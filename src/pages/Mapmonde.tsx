@@ -29,7 +29,9 @@ const Mapmonde = () => {
 
     transitionsData.forEach((transition) => {
       const timeout = setTimeout(() => {
-        addTransition(transition.from, transition.to, 2000);
+        // Durée aléatoire entre 1000ms (1s) et 2000ms (2s)
+        const duration = Math.floor(Math.random() * 1000) + 1000;
+        addTransition(transition.from, transition.to, duration, transition.savings);
       }, transition.timestamp);
 
       timeouts.push(timeout);

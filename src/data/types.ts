@@ -11,4 +11,5 @@ export interface ActiveTransition {
   to: string; // nom du serveur destination
   timestamp: number; // timestamp de début
   duration: number; // durée en ms (2000ms = 2 secondes)
+  savings?: number; // économies en euros (ex: 0.75)
 }

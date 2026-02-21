@@ -6,12 +6,13 @@ export const useServerTransitions = () => {
   const timeoutRefs = useRef<Map<string, NodeJS.Timeout>>(new Map());
 
   // Ajouter une nouvelle transition
-  const addTransition = useCallback((from: string, to: string, duration: number = 2000) => {
+  const addTransition = useCallback((from: string, to: string, duration: number = 2000, savings?: number) => {
     const transition: ActiveTransition = {
       from,
       to,
       timestamp: Date.now(),
       duration,
+      savings,
     };
 
     const key = `${from}-${to}-${transition.timestamp}`;

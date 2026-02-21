@@ -2,1691 +2,2029 @@
   {
     "from": "DC Paris",
     "to": "DC New York",
-    "timestamp": 1000
+    "timestamp": 1000,
+    "savings": 1.35
   },
   {
     "from": "DC London",
     "to": "DC Tokyo",
-    "timestamp": 2500
+    "timestamp": 2500,
+    "savings": 2.37
   },
   {
     "from": "DC Frankfurt",
     "to": "DC Singapore",
-    "timestamp": 4000
+    "timestamp": 4000,
+    "savings": 2.31
   },
   {
     "from": "DC Amsterdam",
     "to": "DC Los Angeles",
-    "timestamp": 5500
+    "timestamp": 5500,
+    "savings": 1.81
   },
   {
     "from": "DC New York",
     "to": "DC São Paulo",
-    "timestamp": 7000
+    "timestamp": 7000,
+    "savings": 1.76
   },
   {
     "from": "DC Tokyo",
     "to": "DC Sydney",
-    "timestamp": 8500
+    "timestamp": 8500,
+    "savings": 1.14
   },
   {
     "from": "DC Dubai",
     "to": "DC Mumbai",
-    "timestamp": 10000
+    "timestamp": 10000,
+    "savings": 0.39
   },
   {
     "from": "DC Paris",
     "to": "DC Frankfurt",
-    "timestamp": 11500
+    "timestamp": 11500,
+    "savings": 0.29
   },
   {
     "from": "DC Singapore",
     "to": "DC Seoul",
-    "timestamp": 13000
+    "timestamp": 13000,
+    "savings": 0.32
   },
   {
     "from": "DC London",
     "to": "DC New York",
-    "timestamp": 14500
+    "timestamp": 14500,
+    "savings": 1.3
   },
   {
     "from": "DC Sydney",
     "to": "DC Tokyo",
-    "timestamp": 16000
+    "timestamp": 16000,
+    "savings": 1.75
   },
   {
     "from": "DC Mumbai",
     "to": "DC Dubai",
-    "timestamp": 17500
+    "timestamp": 17500,
+    "savings": 0.75
   },
   {
     "from": "DC São Paulo",
     "to": "DC New York",
-    "timestamp": 19000
+    "timestamp": 19000,
+    "savings": 2.48
   },
   {
     "from": "DC Frankfurt",
     "to": "DC London",
-    "timestamp": 20500
+    "timestamp": 20500,
+    "savings": 0.27
   },
   {
     "from": "DC Seoul",
     "to": "DC Singapore",
-    "timestamp": 22000
+    "timestamp": 22000,
+    "savings": 0.28
   },
   {
     "from": "DC Paris",
     "to": "DC Tokyo",
-    "timestamp": 23500
+    "timestamp": 23500,
+    "savings": 2.43
   },
   {
     "from": "DC Hong Kong",
     "to": "DC Shanghai",
-    "timestamp": 25000
+    "timestamp": 25000,
+    "savings": 0.17
   },
   {
     "from": "DC Beijing",
     "to": "DC Seoul",
-    "timestamp": 26500
+    "timestamp": 26500,
+    "savings": 0.32
   },
   {
     "from": "DC Dublin",
     "to": "DC Madrid",
-    "timestamp": 28000
+    "timestamp": 28000,
+    "savings": 0.37
   },
   {
     "from": "DC Milan",
     "to": "DC Stockholm",
-    "timestamp": 29500
+    "timestamp": 29500,
+    "savings": 0.3
   },
   {
     "from": "DC Zurich",
     "to": "DC Vienna",
-    "timestamp": 31000
+    "timestamp": 31000,
+    "savings": 0.1
   },
   {
     "from": "DC Warsaw",
     "to": "DC Moscow",
-    "timestamp": 32500
+    "timestamp": 32500,
+    "savings": 0.13
   },
   {
     "from": "DC Istanbul",
     "to": "DC Tel Aviv",
-    "timestamp": 34000
+    "timestamp": 34000,
+    "savings": 0.24
   },
   {
     "from": "DC Riyadh",
     "to": "DC Dubai",
-    "timestamp": 35500
+    "timestamp": 35500,
+    "savings": 0.37
   },
   {
     "from": "DC Bangalore",
     "to": "DC Delhi",
-    "timestamp": 37000
+    "timestamp": 37000,
+    "savings": 0.35
   },
   {
     "from": "DC Bangkok",
     "to": "DC Jakarta",
-    "timestamp": 38500
+    "timestamp": 38500,
+    "savings": 0.16
   },
   {
     "from": "DC Manila",
     "to": "DC Kuala Lumpur",
-    "timestamp": 40000
+    "timestamp": 40000,
+    "savings": 0.12
   },
   {
     "from": "DC Taipei",
     "to": "DC Osaka",
-    "timestamp": 41500
+    "timestamp": 41500,
+    "savings": 0.21
   },
   {
     "from": "DC Melbourne",
     "to": "DC Auckland",
-    "timestamp": 43000
+    "timestamp": 43000,
+    "savings": 0.24
   },
   {
     "from": "DC San Francisco",
     "to": "DC Seattle",
-    "timestamp": 44500
+    "timestamp": 44500,
+    "savings": 0.35
   },
   {
     "from": "DC Dallas",
     "to": "DC Miami",
-    "timestamp": 46000
+    "timestamp": 46000,
+    "savings": 0.22
   },
   {
     "from": "DC Atlanta",
     "to": "DC Montreal",
-    "timestamp": 47500
+    "timestamp": 47500,
+    "savings": 0.18
   },
   {
     "from": "DC Vancouver",
     "to": "DC Mexico City",
-    "timestamp": 49000
+    "timestamp": 49000,
+    "savings": 0.14
   },
   {
     "from": "DC Bogota",
     "to": "DC Lima",
-    "timestamp": 50500
+    "timestamp": 50500,
+    "savings": 0.27
   },
   {
     "from": "DC Santiago",
     "to": "DC Buenos Aires",
-    "timestamp": 52000
+    "timestamp": 52000,
+    "savings": 0.28
   },
   {
     "from": "DC Rio de Janeiro",
     "to": "DC São Paulo",
-    "timestamp": 53500
+    "timestamp": 53500,
+    "savings": 0.24
   },
   {
     "from": "DC Johannesburg",
     "to": "DC Cape Town",
-    "timestamp": 55000
+    "timestamp": 55000,
+    "savings": 0.18
   },
   {
     "from": "DC Lagos",
     "to": "DC Cairo",
-    "timestamp": 56500
+    "timestamp": 56500,
+    "savings": 0.28
   },
   {
     "from": "DC Casablanca",
     "to": "DC Nairobi",
-    "timestamp": 58000
+    "timestamp": 58000,
+    "savings": 0.28
   },
   {
     "from": "DC Brussels",
     "to": "DC Copenhagen",
-    "timestamp": 59500
+    "timestamp": 59500,
+    "savings": 0.23
   },
   {
     "from": "DC Helsinki",
     "to": "DC Oslo",
-    "timestamp": 61000
+    "timestamp": 61000,
+    "savings": 0.31
   },
   {
     "from": "DC Prague",
     "to": "DC Budapest",
-    "timestamp": 62500
+    "timestamp": 62500,
+    "savings": 0.25
   },
   {
     "from": "DC Bucharest",
     "to": "DC Athens",
-    "timestamp": 64000
+    "timestamp": 64000,
+    "savings": 0.33
   },
   {
     "from": "DC Lisbon",
     "to": "DC Barcelona",
-    "timestamp": 65500
+    "timestamp": 65500,
+    "savings": 0.36
   },
   {
     "from": "DC Rome",
     "to": "DC Berlin",
-    "timestamp": 67000
+    "timestamp": 67000,
+    "savings": 0.37
   },
   {
     "from": "DC Munich",
     "to": "DC Hamburg",
-    "timestamp": 68500
+    "timestamp": 68500,
+    "savings": 0.33
   },
   {
     "from": "DC Amsterdam 2",
     "to": "DC Brussels 2",
-    "timestamp": 70000
+    "timestamp": 70000,
+    "savings": 0.39
   },
   {
     "from": "DC Paris 2",
     "to": "DC London 2",
-    "timestamp": 71500
+    "timestamp": 71500,
+    "savings": 0.35
   },
   {
     "from": "DC Frankfurt 2",
     "to": "DC New York 2",
-    "timestamp": 73000
+    "timestamp": 73000,
+    "savings": 2.3
   },
   {
     "from": "DC Los Angeles 2",
     "to": "DC Chicago 2",
-    "timestamp": 74500
+    "timestamp": 74500,
+    "savings": 0.2
   },
   {
     "from": "DC Tokyo 2",
     "to": "DC Singapore 2",
-    "timestamp": 76000
+    "timestamp": 76000,
+    "savings": 0.37
   },
   {
     "from": "DC Hong Kong 2",
     "to": "DC Sydney 2",
-    "timestamp": 77500
+    "timestamp": 77500,
+    "savings": 1.01
   },
   {
     "from": "DC São Paulo 2",
     "to": "DC Mumbai 3",
-    "timestamp": 79000
+    "timestamp": 79000,
+    "savings": 1.09
   },
   {
     "from": "DC Seoul 2",
     "to": "DC Dubai 2",
-    "timestamp": 80500
+    "timestamp": 80500,
+    "savings": 1.49
   },
   {
     "from": "DC Doha",
     "to": "DC Kuwait City",
-    "timestamp": 82000
+    "timestamp": 82000,
+    "savings": 0.38
   },
   {
     "from": "DC Manama",
     "to": "DC Abu Dhabi",
-    "timestamp": 83500
+    "timestamp": 83500,
+    "savings": 0.22
   },
   {
     "from": "DC Jeddah",
     "to": "DC Karachi",
-    "timestamp": 85000
+    "timestamp": 85000,
+    "savings": 1.19
   },
   {
     "from": "DC Colombo",
     "to": "DC Dhaka",
-    "timestamp": 86500
+    "timestamp": 86500,
+    "savings": 0.31
   },
   {
     "from": "DC Kathmandu",
     "to": "DC Bangalore",
-    "timestamp": 88000
+    "timestamp": 88000,
+    "savings": 0.4
   },
   {
     "from": "DC New York",
     "to": "DC London",
-    "timestamp": 89500
+    "timestamp": 89500,
+    "savings": 2.09
   },
   {
     "from": "DC Tokyo",
     "to": "DC Paris",
-    "timestamp": 91000
+    "timestamp": 91000,
+    "savings": 1.43
   },
   {
     "from": "DC Singapore",
     "to": "DC Frankfurt",
-    "timestamp": 92500
+    "timestamp": 92500,
+    "savings": 1.75
   },
   {
     "from": "DC Sydney",
     "to": "DC Los Angeles",
-    "timestamp": 94000
+    "timestamp": 94000,
+    "savings": 1.66
   },
   {
     "from": "DC Mumbai",
     "to": "DC Dubai",
-    "timestamp": 95500
+    "timestamp": 95500,
+    "savings": 0.74
   },
   {
     "from": "DC Seoul",
     "to": "DC Hong Kong",
-    "timestamp": 97000
+    "timestamp": 97000,
+    "savings": 0.12
   },
   {
     "from": "DC Shanghai",
     "to": "DC Beijing",
-    "timestamp": 98500
+    "timestamp": 98500,
+    "savings": 0.25
   },
   {
     "from": "DC Dublin",
     "to": "DC Amsterdam",
-    "timestamp": 100000
+    "timestamp": 100000,
+    "savings": 0.28
   },
   {
     "from": "DC Madrid",
     "to": "DC Milan",
-    "timestamp": 101500
+    "timestamp": 101500,
+    "savings": 0.31
   },
   {
     "from": "DC Stockholm",
     "to": "DC Zurich",
-    "timestamp": 103000
+    "timestamp": 103000,
+    "savings": 0.15
   },
   {
     "from": "DC Vienna",
     "to": "DC Warsaw",
-    "timestamp": 104500
+    "timestamp": 104500,
+    "savings": 0.1
   },
   {
     "from": "DC Moscow",
     "to": "DC Istanbul",
-    "timestamp": 106000
+    "timestamp": 106000,
+    "savings": 0.61
   },
   {
     "from": "DC Tel Aviv",
     "to": "DC Riyadh",
-    "timestamp": 107500
+    "timestamp": 107500,
+    "savings": 0.31
   },
   {
     "from": "DC Delhi",
     "to": "DC Bangkok",
-    "timestamp": 109000
+    "timestamp": 109000,
+    "savings": 1.27
   },
   {
     "from": "DC Jakarta",
     "to": "DC Manila",
-    "timestamp": 110500
+    "timestamp": 110500,
+    "savings": 0.16
   },
   {
     "from": "DC Kuala Lumpur",
     "to": "DC Taipei",
-    "timestamp": 112000
+    "timestamp": 112000,
+    "savings": 0.34
   },
   {
     "from": "DC Osaka",
     "to": "DC Melbourne",
-    "timestamp": 113500
+    "timestamp": 113500,
+    "savings": 1.84
   },
   {
     "from": "DC Auckland",
     "to": "DC San Francisco",
-    "timestamp": 115000
+    "timestamp": 115000,
+    "savings": 2.37
   },
   {
     "from": "DC Seattle",
     "to": "DC Dallas",
-    "timestamp": 116500
+    "timestamp": 116500,
+    "savings": 0.23
   },
   {
     "from": "DC Miami",
     "to": "DC Atlanta",
-    "timestamp": 118000
+    "timestamp": 118000,
+    "savings": 0.18
   },
   {
     "from": "DC Montreal",
     "to": "DC Vancouver",
-    "timestamp": 119500
+    "timestamp": 119500,
+    "savings": 0.15
   },
   {
     "from": "DC Mexico City",
     "to": "DC Bogota",
-    "timestamp": 121000
+    "timestamp": 121000,
+    "savings": 0.72
   },
   {
     "from": "DC Lima",
     "to": "DC Santiago",
-    "timestamp": 122500
+    "timestamp": 122500,
+    "savings": 0.14
   },
   {
     "from": "DC Buenos Aires",
     "to": "DC Rio de Janeiro",
-    "timestamp": 124000
+    "timestamp": 124000,
+    "savings": 0.31
   },
   {
     "from": "DC Cape Town",
     "to": "DC Johannesburg",
-    "timestamp": 125500
+    "timestamp": 125500,
+    "savings": 0.33
   },
   {
     "from": "DC Cairo",
     "to": "DC Lagos",
-    "timestamp": 127000
+    "timestamp": 127000,
+    "savings": 0.39
   },
   {
     "from": "DC Nairobi",
     "to": "DC Casablanca",
-    "timestamp": 128500
+    "timestamp": 128500,
+    "savings": 0.15
   },
   {
     "from": "DC Copenhagen",
     "to": "DC Brussels",
-    "timestamp": 130000
+    "timestamp": 130000,
+    "savings": 0.11
   },
   {
     "from": "DC Oslo",
     "to": "DC Helsinki",
-    "timestamp": 131500
+    "timestamp": 131500,
+    "savings": 0.14
   },
   {
     "from": "DC Budapest",
     "to": "DC Prague",
-    "timestamp": 133000
+    "timestamp": 133000,
+    "savings": 0.22
   },
   {
     "from": "DC Athens",
     "to": "DC Bucharest",
-    "timestamp": 134500
+    "timestamp": 134500,
+    "savings": 0.14
   },
   {
     "from": "DC Barcelona",
     "to": "DC Lisbon",
-    "timestamp": 136000
+    "timestamp": 136000,
+    "savings": 0.23
   },
   {
     "from": "DC Berlin",
     "to": "DC Rome",
-    "timestamp": 137500
+    "timestamp": 137500,
+    "savings": 0.2
   },
   {
     "from": "DC Hamburg",
     "to": "DC Munich",
-    "timestamp": 139000
+    "timestamp": 139000,
+    "savings": 0.19
   },
   {
     "from": "DC Brussels 2",
     "to": "DC Amsterdam 2",
-    "timestamp": 140500
+    "timestamp": 140500,
+    "savings": 0.12
   },
   {
     "from": "DC London 2",
     "to": "DC Paris 2",
-    "timestamp": 142000
+    "timestamp": 142000,
+    "savings": 0.17
   },
   {
     "from": "DC New York 2",
     "to": "DC Frankfurt 2",
-    "timestamp": 143500
+    "timestamp": 143500,
+    "savings": 1.14
   },
   {
     "from": "DC Chicago 2",
     "to": "DC Los Angeles 2",
-    "timestamp": 145000
+    "timestamp": 145000,
+    "savings": 0.12
   },
   {
     "from": "DC Singapore 2",
     "to": "DC Tokyo 2",
-    "timestamp": 146500
+    "timestamp": 146500,
+    "savings": 0.33
   },
   {
     "from": "DC Sydney 2",
     "to": "DC Hong Kong 2",
-    "timestamp": 148000
+    "timestamp": 148000,
+    "savings": 1.24
   },
   {
     "from": "DC Mumbai 3",
     "to": "DC São Paulo 2",
-    "timestamp": 149500
+    "timestamp": 149500,
+    "savings": 1.06
   },
   {
     "from": "DC Dubai 2",
     "to": "DC Seoul 2",
-    "timestamp": 151000
+    "timestamp": 151000,
+    "savings": 1.37
   },
   {
     "from": "DC Kuwait City",
     "to": "DC Doha",
-    "timestamp": 152500
+    "timestamp": 152500,
+    "savings": 0.36
   },
   {
     "from": "DC Abu Dhabi",
     "to": "DC Manama",
-    "timestamp": 154000
+    "timestamp": 154000,
+    "savings": 0.33
   },
   {
     "from": "DC Karachi",
     "to": "DC Jeddah",
-    "timestamp": 155500
+    "timestamp": 155500,
+    "savings": 1.31
   },
   {
     "from": "DC Dhaka",
     "to": "DC Colombo",
-    "timestamp": 157000
+    "timestamp": 157000,
+    "savings": 0.17
   },
   {
     "from": "DC Bangalore",
     "to": "DC Kathmandu",
-    "timestamp": 158500
+    "timestamp": 158500,
+    "savings": 0.37
   },
   {
     "from": "DC Toronto",
     "to": "DC Montreal",
-    "timestamp": 160000
+    "timestamp": 160000,
+    "savings": 0.17
   },
   {
     "from": "DC Chicago",
     "to": "DC New York",
-    "timestamp": 161500
+    "timestamp": 161500,
+    "savings": 0.39
   },
   {
     "from": "DC Los Angeles",
     "to": "DC San Francisco",
-    "timestamp": 163000
+    "timestamp": 163000,
+    "savings": 0.18
   },
   {
     "from": "DC Dallas",
     "to": "DC Atlanta",
-    "timestamp": 164500
+    "timestamp": 164500,
+    "savings": 0.2
   },
   {
     "from": "DC Miami",
     "to": "DC Mexico City",
-    "timestamp": 166000
+    "timestamp": 166000,
+    "savings": 0.33
   },
   {
     "from": "DC Vancouver",
     "to": "DC Seattle",
-    "timestamp": 167500
+    "timestamp": 167500,
+    "savings": 0.29
   },
   {
     "from": "DC Beijing",
     "to": "DC Shanghai",
-    "timestamp": 169000
+    "timestamp": 169000,
+    "savings": 0.22
   },
   {
     "from": "DC Hong Kong",
     "to": "DC Taipei",
-    "timestamp": 170500
+    "timestamp": 170500,
+    "savings": 0.22
   },
   {
     "from": "DC Tokyo",
     "to": "DC Osaka",
-    "timestamp": 172000
+    "timestamp": 172000,
+    "savings": 0.34
   },
   {
     "from": "DC Seoul",
     "to": "DC Beijing",
-    "timestamp": 173500
+    "timestamp": 173500,
+    "savings": 0.11
   },
   {
     "from": "DC Singapore",
     "to": "DC Kuala Lumpur",
-    "timestamp": 175000
+    "timestamp": 175000,
+    "savings": 0.26
   },
   {
     "from": "DC Bangkok",
     "to": "DC Jakarta",
-    "timestamp": 176500
+    "timestamp": 176500,
+    "savings": 0.13
   },
   {
     "from": "DC Manila",
     "to": "DC Hong Kong",
-    "timestamp": 178000
+    "timestamp": 178000,
+    "savings": 0.13
   },
   {
     "from": "DC Sydney",
     "to": "DC Melbourne",
-    "timestamp": 179500
+    "timestamp": 179500,
+    "savings": 0.32
   },
   {
     "from": "DC Auckland",
     "to": "DC Sydney",
-    "timestamp": 181000
+    "timestamp": 181000,
+    "savings": 0.15
   },
   {
     "from": "DC Mumbai",
     "to": "DC Bangalore",
-    "timestamp": 182500
+    "timestamp": 182500,
+    "savings": 0.2
   },
   {
     "from": "DC Delhi",
     "to": "DC Mumbai",
-    "timestamp": 184000
+    "timestamp": 184000,
+    "savings": 0.15
   },
   {
     "from": "DC Karachi",
     "to": "DC Dubai",
-    "timestamp": 185500
+    "timestamp": 185500,
+    "savings": 0.56
   },
   {
     "from": "DC Dubai",
     "to": "DC Doha",
-    "timestamp": 187000
+    "timestamp": 187000,
+    "savings": 0.26
   },
   {
     "from": "DC Riyadh",
     "to": "DC Jeddah",
-    "timestamp": 188500
+    "timestamp": 188500,
+    "savings": 0.35
   },
   {
     "from": "DC Istanbul",
     "to": "DC Moscow",
-    "timestamp": 190000
+    "timestamp": 190000,
+    "savings": 0.73
   },
   {
     "from": "DC Tel Aviv",
     "to": "DC Istanbul",
-    "timestamp": 191500
+    "timestamp": 191500,
+    "savings": 0.35
   },
   {
     "from": "DC Cairo",
     "to": "DC Casablanca",
-    "timestamp": 193000
+    "timestamp": 193000,
+    "savings": 0.15
   },
   {
     "from": "DC Lagos",
     "to": "DC Johannesburg",
-    "timestamp": 194500
+    "timestamp": 194500,
+    "savings": 0.21
   },
   {
     "from": "DC Nairobi",
     "to": "DC Lagos",
-    "timestamp": 196000
+    "timestamp": 196000,
+    "savings": 0.4
   },
   {
     "from": "DC Cape Town",
     "to": "DC Johannesburg",
-    "timestamp": 197500
+    "timestamp": 197500,
+    "savings": 0.16
   },
   {
     "from": "DC São Paulo",
     "to": "DC Buenos Aires",
-    "timestamp": 199000
+    "timestamp": 199000,
+    "savings": 0.3
   },
   {
     "from": "DC Rio de Janeiro",
     "to": "DC São Paulo",
-    "timestamp": 200500
+    "timestamp": 200500,
+    "savings": 0.27
   },
   {
     "from": "DC Bogota",
     "to": "DC Mexico City",
-    "timestamp": 202000
+    "timestamp": 202000,
+    "savings": 1.35
   },
   {
     "from": "DC Lima",
     "to": "DC Bogota",
-    "timestamp": 203500
+    "timestamp": 203500,
+    "savings": 0.22
   },
   {
     "from": "DC Santiago",
     "to": "DC Lima",
-    "timestamp": 205000
+    "timestamp": 205000,
+    "savings": 0.26
   },
   {
     "from": "DC Buenos Aires",
     "to": "DC Santiago",
-    "timestamp": 206500
+    "timestamp": 206500,
+    "savings": 0.21
   },
   {
     "from": "DC Paris",
     "to": "DC Amsterdam",
-    "timestamp": 208000
+    "timestamp": 208000,
+    "savings": 0.14
   },
   {
     "from": "DC London",
     "to": "DC Dublin",
-    "timestamp": 209500
+    "timestamp": 209500,
+    "savings": 0.35
   },
   {
     "from": "DC Frankfurt",
     "to": "DC Zurich",
-    "timestamp": 211000
+    "timestamp": 211000,
+    "savings": 0.13
   },
   {
     "from": "DC Amsterdam",
     "to": "DC Brussels",
-    "timestamp": 212500
+    "timestamp": 212500,
+    "savings": 0.21
   },
   {
     "from": "DC Madrid",
     "to": "DC Barcelona",
-    "timestamp": 214000
+    "timestamp": 214000,
+    "savings": 0.31
   },
   {
     "from": "DC Milan",
     "to": "DC Rome",
-    "timestamp": 215500
+    "timestamp": 215500,
+    "savings": 0.19
   },
   {
     "from": "DC Stockholm",
     "to": "DC Copenhagen",
-    "timestamp": 217000
+    "timestamp": 217000,
+    "savings": 0.15
   },
   {
     "from": "DC Vienna",
     "to": "DC Budapest",
-    "timestamp": 218500
+    "timestamp": 218500,
+    "savings": 0.26
   },
   {
     "from": "DC Warsaw",
     "to": "DC Prague",
-    "timestamp": 220000
+    "timestamp": 220000,
+    "savings": 0.15
   },
   {
     "from": "DC Berlin",
     "to": "DC Munich",
-    "timestamp": 221500
+    "timestamp": 221500,
+    "savings": 0.27
   },
   {
     "from": "DC Hamburg",
     "to": "DC Berlin",
-    "timestamp": 223000
+    "timestamp": 223000,
+    "savings": 0.19
   },
   {
     "from": "DC Helsinki",
     "to": "DC Stockholm",
-    "timestamp": 224500
+    "timestamp": 224500,
+    "savings": 0.34
   },
   {
     "from": "DC Oslo",
     "to": "DC Copenhagen",
-    "timestamp": 226000
+    "timestamp": 226000,
+    "savings": 0.33
   },
   {
     "from": "DC Bucharest",
     "to": "DC Athens",
-    "timestamp": 227500
+    "timestamp": 227500,
+    "savings": 0.32
   },
   {
     "from": "DC Lisbon",
     "to": "DC Madrid",
-    "timestamp": 229000
+    "timestamp": 229000,
+    "savings": 0.28
   },
   {
     "from": "DC Barcelona",
     "to": "DC Milan",
-    "timestamp": 230500
+    "timestamp": 230500,
+    "savings": 0.3
   },
   {
     "from": "DC Rome",
     "to": "DC Vienna",
-    "timestamp": 232000
+    "timestamp": 232000,
+    "savings": 0.3
   },
   {
     "from": "DC New York",
     "to": "DC Chicago",
-    "timestamp": 233500
+    "timestamp": 233500,
+    "savings": 0.14
   },
   {
     "from": "DC Los Angeles",
     "to": "DC San Francisco",
-    "timestamp": 235000
+    "timestamp": 235000,
+    "savings": 0.25
   },
   {
     "from": "DC Seattle",
     "to": "DC Vancouver",
-    "timestamp": 236500
+    "timestamp": 236500,
+    "savings": 0.31
   },
   {
     "from": "DC Dallas",
     "to": "DC Miami",
-    "timestamp": 238000
+    "timestamp": 238000,
+    "savings": 0.33
   },
   {
     "from": "DC Atlanta",
     "to": "DC Toronto",
-    "timestamp": 239500
+    "timestamp": 239500,
+    "savings": 0.14
   },
   {
     "from": "DC Montreal",
     "to": "DC New York",
-    "timestamp": 241000
+    "timestamp": 241000,
+    "savings": 0.12
   },
   {
     "from": "DC Vancouver",
     "to": "DC Seattle",
-    "timestamp": 242500
+    "timestamp": 242500,
+    "savings": 0.31
   },
   {
     "from": "DC Mexico City",
     "to": "DC Dallas",
-    "timestamp": 244000
+    "timestamp": 244000,
+    "savings": 0.25
   },
   {
     "from": "DC Tokyo",
     "to": "DC Seoul",
-    "timestamp": 245500
+    "timestamp": 245500,
+    "savings": 0.13
   },
   {
     "from": "DC Seoul",
     "to": "DC Beijing",
-    "timestamp": 247000
+    "timestamp": 247000,
+    "savings": 0.33
   },
   {
     "from": "DC Shanghai",
     "to": "DC Hong Kong",
-    "timestamp": 248500
+    "timestamp": 248500,
+    "savings": 0.1
   },
   {
     "from": "DC Hong Kong",
     "to": "DC Singapore",
-    "timestamp": 250000
+    "timestamp": 250000,
+    "savings": 0.21
   },
   {
     "from": "DC Singapore",
     "to": "DC Bangkok",
-    "timestamp": 251500
+    "timestamp": 251500,
+    "savings": 0.15
   },
   {
     "from": "DC Bangkok",
     "to": "DC Jakarta",
-    "timestamp": 253000
+    "timestamp": 253000,
+    "savings": 0.12
   },
   {
     "from": "DC Jakarta",
     "to": "DC Manila",
-    "timestamp": 254500
+    "timestamp": 254500,
+    "savings": 0.31
   },
   {
     "from": "DC Manila",
     "to": "DC Taipei",
-    "timestamp": 256000
+    "timestamp": 256000,
+    "savings": 0.35
   },
   {
     "from": "DC Taipei",
     "to": "DC Osaka",
-    "timestamp": 257500
+    "timestamp": 257500,
+    "savings": 0.34
   },
   {
     "from": "DC Osaka",
     "to": "DC Tokyo",
-    "timestamp": 259000
+    "timestamp": 259000,
+    "savings": 0.39
   },
   {
     "from": "DC Sydney",
     "to": "DC Melbourne",
-    "timestamp": 260500
+    "timestamp": 260500,
+    "savings": 0.3
   },
   {
     "from": "DC Melbourne",
     "to": "DC Auckland",
-    "timestamp": 262000
+    "timestamp": 262000,
+    "savings": 0.26
   },
   {
     "from": "DC Mumbai",
     "to": "DC Delhi",
-    "timestamp": 263500
+    "timestamp": 263500,
+    "savings": 0.33
   },
   {
     "from": "DC Delhi",
     "to": "DC Bangalore",
-    "timestamp": 265000
+    "timestamp": 265000,
+    "savings": 0.14
   },
   {
     "from": "DC Bangalore",
     "to": "DC Mumbai 2",
-    "timestamp": 266500
+    "timestamp": 266500,
+    "savings": 0.18
   },
   {
     "from": "DC Karachi",
     "to": "DC Mumbai",
-    "timestamp": 268000
+    "timestamp": 268000,
+    "savings": 0.15
   },
   {
     "from": "DC Colombo",
     "to": "DC Bangalore",
-    "timestamp": 269500
+    "timestamp": 269500,
+    "savings": 0.25
   },
   {
     "from": "DC Dhaka",
     "to": "DC Delhi",
-    "timestamp": 271000
+    "timestamp": 271000,
+    "savings": 0.36
   },
   {
     "from": "DC Kathmandu",
     "to": "DC Delhi",
-    "timestamp": 272500
+    "timestamp": 272500,
+    "savings": 0.19
   },
   {
     "from": "DC Dubai",
     "to": "DC Abu Dhabi",
-    "timestamp": 274000
+    "timestamp": 274000,
+    "savings": 0.3
   },
   {
     "from": "DC Doha",
     "to": "DC Manama",
-    "timestamp": 275500
+    "timestamp": 275500,
+    "savings": 0.21
   },
   {
     "from": "DC Kuwait City",
     "to": "DC Riyadh",
-    "timestamp": 277000
+    "timestamp": 277000,
+    "savings": 0.32
   },
   {
     "from": "DC Jeddah",
     "to": "DC Dubai",
-    "timestamp": 278500
+    "timestamp": 278500,
+    "savings": 0.29
   },
   {
     "from": "DC Istanbul",
     "to": "DC Athens",
-    "timestamp": 280000
+    "timestamp": 280000,
+    "savings": 0.79
   },
   {
     "from": "DC Tel Aviv",
     "to": "DC Cairo",
-    "timestamp": 281500
+    "timestamp": 281500,
+    "savings": 0.64
   },
   {
     "from": "DC Cairo",
     "to": "DC Casablanca",
-    "timestamp": 283000
+    "timestamp": 283000,
+    "savings": 0.25
   },
   {
     "from": "DC Casablanca",
     "to": "DC Madrid",
-    "timestamp": 284500
+    "timestamp": 284500,
+    "savings": 0.75
   },
   {
     "from": "DC Lagos",
     "to": "DC Casablanca",
-    "timestamp": 286000
+    "timestamp": 286000,
+    "savings": 0.36
   },
   {
     "from": "DC Nairobi",
     "to": "DC Lagos",
-    "timestamp": 287500
+    "timestamp": 287500,
+    "savings": 0.11
   },
   {
     "from": "DC Johannesburg",
     "to": "DC Nairobi",
-    "timestamp": 289000
+    "timestamp": 289000,
+    "savings": 0.39
   },
   {
     "from": "DC Cape Town",
     "to": "DC Johannesburg",
-    "timestamp": 290500
+    "timestamp": 290500,
+    "savings": 0.14
   },
   {
     "from": "DC São Paulo",
     "to": "DC Rio de Janeiro",
-    "timestamp": 292000
+    "timestamp": 292000,
+    "savings": 0.27
   },
   {
     "from": "DC Buenos Aires",
     "to": "DC São Paulo",
-    "timestamp": 293500
+    "timestamp": 293500,
+    "savings": 0.35
   },
   {
     "from": "DC Santiago",
     "to": "DC Buenos Aires",
-    "timestamp": 295000
+    "timestamp": 295000,
+    "savings": 0.4
   },
   {
     "from": "DC Lima",
     "to": "DC Bogota",
-    "timestamp": 296500
+    "timestamp": 296500,
+    "savings": 0.11
   },
   {
     "from": "DC Bogota",
     "to": "DC Mexico City",
-    "timestamp": 298000
+    "timestamp": 298000,
+    "savings": 1.41
   },
   {
     "from": "DC Mexico City",
     "to": "DC Dallas",
-    "timestamp": 299500
+    "timestamp": 299500,
+    "savings": 0.29
   },
   {
     "from": "DC New York",
     "to": "DC Toronto",
-    "timestamp": 301000
+    "timestamp": 301000,
+    "savings": 0.27
   },
   {
     "from": "DC Chicago",
     "to": "DC Toronto",
-    "timestamp": 302500
+    "timestamp": 302500,
+    "savings": 0.12
   },
   {
     "from": "DC Los Angeles",
     "to": "DC Seattle",
-    "timestamp": 304000
+    "timestamp": 304000,
+    "savings": 0.18
   },
   {
     "from": "DC San Francisco",
     "to": "DC Vancouver",
-    "timestamp": 305500
+    "timestamp": 305500,
+    "savings": 0.4
   },
   {
     "from": "DC Seattle",
     "to": "DC Vancouver",
-    "timestamp": 307000
+    "timestamp": 307000,
+    "savings": 0.13
   },
   {
     "from": "DC Dallas",
     "to": "DC Atlanta",
-    "timestamp": 308500
+    "timestamp": 308500,
+    "savings": 0.22
   },
   {
     "from": "DC Miami",
     "to": "DC Bogota",
-    "timestamp": 310000
+    "timestamp": 310000,
+    "savings": 0.9
   },
   {
     "from": "DC Paris",
     "to": "DC Brussels",
-    "timestamp": 311500
+    "timestamp": 311500,
+    "savings": 0.34
   },
   {
     "from": "DC London",
     "to": "DC Amsterdam",
-    "timestamp": 313000
+    "timestamp": 313000,
+    "savings": 0.23
   },
   {
     "from": "DC Frankfurt",
     "to": "DC Zurich",
-    "timestamp": 314500
+    "timestamp": 314500,
+    "savings": 0.12
   },
   {
     "from": "DC Amsterdam",
     "to": "DC Copenhagen",
-    "timestamp": 316000
+    "timestamp": 316000,
+    "savings": 0.18
   },
   {
     "from": "DC Madrid",
     "to": "DC Lisbon",
-    "timestamp": 317500
+    "timestamp": 317500,
+    "savings": 0.1
   },
   {
     "from": "DC Milan",
     "to": "DC Rome",
-    "timestamp": 319000
+    "timestamp": 319000,
+    "savings": 0.24
   },
   {
     "from": "DC Stockholm",
     "to": "DC Helsinki",
-    "timestamp": 320500
+    "timestamp": 320500,
+    "savings": 0.12
   },
   {
     "from": "DC Vienna",
     "to": "DC Budapest",
-    "timestamp": 322000
+    "timestamp": 322000,
+    "savings": 0.17
   },
   {
     "from": "DC Warsaw",
     "to": "DC Berlin",
-    "timestamp": 323500
+    "timestamp": 323500,
+    "savings": 0.13
   },
   {
     "from": "DC Moscow",
     "to": "DC Istanbul",
-    "timestamp": 325000
+    "timestamp": 325000,
+    "savings": 0.6
   },
   {
     "from": "DC Istanbul",
     "to": "DC Tel Aviv",
-    "timestamp": 326500
+    "timestamp": 326500,
+    "savings": 0.32
   },
   {
     "from": "DC Tokyo",
     "to": "DC Seoul",
-    "timestamp": 328000
+    "timestamp": 328000,
+    "savings": 0.37
   },
   {
     "from": "DC Seoul",
     "to": "DC Beijing",
-    "timestamp": 329500
+    "timestamp": 329500,
+    "savings": 0.27
   },
   {
     "from": "DC Beijing",
     "to": "DC Shanghai",
-    "timestamp": 331000
+    "timestamp": 331000,
+    "savings": 0.11
   },
   {
     "from": "DC Shanghai",
     "to": "DC Hong Kong",
-    "timestamp": 332500
+    "timestamp": 332500,
+    "savings": 0.25
   },
   {
     "from": "DC Hong Kong",
     "to": "DC Singapore",
-    "timestamp": 334000
+    "timestamp": 334000,
+    "savings": 0.15
   },
   {
     "from": "DC Singapore",
     "to": "DC Kuala Lumpur",
-    "timestamp": 335500
+    "timestamp": 335500,
+    "savings": 0.32
   },
   {
     "from": "DC Kuala Lumpur",
     "to": "DC Bangkok",
-    "timestamp": 337000
+    "timestamp": 337000,
+    "savings": 0.14
   },
   {
     "from": "DC Bangkok",
     "to": "DC Jakarta",
-    "timestamp": 338500
+    "timestamp": 338500,
+    "savings": 0.35
   },
   {
     "from": "DC Jakarta",
     "to": "DC Singapore",
-    "timestamp": 340000
+    "timestamp": 340000,
+    "savings": 0.15
   },
   {
     "from": "DC Manila",
     "to": "DC Jakarta",
-    "timestamp": 341500
+    "timestamp": 341500,
+    "savings": 0.11
   },
   {
     "from": "DC Taipei",
     "to": "DC Manila",
-    "timestamp": 343000
+    "timestamp": 343000,
+    "savings": 0.2
   },
   {
     "from": "DC Osaka",
     "to": "DC Tokyo",
-    "timestamp": 344500
+    "timestamp": 344500,
+    "savings": 0.4
   },
   {
     "from": "DC Sydney",
     "to": "DC Melbourne",
-    "timestamp": 346000
+    "timestamp": 346000,
+    "savings": 0.14
   },
   {
     "from": "DC Melbourne",
     "to": "DC Sydney",
-    "timestamp": 347500
+    "timestamp": 347500,
+    "savings": 0.29
   },
   {
     "from": "DC Auckland",
     "to": "DC Sydney",
-    "timestamp": 349000
+    "timestamp": 349000,
+    "savings": 0.29
   },
   {
     "from": "DC Mumbai",
     "to": "DC Mumbai 2",
-    "timestamp": 350500
+    "timestamp": 350500,
+    "savings": 0.33
   },
   {
     "from": "DC Bangalore",
     "to": "DC Mumbai",
-    "timestamp": 352000
+    "timestamp": 352000,
+    "savings": 0.26
   },
   {
     "from": "DC Delhi",
     "to": "DC Mumbai",
-    "timestamp": 353500
+    "timestamp": 353500,
+    "savings": 0.25
   },
   {
     "from": "DC Karachi",
     "to": "DC Mumbai",
-    "timestamp": 355000
+    "timestamp": 355000,
+    "savings": 0.35
   },
   {
     "from": "DC Colombo",
     "to": "DC Bangalore",
-    "timestamp": 356500
+    "timestamp": 356500,
+    "savings": 0.26
   },
   {
     "from": "DC Dhaka",
     "to": "DC Delhi",
-    "timestamp": 358000
+    "timestamp": 358000,
+    "savings": 0.15
   },
   {
     "from": "DC Kathmandu",
     "to": "DC Delhi",
-    "timestamp": 359500
+    "timestamp": 359500,
+    "savings": 0.17
   },
   {
     "from": "DC Dubai",
     "to": "DC Dubai 2",
-    "timestamp": 361000
+    "timestamp": 361000,
+    "savings": 0.39
   },
   {
     "from": "DC Doha",
     "to": "DC Dubai",
-    "timestamp": 362500
+    "timestamp": 362500,
+    "savings": 0.17
   },
   {
     "from": "DC Kuwait City",
     "to": "DC Dubai",
-    "timestamp": 364000
+    "timestamp": 364000,
+    "savings": 0.19
   },
   {
     "from": "DC Manama",
     "to": "DC Doha",
-    "timestamp": 365500
+    "timestamp": 365500,
+    "savings": 0.33
   },
   {
     "from": "DC Abu Dhabi",
     "to": "DC Dubai",
-    "timestamp": 367000
+    "timestamp": 367000,
+    "savings": 0.24
   },
   {
     "from": "DC Jeddah",
     "to": "DC Riyadh",
-    "timestamp": 368500
+    "timestamp": 368500,
+    "savings": 0.15
   },
   {
     "from": "DC Istanbul",
     "to": "DC Bucharest",
-    "timestamp": 370000
+    "timestamp": 370000,
+    "savings": 0.6
   },
   {
     "from": "DC Tel Aviv",
     "to": "DC Istanbul",
-    "timestamp": 371500
+    "timestamp": 371500,
+    "savings": 0.35
   },
   {
     "from": "DC Cairo",
     "to": "DC Istanbul",
-    "timestamp": 373000
+    "timestamp": 373000,
+    "savings": 0.49
   },
   {
     "from": "DC Casablanca",
     "to": "DC Madrid",
-    "timestamp": 374500
+    "timestamp": 374500,
+    "savings": 0.47
   },
   {
     "from": "DC Lagos",
     "to": "DC Casablanca",
-    "timestamp": 376000
+    "timestamp": 376000,
+    "savings": 0.33
   },
   {
     "from": "DC Nairobi",
     "to": "DC Lagos",
-    "timestamp": 377500
+    "timestamp": 377500,
+    "savings": 0.32
   },
   {
     "from": "DC Johannesburg",
     "to": "DC Nairobi",
-    "timestamp": 379000
+    "timestamp": 379000,
+    "savings": 0.29
   },
   {
     "from": "DC Cape Town",
     "to": "DC Johannesburg",
-    "timestamp": 380500
+    "timestamp": 380500,
+    "savings": 0.27
   },
   {
     "from": "DC São Paulo",
     "to": "DC Rio de Janeiro",
-    "timestamp": 382000
+    "timestamp": 382000,
+    "savings": 0.18
   },
   {
     "from": "DC Rio de Janeiro",
     "to": "DC São Paulo",
-    "timestamp": 383500
+    "timestamp": 383500,
+    "savings": 0.16
   },
   {
     "from": "DC Buenos Aires",
     "to": "DC São Paulo",
-    "timestamp": 385000
+    "timestamp": 385000,
+    "savings": 0.19
   },
   {
     "from": "DC Santiago",
     "to": "DC Buenos Aires",
-    "timestamp": 386500
+    "timestamp": 386500,
+    "savings": 0.12
   },
   {
     "from": "DC Lima",
     "to": "DC Santiago",
-    "timestamp": 388000
+    "timestamp": 388000,
+    "savings": 0.34
   },
   {
     "from": "DC Bogota",
     "to": "DC Lima",
-    "timestamp": 389500
+    "timestamp": 389500,
+    "savings": 0.23
   },
   {
     "from": "DC Mexico City",
     "to": "DC Bogota",
-    "timestamp": 391000
+    "timestamp": 391000,
+    "savings": 1
   },
   {
     "from": "DC New York",
     "to": "DC Montreal",
-    "timestamp": 392500
+    "timestamp": 392500,
+    "savings": 0.26
   },
   {
     "from": "DC Los Angeles",
     "to": "DC San Francisco",
-    "timestamp": 394000
+    "timestamp": 394000,
+    "savings": 0.3
   },
   {
     "from": "DC Chicago",
     "to": "DC New York",
-    "timestamp": 395500
+    "timestamp": 395500,
+    "savings": 0.33
   },
   {
     "from": "DC San Francisco",
     "to": "DC Los Angeles",
-    "timestamp": 397000
+    "timestamp": 397000,
+    "savings": 0.3
   },
   {
     "from": "DC Seattle",
     "to": "DC Vancouver",
-    "timestamp": 398500
+    "timestamp": 398500,
+    "savings": 0.16
   },
   {
     "from": "DC Dallas",
     "to": "DC Miami",
-    "timestamp": 400000
+    "timestamp": 400000,
+    "savings": 0.1
   },
   {
     "from": "DC Miami",
     "to": "DC Atlanta",
-    "timestamp": 401500
+    "timestamp": 401500,
+    "savings": 0.24
   },
   {
     "from": "DC Atlanta",
     "to": "DC Toronto",
-    "timestamp": 403000
+    "timestamp": 403000,
+    "savings": 0.37
   },
   {
     "from": "DC Montreal",
     "to": "DC New York",
-    "timestamp": 404500
+    "timestamp": 404500,
+    "savings": 0.34
   },
   {
     "from": "DC Vancouver",
     "to": "DC Seattle",
-    "timestamp": 406000
+    "timestamp": 406000,
+    "savings": 0.24
   },
   {
     "from": "DC Toronto",
     "to": "DC Montreal",
-    "timestamp": 407500
+    "timestamp": 407500,
+    "savings": 0.33
   },
   {
     "from": "DC Paris",
     "to": "DC London",
-    "timestamp": 409000
+    "timestamp": 409000,
+    "savings": 0.38
   },
   {
     "from": "DC London",
     "to": "DC Amsterdam",
-    "timestamp": 410500
+    "timestamp": 410500,
+    "savings": 0.14
   },
   {
     "from": "DC Frankfurt",
     "to": "DC Munich",
-    "timestamp": 412000
+    "timestamp": 412000,
+    "savings": 0.13
   },
   {
     "from": "DC Amsterdam",
     "to": "DC Brussels",
-    "timestamp": 413500
+    "timestamp": 413500,
+    "savings": 0.39
   },
   {
     "from": "DC Madrid",
     "to": "DC Barcelona",
-    "timestamp": 415000
+    "timestamp": 415000,
+    "savings": 0.18
   },
   {
     "from": "DC Milan",
     "to": "DC Rome",
-    "timestamp": 416500
+    "timestamp": 416500,
+    "savings": 0.3
   },
   {
     "from": "DC Stockholm",
     "to": "DC Copenhagen",
-    "timestamp": 418000
+    "timestamp": 418000,
+    "savings": 0.35
   },
   {
     "from": "DC Vienna",
     "to": "DC Budapest",
-    "timestamp": 419500
+    "timestamp": 419500,
+    "savings": 0.26
   },
   {
     "from": "DC Warsaw",
     "to": "DC Prague",
-    "timestamp": 421000
+    "timestamp": 421000,
+    "savings": 0.25
   },
   {
     "from": "DC Berlin",
     "to": "DC Hamburg",
-    "timestamp": 422500
+    "timestamp": 422500,
+    "savings": 0.34
   },
   {
     "from": "DC Moscow",
     "to": "DC Warsaw",
-    "timestamp": 424000
+    "timestamp": 424000,
+    "savings": 0.32
   },
   {
     "from": "DC Istanbul",
     "to": "DC Moscow",
-    "timestamp": 425500
+    "timestamp": 425500,
+    "savings": 0.8
   },
   {
     "from": "DC Tokyo",
     "to": "DC Hong Kong",
-    "timestamp": 427000
+    "timestamp": 427000,
+    "savings": 0.38
   },
   {
     "from": "DC Seoul",
     "to": "DC Tokyo",
-    "timestamp": 428500
+    "timestamp": 428500,
+    "savings": 0.3
   },
   {
     "from": "DC Beijing",
     "to": "DC Seoul",
-    "timestamp": 430000
+    "timestamp": 430000,
+    "savings": 0.25
   },
   {
     "from": "DC Shanghai",
     "to": "DC Beijing",
-    "timestamp": 431500
+    "timestamp": 431500,
+    "savings": 0.19
   },
   {
     "from": "DC Hong Kong",
     "to": "DC Shanghai",
-    "timestamp": 433000
+    "timestamp": 433000,
+    "savings": 0.34
   },
   {
     "from": "DC Singapore",
     "to": "DC Hong Kong",
-    "timestamp": 434500
+    "timestamp": 434500,
+    "savings": 0.25
   },
   {
     "from": "DC Bangkok",
     "to": "DC Singapore",
-    "timestamp": 436000
+    "timestamp": 436000,
+    "savings": 0.27
   },
   {
     "from": "DC Jakarta",
     "to": "DC Bangkok",
-    "timestamp": 437500
+    "timestamp": 437500,
+    "savings": 0.3
   },
   {
     "from": "DC Manila",
     "to": "DC Jakarta",
-    "timestamp": 439000
+    "timestamp": 439000,
+    "savings": 0.26
   },
   {
     "from": "DC Taipei",
     "to": "DC Manila",
-    "timestamp": 440500
+    "timestamp": 440500,
+    "savings": 0.28
   },
   {
     "from": "DC Osaka",
     "to": "DC Taipei",
-    "timestamp": 442000
+    "timestamp": 442000,
+    "savings": 0.35
   },
   {
     "from": "DC Sydney",
     "to": "DC Tokyo",
-    "timestamp": 443500
+    "timestamp": 443500,
+    "savings": 2.4
   },
   {
     "from": "DC Melbourne",
     "to": "DC Sydney",
-    "timestamp": 445000
+    "timestamp": 445000,
+    "savings": 0.26
   },
   {
     "from": "DC Auckland",
     "to": "DC Melbourne",
-    "timestamp": 446500
+    "timestamp": 446500,
+    "savings": 0.3
   },
   {
     "from": "DC Mumbai",
     "to": "DC Dubai",
-    "timestamp": 448000
+    "timestamp": 448000,
+    "savings": 0.46
   },
   {
     "from": "DC Bangalore",
     "to": "DC Mumbai",
-    "timestamp": 449500
+    "timestamp": 449500,
+    "savings": 0.2
   },
   {
     "from": "DC Delhi",
     "to": "DC Bangalore",
-    "timestamp": 451000
+    "timestamp": 451000,
+    "savings": 0.39
   },
   {
     "from": "DC Karachi",
     "to": "DC Delhi",
-    "timestamp": 452500
+    "timestamp": 452500,
+    "savings": 0.18
   },
   {
     "from": "DC Colombo",
     "to": "DC Mumbai",
-    "timestamp": 454000
+    "timestamp": 454000,
+    "savings": 0.28
   },
   {
     "from": "DC Dhaka",
     "to": "DC Bangalore",
-    "timestamp": 455500
+    "timestamp": 455500,
+    "savings": 0.15
   },
   {
     "from": "DC Kathmandu",
     "to": "DC Delhi",
-    "timestamp": 457000
+    "timestamp": 457000,
+    "savings": 0.22
   },
   {
     "from": "DC Dubai",
     "to": "DC Istanbul",
-    "timestamp": 458500
+    "timestamp": 458500,
+    "savings": 0.13
   },
   {
     "from": "DC Doha",
     "to": "DC Dubai",
-    "timestamp": 460000
+    "timestamp": 460000,
+    "savings": 0.16
   },
   {
     "from": "DC Kuwait City",
     "to": "DC Doha",
-    "timestamp": 461500
+    "timestamp": 461500,
+    "savings": 0.35
   },
   {
     "from": "DC Manama",
     "to": "DC Kuwait City",
-    "timestamp": 463000
+    "timestamp": 463000,
+    "savings": 0.39
   },
   {
     "from": "DC Abu Dhabi",
     "to": "DC Doha",
-    "timestamp": 464500
+    "timestamp": 464500,
+    "savings": 0.3
   },
   {
     "from": "DC Jeddah",
     "to": "DC Dubai",
-    "timestamp": 466000
+    "timestamp": 466000,
+    "savings": 0.22
   },
   {
     "from": "DC Riyadh",
     "to": "DC Jeddah",
-    "timestamp": 467500
+    "timestamp": 467500,
+    "savings": 0.16
   },
   {
     "from": "DC Istanbul",
     "to": "DC Athens",
-    "timestamp": 469000
+    "timestamp": 469000,
+    "savings": 0.42
   },
   {
     "from": "DC Tel Aviv",
     "to": "DC Cairo",
-    "timestamp": 470500
+    "timestamp": 470500,
+    "savings": 0.73
   },
   {
     "from": "DC Cairo",
     "to": "DC Casablanca",
-    "timestamp": 472000
+    "timestamp": 472000,
+    "savings": 0.16
   },
   {
     "from": "DC Casablanca",
     "to": "DC Madrid",
-    "timestamp": 473500
+    "timestamp": 473500,
+    "savings": 0.76
   },
   {
     "from": "DC Lagos",
     "to": "DC Casablanca",
-    "timestamp": 475000
+    "timestamp": 475000,
+    "savings": 0.12
   },
   {
     "from": "DC Nairobi",
     "to": "DC Lagos",
-    "timestamp": 476500
+    "timestamp": 476500,
+    "savings": 0.13
   },
   {
     "from": "DC Johannesburg",
     "to": "DC Nairobi",
-    "timestamp": 478000
+    "timestamp": 478000,
+    "savings": 0.14
   },
   {
     "from": "DC Cape Town",
     "to": "DC Johannesburg",
-    "timestamp": 479500
+    "timestamp": 479500,
+    "savings": 0.21
   },
   {
     "from": "DC São Paulo",
     "to": "DC Buenos Aires",
-    "timestamp": 481000
+    "timestamp": 481000,
+    "savings": 0.2
   },
   {
     "from": "DC Rio de Janeiro",
     "to": "DC São Paulo",
-    "timestamp": 482500
+    "timestamp": 482500,
+    "savings": 0.17
   },
   {
     "from": "DC Buenos Aires",
     "to": "DC Santiago",
-    "timestamp": 484000
+    "timestamp": 484000,
+    "savings": 0.25
   },
   {
     "from": "DC Santiago",
     "to": "DC Lima",
-    "timestamp": 485500
+    "timestamp": 485500,
+    "savings": 0.1
   },
   {
     "from": "DC Lima",
     "to": "DC Bogota",
-    "timestamp": 487000
+    "timestamp": 487000,
+    "savings": 0.24
   },
   {
     "from": "DC Bogota",
     "to": "DC Mexico City",
-    "timestamp": 488500
+    "timestamp": 488500,
+    "savings": 0.97
   },
   {
     "from": "DC Mexico City",
     "to": "DC Dallas",
-    "timestamp": 490000
+    "timestamp": 490000,
+    "savings": 0.34
   },
   {
     "from": "DC New York",
     "to": "DC Chicago",
-    "timestamp": 491500
+    "timestamp": 491500,
+    "savings": 0.33
   },
   {
     "from": "DC Los Angeles",
     "to": "DC San Francisco",
-    "timestamp": 493000
+    "timestamp": 493000,
+    "savings": 0.19
   },
   {
     "from": "DC Chicago",
     "to": "DC Toronto",
-    "timestamp": 494500
+    "timestamp": 494500,
+    "savings": 0.2
   },
   {
     "from": "DC San Francisco",
     "to": "DC Seattle",
-    "timestamp": 496000
+    "timestamp": 496000,
+    "savings": 0.18
   },
   {
     "from": "DC Seattle",
     "to": "DC Vancouver",
-    "timestamp": 497500
+    "timestamp": 497500,
+    "savings": 0.36
   },
   {
     "from": "DC Dallas",
     "to": "DC Atlanta",
-    "timestamp": 499000
+    "timestamp": 499000,
+    "savings": 0.27
   },
   {
     "from": "DC Miami",
     "to": "DC Mexico City",
-    "timestamp": 500500
+    "timestamp": 500500,
+    "savings": 0.26
   },
   {
     "from": "DC Atlanta",
     "to": "DC Montreal",
-    "timestamp": 502000
+    "timestamp": 502000,
+    "savings": 0.11
   },
   {
     "from": "DC Montreal",
     "to": "DC Toronto",
-    "timestamp": 503500
+    "timestamp": 503500,
+    "savings": 0.24
   },
   {
     "from": "DC Vancouver",
     "to": "DC Seattle",
-    "timestamp": 505000
+    "timestamp": 505000,
+    "savings": 0.36
   },
   {
     "from": "DC Toronto",
     "to": "DC New York",
-    "timestamp": 506500
+    "timestamp": 506500,
+    "savings": 0.14
   }
 ]

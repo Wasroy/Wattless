@@ -149,6 +149,74 @@ const WorldMap = memo(({
     
     return positions;
   }, [serveurs, activeTransitions]);
+
+  // Calculer les positions des labels de prix pour éviter les chevauchements
+  const priceLabelPositions = useMemo(() => {
+    const positions = new Map<number, { x: number; y: number }>();
+    
+    // Distance minimale pour considérer deux transitions comme proches (en degrés)
+    const PROXIMITY_THRESHOLD = 5;
+    
+    activeTransitions.forEach((transition, index) => {
+      const fromCoords = getServerCoordinates(transition.from);
+      const toCoords = getServerCoordinates(transition.to);
+      
+      if (!fromCoords || !toCoords) return;
+      
+      const midLon = (fromCoords[0] + toCoords[0]) / 2;
+      const midLat = (fromCoords[1] + toCoords[1]) / 2;
+      
+      let offsetX = 0;
+      let offsetY = -12; // Position par défaut au-dessus
+      
+      // Vérifier les autres transitions proches
+      activeTransitions.forEach((otherTransition, otherIndex) => {
+        if (index === otherIndex) return;
+        
+        const otherFromCoords = getServerCoordinates(otherTransition.from);
+        const otherToCoords = getServerCoordinates(otherTransition.to);
+        
+        if (!otherFromCoords || !otherToCoords) return;
+        
+        const otherMidLon = (otherFromCoords[0] + otherToCoords[0]) / 2;
+        const otherMidLat = (otherFromCoords[1] + otherToCoords[1]) / 2;
+        
+        // Calcul de distance entre les points milieux
+        const latDiff = Math.abs(midLat - otherMidLat);
+        const lonDiff = Math.abs(midLon - otherMidLon);
+        const distance = Math.sqrt(latDiff * latDiff + lonDiff * lonDiff);
+        
+        if (distance < PROXIMITY_THRESHOLD) {
+          // Si les transitions sont proches, décaler les labels
+          // Alterner selon l'index pour éviter les chevauchements
+          if (index < otherIndex) {
+            // Première transition : décaler vers le haut-gauche
+            offsetY = -16;
+            offsetX = -12;
+          } else {
+            // Deuxième transition : décaler vers le bas-droite
+            offsetY = -8;
+            offsetX = 12;
+          }
+          
+          // Si très proches, utiliser un décalage plus important
+          if (distance < PROXIMITY_THRESHOLD / 2) {
+            if (index < otherIndex) {
+              offsetY = -20;
+              offsetX = -18;
+            } else {
+              offsetY = -4;
+              offsetX = 18;
+            }
+          }
+        }
+      });
+      
+      positions.set(transition.timestamp, { x: offsetX, y: offsetY });
+    });
+    
+    return positions;
+  }, [activeTransitions, getServerCoordinates]);
   return (
     <div className={`w-full relative ${className}`} style={{ overflow: "hidden", marginBottom: "-10%" }}>
       <div style={{ clipPath: "inset(0 0 3% 0)" }}>
@@ -199,20 +267,58 @@ const WorldMap = memo(({
 
           if (!fromCoords || !toCoords) return null;
 
+          // Calculer le point milieu pour positionner le prix
+          const midLon = (fromCoords[0] + toCoords[0]) / 2;
+          const midLat = (fromCoords[1] + toCoords[1]) / 2;
+          const savings = transition.savings || 0;
+          
+          // Obtenir la position du label de prix (avec décalage pour éviter chevauchements)
+          const pricePos = priceLabelPositions.get(transition.timestamp) || { x: 0, y: -12 };
+
           return (
-            <Line
-              key={`transition-${i}-${transition.timestamp}`}
-              from={fromCoords}
-              to={toCoords}
-              stroke="#22c55e"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeDasharray="5,5"
-              style={{
-                animation: "dash 1s linear infinite",
-                filter: "drop-shadow(0 0 4px rgba(34, 197, 94, 0.6))",
-              }}
-            />
+            <g key={`transition-${i}-${transition.timestamp}`}>
+              <Line
+                from={fromCoords}
+                to={toCoords}
+                stroke="#22c55e"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeDasharray="5,5"
+                style={{
+                  animation: "dash 1s linear infinite",
+                  filter: "drop-shadow(0 0 4px rgba(34, 197, 94, 0.6))",
+                }}
+              />
+              {/* Label prix au-dessus du trait */}
+              <Marker coordinates={[midLon, midLat]}>
+                <rect
+                  x={pricePos.x - 18}
+                  y={pricePos.y - 6}
+                  width={36}
+                  height={12}
+                  rx={3}
+                  fill="rgba(15, 23, 42, 0.85)"
+                  stroke="#22c55e"
+                  strokeWidth={0.8}
+                  style={{
+                    filter: "drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))",
+                  }}
+                />
+                <text
+                  textAnchor="middle"
+                  x={pricePos.x}
+                  y={pricePos.y + 2}
+                  style={{
+                    fontFamily: "JetBrains Mono, monospace",
+                    fontSize: 7,
+                    fill: "#22c55e",
+                    fontWeight: "600",
+                  }}
+                >
+                  +{savings.toFixed(2)}€
+                </text>
+              </Marker>
+            </g>
           );
         })}
 
