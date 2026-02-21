@@ -67,10 +67,11 @@ On scrape **localement** (une seule region, 3 AZ). C'est plus realiste et plus i
 
 | Source | API / Methode | Ce qu'on recupere | Hardcode ? |
 |--------|--------------|-------------------|------------|
-| **Prix Spot GPU** | AWS EC2 Spot Price History (boto3) OU dataset hardcode | Prix par AZ (eu-west-3a/b/c) pour g4dn, p3, p4d | Hardcode un dataset de prix qui fluctue de facon realiste |
-| **Energie locale** | Electricity Maps API (gratuit) | gCO2/kWh en France en temps reel | API reelle — super impressionnant en demo |
-| **Meteo locale** | OpenWeatherMap (gratuit) | Vent, soleil a Paris → correle avec l'energie verte | API reelle |
-| **Heures creuses** | Hardcode | Profil tarifaire : prix bas entre 1h-5h, pics a 19h | Hardcode courbe realiste |
+| **Prix Spot GPU** | Azure Retail Prices API (zero auth!) + boto3 si creds AWS | Prix par AZ pour GPU instances. Azure = un simple GET sans cle | Azure = API reelle. AWS = hardcode si pas de creds |
+| **Intensite carbone** | Carbon Intensity UK API (zero auth) + RTE eCO2mix | gCO2/kWh temps reel + mix electrique France | APIs reelles, zero inscription |
+| **Estimation CO2 par job** | CodeCarbon (pip install codecarbon) | CO2 estime du calcul en cours (GPU+CPU+RAM x carbone local) | Lib Python, integration directe |
+| **Meteo locale** | Open-Meteo (zero auth, illimite) | Vent, soleil, temperature, forecast | API reelle, zero cle |
+| **Heures creuses** | Hardcode + Carbon Intensity forecast (dispo gratuit) | Profil tarifaire : prix bas entre 1h-5h, pics a 19h | Mix hardcode + forecast reel |
 
 **Fichier `backend/engine/data/az_config.json` :**
 ```json
@@ -382,14 +383,54 @@ Wattless-repo/
 
 ---
 
-## APIS GRATUITES A UTILISER
+## TOUTES LES APIS & SOURCES DE DONNEES
 
-| API | Gratuit ? | Cle ? | Usage |
-|-----|-----------|-------|-------|
-| [Electricity Maps](https://api.electricitymap.org/) | Free tier | Oui (inscription) | gCO2/kWh en France temps reel |
-| [OpenWeatherMap](https://openweathermap.org/api) | Free tier | Oui (inscription) | Meteo Paris (soleil/vent) |
-| [Azure Retail Prices](https://prices.azure.com/api/retail/prices) | 100% public | Non | Prix GPU spot (pour reference) |
-| [AWS Spot Advisor](https://spot.io/aws-spot-advisor/) | Public | Non | Frequence d'interruption par type |
+### PRIX CLOUD (Spot / GPU) — Pour le scoring prix
+
+| API | Gratuit | Auth | Ce qu'on recupere | Priorite |
+|-----|---------|------|-------------------|----------|
+| [Azure Retail Prices](https://prices.azure.com/api/retail/prices) | 100% gratuit | **Aucune** | Prix Spot VM/GPU par region. Simple GET, filtre par SKU. `?$filter=meterName contains 'Spot'` | **P0 — A faire en premier** |
+| [AWS DescribeSpotPriceHistory](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSpotPriceHistory.html) (boto3) | Gratuit | Creds AWS IAM ReadOnly | Prix Spot par AZ (eu-west-3a/b/c), par instance, historique 90 jours | P1 si on a des creds AWS |
+| [CloudPrice.net](https://cloudprice.net/) | Gratuit (scraping) | Non | Compare AWS/GCP/Azure toutes regions, temps reel | P2 — backup scraping |
+| [ec2-spot-price](https://github.com/susumuota/ec2-spot-price) | Open source | Creds AWS | Lib Python wrapper pour prix Spot AWS | P2 — wrapper pratique |
+| [AWS Spot Advisor](https://spot.io/aws-spot-advisor/) | Public | Non | Frequence d'interruption par type d'instance (%) | P1 — hardcode les taux |
+
+### CARBONE / ENERGIE — Pour le scoring vert + Time-Shifting
+
+| API | Gratuit | Auth | Ce qu'on recupere | Priorite |
+|-----|---------|------|-------------------|----------|
+| [Carbon Intensity UK](https://carbonintensity.org.uk/) | 100% gratuit | **Aucune** | Intensite carbone UK temps reel + forecast 48h. Zero auth, zero cle. | **P0 — Le plus simple** |
+| [RTE eCO2mix](https://www.rte-france.com/en/data-publications/eco2mix) | 100% gratuit | Non | Mix electrique France temps reel : % nucleaire, eolien, solaire, gaz | **P0 — France = notre demo** |
+| [Electricity Maps](https://app.electricitymaps.com/docs) | Free tier | Cle API (inscription) | gCO2/kWh par pays, temps reel, update toutes les 15min | P1 — inscription necessaire |
+| [WattTime](https://docs.watttime.org/) | Free tier (index 0-100) | Cle API (inscription) | Emissions marginales par region, update 5min. Free = index percentile | P1 — index gratuit |
+| [CodeCarbon](https://github.com/mlco2/codecarbon) | Open source | **Aucune** | Lib Python : estime CO2 d'un calcul (GPU+CPU+RAM) x intensite carbone locale. S'integre direct dans le simulateur. | **P0 — pip install codecarbon** |
+| [Green Software Foundation Carbon Aware SDK](https://github.com/Green-Software-Foundation/carbon-aware-sdk) | Open source | Non | SDK unifie qui query Electricity Maps + WattTime via une seule API | P2 — si on veut unifier |
+
+### METEO — Pour correler soleil/vent avec energie verte
+
+| API | Gratuit | Auth | Ce qu'on recupere | Priorite |
+|-----|---------|------|-------------------|----------|
+| [Open-Meteo](https://open-meteo.com/) | 100% gratuit | **Aucune** | Meteo + forecast + solaire + vent. Zero auth, zero cle, illimite. | **P0 — Mieux qu'OpenWeather** |
+| [OpenWeatherMap](https://openweathermap.org/api) | Free tier (1000 calls/jour) | Cle API | Meteo par ville : temperature, vent, couverture nuageuse | P1 — backup |
+
+### PUE / EFFICACITE DATACENTER — Pour le scoring charge
+
+| Source | Gratuit | Ce qu'on recupere | Priorite |
+|--------|---------|-------------------|----------|
+| [Google PUE Data](https://datacenters.google/efficiency/) | Public | PUE par datacenter Google (avg 1.09). | P2 — hardcode |
+| [Microsoft PUE Data](https://datacenters.microsoft.com/sustainability/efficiency/) | Public | PUE datacenters Microsoft | P2 — hardcode |
+
+### RECAP : LES 5 APIs A BRANCHER EN PRIORITE (zero auth, gratuit)
+
+```
+1. Azure Retail Prices    → Prix GPU Spot        → GET https://prices.azure.com/api/retail/prices
+2. Open-Meteo             → Meteo (soleil/vent)  → GET https://api.open-meteo.com/v1/forecast
+3. Carbon Intensity UK    → gCO2/kWh temps reel  → GET https://api.carbonintensity.org.uk/intensity
+4. RTE eCO2mix            → Mix electrique France → Scrape/API RTE
+5. CodeCarbon (lib)       → CO2 par job           → pip install codecarbon
+```
+
+Ces 5 ne demandent **aucune inscription, aucune cle API, aucun compte**. Parfait pour le hackathon.
 
 ---
 
