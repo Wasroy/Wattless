@@ -1,0 +1,99 @@
+# 🚀 NERVE : MASTER BLUEPRINT (Tech & Business)
+**Document de référence complet (PRD + Specs Architecture)**
+**Version :** 3.0 — Vision Mondiale
+
+---
+
+## 1. VISION & EXECUTIVE SUMMARY
+**La Vision :** Nerve est un Orchestrateur Cloud Prédictif à l'échelle mondiale. Nous scannons en temps réel les serveurs, la météo, l'énergie et les événements sociaux/environnementaux sur toute la planète pour envoyer chaque calcul là où c'est le moins cher, le plus vert et le plus disponible — à l'instant T.
+**La Promesse Client :** Vos calculs lourds tournent toujours au meilleur endroit du monde, automatiquement. Prix minimal, impact carbone minimal, zéro interruption.
+
+**Le Principe Fondamental : On déplace le calcul, jamais les données.**
+Les données du client restent stockées là où elles sont. Seule l'instruction de calcul (le code, le job) est envoyée vers le serveur optimal. Un job pèse quelques Ko/Mo → les frais de transfert sont négligeables.
+
+**Le Job to be Done (JTBD) :**
+> "Quand ma facture Cloud explose à cause de mes calculs lourds (IA, Data, Rendu), je veux que mon calcul soit automatiquement envoyé sur le meilleur serveur au monde à cet instant — le moins cher, le plus vert, le moins chargé — sans que je gère quoi que ce soit."
+
+---
+
+## 2. RÈGLES FONDAMENTALES
+1. **Arbitrage MONDIAL, pas local :** Nerve compare les serveurs du monde entier (AWS, GCP, Azure — toutes régions). Un calcul peut partir de Francfort au Brésil si c'est moins cher et plus vert là-bas. C'est possible parce qu'on ne déplace que le calcul (quelques Ko/Mo), jamais les données lourdes → les Egress Fees sont négligeables.
+2. **On ne touche jamais au Stateful :** Nerve ignore totalement les bases de données (PostgreSQL, MongoDB). On ne gère que le *Stateless* et les calculs *Asynchrones* (Workers). Les données restent fixes, seule la puissance de calcul voyage.
+3. **Décision multi-facteurs :** Le choix du serveur ne repose pas que sur le prix. Nerve croise : prix Spot, météo locale (solaire/éolien = énergie pas chère), charge des datacenters, et événements sociaux/environnementaux (ex: Super Bowl aux US → serveurs US surchargés → on décale en Europe).
+
+---
+
+## 3. CIBLE CLIENT (ICP - Ideal Customer Profile)
+L'outil est pensé pour les architectures modernes (Kubernetes). Nos premiers clients sont :
+* **Startups IA :** Entraînement de modèles, inférence de LLMs.
+* **AdTech / Data :** Traitement de données massives asynchrones.
+* **Studios 3D / Vidéo :** Jobs de rendu lourds.
+*(Note : On exclut les banques et la santé pour le moment : cycles de vente trop longs, compliance ISO/SOC2 trop lourde pour un MVP).*
+
+---
+
+## 4. ARCHITECTURE TECHNIQUE & STACK
+L'architecture s'intègre nativement dans les clusters Kubernetes des clients. L'objectif est une empreinte ultra-légère et une latence quasi-nulle.
+
+* **Moteur & Orchestration :** `Go (Golang)` - Obligatoire pour interagir proprement et rapidement avec l'API Kubernetes.
+* **Modèle Prédictif (IA) :** `Python + PyTorch` (Modèles légers type LSTM/Transformers pour la prédiction de séries temporelles sur les prix et coupures).
+* **Cache & Décision temps réel :** `Redis` (Stockage des prix Spot AWS/GCP à la milliseconde).
+* **Observabilité :** `Prometheus` (récupération des métriques) + `Grafana` (Dashboard client).
+* **Déploiement :** Package `Helm` (Installation en 1 ligne : `helm install nerve`).
+
+---
+
+## 5. LES 5 MODULES DU PRODUIT (FEATURES)
+
+### Module 1 : Workload Profiler (L'Intercepteur)
+* **Mécanisme :** Utilisation d'un `Mutating Admission Webhook` Kubernetes.
+* **Rôle :** À chaque lancement d'un Pod, Nerve intercepte la requête. Si c'est taggé "Asynchrone/Batch", Nerve injecte dynamiquement des `nodeSelectors` et `tolerations` pour forcer l'exécution sur une machine gérée par Nerve. S'il s'agit d'une API web live (Synchrone) ou d'une DB, Nerve laisse passer sans rien toucher.
+
+### Module 2 : Global Intelligence Engine (Le Radar Mondial)
+* **Mécanisme :** Scraping + APIs en continu sur l'ensemble de la planète.
+* **Sources de données :**
+  * **Prix Cloud :** APIs AWS EC2 Spot, GCP Preemptible, Azure Spot — toutes régions mondiales, en temps réel.
+  * **Météo & Énergie :** APIs météorologiques (OpenWeather, etc.) + APIs énergie (Electricity Maps, RTE) pour savoir où l'énergie renouvelable est abondante (soleil, vent) → serveurs alimentés par du vert = moins cher et plus éco.
+  * **Événements sociaux & environnementaux :** Détection d'événements majeurs (Super Bowl, Black Friday, catastrophes naturelles, etc.) qui surchargent les datacenters d'une zone → signal pour éviter ces régions et décaler le calcul ailleurs.
+* **Output :** Un **score composite par région** en temps réel : `Score = f(prix, énergie verte, charge datacenter, événements)`. Le Scheduler utilise ce score pour choisir la meilleure destination mondiale.
+
+### Module 3 : Spot Sniper & Scheduler (Le Cœur du Réacteur)
+* **Mécanisme :** Un `Custom Kubernetes Scheduler` couplé à un gestionnaire d'événements API Cloud multi-providers (AWS, GCP, Azure).
+* **Rôle :** Place les Pods asynchrones sur les serveurs Spot les moins chers **au niveau mondial**. Le scheduler compare toutes les régions de tous les providers pour trouver le meilleur spot sur la planète à l'instant T.
+* **Le Bouclier (Graceful Termination) :** Si l'IA prédit une coupure ou si un provider envoie un signal d'interruption, Nerve déclenche instantanément un `Cordon` et `Drain` sur le Node concerné, et replace le Pod sur un Node sûr (potentiellement dans une autre région/pays) en < 10 secondes. Zéro downtime.
+
+### Module 4 : Green Time-Shifter (Le Planificateur Écolo)
+* **Mécanisme :** Job Queue locale + intégration APIs mondiales (Electricity Maps, RTE, APIs météo locales).
+* **Rôle :** Permet au client de tagger un job avec `nerve.io/eco-mode: true`. Nerve ne se limite pas à attendre que le réseau local soit vert — il cherche **sur toute la planète** où l'énergie est la plus verte à l'instant T (ex: il fait grand soleil au Brésil avec des panneaux solaires → on envoie le calcul là-bas). Combine données météo en temps réel + mix énergétique par région.
+
+### Module 5 : Dashboard FinOps/GreenOps
+* **Mécanisme :** UI légère requêtant Prometheus.
+* **Rôle :** Afficher la valeur : Économies réalisées ce mois-ci ($), Nombre de coupures évitées, Kg de CO2 économisés.
+
+---
+
+## 6. SPÉCIFICATIONS & CONTRAINTES DE CODE (SPECS MILITAIRES)
+L'équipe tech doit graver ces règles dans le marbre. Un CTO client nous désinstallera immédiatement si on ne les respecte pas :
+
+* **Performances (Zéro Overhead) :** L'agent Nerve doit consommer `< 50 Mo de RAM` et `< 0.1 vCPU`. La latence d'interception du Webhook doit être `< 50ms`.
+* **Sécurité & RBAC :** Accès strictement limité aux permissions `Nodes` et `Pods`. Interdiction absolue de requêter les `Secrets`, `ConfigMaps` ou `PersistentVolumes`.
+* **Fail-Safe (No Single Point of Failure) :** Si l'agent Nerve crash ou perd internet : le cluster DOIT repasser automatiquement sur le Scheduler par défaut de Kubernetes.
+
+---
+
+## 7. GESTION DES RISQUES & EDGE CASES (POUR LES DÉVELOPPEURS)
+L'algorithme doit intégrer ces parades défensives :
+* **Cas A - Pénurie mondiale de GPU en Spot :** Coder un "Fallback Timeout". Si aucun GPU Spot n'est trouvé **sur aucune région du monde** en 5 min, Nerve déploie le Pod sur un GPU On-Demand plein tarif. Le calcul ne doit jamais être bloqué.
+* **Cas B - Boucle infinie d'éviction (Ping-Pong) :** Coder un "Eviction Rate Limiter". Un pod ne peut pas être déplacé plus de 2 fois par heure.
+* **Cas C - Rate Limiting des APIs Cloud :** Coder un "Circuit Breaker" par provider. Si AWS/GCP/Azure bloque nos requêtes, l'agent bascule sur les autres providers et se met en veille 10 minutes pour le provider bloqué.
+* **Cas D - Événement mondial imprévu (catastrophe, panne massive) :** Le Global Intelligence Engine détecte la surcharge/indisponibilité d'une zone et blackliste automatiquement les régions affectées du scoring.
+* **Cas E - Latence inter-régionale :** Pour les jobs sensibles à la latence réseau, Nerve propose un mode `nerve.io/locality: prefer-local` qui priorise les régions proches tout en gardant le fallback mondial.
+
+---
+
+## 8. ROADMAP DU MVP (Ce qu'on code le Mois 1)
+Pour valider le marché rapidement, on ne construit pas tout le 1er mois.
+* **Semaine 1-2 :** Coder l'Agent Go basique (Webhook + Scheduler). Intégration stricte à AWS uniquement (API EC2 Spot).
+* **Semaine 3 :** Coder le système de Graceful Termination (écouter les signaux AWS de coupure de Spot 2 minutes avant, et évacuer les Pods).
+* **Semaine 4 :** Un dashboard ultra-basique pour prouver qu'on a fait économiser X dollars sur la semaine test chez notre premier Design Partner (Startup IA).
+*(Le modèle IA prédictif complexe et le GreenOps viendront en V2).*
