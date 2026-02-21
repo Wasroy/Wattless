@@ -68,6 +68,17 @@ const WorldMap = memo(({
   allServeursColor = false,
   activeTransitions = [],
 }: WorldMapProps) => {
+  // Fonction pour extraire la ville du nom du serveur
+  // Format attendu: "Standard_NC12_Promo - Amsterdam, Netherlands" -> "Amsterdam"
+  const getCityName = (serverName: string): string => {
+    if (serverName.includes(" - ")) {
+      const location = serverName.split(" - ")[1];
+      // Extraire juste la ville (avant la virgule si présente)
+      return location.split(",")[0].trim();
+    }
+    return serverName;
+  };
+
   // Fonction pour vérifier si un serveur est actif
   const isServerActive = useMemo(() => {
     const activeSet = new Set<string>();
@@ -344,7 +355,7 @@ const WorldMap = memo(({
                     filter: isActive ? "drop-shadow(0 0 2px rgba(34, 197, 94, 0.5))" : "none",
                   }}
                 >
-                  {dc.name}
+                  {isActive ? getCityName(dc.name) : dc.name}
                 </text>
               )}
             </Marker>

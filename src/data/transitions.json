@@ -1,2030 +1,602 @@
 [
   {
-    "from": "DC Paris",
-    "to": "DC New York",
-    "timestamp": 1000,
-    "savings": 1.35
+    "from": "Standard_ND96amsr_A100_v4 - San Francisco, California, USA",
+    "to": "Standard_ND96amsr_A100_v4 - Johannesburg, South Africa",
+    "timestamp": 1500,
+    "savings": 2.44
   },
   {
-    "from": "DC London",
-    "to": "DC Tokyo",
-    "timestamp": 2500,
-    "savings": 2.37
+    "from": "Standard_NC24ads_A100_v4 - Nagpur, India",
+    "to": "Standard_NV72ads_A10_v5 - Mumbai, India",
+    "timestamp": 3000,
+    "savings": 0.59
   },
   {
-    "from": "DC Frankfurt",
-    "to": "DC Singapore",
-    "timestamp": 4000,
-    "savings": 2.31
-  },
-  {
-    "from": "DC Amsterdam",
-    "to": "DC Los Angeles",
-    "timestamp": 5500,
-    "savings": 1.81
-  },
-  {
-    "from": "DC New York",
-    "to": "DC São Paulo",
-    "timestamp": 7000,
-    "savings": 1.76
-  },
-  {
-    "from": "DC Tokyo",
-    "to": "DC Sydney",
-    "timestamp": 8500,
-    "savings": 1.14
-  },
-  {
-    "from": "DC Dubai",
-    "to": "DC Mumbai",
-    "timestamp": 10000,
-    "savings": 0.39
-  },
-  {
-    "from": "DC Paris",
-    "to": "DC Frankfurt",
-    "timestamp": 11500,
-    "savings": 0.29
-  },
-  {
-    "from": "DC Singapore",
-    "to": "DC Seoul",
-    "timestamp": 13000,
-    "savings": 0.32
-  },
-  {
-    "from": "DC London",
-    "to": "DC New York",
-    "timestamp": 14500,
-    "savings": 1.3
-  },
-  {
-    "from": "DC Sydney",
-    "to": "DC Tokyo",
-    "timestamp": 16000,
-    "savings": 1.75
-  },
-  {
-    "from": "DC Mumbai",
-    "to": "DC Dubai",
-    "timestamp": 17500,
-    "savings": 0.75
-  },
-  {
-    "from": "DC São Paulo",
-    "to": "DC New York",
-    "timestamp": 19000,
-    "savings": 2.48
-  },
-  {
-    "from": "DC Frankfurt",
-    "to": "DC London",
-    "timestamp": 20500,
-    "savings": 0.27
-  },
-  {
-    "from": "DC Seoul",
-    "to": "DC Singapore",
-    "timestamp": 22000,
-    "savings": 0.28
-  },
-  {
-    "from": "DC Paris",
-    "to": "DC Tokyo",
-    "timestamp": 23500,
-    "savings": 2.43
-  },
-  {
-    "from": "DC Hong Kong",
-    "to": "DC Shanghai",
-    "timestamp": 25000,
-    "savings": 0.17
-  },
-  {
-    "from": "DC Beijing",
-    "to": "DC Seoul",
-    "timestamp": 26500,
-    "savings": 0.32
-  },
-  {
-    "from": "DC Dublin",
-    "to": "DC Madrid",
-    "timestamp": 28000,
-    "savings": 0.37
-  },
-  {
-    "from": "DC Milan",
-    "to": "DC Stockholm",
-    "timestamp": 29500,
-    "savings": 0.3
-  },
-  {
-    "from": "DC Zurich",
-    "to": "DC Vienna",
-    "timestamp": 31000,
-    "savings": 0.1
-  },
-  {
-    "from": "DC Warsaw",
-    "to": "DC Moscow",
-    "timestamp": 32500,
-    "savings": 0.13
-  },
-  {
-    "from": "DC Istanbul",
-    "to": "DC Tel Aviv",
-    "timestamp": 34000,
-    "savings": 0.24
-  },
-  {
-    "from": "DC Riyadh",
-    "to": "DC Dubai",
-    "timestamp": 35500,
-    "savings": 0.37
-  },
-  {
-    "from": "DC Bangalore",
-    "to": "DC Delhi",
-    "timestamp": 37000,
-    "savings": 0.35
-  },
-  {
-    "from": "DC Bangkok",
-    "to": "DC Jakarta",
-    "timestamp": 38500,
-    "savings": 0.16
-  },
-  {
-    "from": "DC Manila",
-    "to": "DC Kuala Lumpur",
-    "timestamp": 40000,
-    "savings": 0.12
-  },
-  {
-    "from": "DC Taipei",
-    "to": "DC Osaka",
-    "timestamp": 41500,
-    "savings": 0.21
-  },
-  {
-    "from": "DC Melbourne",
-    "to": "DC Auckland",
-    "timestamp": 43000,
-    "savings": 0.24
-  },
-  {
-    "from": "DC San Francisco",
-    "to": "DC Seattle",
-    "timestamp": 44500,
-    "savings": 0.35
-  },
-  {
-    "from": "DC Dallas",
-    "to": "DC Miami",
-    "timestamp": 46000,
-    "savings": 0.22
-  },
-  {
-    "from": "DC Atlanta",
-    "to": "DC Montreal",
-    "timestamp": 47500,
-    "savings": 0.18
-  },
-  {
-    "from": "DC Vancouver",
-    "to": "DC Mexico City",
-    "timestamp": 49000,
-    "savings": 0.14
-  },
-  {
-    "from": "DC Bogota",
-    "to": "DC Lima",
-    "timestamp": 50500,
-    "savings": 0.27
-  },
-  {
-    "from": "DC Santiago",
-    "to": "DC Buenos Aires",
-    "timestamp": 52000,
-    "savings": 0.28
-  },
-  {
-    "from": "DC Rio de Janeiro",
-    "to": "DC São Paulo",
-    "timestamp": 53500,
-    "savings": 0.24
-  },
-  {
-    "from": "DC Johannesburg",
-    "to": "DC Cape Town",
-    "timestamp": 55000,
-    "savings": 0.18
-  },
-  {
-    "from": "DC Lagos",
-    "to": "DC Cairo",
-    "timestamp": 56500,
-    "savings": 0.28
-  },
-  {
-    "from": "DC Casablanca",
-    "to": "DC Nairobi",
-    "timestamp": 58000,
-    "savings": 0.28
-  },
-  {
-    "from": "DC Brussels",
-    "to": "DC Copenhagen",
-    "timestamp": 59500,
-    "savings": 0.23
-  },
-  {
-    "from": "DC Helsinki",
-    "to": "DC Oslo",
-    "timestamp": 61000,
-    "savings": 0.31
-  },
-  {
-    "from": "DC Prague",
-    "to": "DC Budapest",
-    "timestamp": 62500,
-    "savings": 0.25
-  },
-  {
-    "from": "DC Bucharest",
-    "to": "DC Athens",
-    "timestamp": 64000,
-    "savings": 0.33
-  },
-  {
-    "from": "DC Lisbon",
-    "to": "DC Barcelona",
-    "timestamp": 65500,
-    "savings": 0.36
-  },
-  {
-    "from": "DC Rome",
-    "to": "DC Berlin",
-    "timestamp": 67000,
-    "savings": 0.37
-  },
-  {
-    "from": "DC Munich",
-    "to": "DC Hamburg",
-    "timestamp": 68500,
-    "savings": 0.33
-  },
-  {
-    "from": "DC Amsterdam 2",
-    "to": "DC Brussels 2",
-    "timestamp": 70000,
-    "savings": 0.39
-  },
-  {
-    "from": "DC Paris 2",
-    "to": "DC London 2",
-    "timestamp": 71500,
-    "savings": 0.35
-  },
-  {
-    "from": "DC Frankfurt 2",
-    "to": "DC New York 2",
-    "timestamp": 73000,
-    "savings": 2.3
-  },
-  {
-    "from": "DC Los Angeles 2",
-    "to": "DC Chicago 2",
-    "timestamp": 74500,
-    "savings": 0.2
-  },
-  {
-    "from": "DC Tokyo 2",
-    "to": "DC Singapore 2",
-    "timestamp": 76000,
-    "savings": 0.37
-  },
-  {
-    "from": "DC Hong Kong 2",
-    "to": "DC Sydney 2",
-    "timestamp": 77500,
-    "savings": 1.01
-  },
-  {
-    "from": "DC São Paulo 2",
-    "to": "DC Mumbai 3",
-    "timestamp": 79000,
-    "savings": 1.09
-  },
-  {
-    "from": "DC Seoul 2",
-    "to": "DC Dubai 2",
-    "timestamp": 80500,
-    "savings": 1.49
-  },
-  {
-    "from": "DC Doha",
-    "to": "DC Kuwait City",
-    "timestamp": 82000,
-    "savings": 0.38
-  },
-  {
-    "from": "DC Manama",
-    "to": "DC Abu Dhabi",
-    "timestamp": 83500,
-    "savings": 0.22
-  },
-  {
-    "from": "DC Jeddah",
-    "to": "DC Karachi",
-    "timestamp": 85000,
-    "savings": 1.19
-  },
-  {
-    "from": "DC Colombo",
-    "to": "DC Dhaka",
-    "timestamp": 86500,
-    "savings": 0.31
-  },
-  {
-    "from": "DC Kathmandu",
-    "to": "DC Bangalore",
-    "timestamp": 88000,
-    "savings": 0.4
-  },
-  {
-    "from": "DC New York",
-    "to": "DC London",
-    "timestamp": 89500,
-    "savings": 2.09
-  },
-  {
-    "from": "DC Tokyo",
-    "to": "DC Paris",
-    "timestamp": 91000,
-    "savings": 1.43
-  },
-  {
-    "from": "DC Singapore",
-    "to": "DC Frankfurt",
-    "timestamp": 92500,
-    "savings": 1.75
-  },
-  {
-    "from": "DC Sydney",
-    "to": "DC Los Angeles",
-    "timestamp": 94000,
-    "savings": 1.66
-  },
-  {
-    "from": "DC Mumbai",
-    "to": "DC Dubai",
-    "timestamp": 95500,
-    "savings": 0.74
-  },
-  {
-    "from": "DC Seoul",
-    "to": "DC Hong Kong",
-    "timestamp": 97000,
-    "savings": 0.12
-  },
-  {
-    "from": "DC Shanghai",
-    "to": "DC Beijing",
-    "timestamp": 98500,
-    "savings": 0.25
-  },
-  {
-    "from": "DC Dublin",
-    "to": "DC Amsterdam",
-    "timestamp": 100000,
-    "savings": 0.28
-  },
-  {
-    "from": "DC Madrid",
-    "to": "DC Milan",
-    "timestamp": 101500,
-    "savings": 0.31
-  },
-  {
-    "from": "DC Stockholm",
-    "to": "DC Zurich",
-    "timestamp": 103000,
-    "savings": 0.15
-  },
-  {
-    "from": "DC Vienna",
-    "to": "DC Warsaw",
-    "timestamp": 104500,
-    "savings": 0.1
-  },
-  {
-    "from": "DC Moscow",
-    "to": "DC Istanbul",
-    "timestamp": 106000,
-    "savings": 0.61
-  },
-  {
-    "from": "DC Tel Aviv",
-    "to": "DC Riyadh",
-    "timestamp": 107500,
-    "savings": 0.31
-  },
-  {
-    "from": "DC Delhi",
-    "to": "DC Bangkok",
-    "timestamp": 109000,
-    "savings": 1.27
-  },
-  {
-    "from": "DC Jakarta",
-    "to": "DC Manila",
-    "timestamp": 110500,
-    "savings": 0.16
-  },
-  {
-    "from": "DC Kuala Lumpur",
-    "to": "DC Taipei",
-    "timestamp": 112000,
-    "savings": 0.34
-  },
-  {
-    "from": "DC Osaka",
-    "to": "DC Melbourne",
-    "timestamp": 113500,
-    "savings": 1.84
-  },
-  {
-    "from": "DC Auckland",
-    "to": "DC San Francisco",
-    "timestamp": 115000,
-    "savings": 2.37
-  },
-  {
-    "from": "DC Seattle",
-    "to": "DC Dallas",
-    "timestamp": 116500,
-    "savings": 0.23
-  },
-  {
-    "from": "DC Miami",
-    "to": "DC Atlanta",
-    "timestamp": 118000,
-    "savings": 0.18
-  },
-  {
-    "from": "DC Montreal",
-    "to": "DC Vancouver",
-    "timestamp": 119500,
-    "savings": 0.15
-  },
-  {
-    "from": "DC Mexico City",
-    "to": "DC Bogota",
-    "timestamp": 121000,
-    "savings": 0.72
-  },
-  {
-    "from": "DC Lima",
-    "to": "DC Santiago",
-    "timestamp": 122500,
-    "savings": 0.14
-  },
-  {
-    "from": "DC Buenos Aires",
-    "to": "DC Rio de Janeiro",
-    "timestamp": 124000,
-    "savings": 0.31
-  },
-  {
-    "from": "DC Cape Town",
-    "to": "DC Johannesburg",
-    "timestamp": 125500,
-    "savings": 0.33
-  },
-  {
-    "from": "DC Cairo",
-    "to": "DC Lagos",
-    "timestamp": 127000,
-    "savings": 0.39
-  },
-  {
-    "from": "DC Nairobi",
-    "to": "DC Casablanca",
-    "timestamp": 128500,
-    "savings": 0.15
-  },
-  {
-    "from": "DC Copenhagen",
-    "to": "DC Brussels",
-    "timestamp": 130000,
-    "savings": 0.11
-  },
-  {
-    "from": "DC Oslo",
-    "to": "DC Helsinki",
-    "timestamp": 131500,
-    "savings": 0.14
-  },
-  {
-    "from": "DC Budapest",
-    "to": "DC Prague",
-    "timestamp": 133000,
-    "savings": 0.22
-  },
-  {
-    "from": "DC Athens",
-    "to": "DC Bucharest",
-    "timestamp": 134500,
-    "savings": 0.14
-  },
-  {
-    "from": "DC Barcelona",
-    "to": "DC Lisbon",
-    "timestamp": 136000,
-    "savings": 0.23
-  },
-  {
-    "from": "DC Berlin",
-    "to": "DC Rome",
-    "timestamp": 137500,
-    "savings": 0.2
-  },
-  {
-    "from": "DC Hamburg",
-    "to": "DC Munich",
-    "timestamp": 139000,
-    "savings": 0.19
-  },
-  {
-    "from": "DC Brussels 2",
-    "to": "DC Amsterdam 2",
-    "timestamp": 140500,
-    "savings": 0.12
-  },
-  {
-    "from": "DC London 2",
-    "to": "DC Paris 2",
-    "timestamp": 142000,
-    "savings": 0.17
-  },
-  {
-    "from": "DC New York 2",
-    "to": "DC Frankfurt 2",
-    "timestamp": 143500,
-    "savings": 1.14
-  },
-  {
-    "from": "DC Chicago 2",
-    "to": "DC Los Angeles 2",
-    "timestamp": 145000,
-    "savings": 0.12
-  },
-  {
-    "from": "DC Singapore 2",
-    "to": "DC Tokyo 2",
-    "timestamp": 146500,
-    "savings": 0.33
-  },
-  {
-    "from": "DC Sydney 2",
-    "to": "DC Hong Kong 2",
-    "timestamp": 148000,
-    "savings": 1.24
-  },
-  {
-    "from": "DC Mumbai 3",
-    "to": "DC São Paulo 2",
-    "timestamp": 149500,
-    "savings": 1.06
-  },
-  {
-    "from": "DC Dubai 2",
-    "to": "DC Seoul 2",
-    "timestamp": 151000,
-    "savings": 1.37
-  },
-  {
-    "from": "DC Kuwait City",
-    "to": "DC Doha",
-    "timestamp": 152500,
-    "savings": 0.36
-  },
-  {
-    "from": "DC Abu Dhabi",
-    "to": "DC Manama",
-    "timestamp": 154000,
-    "savings": 0.33
-  },
-  {
-    "from": "DC Karachi",
-    "to": "DC Jeddah",
-    "timestamp": 155500,
-    "savings": 1.31
-  },
-  {
-    "from": "DC Dhaka",
-    "to": "DC Colombo",
-    "timestamp": 157000,
-    "savings": 0.17
-  },
-  {
-    "from": "DC Bangalore",
-    "to": "DC Kathmandu",
-    "timestamp": 158500,
-    "savings": 0.37
-  },
-  {
-    "from": "DC Toronto",
-    "to": "DC Montreal",
-    "timestamp": 160000,
-    "savings": 0.17
-  },
-  {
-    "from": "DC Chicago",
-    "to": "DC New York",
-    "timestamp": 161500,
-    "savings": 0.39
-  },
-  {
-    "from": "DC Los Angeles",
-    "to": "DC San Francisco",
-    "timestamp": 163000,
-    "savings": 0.18
-  },
-  {
-    "from": "DC Dallas",
-    "to": "DC Atlanta",
-    "timestamp": 164500,
-    "savings": 0.2
-  },
-  {
-    "from": "DC Miami",
-    "to": "DC Mexico City",
-    "timestamp": 166000,
-    "savings": 0.33
-  },
-  {
-    "from": "DC Vancouver",
-    "to": "DC Seattle",
-    "timestamp": 167500,
-    "savings": 0.29
-  },
-  {
-    "from": "DC Beijing",
-    "to": "DC Shanghai",
-    "timestamp": 169000,
-    "savings": 0.22
-  },
-  {
-    "from": "DC Hong Kong",
-    "to": "DC Taipei",
-    "timestamp": 170500,
-    "savings": 0.22
-  },
-  {
-    "from": "DC Tokyo",
-    "to": "DC Osaka",
-    "timestamp": 172000,
-    "savings": 0.34
-  },
-  {
-    "from": "DC Seoul",
-    "to": "DC Beijing",
-    "timestamp": 173500,
-    "savings": 0.11
-  },
-  {
-    "from": "DC Singapore",
-    "to": "DC Kuala Lumpur",
-    "timestamp": 175000,
-    "savings": 0.26
-  },
-  {
-    "from": "DC Bangkok",
-    "to": "DC Jakarta",
-    "timestamp": 176500,
-    "savings": 0.13
-  },
-  {
-    "from": "DC Manila",
-    "to": "DC Hong Kong",
-    "timestamp": 178000,
-    "savings": 0.13
-  },
-  {
-    "from": "DC Sydney",
-    "to": "DC Melbourne",
-    "timestamp": 179500,
-    "savings": 0.32
-  },
-  {
-    "from": "DC Auckland",
-    "to": "DC Sydney",
-    "timestamp": 181000,
-    "savings": 0.15
-  },
-  {
-    "from": "DC Mumbai",
-    "to": "DC Bangalore",
-    "timestamp": 182500,
-    "savings": 0.2
-  },
-  {
-    "from": "DC Delhi",
-    "to": "DC Mumbai",
-    "timestamp": 184000,
-    "savings": 0.15
-  },
-  {
-    "from": "DC Karachi",
-    "to": "DC Dubai",
-    "timestamp": 185500,
-    "savings": 0.56
-  },
-  {
-    "from": "DC Dubai",
-    "to": "DC Doha",
-    "timestamp": 187000,
-    "savings": 0.26
-  },
-  {
-    "from": "DC Riyadh",
-    "to": "DC Jeddah",
-    "timestamp": 188500,
-    "savings": 0.35
-  },
-  {
-    "from": "DC Istanbul",
-    "to": "DC Moscow",
-    "timestamp": 190000,
-    "savings": 0.73
-  },
-  {
-    "from": "DC Tel Aviv",
-    "to": "DC Istanbul",
-    "timestamp": 191500,
-    "savings": 0.35
-  },
-  {
-    "from": "DC Cairo",
-    "to": "DC Casablanca",
-    "timestamp": 193000,
-    "savings": 0.15
-  },
-  {
-    "from": "DC Lagos",
-    "to": "DC Johannesburg",
-    "timestamp": 194500,
-    "savings": 0.21
-  },
-  {
-    "from": "DC Nairobi",
-    "to": "DC Lagos",
-    "timestamp": 196000,
-    "savings": 0.4
-  },
-  {
-    "from": "DC Cape Town",
-    "to": "DC Johannesburg",
-    "timestamp": 197500,
-    "savings": 0.16
-  },
-  {
-    "from": "DC São Paulo",
-    "to": "DC Buenos Aires",
-    "timestamp": 199000,
-    "savings": 0.3
-  },
-  {
-    "from": "DC Rio de Janeiro",
-    "to": "DC São Paulo",
-    "timestamp": 200500,
-    "savings": 0.27
-  },
-  {
-    "from": "DC Bogota",
-    "to": "DC Mexico City",
-    "timestamp": 202000,
-    "savings": 1.35
-  },
-  {
-    "from": "DC Lima",
-    "to": "DC Bogota",
-    "timestamp": 203500,
-    "savings": 0.22
-  },
-  {
-    "from": "DC Santiago",
-    "to": "DC Lima",
-    "timestamp": 205000,
-    "savings": 0.26
-  },
-  {
-    "from": "DC Buenos Aires",
-    "to": "DC Santiago",
-    "timestamp": 206500,
-    "savings": 0.21
-  },
-  {
-    "from": "DC Paris",
-    "to": "DC Amsterdam",
-    "timestamp": 208000,
-    "savings": 0.14
-  },
-  {
-    "from": "DC London",
-    "to": "DC Dublin",
-    "timestamp": 209500,
-    "savings": 0.35
-  },
-  {
-    "from": "DC Frankfurt",
-    "to": "DC Zurich",
-    "timestamp": 211000,
-    "savings": 0.13
-  },
-  {
-    "from": "DC Amsterdam",
-    "to": "DC Brussels",
-    "timestamp": 212500,
-    "savings": 0.21
-  },
-  {
-    "from": "DC Madrid",
-    "to": "DC Barcelona",
-    "timestamp": 214000,
-    "savings": 0.31
-  },
-  {
-    "from": "DC Milan",
-    "to": "DC Rome",
-    "timestamp": 215500,
-    "savings": 0.19
-  },
-  {
-    "from": "DC Stockholm",
-    "to": "DC Copenhagen",
-    "timestamp": 217000,
-    "savings": 0.15
-  },
-  {
-    "from": "DC Vienna",
-    "to": "DC Budapest",
-    "timestamp": 218500,
-    "savings": 0.26
-  },
-  {
-    "from": "DC Warsaw",
-    "to": "DC Prague",
-    "timestamp": 220000,
-    "savings": 0.15
-  },
-  {
-    "from": "DC Berlin",
-    "to": "DC Munich",
-    "timestamp": 221500,
-    "savings": 0.27
-  },
-  {
-    "from": "DC Hamburg",
-    "to": "DC Berlin",
-    "timestamp": 223000,
-    "savings": 0.19
-  },
-  {
-    "from": "DC Helsinki",
-    "to": "DC Stockholm",
-    "timestamp": 224500,
-    "savings": 0.34
-  },
-  {
-    "from": "DC Oslo",
-    "to": "DC Copenhagen",
-    "timestamp": 226000,
-    "savings": 0.33
-  },
-  {
-    "from": "DC Bucharest",
-    "to": "DC Athens",
-    "timestamp": 227500,
-    "savings": 0.32
-  },
-  {
-    "from": "DC Lisbon",
-    "to": "DC Madrid",
-    "timestamp": 229000,
-    "savings": 0.28
-  },
-  {
-    "from": "DC Barcelona",
-    "to": "DC Milan",
-    "timestamp": 230500,
-    "savings": 0.3
-  },
-  {
-    "from": "DC Rome",
-    "to": "DC Vienna",
-    "timestamp": 232000,
-    "savings": 0.3
-  },
-  {
-    "from": "DC New York",
-    "to": "DC Chicago",
-    "timestamp": 233500,
-    "savings": 0.14
-  },
-  {
-    "from": "DC Los Angeles",
-    "to": "DC San Francisco",
-    "timestamp": 235000,
-    "savings": 0.25
-  },
-  {
-    "from": "DC Seattle",
-    "to": "DC Vancouver",
-    "timestamp": 236500,
-    "savings": 0.31
-  },
-  {
-    "from": "DC Dallas",
-    "to": "DC Miami",
-    "timestamp": 238000,
-    "savings": 0.33
-  },
-  {
-    "from": "DC Atlanta",
-    "to": "DC Toronto",
-    "timestamp": 239500,
-    "savings": 0.14
-  },
-  {
-    "from": "DC Montreal",
-    "to": "DC New York",
-    "timestamp": 241000,
-    "savings": 0.12
-  },
-  {
-    "from": "DC Vancouver",
-    "to": "DC Seattle",
-    "timestamp": 242500,
-    "savings": 0.31
-  },
-  {
-    "from": "DC Mexico City",
-    "to": "DC Dallas",
-    "timestamp": 244000,
-    "savings": 0.25
-  },
-  {
-    "from": "DC Tokyo",
-    "to": "DC Seoul",
-    "timestamp": 245500,
-    "savings": 0.13
-  },
-  {
-    "from": "DC Seoul",
-    "to": "DC Beijing",
-    "timestamp": 247000,
-    "savings": 0.33
-  },
-  {
-    "from": "DC Shanghai",
-    "to": "DC Hong Kong",
-    "timestamp": 248500,
-    "savings": 0.1
-  },
-  {
-    "from": "DC Hong Kong",
-    "to": "DC Singapore",
-    "timestamp": 250000,
-    "savings": 0.21
-  },
-  {
-    "from": "DC Singapore",
-    "to": "DC Bangkok",
-    "timestamp": 251500,
-    "savings": 0.15
-  },
-  {
-    "from": "DC Bangkok",
-    "to": "DC Jakarta",
-    "timestamp": 253000,
-    "savings": 0.12
-  },
-  {
-    "from": "DC Jakarta",
-    "to": "DC Manila",
-    "timestamp": 254500,
-    "savings": 0.31
-  },
-  {
-    "from": "DC Manila",
-    "to": "DC Taipei",
-    "timestamp": 256000,
-    "savings": 0.35
-  },
-  {
-    "from": "DC Taipei",
-    "to": "DC Osaka",
-    "timestamp": 257500,
-    "savings": 0.34
-  },
-  {
-    "from": "DC Osaka",
-    "to": "DC Tokyo",
-    "timestamp": 259000,
-    "savings": 0.39
-  },
-  {
-    "from": "DC Sydney",
-    "to": "DC Melbourne",
-    "timestamp": 260500,
-    "savings": 0.3
-  },
-  {
-    "from": "DC Melbourne",
-    "to": "DC Auckland",
-    "timestamp": 262000,
-    "savings": 0.26
-  },
-  {
-    "from": "DC Mumbai",
-    "to": "DC Delhi",
-    "timestamp": 263500,
-    "savings": 0.33
-  },
-  {
-    "from": "DC Delhi",
-    "to": "DC Bangalore",
-    "timestamp": 265000,
-    "savings": 0.14
-  },
-  {
-    "from": "DC Bangalore",
-    "to": "DC Mumbai 2",
-    "timestamp": 266500,
-    "savings": 0.18
-  },
-  {
-    "from": "DC Karachi",
-    "to": "DC Mumbai",
-    "timestamp": 268000,
-    "savings": 0.15
-  },
-  {
-    "from": "DC Colombo",
-    "to": "DC Bangalore",
-    "timestamp": 269500,
-    "savings": 0.25
-  },
-  {
-    "from": "DC Dhaka",
-    "to": "DC Delhi",
-    "timestamp": 271000,
-    "savings": 0.36
-  },
-  {
-    "from": "DC Kathmandu",
-    "to": "DC Delhi",
-    "timestamp": 272500,
-    "savings": 0.19
-  },
-  {
-    "from": "DC Dubai",
-    "to": "DC Abu Dhabi",
-    "timestamp": 274000,
-    "savings": 0.3
-  },
-  {
-    "from": "DC Doha",
-    "to": "DC Manama",
-    "timestamp": 275500,
-    "savings": 0.21
-  },
-  {
-    "from": "DC Kuwait City",
-    "to": "DC Riyadh",
-    "timestamp": 277000,
-    "savings": 0.32
-  },
-  {
-    "from": "DC Jeddah",
-    "to": "DC Dubai",
-    "timestamp": 278500,
-    "savings": 0.29
-  },
-  {
-    "from": "DC Istanbul",
-    "to": "DC Athens",
-    "timestamp": 280000,
-    "savings": 0.79
-  },
-  {
-    "from": "DC Tel Aviv",
-    "to": "DC Cairo",
-    "timestamp": 281500,
-    "savings": 0.64
-  },
-  {
-    "from": "DC Cairo",
-    "to": "DC Casablanca",
-    "timestamp": 283000,
-    "savings": 0.25
-  },
-  {
-    "from": "DC Casablanca",
-    "to": "DC Madrid",
-    "timestamp": 284500,
-    "savings": 0.75
-  },
-  {
-    "from": "DC Lagos",
-    "to": "DC Casablanca",
-    "timestamp": 286000,
-    "savings": 0.36
-  },
-  {
-    "from": "DC Nairobi",
-    "to": "DC Lagos",
-    "timestamp": 287500,
-    "savings": 0.11
-  },
-  {
-    "from": "DC Johannesburg",
-    "to": "DC Nairobi",
-    "timestamp": 289000,
-    "savings": 0.39
-  },
-  {
-    "from": "DC Cape Town",
-    "to": "DC Johannesburg",
-    "timestamp": 290500,
-    "savings": 0.14
-  },
-  {
-    "from": "DC São Paulo",
-    "to": "DC Rio de Janeiro",
-    "timestamp": 292000,
-    "savings": 0.27
-  },
-  {
-    "from": "DC Buenos Aires",
-    "to": "DC São Paulo",
-    "timestamp": 293500,
-    "savings": 0.35
-  },
-  {
-    "from": "DC Santiago",
-    "to": "DC Buenos Aires",
-    "timestamp": 295000,
-    "savings": 0.4
-  },
-  {
-    "from": "DC Lima",
-    "to": "DC Bogota",
-    "timestamp": 296500,
-    "savings": 0.11
-  },
-  {
-    "from": "DC Bogota",
-    "to": "DC Mexico City",
-    "timestamp": 298000,
-    "savings": 1.41
-  },
-  {
-    "from": "DC Mexico City",
-    "to": "DC Dallas",
-    "timestamp": 299500,
-    "savings": 0.29
-  },
-  {
-    "from": "DC New York",
-    "to": "DC Toronto",
-    "timestamp": 301000,
-    "savings": 0.27
-  },
-  {
-    "from": "DC Chicago",
-    "to": "DC Toronto",
-    "timestamp": 302500,
-    "savings": 0.12
-  },
-  {
-    "from": "DC Los Angeles",
-    "to": "DC Seattle",
-    "timestamp": 304000,
-    "savings": 0.18
-  },
-  {
-    "from": "DC San Francisco",
-    "to": "DC Vancouver",
-    "timestamp": 305500,
-    "savings": 0.4
-  },
-  {
-    "from": "DC Seattle",
-    "to": "DC Vancouver",
-    "timestamp": 307000,
-    "savings": 0.13
-  },
-  {
-    "from": "DC Dallas",
-    "to": "DC Atlanta",
-    "timestamp": 308500,
-    "savings": 0.22
-  },
-  {
-    "from": "DC Miami",
-    "to": "DC Bogota",
-    "timestamp": 310000,
-    "savings": 0.9
-  },
-  {
-    "from": "DC Paris",
-    "to": "DC Brussels",
-    "timestamp": 311500,
-    "savings": 0.34
-  },
-  {
-    "from": "DC London",
-    "to": "DC Amsterdam",
-    "timestamp": 313000,
-    "savings": 0.23
-  },
-  {
-    "from": "DC Frankfurt",
-    "to": "DC Zurich",
-    "timestamp": 314500,
-    "savings": 0.12
-  },
-  {
-    "from": "DC Amsterdam",
-    "to": "DC Copenhagen",
-    "timestamp": 316000,
-    "savings": 0.18
-  },
-  {
-    "from": "DC Madrid",
-    "to": "DC Lisbon",
-    "timestamp": 317500,
-    "savings": 0.1
-  },
-  {
-    "from": "DC Milan",
-    "to": "DC Rome",
-    "timestamp": 319000,
-    "savings": 0.24
-  },
-  {
-    "from": "DC Stockholm",
-    "to": "DC Helsinki",
-    "timestamp": 320500,
-    "savings": 0.12
-  },
-  {
-    "from": "DC Vienna",
-    "to": "DC Budapest",
-    "timestamp": 322000,
-    "savings": 0.17
-  },
-  {
-    "from": "DC Warsaw",
-    "to": "DC Berlin",
-    "timestamp": 323500,
-    "savings": 0.13
-  },
-  {
-    "from": "DC Moscow",
-    "to": "DC Istanbul",
-    "timestamp": 325000,
-    "savings": 0.6
-  },
-  {
-    "from": "DC Istanbul",
-    "to": "DC Tel Aviv",
-    "timestamp": 326500,
-    "savings": 0.32
-  },
-  {
-    "from": "DC Tokyo",
-    "to": "DC Seoul",
-    "timestamp": 328000,
-    "savings": 0.37
-  },
-  {
-    "from": "DC Seoul",
-    "to": "DC Beijing",
-    "timestamp": 329500,
-    "savings": 0.27
-  },
-  {
-    "from": "DC Beijing",
-    "to": "DC Shanghai",
-    "timestamp": 331000,
-    "savings": 0.11
-  },
-  {
-    "from": "DC Shanghai",
-    "to": "DC Hong Kong",
-    "timestamp": 332500,
-    "savings": 0.25
-  },
-  {
-    "from": "DC Hong Kong",
-    "to": "DC Singapore",
-    "timestamp": 334000,
-    "savings": 0.15
-  },
-  {
-    "from": "DC Singapore",
-    "to": "DC Kuala Lumpur",
-    "timestamp": 335500,
-    "savings": 0.32
-  },
-  {
-    "from": "DC Kuala Lumpur",
-    "to": "DC Bangkok",
-    "timestamp": 337000,
-    "savings": 0.14
-  },
-  {
-    "from": "DC Bangkok",
-    "to": "DC Jakarta",
-    "timestamp": 338500,
-    "savings": 0.35
-  },
-  {
-    "from": "DC Jakarta",
-    "to": "DC Singapore",
-    "timestamp": 340000,
-    "savings": 0.15
-  },
-  {
-    "from": "DC Manila",
-    "to": "DC Jakarta",
-    "timestamp": 341500,
-    "savings": 0.11
-  },
-  {
-    "from": "DC Taipei",
-    "to": "DC Manila",
-    "timestamp": 343000,
-    "savings": 0.2
-  },
-  {
-    "from": "DC Osaka",
-    "to": "DC Tokyo",
-    "timestamp": 344500,
-    "savings": 0.4
-  },
-  {
-    "from": "DC Sydney",
-    "to": "DC Melbourne",
-    "timestamp": 346000,
-    "savings": 0.14
-  },
-  {
-    "from": "DC Melbourne",
-    "to": "DC Sydney",
-    "timestamp": 347500,
-    "savings": 0.29
-  },
-  {
-    "from": "DC Auckland",
-    "to": "DC Sydney",
-    "timestamp": 349000,
-    "savings": 0.29
-  },
-  {
-    "from": "DC Mumbai",
-    "to": "DC Mumbai 2",
-    "timestamp": 350500,
-    "savings": 0.33
-  },
-  {
-    "from": "DC Bangalore",
-    "to": "DC Mumbai",
-    "timestamp": 352000,
-    "savings": 0.26
-  },
-  {
-    "from": "DC Delhi",
-    "to": "DC Mumbai",
-    "timestamp": 353500,
-    "savings": 0.25
-  },
-  {
-    "from": "DC Karachi",
-    "to": "DC Mumbai",
-    "timestamp": 355000,
-    "savings": 0.35
-  },
-  {
-    "from": "DC Colombo",
-    "to": "DC Bangalore",
-    "timestamp": 356500,
-    "savings": 0.26
-  },
-  {
-    "from": "DC Dhaka",
-    "to": "DC Delhi",
-    "timestamp": 358000,
-    "savings": 0.15
-  },
-  {
-    "from": "DC Kathmandu",
-    "to": "DC Delhi",
-    "timestamp": 359500,
-    "savings": 0.17
-  },
-  {
-    "from": "DC Dubai",
-    "to": "DC Dubai 2",
-    "timestamp": 361000,
-    "savings": 0.39
-  },
-  {
-    "from": "DC Doha",
-    "to": "DC Dubai",
-    "timestamp": 362500,
-    "savings": 0.17
-  },
-  {
-    "from": "DC Kuwait City",
-    "to": "DC Dubai",
-    "timestamp": 364000,
-    "savings": 0.19
-  },
-  {
-    "from": "DC Manama",
-    "to": "DC Doha",
-    "timestamp": 365500,
-    "savings": 0.33
-  },
-  {
-    "from": "DC Abu Dhabi",
-    "to": "DC Dubai",
-    "timestamp": 367000,
-    "savings": 0.24
-  },
-  {
-    "from": "DC Jeddah",
-    "to": "DC Riyadh",
-    "timestamp": 368500,
-    "savings": 0.15
-  },
-  {
-    "from": "DC Istanbul",
-    "to": "DC Bucharest",
-    "timestamp": 370000,
-    "savings": 0.6
-  },
-  {
-    "from": "DC Tel Aviv",
-    "to": "DC Istanbul",
-    "timestamp": 371500,
-    "savings": 0.35
-  },
-  {
-    "from": "DC Cairo",
-    "to": "DC Istanbul",
-    "timestamp": 373000,
-    "savings": 0.49
-  },
-  {
-    "from": "DC Casablanca",
-    "to": "DC Madrid",
-    "timestamp": 374500,
+    "from": "Standard_NV24s_v2 - San Antonio, Texas, USA",
+    "to": "Standard_NC24r_Promo - Chicago, Illinois, USA",
+    "timestamp": 4500,
     "savings": 0.47
   },
   {
-    "from": "DC Lagos",
-    "to": "DC Casablanca",
-    "timestamp": 376000,
+    "from": "Standard_NV12s_v3 - Virginia, USA",
+    "to": "Standard_NC96ads_A100_v4 - Pune, India",
+    "timestamp": 6000,
+    "savings": 1.2
+  },
+  {
+    "from": "Standard_NC24rs_v3 - Mumbai, India",
+    "to": "Standard_ND128isr_NDR_GB200_v6 - Busan, South Korea",
+    "timestamp": 7500,
+    "savings": 1.31
+  },
+  {
+    "from": "Standard_NV12s_v3 - Paris, France",
+    "to": "Standard_NC40ads_H100_v5 - London, United Kingdom",
+    "timestamp": 9000,
+    "savings": 0.6
+  },
+  {
+    "from": "Standard_ND96is_H100_v5 - Washington State, USA",
+    "to": "Standard_NV4as_v4 - Milan, Italy",
+    "timestamp": 10500,
+    "savings": 2.45
+  },
+  {
+    "from": "Standard_NC64as_T4_v3 - Sydney, Australia",
+    "to": "Standard_NC6s_v3 - Doha, Qatar",
+    "timestamp": 12000,
+    "savings": 1.27
+  },
+  {
+    "from": "Standard_NC24ads_A100_v4 - Nagpur, India",
+    "to": "Standard_NV18ads_A10_v5 - Dublin, Ireland",
+    "timestamp": 13500,
+    "savings": 2.06
+  },
+  {
+    "from": "Standard_NV72ads_A10_v5 - Zurich, Switzerland",
+    "to": "Standard_NV12s_v3 - Virginia, USA",
+    "timestamp": 15000,
+    "savings": 1.31
+  },
+  {
+    "from": "Standard_NV32as_v4 - Toronto, Canada",
+    "to": "Standard_NC6_Promo - Virginia, USA",
+    "timestamp": 16500,
+    "savings": 0.4
+  },
+  {
+    "from": "Standard_NV72ads_A10_v5 - San Antonio, Texas, USA",
+    "to": "Standard_NV16as_v4 - Frankfurt, Germany",
+    "timestamp": 18000,
+    "savings": 1.4
+  },
+  {
+    "from": "Standard_NC24rs_v3 - Mumbai, India",
+    "to": "Standard_NC128lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
+    "timestamp": 19500,
+    "savings": 1.12
+  },
+  {
+    "from": "Standard_NV32as_v4 - Warsaw, Poland",
+    "to": "Standard_NP10s - Tokyo, Japan",
+    "timestamp": 21000,
+    "savings": 1.63
+  },
+  {
+    "from": "Standard_NV4as_v4 - Milan, Italy",
+    "to": "Standard_NV8as_v4 - Tokyo, Japan",
+    "timestamp": 22500,
+    "savings": 2.37
+  },
+  {
+    "from": "Standard_NC24_Promo - Virginia, USA (Gov)",
+    "to": "Standard_NC32lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
+    "timestamp": 24000,
+    "savings": 0.78
+  },
+  {
+    "from": "Standard_NC40ads_H100_v5 - Frankfurt, Germany",
+    "to": "Standard_NV18ads_A10_v5 - Washington State, USA",
+    "timestamp": 25500,
+    "savings": 1.75
+  },
+  {
+    "from": "Standard_NC24ads_A100_v4 - Milan, Italy",
+    "to": "Standard_ND96is_noIB_H100_v5 - Virginia, USA",
+    "timestamp": 27000,
+    "savings": 1.65
+  },
+  {
+    "from": "Standard_NV8ads_V710_v5 - Chicago, Illinois, USA",
+    "to": "Standard_ND96is_MI300X_v5 - Phoenix, Arizona, USA",
+    "timestamp": 28500,
+    "savings": 1.15
+  },
+  {
+    "from": "Standard_ND96is_H100_v5 - London, United Kingdom",
+    "to": "Standard_NV6ads_A10_v5 - Stockholm, Sweden",
+    "timestamp": 30000,
+    "savings": 0.49
+  },
+  {
+    "from": "Standard_NC128lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
+    "to": "Standard_NV72ads_A10_v5 - Virginia, USA",
+    "timestamp": 31500,
+    "savings": 1.17
+  },
+  {
+    "from": "Standard_ND96isrf_H100_v5 - Madrid, Spain",
+    "to": "Standard_NV8as_v4 - Toronto, Canada",
+    "timestamp": 33000,
+    "savings": 1.58
+  },
+  {
+    "from": "Standard_NV36ads_A10_v5 - Paris, France",
+    "to": "Standard_NP10s - Tokyo, Japan",
+    "timestamp": 34500,
+    "savings": 2.27
+  },
+  {
+    "from": "Standard_NC80adis_H100_v5 - London, United Kingdom",
+    "to": "Standard_ND96ams_A100_v4 - Zurich, Switzerland",
+    "timestamp": 36000,
+    "savings": 0.54
+  },
+  {
+    "from": "Standard_NC24s_v3 - Phoenix, Arizona, USA",
+    "to": "Standard_NG16ads_V620_v1 - Phoenix, Arizona, USA",
+    "timestamp": 37500,
     "savings": 0.33
   },
   {
-    "from": "DC Nairobi",
-    "to": "DC Lagos",
-    "timestamp": 377500,
-    "savings": 0.32
+    "from": "Standard_NC24s_v3 - San Francisco, California, USA",
+    "to": "Standard_NC16lds_xl_RTXPRO6000BSE_v6 - Des Moines, Iowa, USA",
+    "timestamp": 39000,
+    "savings": 0.72
   },
   {
-    "from": "DC Johannesburg",
-    "to": "DC Nairobi",
-    "timestamp": 379000,
-    "savings": 0.29
+    "from": "Standard_NC24rs_v3 - Virginia, USA",
+    "to": "Standard_ND128isr_NDR_GB200_v6 - Phoenix, Arizona, USA",
+    "timestamp": 40500,
+    "savings": 1.23
   },
   {
-    "from": "DC Cape Town",
-    "to": "DC Johannesburg",
-    "timestamp": 380500,
-    "savings": 0.27
+    "from": "Standard_NV48s_v3 - Virginia, USA (Gov)",
+    "to": "Standard_NC6_Promo - Virginia, USA",
+    "timestamp": 42000,
+    "savings": 0.4
   },
   {
-    "from": "DC São Paulo",
-    "to": "DC Rio de Janeiro",
-    "timestamp": 382000,
-    "savings": 0.18
+    "from": "Standard_NG8ads_V620_v1 - Des Moines, Iowa, USA",
+    "to": "Standard_NV12s_v2 - San Antonio, Texas, USA",
+    "timestamp": 43500,
+    "savings": 0.52
   },
   {
-    "from": "DC Rio de Janeiro",
-    "to": "DC São Paulo",
-    "timestamp": 383500,
-    "savings": 0.16
+    "from": "Standard_NC16lds_xl_RTXPRO6000BSE_v6 - Des Moines, Iowa, USA",
+    "to": "Standard_NV6ads_A10_v5 - Frankfurt, Germany",
+    "timestamp": 45000,
+    "savings": 1.9
   },
   {
-    "from": "DC Buenos Aires",
-    "to": "DC São Paulo",
-    "timestamp": 385000,
-    "savings": 0.19
+    "from": "Standard_NV32as_v4 - Toronto, Canada",
+    "to": "Standard_NC24rs_v3 - Mumbai, India",
+    "timestamp": 46500,
+    "savings": 1.63
   },
   {
-    "from": "DC Santiago",
-    "to": "DC Buenos Aires",
-    "timestamp": 386500,
-    "savings": 0.12
+    "from": "Standard_NV16as_v4 - Frankfurt, Germany",
+    "to": "Standard_NV8as_v4 - Toronto, Canada",
+    "timestamp": 48000,
+    "savings": 1.92
   },
   {
-    "from": "DC Lima",
-    "to": "DC Santiago",
-    "timestamp": 388000,
-    "savings": 0.34
+    "from": "Standard_ND96ams_A100_v4 - Paris, France",
+    "to": "Standard_NC64ds_xl_RTXPRO6000BSE_v6 - Washington State, USA",
+    "timestamp": 49500,
+    "savings": 1.39
   },
   {
-    "from": "DC Bogota",
-    "to": "DC Lima",
-    "timestamp": 389500,
-    "savings": 0.23
+    "from": "Standard_NC24s_v3 - Tokyo, Japan",
+    "to": "Standard_NC6s_v3 - Doha, Qatar",
+    "timestamp": 51000,
+    "savings": 1.72
   },
   {
-    "from": "DC Mexico City",
-    "to": "DC Bogota",
-    "timestamp": 391000,
-    "savings": 1
+    "from": "Standard_NV18ads_A10_v5 - Virginia, USA (Gov)",
+    "to": "Standard_ND96is_H100_v5 - Virginia, USA",
+    "timestamp": 52500,
+    "savings": 0.45
   },
   {
-    "from": "DC New York",
-    "to": "DC Montreal",
-    "timestamp": 392500,
-    "savings": 0.26
+    "from": "Standard_NC12s_v3 - Washington State, USA",
+    "to": "Standard_NV36ads_A10_v5 - Tokyo, Japan",
+    "timestamp": 54000,
+    "savings": 2.37
   },
   {
-    "from": "DC Los Angeles",
-    "to": "DC San Francisco",
-    "timestamp": 394000,
-    "savings": 0.3
-  },
-  {
-    "from": "DC Chicago",
-    "to": "DC New York",
-    "timestamp": 395500,
-    "savings": 0.33
-  },
-  {
-    "from": "DC San Francisco",
-    "to": "DC Los Angeles",
-    "timestamp": 397000,
-    "savings": 0.3
-  },
-  {
-    "from": "DC Seattle",
-    "to": "DC Vancouver",
-    "timestamp": 398500,
-    "savings": 0.16
-  },
-  {
-    "from": "DC Dallas",
-    "to": "DC Miami",
-    "timestamp": 400000,
-    "savings": 0.1
-  },
-  {
-    "from": "DC Miami",
-    "to": "DC Atlanta",
-    "timestamp": 401500,
-    "savings": 0.24
-  },
-  {
-    "from": "DC Atlanta",
-    "to": "DC Toronto",
-    "timestamp": 403000,
-    "savings": 0.37
-  },
-  {
-    "from": "DC Montreal",
-    "to": "DC New York",
-    "timestamp": 404500,
-    "savings": 0.34
-  },
-  {
-    "from": "DC Vancouver",
-    "to": "DC Seattle",
-    "timestamp": 406000,
-    "savings": 0.24
-  },
-  {
-    "from": "DC Toronto",
-    "to": "DC Montreal",
-    "timestamp": 407500,
-    "savings": 0.33
-  },
-  {
-    "from": "DC Paris",
-    "to": "DC London",
-    "timestamp": 409000,
+    "from": "Standard_NV8as_v4 - London, United Kingdom",
+    "to": "Standard_NV48s_v3 - Dublin, Ireland",
+    "timestamp": 55500,
     "savings": 0.38
   },
   {
-    "from": "DC London",
-    "to": "DC Amsterdam",
-    "timestamp": 410500,
-    "savings": 0.14
+    "from": "Standard_NV36ads_A10_v5 - Chicago, Illinois, USA",
+    "to": "Standard_NV32as_v4 - Amsterdam, Netherlands",
+    "timestamp": 57000,
+    "savings": 1.55
   },
   {
-    "from": "DC Frankfurt",
-    "to": "DC Munich",
-    "timestamp": 412000,
-    "savings": 0.13
+    "from": "Standard_NG16ads_V620_v1 - Phoenix, Arizona, USA",
+    "to": "Standard_NV18ads_A10_v5 - Zurich, Switzerland",
+    "timestamp": 58500,
+    "savings": 1.32
   },
   {
-    "from": "DC Amsterdam",
-    "to": "DC Brussels",
-    "timestamp": 413500,
-    "savings": 0.39
+    "from": "Standard_NC80adis_H100_v5 - Chicago, Illinois, USA",
+    "to": "Standard_NC16lds_xl_RTXPRO6000BSE_v6 - Dublin, Ireland",
+    "timestamp": 60000,
+    "savings": 1.98
   },
   {
-    "from": "DC Madrid",
-    "to": "DC Barcelona",
-    "timestamp": 415000,
-    "savings": 0.18
+    "from": "Standard_NV8as_v4 - Warsaw, Poland",
+    "to": "Standard_NC32lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
+    "timestamp": 61500,
+    "savings": 1.65
   },
   {
-    "from": "DC Milan",
-    "to": "DC Rome",
-    "timestamp": 416500,
-    "savings": 0.3
+    "from": "Standard_NV18ads_A10_v5 - Washington State, USA",
+    "to": "Standard_NV6ads_A10_v5 - Madrid, Spain",
+    "timestamp": 63000,
+    "savings": 1.78
   },
   {
-    "from": "DC Stockholm",
-    "to": "DC Copenhagen",
-    "timestamp": 418000,
-    "savings": 0.35
+    "from": "Standard_NV18ads_A10_v5 - Chicago, Illinois, USA",
+    "to": "Standard_NV24s_v3 - Singapore",
+    "timestamp": 64500,
+    "savings": 1.22
   },
   {
-    "from": "DC Vienna",
-    "to": "DC Budapest",
-    "timestamp": 419500,
-    "savings": 0.26
+    "from": "Standard_NV28adms_V710_v5 - San Francisco, California, USA",
+    "to": "Standard_NC40ads_H100_v5 - Madrid, Spain",
+    "timestamp": 66000,
+    "savings": 2.42
   },
   {
-    "from": "DC Warsaw",
-    "to": "DC Prague",
-    "timestamp": 421000,
-    "savings": 0.25
+    "from": "Standard_NC24r_Promo - Sydney, Australia",
+    "to": "Standard_NC40ads_H100_v5 - Dublin, Ireland",
+    "timestamp": 67500,
+    "savings": 2.47
   },
   {
-    "from": "DC Berlin",
-    "to": "DC Hamburg",
-    "timestamp": 422500,
-    "savings": 0.34
+    "from": "Standard_NV6ads_A10_v5 - Madrid, Spain",
+    "to": "Standard_ND96ams_A100_v4 - Paris, France",
+    "timestamp": 69000,
+    "savings": 0.57
   },
   {
-    "from": "DC Moscow",
-    "to": "DC Warsaw",
-    "timestamp": 424000,
-    "savings": 0.32
+    "from": "Standard_NV12_Promo - Singapore",
+    "to": "Standard_NV6_Promo - Singapore",
+    "timestamp": 70500,
+    "savings": 0.24
   },
   {
-    "from": "DC Istanbul",
-    "to": "DC Moscow",
-    "timestamp": 425500,
-    "savings": 0.8
+    "from": "Standard_NC64ds_xl_RTXPRO6000BSE_v6 - Singapore",
+    "to": "Standard_NC6_Promo - Dublin, Ireland",
+    "timestamp": 72000,
+    "savings": 2.46
   },
   {
-    "from": "DC Tokyo",
-    "to": "DC Hong Kong",
-    "timestamp": 427000,
-    "savings": 0.38
+    "from": "Standard_ND128isr_NDR_GB200_v6 - Busan, South Korea",
+    "to": "Standard_NC96ads_A100_v4 - Frankfurt, Germany",
+    "timestamp": 73500,
+    "savings": 1.26
   },
   {
-    "from": "DC Seoul",
-    "to": "DC Tokyo",
-    "timestamp": 428500,
-    "savings": 0.3
+    "from": "Standard_NV72ads_A10_v5 - Virginia, USA",
+    "to": "Standard_NC24r_Promo - Amsterdam, Netherlands",
+    "timestamp": 75000,
+    "savings": 1.68
   },
   {
-    "from": "DC Beijing",
-    "to": "DC Seoul",
-    "timestamp": 430000,
-    "savings": 0.25
+    "from": "Standard_ND96is_flex_H100_v5 - Stockholm, Sweden",
+    "to": "Standard_NV16as_v4 - Virginia, USA",
+    "timestamp": 76500,
+    "savings": 1.31
   },
   {
-    "from": "DC Shanghai",
-    "to": "DC Beijing",
-    "timestamp": 431500,
-    "savings": 0.19
+    "from": "Standard_NV12s_v3 - Virginia, USA",
+    "to": "Standard_ND96isr_H200_v5 - Warsaw, Poland",
+    "timestamp": 78000,
+    "savings": 1.16
   },
   {
-    "from": "DC Hong Kong",
-    "to": "DC Shanghai",
-    "timestamp": 433000,
-    "savings": 0.34
+    "from": "Standard_NC40ads_H100_v5 - Dublin, Ireland",
+    "to": "Standard_NV36adms_A10_v5 - Kuala Lumpur, Malaysia",
+    "timestamp": 79500,
+    "savings": 1.82
   },
   {
-    "from": "DC Singapore",
-    "to": "DC Hong Kong",
-    "timestamp": 434500,
-    "savings": 0.25
+    "from": "Standard_NV8ads_V710_v5 - Chicago, Illinois, USA",
+    "to": "Standard_ND96isr_H100_v5 - Amsterdam, Netherlands",
+    "timestamp": 81000,
+    "savings": 1.78
   },
   {
-    "from": "DC Bangkok",
-    "to": "DC Singapore",
-    "timestamp": 436000,
-    "savings": 0.27
-  },
-  {
-    "from": "DC Jakarta",
-    "to": "DC Bangkok",
-    "timestamp": 437500,
-    "savings": 0.3
-  },
-  {
-    "from": "DC Manila",
-    "to": "DC Jakarta",
-    "timestamp": 439000,
-    "savings": 0.26
-  },
-  {
-    "from": "DC Taipei",
-    "to": "DC Manila",
-    "timestamp": 440500,
-    "savings": 0.28
-  },
-  {
-    "from": "DC Osaka",
-    "to": "DC Taipei",
-    "timestamp": 442000,
-    "savings": 0.35
-  },
-  {
-    "from": "DC Sydney",
-    "to": "DC Tokyo",
-    "timestamp": 443500,
-    "savings": 2.4
-  },
-  {
-    "from": "DC Melbourne",
-    "to": "DC Sydney",
-    "timestamp": 445000,
-    "savings": 0.26
-  },
-  {
-    "from": "DC Auckland",
-    "to": "DC Melbourne",
-    "timestamp": 446500,
-    "savings": 0.3
-  },
-  {
-    "from": "DC Mumbai",
-    "to": "DC Dubai",
-    "timestamp": 448000,
-    "savings": 0.46
-  },
-  {
-    "from": "DC Bangalore",
-    "to": "DC Mumbai",
-    "timestamp": 449500,
-    "savings": 0.2
-  },
-  {
-    "from": "DC Delhi",
-    "to": "DC Bangalore",
-    "timestamp": 451000,
-    "savings": 0.39
-  },
-  {
-    "from": "DC Karachi",
-    "to": "DC Delhi",
-    "timestamp": 452500,
-    "savings": 0.18
-  },
-  {
-    "from": "DC Colombo",
-    "to": "DC Mumbai",
-    "timestamp": 454000,
-    "savings": 0.28
-  },
-  {
-    "from": "DC Dhaka",
-    "to": "DC Bangalore",
-    "timestamp": 455500,
-    "savings": 0.15
-  },
-  {
-    "from": "DC Kathmandu",
-    "to": "DC Delhi",
-    "timestamp": 457000,
-    "savings": 0.22
-  },
-  {
-    "from": "DC Dubai",
-    "to": "DC Istanbul",
-    "timestamp": 458500,
-    "savings": 0.13
-  },
-  {
-    "from": "DC Doha",
-    "to": "DC Dubai",
-    "timestamp": 460000,
-    "savings": 0.16
-  },
-  {
-    "from": "DC Kuwait City",
-    "to": "DC Doha",
-    "timestamp": 461500,
-    "savings": 0.35
-  },
-  {
-    "from": "DC Manama",
-    "to": "DC Kuwait City",
-    "timestamp": 463000,
-    "savings": 0.39
-  },
-  {
-    "from": "DC Abu Dhabi",
-    "to": "DC Doha",
-    "timestamp": 464500,
-    "savings": 0.3
-  },
-  {
-    "from": "DC Jeddah",
-    "to": "DC Dubai",
-    "timestamp": 466000,
-    "savings": 0.22
-  },
-  {
-    "from": "DC Riyadh",
-    "to": "DC Jeddah",
-    "timestamp": 467500,
-    "savings": 0.16
-  },
-  {
-    "from": "DC Istanbul",
-    "to": "DC Athens",
-    "timestamp": 469000,
-    "savings": 0.42
-  },
-  {
-    "from": "DC Tel Aviv",
-    "to": "DC Cairo",
-    "timestamp": 470500,
+    "from": "Standard_NV6_Promo - Virginia, USA",
+    "to": "Standard_NG16ads_V620_v1 - Virginia, USA",
+    "timestamp": 82500,
     "savings": 0.73
   },
   {
-    "from": "DC Cairo",
-    "to": "DC Casablanca",
-    "timestamp": 472000,
-    "savings": 0.16
+    "from": "Standard_NV16as_v4 - Virginia, USA",
+    "to": "Standard_NV12ads_A10_v5 - Milan, Italy",
+    "timestamp": 84000,
+    "savings": 2.08
   },
   {
-    "from": "DC Casablanca",
-    "to": "DC Madrid",
-    "timestamp": 473500,
-    "savings": 0.76
-  },
-  {
-    "from": "DC Lagos",
-    "to": "DC Casablanca",
-    "timestamp": 475000,
-    "savings": 0.12
-  },
-  {
-    "from": "DC Nairobi",
-    "to": "DC Lagos",
-    "timestamp": 476500,
-    "savings": 0.13
-  },
-  {
-    "from": "DC Johannesburg",
-    "to": "DC Nairobi",
-    "timestamp": 478000,
-    "savings": 0.14
-  },
-  {
-    "from": "DC Cape Town",
-    "to": "DC Johannesburg",
-    "timestamp": 479500,
-    "savings": 0.21
-  },
-  {
-    "from": "DC São Paulo",
-    "to": "DC Buenos Aires",
-    "timestamp": 481000,
-    "savings": 0.2
-  },
-  {
-    "from": "DC Rio de Janeiro",
-    "to": "DC São Paulo",
-    "timestamp": 482500,
-    "savings": 0.17
-  },
-  {
-    "from": "DC Buenos Aires",
-    "to": "DC Santiago",
-    "timestamp": 484000,
-    "savings": 0.25
-  },
-  {
-    "from": "DC Santiago",
-    "to": "DC Lima",
-    "timestamp": 485500,
-    "savings": 0.1
-  },
-  {
-    "from": "DC Lima",
-    "to": "DC Bogota",
-    "timestamp": 487000,
-    "savings": 0.24
-  },
-  {
-    "from": "DC Bogota",
-    "to": "DC Mexico City",
-    "timestamp": 488500,
-    "savings": 0.97
-  },
-  {
-    "from": "DC Mexico City",
-    "to": "DC Dallas",
-    "timestamp": 490000,
-    "savings": 0.34
-  },
-  {
-    "from": "DC New York",
-    "to": "DC Chicago",
-    "timestamp": 491500,
-    "savings": 0.33
-  },
-  {
-    "from": "DC Los Angeles",
-    "to": "DC San Francisco",
-    "timestamp": 493000,
+    "from": "Standard_NC12_Promo - Amsterdam, Netherlands",
+    "to": "Standard_NC24r_Promo - Amsterdam, Netherlands",
+    "timestamp": 85500,
     "savings": 0.19
   },
   {
-    "from": "DC Chicago",
-    "to": "DC Toronto",
-    "timestamp": 494500,
-    "savings": 0.2
+    "from": "Standard_ND128isr_NDR_GB200_v6 - Busan, South Korea",
+    "to": "Standard_NV18ads_A10_v5 - Virginia, USA (Gov)",
+    "timestamp": 87000,
+    "savings": 1.64
   },
   {
-    "from": "DC San Francisco",
-    "to": "DC Seattle",
-    "timestamp": 496000,
-    "savings": 0.18
+    "from": "Standard_NV6ads_A10_v5 - San Francisco, California, USA",
+    "to": "Standard_NV36ads_A10_v5 - Tel Aviv, Israel",
+    "timestamp": 88500,
+    "savings": 1.24
   },
   {
-    "from": "DC Seattle",
-    "to": "DC Vancouver",
-    "timestamp": 497500,
-    "savings": 0.36
+    "from": "Standard_NV12ads_A10_v5 - Milan, Italy",
+    "to": "Standard_NV18ads_A10_v5 - Washington State, USA",
+    "timestamp": 90000,
+    "savings": 1.06
   },
   {
-    "from": "DC Dallas",
-    "to": "DC Atlanta",
-    "timestamp": 499000,
-    "savings": 0.27
+    "from": "Standard_NV16as_v4 - Virginia, USA",
+    "to": "Standard_NC12s_v3 - Toronto, Canada",
+    "timestamp": 91500,
+    "savings": 0.76
   },
   {
-    "from": "DC Miami",
-    "to": "DC Mexico City",
-    "timestamp": 500500,
-    "savings": 0.26
+    "from": "Standard_NV6_Promo - Virginia, USA",
+    "to": "Standard_NV12s_v3 - Paris, France",
+    "timestamp": 93000,
+    "savings": 1.1
   },
   {
-    "from": "DC Atlanta",
-    "to": "DC Montreal",
-    "timestamp": 502000,
-    "savings": 0.11
+    "from": "Standard_NC24r_Promo - Chicago, Illinois, USA",
+    "to": "Standard_ND96ams_A100_v4 - Dubai, UAE",
+    "timestamp": 94500,
+    "savings": 1.26
   },
   {
-    "from": "DC Montreal",
-    "to": "DC Toronto",
-    "timestamp": 503500,
-    "savings": 0.24
+    "from": "Standard_NC48ads_A100_v4 - Paris, France",
+    "to": "Standard_NC24rs_v3 - Mumbai, India",
+    "timestamp": 96000,
+    "savings": 2.01
   },
   {
-    "from": "DC Vancouver",
-    "to": "DC Seattle",
-    "timestamp": 505000,
-    "savings": 0.36
+    "from": "Standard_NV8as_v4 - Toronto, Canada",
+    "to": "Standard_NV72ads_A10_v5 - Virginia, USA",
+    "timestamp": 97500,
+    "savings": 0.69
   },
   {
-    "from": "DC Toronto",
-    "to": "DC New York",
-    "timestamp": 506500,
-    "savings": 0.14
+    "from": "Standard_NP20s - Washington State, USA",
+    "to": "Standard_ND96is_H100_v5 - London, United Kingdom",
+    "timestamp": 99000,
+    "savings": 2.16
+  },
+  {
+    "from": "Standard_NV18ads_A10_v5 - Chicago, Illinois, USA",
+    "to": "Standard_NV12s_v3 - Virginia, USA",
+    "timestamp": 100500,
+    "savings": 0.37
+  },
+  {
+    "from": "Standard_NV72ads_A10_v5 - Virginia, USA",
+    "to": "Standard_NC48ads_A100_v4 - Toronto, Canada",
+    "timestamp": 102000,
+    "savings": 0.7
+  },
+  {
+    "from": "Standard_NV32as_v4 - Arizona, USA (Gov)",
+    "to": "Standard_NC6_Promo - Dublin, Ireland",
+    "timestamp": 103500,
+    "savings": 1.9
+  },
+  {
+    "from": "Standard_NV36adms_A10_v5 - Sao Paulo, Brazil",
+    "to": "Standard_NV36adms_A10_v5 - Hong Kong",
+    "timestamp": 105000,
+    "savings": 2.26
+  },
+  {
+    "from": "Standard_NP10s - San Antonio, Texas, USA",
+    "to": "Standard_NV6ads_A10_v5 - Mexico City, Mexico",
+    "timestamp": 106500,
+    "savings": 0.67
+  },
+  {
+    "from": "Standard_NC96ads_A100_v4 - Mumbai, India",
+    "to": "Standard_NV16as_v4 - Atlanta, Georgia, USA",
+    "timestamp": 108000,
+    "savings": 2.36
+  },
+  {
+    "from": "Standard_NC24s_v3 - Arizona, USA (Gov)",
+    "to": "Standard_NC8as_T4_v3 - Des Moines, Iowa, USA",
+    "timestamp": 109500,
+    "savings": 0.94
+  },
+  {
+    "from": "Standard_ND128isrf_GB300_v6 - Virginia, USA",
+    "to": "Standard_NC8as_T4_v3 - Dallas, Texas, USA",
+    "timestamp": 111000,
+    "savings": 0.72
+  },
+  {
+    "from": "Standard_NC24ads_A100_v4 - Milan, Italy",
+    "to": "Standard_NC128ds_xl_RTXPRO6000BSE_v6 - Singapore",
+    "timestamp": 112500,
+    "savings": 1.79
+  },
+  {
+    "from": "Standard_NV48s_v3 - Dublin, Ireland",
+    "to": "Standard_NC48ads_A100_v4 - Warsaw, Poland",
+    "timestamp": 114000,
+    "savings": 1.39
+  },
+  {
+    "from": "Standard_NC24r_Promo - Chicago, Illinois, USA",
+    "to": "Standard_NC320ds_xl_RTXPRO6000BSE_v6 - Des Moines, Iowa, USA",
+    "timestamp": 115500,
+    "savings": 0.68
+  },
+  {
+    "from": "Standard_NC24s_v3 - Tokyo, Japan",
+    "to": "Standard_NC24rs_v3 - Singapore",
+    "timestamp": 117000,
+    "savings": 1.4
+  },
+  {
+    "from": "Standard_NP10s - Toronto, Canada",
+    "to": "Standard_NC6_Promo - Virginia, USA (Gov)",
+    "timestamp": 118500,
+    "savings": 0.72
+  },
+  {
+    "from": "Standard_NC24rs_v3 - Mumbai, India",
+    "to": "Standard_NV36ads_A10_v5 - Dubai, UAE",
+    "timestamp": 120000,
+    "savings": 0.61
+  },
+  {
+    "from": "Standard_NC128ds_xl_RTXPRO6000BSE_v6 - Singapore",
+    "to": "Standard_NC24rs_v3 - Singapore",
+    "timestamp": 121500,
+    "savings": 0.16
+  },
+  {
+    "from": "Standard_NC64ds_xl_RTXPRO6000BSE_v6 - Singapore",
+    "to": "Standard_ND96isr_H200_v5 - Sao Paulo, Brazil",
+    "timestamp": 123000,
+    "savings": 2.38
+  },
+  {
+    "from": "Standard_NC64as_T4_v3 - Sydney, Australia",
+    "to": "Standard_NC24rs_v3 - Mumbai, India",
+    "timestamp": 124500,
+    "savings": 1.76
+  },
+  {
+    "from": "Standard_NC8as_T4_v3 - Amsterdam, Netherlands",
+    "to": "Standard_NV18ads_A10_v5 - Phoenix, Arizona, USA",
+    "timestamp": 126000,
+    "savings": 1.36
+  },
+  {
+    "from": "Standard_NV18ads_A10_v5 - Virginia, USA (Gov)",
+    "to": "Standard_NV16as_v4 - Virginia, USA",
+    "timestamp": 127500,
+    "savings": 0.5
+  },
+  {
+    "from": "Standard_NV12s_v3 - San Francisco, California, USA",
+    "to": "Standard_NV36adms_A10_v5 - Virginia, USA",
+    "timestamp": 129000,
+    "savings": 1.09
+  },
+  {
+    "from": "Standard_NC12s_v3 - Pune, India",
+    "to": "Standard_NC8as_T4_v3 - Sao Paulo, Brazil",
+    "timestamp": 130500,
+    "savings": 1.24
+  },
+  {
+    "from": "Standard_ND128isr_NDR_GB200_v6 - Sydney, Australia",
+    "to": "Standard_NV8as_v4 - Warsaw, Poland",
+    "timestamp": 132000,
+    "savings": 2.3
+  },
+  {
+    "from": "Standard_NC48ads_A100_v4 - Pune, India",
+    "to": "Standard_NV36ads_A10_v5 - Dubai, UAE",
+    "timestamp": 133500,
+    "savings": 0.32
+  },
+  {
+    "from": "Standard_NV16as_v4 - Mexico City, Mexico",
+    "to": "Standard_NV4as_v4 - Milan, Italy",
+    "timestamp": 135000,
+    "savings": 2.44
+  },
+  {
+    "from": "Standard_NC12_Promo - Virginia, USA",
+    "to": "Standard_NV72ads_A10_v5 - Des Moines, Iowa, USA",
+    "timestamp": 136500,
+    "savings": 0.79
+  },
+  {
+    "from": "Standard_NV16as_v4 - Stockholm, Sweden",
+    "to": "Standard_NC6_Promo - Dublin, Ireland",
+    "timestamp": 138000,
+    "savings": 0.69
+  },
+  {
+    "from": "Standard_ND96ams_A100_v4 - Paris, France",
+    "to": "Standard_NV72ads_A10_v5 - Des Moines, Iowa, USA",
+    "timestamp": 139500,
+    "savings": 2.13
+  },
+  {
+    "from": "Standard_ND96isr_H100_v5 - Amsterdam, Netherlands",
+    "to": "Standard_NV12_Promo - Singapore",
+    "timestamp": 141000,
+    "savings": 2.37
+  },
+  {
+    "from": "Standard_NC24ads_A100_v4 - Nagpur, India",
+    "to": "Standard_NV36ads_A10_v5 - Jakarta, Indonesia",
+    "timestamp": 142500,
+    "savings": 0.74
+  },
+  {
+    "from": "Standard_NC6_Promo - Virginia, USA",
+    "to": "Standard_NV12_Promo - Singapore",
+    "timestamp": 144000,
+    "savings": 2.27
+  },
+  {
+    "from": "Standard_NP10s - Tokyo, Japan",
+    "to": "Standard_NC80adis_H100_v5 - London, United Kingdom",
+    "timestamp": 145500,
+    "savings": 1.57
+  },
+  {
+    "from": "Standard_NC4as_T4_v3 - Des Moines, Iowa, USA",
+    "to": "Standard_NC256ds_xl_RTXPRO6000BSE_v6 - Dublin, Ireland",
+    "timestamp": 147000,
+    "savings": 2.37
+  },
+  {
+    "from": "Standard_NV18ads_A10_v5 - Virginia, USA (Gov)",
+    "to": "Standard_NC128lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
+    "timestamp": 148500,
+    "savings": 1.42
+  },
+  {
+    "from": "Standard_NC12s_v3 - Pune, India",
+    "to": "Standard_NP20s - Washington State, USA",
+    "timestamp": 150000,
+    "savings": 1.57
   }
 ]

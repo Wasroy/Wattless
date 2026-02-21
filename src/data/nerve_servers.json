@@ -1,0 +1,2402 @@
+[
+  {
+    "name": "Standard_NC12_Promo - Amsterdam, Netherlands",
+    "coordinates": [
+      4.9041,
+      52.3676
+    ],
+    "region": "westeurope",
+    "status": "online",
+    "latency": "91ms",
+    "gpu": "NVIDIA Tesla K80 (12GB GDDR5 (legacy))",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC24r_Promo - Amsterdam, Netherlands",
+    "coordinates": [
+      4.9041,
+      52.3676
+    ],
+    "region": "westeurope",
+    "status": "online",
+    "latency": "60ms",
+    "gpu": "NVIDIA Tesla K80 (12GB GDDR5 (legacy))",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC4as_T4_v3 - Amsterdam, Netherlands",
+    "coordinates": [
+      4.9041,
+      52.3676
+    ],
+    "region": "westeurope",
+    "status": "online",
+    "latency": "112ms",
+    "gpu": "NVIDIA Tesla T4 (16GB GDDR6)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC8as_T4_v3 - Amsterdam, Netherlands",
+    "coordinates": [
+      4.9041,
+      52.3676
+    ],
+    "region": "westeurope",
+    "status": "online",
+    "latency": "55ms",
+    "gpu": "NVIDIA Tesla T4 (16GB GDDR6)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_ND96amsr_A100_v4 - Amsterdam, Netherlands",
+    "coordinates": [
+      4.9041,
+      52.3676
+    ],
+    "region": "westeurope",
+    "status": "online",
+    "latency": "158ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_ND96isr_H100_v5 - Amsterdam, Netherlands",
+    "coordinates": [
+      4.9041,
+      52.3676
+    ],
+    "region": "westeurope",
+    "status": "online",
+    "latency": "64ms",
+    "gpu": "NVIDIA H100 (80GB HBM3)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NP20s - Amsterdam, Netherlands",
+    "coordinates": [
+      4.9041,
+      52.3676
+    ],
+    "region": "westeurope",
+    "status": "online",
+    "latency": "100ms",
+    "gpu": "Xilinx Alveo U250 (FPGA)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NV16as_v4 - Amsterdam, Netherlands",
+    "coordinates": [
+      4.9041,
+      52.3676
+    ],
+    "region": "westeurope",
+    "status": "online",
+    "latency": "31ms",
+    "gpu": "AMD Radeon MI25 (16GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV32as_v4 - Amsterdam, Netherlands",
+    "coordinates": [
+      4.9041,
+      52.3676
+    ],
+    "region": "westeurope",
+    "status": "online",
+    "latency": "151ms",
+    "gpu": "AMD Radeon MI25 (32GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV6_Promo - Amsterdam, Netherlands",
+    "coordinates": [
+      4.9041,
+      52.3676
+    ],
+    "region": "westeurope",
+    "status": "online",
+    "latency": "49ms",
+    "gpu": "NVIDIA Tesla M60 (8GB (legacy))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC12s_v3 - San Antonio, Texas, USA",
+    "coordinates": [
+      -98.5,
+      29.4167
+    ],
+    "region": "southcentralus",
+    "status": "online",
+    "latency": "142ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC24rs_v3 - San Antonio, Texas, USA",
+    "coordinates": [
+      -98.5,
+      29.4167
+    ],
+    "region": "southcentralus",
+    "status": "online",
+    "latency": "14ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC64as_T4_v3 - San Antonio, Texas, USA",
+    "coordinates": [
+      -98.5,
+      29.4167
+    ],
+    "region": "southcentralus",
+    "status": "online",
+    "latency": "69ms",
+    "gpu": "NVIDIA Tesla T4 (16GB GDDR6)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC96ads_A100_v4 - San Antonio, Texas, USA",
+    "coordinates": [
+      -98.5,
+      29.4167
+    ],
+    "region": "southcentralus",
+    "status": "online",
+    "latency": "53ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_ND96asr_A100_v4 - San Antonio, Texas, USA",
+    "coordinates": [
+      -98.5,
+      29.4167
+    ],
+    "region": "southcentralus",
+    "status": "online",
+    "latency": "154ms",
+    "gpu": "NVIDIA A100 (40GB HBM2e)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NP10s - San Antonio, Texas, USA",
+    "coordinates": [
+      -98.5,
+      29.4167
+    ],
+    "region": "southcentralus",
+    "status": "online",
+    "latency": "118ms",
+    "gpu": "Xilinx Alveo U250 (FPGA)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV12s_v2 - San Antonio, Texas, USA",
+    "coordinates": [
+      -98.5,
+      29.4167
+    ],
+    "region": "southcentralus",
+    "status": "online",
+    "latency": "97ms",
+    "gpu": "NVIDIA Tesla M60 (16GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV24s_v2 - San Antonio, Texas, USA",
+    "coordinates": [
+      -98.5,
+      29.4167
+    ],
+    "region": "southcentralus",
+    "status": "online",
+    "latency": "147ms",
+    "gpu": "NVIDIA Tesla M60 (32GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV48s_v3 - San Antonio, Texas, USA",
+    "coordinates": [
+      -98.5,
+      29.4167
+    ],
+    "region": "southcentralus",
+    "status": "online",
+    "latency": "41ms",
+    "gpu": "NVIDIA Tesla M60 (32GB)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NV72ads_A10_v5 - San Antonio, Texas, USA",
+    "coordinates": [
+      -98.5,
+      29.4167
+    ],
+    "region": "southcentralus",
+    "status": "online",
+    "latency": "87ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC12s_v3 - Washington State, USA",
+    "coordinates": [
+      -119.8522,
+      47.2333
+    ],
+    "region": "westus2",
+    "status": "online",
+    "latency": "105ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC24rs_v3 - Washington State, USA",
+    "coordinates": [
+      -119.8522,
+      47.2333
+    ],
+    "region": "westus2",
+    "status": "online",
+    "latency": "151ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC32ds_xl_RTXPRO6000BSE_v6 - Washington State, USA",
+    "coordinates": [
+      -119.8522,
+      47.2333
+    ],
+    "region": "westus2",
+    "status": "online",
+    "latency": "131ms",
+    "gpu": "NVIDIA RTX PRO 6000 BSE (48GB GDDR7)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC64ds_xl_RTXPRO6000BSE_v6 - Washington State, USA",
+    "coordinates": [
+      -119.8522,
+      47.2333
+    ],
+    "region": "westus2",
+    "status": "online",
+    "latency": "93ms",
+    "gpu": "NVIDIA RTX PRO 6000 BSE (48GB GDDR7)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC96ads_A100_v4 - Washington State, USA",
+    "coordinates": [
+      -119.8522,
+      47.2333
+    ],
+    "region": "westus2",
+    "status": "online",
+    "latency": "23ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_ND96is_H100_v5 - Washington State, USA",
+    "coordinates": [
+      -119.8522,
+      47.2333
+    ],
+    "region": "westus2",
+    "status": "online",
+    "latency": "75ms",
+    "gpu": "NVIDIA H100 (80GB HBM3)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NP20s - Washington State, USA",
+    "coordinates": [
+      -119.8522,
+      47.2333
+    ],
+    "region": "westus2",
+    "status": "online",
+    "latency": "72ms",
+    "gpu": "Xilinx Alveo U250 (FPGA)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NV18ads_A10_v5 - Washington State, USA",
+    "coordinates": [
+      -119.8522,
+      47.2333
+    ],
+    "region": "westus2",
+    "status": "online",
+    "latency": "48ms",
+    "gpu": "NVIDIA A10 (18GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV48s_v3 - Washington State, USA",
+    "coordinates": [
+      -119.8522,
+      47.2333
+    ],
+    "region": "westus2",
+    "status": "online",
+    "latency": "27ms",
+    "gpu": "NVIDIA Tesla M60 (32GB)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC12_Promo - Virginia, USA",
+    "coordinates": [
+      -79.8164,
+      37.3719
+    ],
+    "region": "eastus",
+    "status": "online",
+    "latency": "72ms",
+    "gpu": "NVIDIA Tesla K80 (12GB GDDR5 (legacy))",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC24rs_v3 - Virginia, USA",
+    "coordinates": [
+      -79.8164,
+      37.3719
+    ],
+    "region": "eastus",
+    "status": "online",
+    "latency": "69ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC6_Promo - Virginia, USA",
+    "coordinates": [
+      -79.8164,
+      37.3719
+    ],
+    "region": "eastus",
+    "status": "online",
+    "latency": "55ms",
+    "gpu": "NVIDIA Tesla K80 (12GB GDDR5 (legacy))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_ND40rs_v2 - Virginia, USA",
+    "coordinates": [
+      -79.8164,
+      37.3719
+    ],
+    "region": "eastus",
+    "status": "online",
+    "latency": "106ms",
+    "gpu": "NVIDIA Tesla V100 (32GB HBM2)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_ND96is_H100_v5 - Virginia, USA",
+    "coordinates": [
+      -79.8164,
+      37.3719
+    ],
+    "region": "eastus",
+    "status": "online",
+    "latency": "50ms",
+    "gpu": "NVIDIA H100 (80GB HBM3)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NP20s - Virginia, USA",
+    "coordinates": [
+      -79.8164,
+      37.3719
+    ],
+    "region": "eastus",
+    "status": "online",
+    "latency": "18ms",
+    "gpu": "Xilinx Alveo U250 (FPGA)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NV16as_v4 - Virginia, USA",
+    "coordinates": [
+      -79.8164,
+      37.3719
+    ],
+    "region": "eastus",
+    "status": "online",
+    "latency": "64ms",
+    "gpu": "AMD Radeon MI25 (16GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV32as_v4 - Virginia, USA",
+    "coordinates": [
+      -79.8164,
+      37.3719
+    ],
+    "region": "eastus",
+    "status": "online",
+    "latency": "67ms",
+    "gpu": "AMD Radeon MI25 (32GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV6_Promo - Virginia, USA",
+    "coordinates": [
+      -79.8164,
+      37.3719
+    ],
+    "region": "eastus",
+    "status": "online",
+    "latency": "109ms",
+    "gpu": "NVIDIA Tesla M60 (8GB (legacy))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC128lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
+    "coordinates": [
+      -122.4167,
+      37.7833
+    ],
+    "region": "westus",
+    "status": "online",
+    "latency": "132ms",
+    "gpu": "NVIDIA RTX PRO 6000 BSE (48GB GDDR7)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NC24s_v3 - San Francisco, California, USA",
+    "coordinates": [
+      -122.4167,
+      37.7833
+    ],
+    "region": "westus",
+    "status": "online",
+    "latency": "155ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC32lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
+    "coordinates": [
+      -122.4167,
+      37.7833
+    ],
+    "region": "westus",
+    "status": "online",
+    "latency": "101ms",
+    "gpu": "NVIDIA RTX PRO 6000 BSE (48GB GDDR7)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC64lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
+    "coordinates": [
+      -122.4167,
+      37.7833
+    ],
+    "region": "westus",
+    "status": "online",
+    "latency": "147ms",
+    "gpu": "NVIDIA RTX PRO 6000 BSE (48GB GDDR7)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_ND96amsr_A100_v4 - San Francisco, California, USA",
+    "coordinates": [
+      -122.4167,
+      37.7833
+    ],
+    "region": "westus",
+    "status": "online",
+    "latency": "146ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_ND96isr_H200_v5 - San Francisco, California, USA",
+    "coordinates": [
+      -122.4167,
+      37.7833
+    ],
+    "region": "westus",
+    "status": "online",
+    "latency": "130ms",
+    "gpu": "NVIDIA H200 (141GB HBM3e)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NV12s_v3 - San Francisco, California, USA",
+    "coordinates": [
+      -122.4167,
+      37.7833
+    ],
+    "region": "westus",
+    "status": "online",
+    "latency": "69ms",
+    "gpu": "NVIDIA Tesla M60 (8GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV28adms_V710_v5 - San Francisco, California, USA",
+    "coordinates": [
+      -122.4167,
+      37.7833
+    ],
+    "region": "westus",
+    "status": "online",
+    "latency": "109ms",
+    "gpu": "AMD Radeon Pro V710 (24GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV6ads_A10_v5 - San Francisco, California, USA",
+    "coordinates": [
+      -122.4167,
+      37.7833
+    ],
+    "region": "westus",
+    "status": "online",
+    "latency": "157ms",
+    "gpu": "NVIDIA A10 (6GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC16as_T4_v3 - Virginia, USA",
+    "coordinates": [
+      -78.3889,
+      36.6681
+    ],
+    "region": "eastus2",
+    "status": "online",
+    "latency": "144ms",
+    "gpu": "NVIDIA Tesla T4 (16GB GDDR6)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC40ads_H100_v5 - Virginia, USA",
+    "coordinates": [
+      -78.3889,
+      36.6681
+    ],
+    "region": "eastus2",
+    "status": "online",
+    "latency": "41ms",
+    "gpu": "NVIDIA H100 NVL (94GB HBM3)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC80adis_H100_v5 - Virginia, USA",
+    "coordinates": [
+      -78.3889,
+      36.6681
+    ],
+    "region": "eastus2",
+    "status": "online",
+    "latency": "80ms",
+    "gpu": "NVIDIA H100 NVL (94GB HBM3)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_ND128isrf_GB300_v6 - Virginia, USA",
+    "coordinates": [
+      -78.3889,
+      36.6681
+    ],
+    "region": "eastus2",
+    "status": "online",
+    "latency": "145ms",
+    "gpu": "NVIDIA GB300 (Blackwell Ultra) (288GB HBM3e)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_ND96is_noIB_H100_v5 - Virginia, USA",
+    "coordinates": [
+      -78.3889,
+      36.6681
+    ],
+    "region": "eastus2",
+    "status": "online",
+    "latency": "41ms",
+    "gpu": "NVIDIA H100 (no InfiniBand) (80GB HBM3)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NG16ads_V620_v1 - Virginia, USA",
+    "coordinates": [
+      -78.3889,
+      36.6681
+    ],
+    "region": "eastus2",
+    "status": "online",
+    "latency": "135ms",
+    "gpu": "AMD Radeon PRO V620 (16GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV12s_v3 - Virginia, USA",
+    "coordinates": [
+      -78.3889,
+      36.6681
+    ],
+    "region": "eastus2",
+    "status": "online",
+    "latency": "115ms",
+    "gpu": "NVIDIA Tesla M60 (8GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV36adms_A10_v5 - Virginia, USA",
+    "coordinates": [
+      -78.3889,
+      36.6681
+    ],
+    "region": "eastus2",
+    "status": "online",
+    "latency": "119ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV72ads_A10_v5 - Virginia, USA",
+    "coordinates": [
+      -78.3889,
+      36.6681
+    ],
+    "region": "eastus2",
+    "status": "online",
+    "latency": "137ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC16lds_xl_RTXPRO6000BSE_v6 - Des Moines, Iowa, USA",
+    "coordinates": [
+      -93.6208,
+      41.5908
+    ],
+    "region": "centralus",
+    "status": "online",
+    "latency": "95ms",
+    "gpu": "NVIDIA RTX PRO 6000 BSE (48GB GDDR7)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC320ds_xl_RTXPRO6000BSE_v6 - Des Moines, Iowa, USA",
+    "coordinates": [
+      -93.6208,
+      41.5908
+    ],
+    "region": "centralus",
+    "status": "online",
+    "latency": "137ms",
+    "gpu": "NVIDIA RTX PRO 6000 BSE (48GB GDDR7)",
+    "gpu_count": 20
+  },
+  {
+    "name": "Standard_NC4as_T4_v3 - Des Moines, Iowa, USA",
+    "coordinates": [
+      -93.6208,
+      41.5908
+    ],
+    "region": "centralus",
+    "status": "online",
+    "latency": "61ms",
+    "gpu": "NVIDIA Tesla T4 (16GB GDDR6)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC8as_T4_v3 - Des Moines, Iowa, USA",
+    "coordinates": [
+      -93.6208,
+      41.5908
+    ],
+    "region": "centralus",
+    "status": "online",
+    "latency": "149ms",
+    "gpu": "NVIDIA Tesla T4 (16GB GDDR6)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_ND96amsr_A100_v4 - Des Moines, Iowa, USA",
+    "coordinates": [
+      -93.6208,
+      41.5908
+    ],
+    "region": "centralus",
+    "status": "online",
+    "latency": "14ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_ND96isr_H200_v5 - Des Moines, Iowa, USA",
+    "coordinates": [
+      -93.6208,
+      41.5908
+    ],
+    "region": "centralus",
+    "status": "online",
+    "latency": "73ms",
+    "gpu": "NVIDIA H200 (141GB HBM3e)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NG8ads_V620_v1 - Des Moines, Iowa, USA",
+    "coordinates": [
+      -93.6208,
+      41.5908
+    ],
+    "region": "centralus",
+    "status": "online",
+    "latency": "29ms",
+    "gpu": "AMD Radeon PRO V620 (8GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV72ads_A10_v5 - Des Moines, Iowa, USA",
+    "coordinates": [
+      -93.6208,
+      41.5908
+    ],
+    "region": "centralus",
+    "status": "online",
+    "latency": "134ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC16lds_xl_RTXPRO6000BSE_v6 - Dublin, Ireland",
+    "coordinates": [
+      -6.2597,
+      53.3478
+    ],
+    "region": "northeurope",
+    "status": "online",
+    "latency": "38ms",
+    "gpu": "NVIDIA RTX PRO 6000 BSE (48GB GDDR7)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC256ds_xl_RTXPRO6000BSE_v6 - Dublin, Ireland",
+    "coordinates": [
+      -6.2597,
+      53.3478
+    ],
+    "region": "northeurope",
+    "status": "online",
+    "latency": "151ms",
+    "gpu": "NVIDIA RTX PRO 6000 BSE (48GB GDDR7)",
+    "gpu_count": 16
+  },
+  {
+    "name": "Standard_NC40ads_H100_v5 - Dublin, Ireland",
+    "coordinates": [
+      -6.2597,
+      53.3478
+    ],
+    "region": "northeurope",
+    "status": "online",
+    "latency": "152ms",
+    "gpu": "NVIDIA H100 NVL (94GB HBM3)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC6_Promo - Dublin, Ireland",
+    "coordinates": [
+      -6.2597,
+      53.3478
+    ],
+    "region": "northeurope",
+    "status": "online",
+    "latency": "85ms",
+    "gpu": "NVIDIA Tesla K80 (12GB GDDR5 (legacy))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_ND96isr_H200_v5 - Dublin, Ireland",
+    "coordinates": [
+      -6.2597,
+      53.3478
+    ],
+    "region": "northeurope",
+    "status": "online",
+    "latency": "25ms",
+    "gpu": "NVIDIA H200 (141GB HBM3e)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NV18ads_A10_v5 - Dublin, Ireland",
+    "coordinates": [
+      -6.2597,
+      53.3478
+    ],
+    "region": "northeurope",
+    "status": "online",
+    "latency": "20ms",
+    "gpu": "NVIDIA A10 (18GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV48s_v3 - Dublin, Ireland",
+    "coordinates": [
+      -6.2597,
+      53.3478
+    ],
+    "region": "northeurope",
+    "status": "online",
+    "latency": "22ms",
+    "gpu": "NVIDIA Tesla M60 (32GB)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC128ds_xl_RTXPRO6000BSE_v6 - Singapore",
+    "coordinates": [
+      103.8198,
+      1.3521
+    ],
+    "region": "southeastasia",
+    "status": "online",
+    "latency": "159ms",
+    "gpu": "NVIDIA RTX PRO 6000 BSE (48GB GDDR7)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NC24rs_v3 - Singapore",
+    "coordinates": [
+      103.8198,
+      1.3521
+    ],
+    "region": "southeastasia",
+    "status": "online",
+    "latency": "113ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC32ds_xl_RTXPRO6000BSE_v6 - Singapore",
+    "coordinates": [
+      103.8198,
+      1.3521
+    ],
+    "region": "southeastasia",
+    "status": "online",
+    "latency": "98ms",
+    "gpu": "NVIDIA RTX PRO 6000 BSE (48GB GDDR7)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC64ds_xl_RTXPRO6000BSE_v6 - Singapore",
+    "coordinates": [
+      103.8198,
+      1.3521
+    ],
+    "region": "southeastasia",
+    "status": "online",
+    "latency": "72ms",
+    "gpu": "NVIDIA RTX PRO 6000 BSE (48GB GDDR7)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_ND40rs_v2 - Singapore",
+    "coordinates": [
+      103.8198,
+      1.3521
+    ],
+    "region": "southeastasia",
+    "status": "online",
+    "latency": "46ms",
+    "gpu": "NVIDIA Tesla V100 (32GB HBM2)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NV12_Promo - Singapore",
+    "coordinates": [
+      103.8198,
+      1.3521
+    ],
+    "region": "southeastasia",
+    "status": "online",
+    "latency": "81ms",
+    "gpu": "NVIDIA Tesla M60 (16GB (legacy))",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NV24s_v3 - Singapore",
+    "coordinates": [
+      103.8198,
+      1.3521
+    ],
+    "region": "southeastasia",
+    "status": "online",
+    "latency": "16ms",
+    "gpu": "NVIDIA Tesla M60 (16GB)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NV6_Promo - Singapore",
+    "coordinates": [
+      103.8198,
+      1.3521
+    ],
+    "region": "southeastasia",
+    "status": "online",
+    "latency": "140ms",
+    "gpu": "NVIDIA Tesla M60 (8GB (legacy))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC16as_T4_v3 - London, United Kingdom",
+    "coordinates": [
+      -0.1278,
+      51.5074
+    ],
+    "region": "uksouth",
+    "status": "online",
+    "latency": "35ms",
+    "gpu": "NVIDIA Tesla T4 (16GB GDDR6)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC40ads_H100_v5 - London, United Kingdom",
+    "coordinates": [
+      -0.1278,
+      51.5074
+    ],
+    "region": "uksouth",
+    "status": "online",
+    "latency": "111ms",
+    "gpu": "NVIDIA H100 NVL (94GB HBM3)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC80adis_H100_v5 - London, United Kingdom",
+    "coordinates": [
+      -0.1278,
+      51.5074
+    ],
+    "region": "uksouth",
+    "status": "online",
+    "latency": "93ms",
+    "gpu": "NVIDIA H100 NVL (94GB HBM3)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_ND96is_H100_v5 - London, United Kingdom",
+    "coordinates": [
+      -0.1278,
+      51.5074
+    ],
+    "region": "uksouth",
+    "status": "online",
+    "latency": "155ms",
+    "gpu": "NVIDIA H100 (80GB HBM3)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NG32adms_V620 - London, United Kingdom",
+    "coordinates": [
+      -0.1278,
+      51.5074
+    ],
+    "region": "uksouth",
+    "status": "online",
+    "latency": "63ms",
+    "gpu": "AMD Radeon PRO V620 (32GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV16as_v4 - London, United Kingdom",
+    "coordinates": [
+      -0.1278,
+      51.5074
+    ],
+    "region": "uksouth",
+    "status": "online",
+    "latency": "67ms",
+    "gpu": "AMD Radeon MI25 (16GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV36ads_A10_v5 - London, United Kingdom",
+    "coordinates": [
+      -0.1278,
+      51.5074
+    ],
+    "region": "uksouth",
+    "status": "online",
+    "latency": "92ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV8as_v4 - London, United Kingdom",
+    "coordinates": [
+      -0.1278,
+      51.5074
+    ],
+    "region": "uksouth",
+    "status": "online",
+    "latency": "149ms",
+    "gpu": "AMD Radeon MI25 (8GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC24s_v3 - Phoenix, Arizona, USA",
+    "coordinates": [
+      -112.074,
+      33.4484
+    ],
+    "region": "westus3",
+    "status": "online",
+    "latency": "153ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC6s_v3 - Phoenix, Arizona, USA",
+    "coordinates": [
+      -112.074,
+      33.4484
+    ],
+    "region": "westus3",
+    "status": "online",
+    "latency": "133ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_ND128isr_NDR_GB200_v6 - Phoenix, Arizona, USA",
+    "coordinates": [
+      -112.074,
+      33.4484
+    ],
+    "region": "westus3",
+    "status": "online",
+    "latency": "92ms",
+    "gpu": "NVIDIA GB200 (Blackwell) (192GB HBM3e)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_ND96is_MI300X_v5 - Phoenix, Arizona, USA",
+    "coordinates": [
+      -112.074,
+      33.4484
+    ],
+    "region": "westus3",
+    "status": "online",
+    "latency": "12ms",
+    "gpu": "AMD Instinct MI300X (192GB HBM3)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NG16ads_V620_v1 - Phoenix, Arizona, USA",
+    "coordinates": [
+      -112.074,
+      33.4484
+    ],
+    "region": "westus3",
+    "status": "online",
+    "latency": "94ms",
+    "gpu": "AMD Radeon PRO V620 (16GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV18ads_A10_v5 - Phoenix, Arizona, USA",
+    "coordinates": [
+      -112.074,
+      33.4484
+    ],
+    "region": "westus3",
+    "status": "online",
+    "latency": "153ms",
+    "gpu": "NVIDIA A10 (18GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV72ads_A10_v5 - Phoenix, Arizona, USA",
+    "coordinates": [
+      -112.074,
+      33.4484
+    ],
+    "region": "westus3",
+    "status": "online",
+    "latency": "100ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC24r_Promo - Chicago, Illinois, USA",
+    "coordinates": [
+      -87.6278,
+      41.8819
+    ],
+    "region": "northcentralus",
+    "status": "online",
+    "latency": "145ms",
+    "gpu": "NVIDIA Tesla K80 (12GB GDDR5 (legacy))",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC80adis_H100_v5 - Chicago, Illinois, USA",
+    "coordinates": [
+      -87.6278,
+      41.8819
+    ],
+    "region": "northcentralus",
+    "status": "online",
+    "latency": "38ms",
+    "gpu": "NVIDIA H100 NVL (94GB HBM3)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_ND96is_H100_v5 - Chicago, Illinois, USA",
+    "coordinates": [
+      -87.6278,
+      41.8819
+    ],
+    "region": "northcentralus",
+    "status": "online",
+    "latency": "121ms",
+    "gpu": "NVIDIA H100 (80GB HBM3)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_ND96isr_MI300X_v5 - Chicago, Illinois, USA",
+    "coordinates": [
+      -87.6278,
+      41.8819
+    ],
+    "region": "northcentralus",
+    "status": "online",
+    "latency": "157ms",
+    "gpu": "AMD Instinct MI300X (192GB HBM3)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NV18ads_A10_v5 - Chicago, Illinois, USA",
+    "coordinates": [
+      -87.6278,
+      41.8819
+    ],
+    "region": "northcentralus",
+    "status": "online",
+    "latency": "47ms",
+    "gpu": "NVIDIA A10 (18GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV36ads_A10_v5 - Chicago, Illinois, USA",
+    "coordinates": [
+      -87.6278,
+      41.8819
+    ],
+    "region": "northcentralus",
+    "status": "online",
+    "latency": "76ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV8ads_V710_v5 - Chicago, Illinois, USA",
+    "coordinates": [
+      -87.6278,
+      41.8819
+    ],
+    "region": "northcentralus",
+    "status": "online",
+    "latency": "100ms",
+    "gpu": "AMD Radeon Pro V710 (8GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC24s_v3 - Tokyo, Japan",
+    "coordinates": [
+      139.6503,
+      35.6762
+    ],
+    "region": "japaneast",
+    "status": "online",
+    "latency": "18ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC80adis_H100_v5 - Tokyo, Japan",
+    "coordinates": [
+      139.6503,
+      35.6762
+    ],
+    "region": "japaneast",
+    "status": "online",
+    "latency": "136ms",
+    "gpu": "NVIDIA H100 NVL (94GB HBM3)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_ND96isr_H100_v5 - Tokyo, Japan",
+    "coordinates": [
+      139.6503,
+      35.6762
+    ],
+    "region": "japaneast",
+    "status": "online",
+    "latency": "119ms",
+    "gpu": "NVIDIA H100 (80GB HBM3)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NP10s - Tokyo, Japan",
+    "coordinates": [
+      139.6503,
+      35.6762
+    ],
+    "region": "japaneast",
+    "status": "online",
+    "latency": "98ms",
+    "gpu": "Xilinx Alveo U250 (FPGA)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV16as_v4 - Tokyo, Japan",
+    "coordinates": [
+      139.6503,
+      35.6762
+    ],
+    "region": "japaneast",
+    "status": "online",
+    "latency": "51ms",
+    "gpu": "AMD Radeon MI25 (16GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV36ads_A10_v5 - Tokyo, Japan",
+    "coordinates": [
+      139.6503,
+      35.6762
+    ],
+    "region": "japaneast",
+    "status": "online",
+    "latency": "148ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV8as_v4 - Tokyo, Japan",
+    "coordinates": [
+      139.6503,
+      35.6762
+    ],
+    "region": "japaneast",
+    "status": "online",
+    "latency": "139ms",
+    "gpu": "AMD Radeon MI25 (8GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC24r_Promo - Sydney, Australia",
+    "coordinates": [
+      151.2093,
+      -33.8688
+    ],
+    "region": "australiaeast",
+    "status": "online",
+    "latency": "81ms",
+    "gpu": "NVIDIA Tesla K80 (12GB GDDR5 (legacy))",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC64as_T4_v3 - Sydney, Australia",
+    "coordinates": [
+      151.2093,
+      -33.8688
+    ],
+    "region": "australiaeast",
+    "status": "online",
+    "latency": "132ms",
+    "gpu": "NVIDIA Tesla T4 (16GB GDDR6)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_ND128isr_NDR_GB200_v6 - Sydney, Australia",
+    "coordinates": [
+      151.2093,
+      -33.8688
+    ],
+    "region": "australiaeast",
+    "status": "online",
+    "latency": "133ms",
+    "gpu": "NVIDIA GB200 (Blackwell) (192GB HBM3e)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NV12ads_A10_v5 - Sydney, Australia",
+    "coordinates": [
+      151.2093,
+      -33.8688
+    ],
+    "region": "australiaeast",
+    "status": "online",
+    "latency": "97ms",
+    "gpu": "NVIDIA A10 (12GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV32as_v4 - Sydney, Australia",
+    "coordinates": [
+      151.2093,
+      -33.8688
+    ],
+    "region": "australiaeast",
+    "status": "online",
+    "latency": "62ms",
+    "gpu": "AMD Radeon MI25 (32GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV6ads_A10_v5 - Sydney, Australia",
+    "coordinates": [
+      151.2093,
+      -33.8688
+    ],
+    "region": "australiaeast",
+    "status": "online",
+    "latency": "24ms",
+    "gpu": "NVIDIA A10 (6GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC48ads_A100_v4 - Stockholm, Sweden",
+    "coordinates": [
+      18.0686,
+      59.3293
+    ],
+    "region": "swedencentral",
+    "status": "online",
+    "latency": "129ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_ND40rs_v2 - Stockholm, Sweden",
+    "coordinates": [
+      18.0686,
+      59.3293
+    ],
+    "region": "swedencentral",
+    "status": "online",
+    "latency": "27ms",
+    "gpu": "NVIDIA Tesla V100 (32GB HBM2)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_ND96is_flex_H100_v5 - Stockholm, Sweden",
+    "coordinates": [
+      18.0686,
+      59.3293
+    ],
+    "region": "swedencentral",
+    "status": "online",
+    "latency": "100ms",
+    "gpu": "NVIDIA H100 (flex) (80GB HBM3)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_ND96isrf_H100_v5 - Stockholm, Sweden",
+    "coordinates": [
+      18.0686,
+      59.3293
+    ],
+    "region": "swedencentral",
+    "status": "online",
+    "latency": "34ms",
+    "gpu": "NVIDIA H100 (80GB HBM3)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NV16as_v4 - Stockholm, Sweden",
+    "coordinates": [
+      18.0686,
+      59.3293
+    ],
+    "region": "swedencentral",
+    "status": "online",
+    "latency": "36ms",
+    "gpu": "AMD Radeon MI25 (16GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV6ads_A10_v5 - Stockholm, Sweden",
+    "coordinates": [
+      18.0686,
+      59.3293
+    ],
+    "region": "swedencentral",
+    "status": "online",
+    "latency": "112ms",
+    "gpu": "NVIDIA A10 (6GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC24_Promo - Virginia, USA (Gov)",
+    "coordinates": [
+      -78.6569,
+      37.4316
+    ],
+    "region": "usgovvirginia",
+    "status": "online",
+    "latency": "125ms",
+    "gpu": "NVIDIA Tesla K80 (12GB GDDR5 (legacy))",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC6_Promo - Virginia, USA (Gov)",
+    "coordinates": [
+      -78.6569,
+      37.4316
+    ],
+    "region": "usgovvirginia",
+    "status": "online",
+    "latency": "128ms",
+    "gpu": "NVIDIA Tesla K80 (12GB GDDR5 (legacy))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_ND96asr_v4 - Virginia, USA (Gov)",
+    "coordinates": [
+      -78.6569,
+      37.4316
+    ],
+    "region": "usgovvirginia",
+    "status": "online",
+    "latency": "53ms",
+    "gpu": "NVIDIA A100 (40GB HBM2e)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NV18ads_A10_v5 - Virginia, USA (Gov)",
+    "coordinates": [
+      -78.6569,
+      37.4316
+    ],
+    "region": "usgovvirginia",
+    "status": "online",
+    "latency": "64ms",
+    "gpu": "NVIDIA A10 (18GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV48s_v3 - Virginia, USA (Gov)",
+    "coordinates": [
+      -78.6569,
+      37.4316
+    ],
+    "region": "usgovvirginia",
+    "status": "online",
+    "latency": "19ms",
+    "gpu": "NVIDIA Tesla M60 (32GB)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC12s_v3 - Toronto, Canada",
+    "coordinates": [
+      -79.3832,
+      43.6532
+    ],
+    "region": "canadacentral",
+    "status": "online",
+    "latency": "112ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC48ads_A100_v4 - Toronto, Canada",
+    "coordinates": [
+      -79.3832,
+      43.6532
+    ],
+    "region": "canadacentral",
+    "status": "online",
+    "latency": "20ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC96ads_A100_v4 - Toronto, Canada",
+    "coordinates": [
+      -79.3832,
+      43.6532
+    ],
+    "region": "canadacentral",
+    "status": "online",
+    "latency": "27ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NP10s - Toronto, Canada",
+    "coordinates": [
+      -79.3832,
+      43.6532
+    ],
+    "region": "canadacentral",
+    "status": "online",
+    "latency": "35ms",
+    "gpu": "Xilinx Alveo U250 (FPGA)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV32as_v4 - Toronto, Canada",
+    "coordinates": [
+      -79.3832,
+      43.6532
+    ],
+    "region": "canadacentral",
+    "status": "online",
+    "latency": "96ms",
+    "gpu": "AMD Radeon MI25 (32GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV8as_v4 - Toronto, Canada",
+    "coordinates": [
+      -79.3832,
+      43.6532
+    ],
+    "region": "canadacentral",
+    "status": "online",
+    "latency": "21ms",
+    "gpu": "AMD Radeon MI25 (8GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC48ads_A100_v4 - Paris, France",
+    "coordinates": [
+      2.3522,
+      48.8566
+    ],
+    "region": "francecentral",
+    "status": "online",
+    "latency": "21ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_ND96ams_A100_v4 - Paris, France",
+    "coordinates": [
+      2.3522,
+      48.8566
+    ],
+    "region": "francecentral",
+    "status": "online",
+    "latency": "10ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NV12s_v3 - Paris, France",
+    "coordinates": [
+      2.3522,
+      48.8566
+    ],
+    "region": "francecentral",
+    "status": "online",
+    "latency": "24ms",
+    "gpu": "NVIDIA Tesla M60 (8GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV36ads_A10_v5 - Paris, France",
+    "coordinates": [
+      2.3522,
+      48.8566
+    ],
+    "region": "francecentral",
+    "status": "online",
+    "latency": "23ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC12s_v3 - Pune, India",
+    "coordinates": [
+      73.8567,
+      18.5204
+    ],
+    "region": "centralindia",
+    "status": "online",
+    "latency": "94ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC48ads_A100_v4 - Pune, India",
+    "coordinates": [
+      73.8567,
+      18.5204
+    ],
+    "region": "centralindia",
+    "status": "online",
+    "latency": "29ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC96ads_A100_v4 - Pune, India",
+    "coordinates": [
+      73.8567,
+      18.5204
+    ],
+    "region": "centralindia",
+    "status": "online",
+    "latency": "65ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NV24_Promo - Pune, India",
+    "coordinates": [
+      73.8567,
+      18.5204
+    ],
+    "region": "centralindia",
+    "status": "online",
+    "latency": "139ms",
+    "gpu": "NVIDIA Tesla M60 (32GB (legacy))",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NV4as_v4 - Pune, India",
+    "coordinates": [
+      73.8567,
+      18.5204
+    ],
+    "region": "centralindia",
+    "status": "online",
+    "latency": "44ms",
+    "gpu": "AMD Radeon MI25 (4GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC40ads_H100_v5 - Madrid, Spain",
+    "coordinates": [
+      -3.7038,
+      40.4168
+    ],
+    "region": "spaincentral",
+    "status": "online",
+    "latency": "11ms",
+    "gpu": "NVIDIA H100 NVL (94GB HBM3)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_ND96amsr_A100_v4 - Madrid, Spain",
+    "coordinates": [
+      -3.7038,
+      40.4168
+    ],
+    "region": "spaincentral",
+    "status": "online",
+    "latency": "159ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_ND96isrf_H100_v5 - Madrid, Spain",
+    "coordinates": [
+      -3.7038,
+      40.4168
+    ],
+    "region": "spaincentral",
+    "status": "online",
+    "latency": "144ms",
+    "gpu": "NVIDIA H100 (80GB HBM3)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NV28adms_V710_v5 - Madrid, Spain",
+    "coordinates": [
+      -3.7038,
+      40.4168
+    ],
+    "region": "spaincentral",
+    "status": "online",
+    "latency": "71ms",
+    "gpu": "AMD Radeon Pro V710 (24GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV6ads_A10_v5 - Madrid, Spain",
+    "coordinates": [
+      -3.7038,
+      40.4168
+    ],
+    "region": "spaincentral",
+    "status": "online",
+    "latency": "130ms",
+    "gpu": "NVIDIA A10 (6GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC48ads_A100_v4 - Warsaw, Poland",
+    "coordinates": [
+      21.0122,
+      52.2297
+    ],
+    "region": "polandcentral",
+    "status": "online",
+    "latency": "131ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_ND96amsr_A100_v4 - Warsaw, Poland",
+    "coordinates": [
+      21.0122,
+      52.2297
+    ],
+    "region": "polandcentral",
+    "status": "online",
+    "latency": "43ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_ND96isr_H200_v5 - Warsaw, Poland",
+    "coordinates": [
+      21.0122,
+      52.2297
+    ],
+    "region": "polandcentral",
+    "status": "online",
+    "latency": "124ms",
+    "gpu": "NVIDIA H200 (141GB HBM3e)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NV32as_v4 - Warsaw, Poland",
+    "coordinates": [
+      21.0122,
+      52.2297
+    ],
+    "region": "polandcentral",
+    "status": "online",
+    "latency": "131ms",
+    "gpu": "AMD Radeon MI25 (32GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV8as_v4 - Warsaw, Poland",
+    "coordinates": [
+      21.0122,
+      52.2297
+    ],
+    "region": "polandcentral",
+    "status": "online",
+    "latency": "155ms",
+    "gpu": "AMD Radeon MI25 (8GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC40ads_H100_v5 - Seoul, South Korea",
+    "coordinates": [
+      126.978,
+      37.5665
+    ],
+    "region": "koreacentral",
+    "status": "online",
+    "latency": "48ms",
+    "gpu": "NVIDIA H100 NVL (94GB HBM3)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC8as_T4_v3 - Seoul, South Korea",
+    "coordinates": [
+      126.978,
+      37.5665
+    ],
+    "region": "koreacentral",
+    "status": "online",
+    "latency": "158ms",
+    "gpu": "NVIDIA Tesla T4 (16GB GDDR6)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV16as_v4 - Seoul, South Korea",
+    "coordinates": [
+      126.978,
+      37.5665
+    ],
+    "region": "koreacentral",
+    "status": "online",
+    "latency": "116ms",
+    "gpu": "AMD Radeon MI25 (16GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV6ads_A10_v5 - Seoul, South Korea",
+    "coordinates": [
+      126.978,
+      37.5665
+    ],
+    "region": "koreacentral",
+    "status": "online",
+    "latency": "122ms",
+    "gpu": "NVIDIA A10 (6GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC24rs_v3 - Sao Paulo, Brazil",
+    "coordinates": [
+      -46.6333,
+      -23.5505
+    ],
+    "region": "brazilsouth",
+    "status": "online",
+    "latency": "93ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC8as_T4_v3 - Sao Paulo, Brazil",
+    "coordinates": [
+      -46.6333,
+      -23.5505
+    ],
+    "region": "brazilsouth",
+    "status": "online",
+    "latency": "69ms",
+    "gpu": "NVIDIA Tesla T4 (16GB GDDR6)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_ND96isr_H200_v5 - Sao Paulo, Brazil",
+    "coordinates": [
+      -46.6333,
+      -23.5505
+    ],
+    "region": "brazilsouth",
+    "status": "online",
+    "latency": "16ms",
+    "gpu": "NVIDIA H200 (141GB HBM3e)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NV36adms_A10_v5 - Sao Paulo, Brazil",
+    "coordinates": [
+      -46.6333,
+      -23.5505
+    ],
+    "region": "brazilsouth",
+    "status": "online",
+    "latency": "138ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC24ads_A100_v4 - Milan, Italy",
+    "coordinates": [
+      9.19,
+      45.4642
+    ],
+    "region": "italynorth",
+    "status": "online",
+    "latency": "38ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_ND128isr_NDR_GB200_v6 - Milan, Italy",
+    "coordinates": [
+      9.19,
+      45.4642
+    ],
+    "region": "italynorth",
+    "status": "online",
+    "latency": "141ms",
+    "gpu": "NVIDIA GB200 (Blackwell) (192GB HBM3e)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NV12ads_A10_v5 - Milan, Italy",
+    "coordinates": [
+      9.19,
+      45.4642
+    ],
+    "region": "italynorth",
+    "status": "online",
+    "latency": "14ms",
+    "gpu": "NVIDIA A10 (12GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV4as_v4 - Milan, Italy",
+    "coordinates": [
+      9.19,
+      45.4642
+    ],
+    "region": "italynorth",
+    "status": "online",
+    "latency": "121ms",
+    "gpu": "AMD Radeon MI25 (4GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC40ads_H100_v5 - Frankfurt, Germany",
+    "coordinates": [
+      8.6821,
+      50.1109
+    ],
+    "region": "germanywestcentral",
+    "status": "online",
+    "latency": "154ms",
+    "gpu": "NVIDIA H100 NVL (94GB HBM3)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC96ads_A100_v4 - Frankfurt, Germany",
+    "coordinates": [
+      8.6821,
+      50.1109
+    ],
+    "region": "germanywestcentral",
+    "status": "online",
+    "latency": "125ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NV16as_v4 - Frankfurt, Germany",
+    "coordinates": [
+      8.6821,
+      50.1109
+    ],
+    "region": "germanywestcentral",
+    "status": "online",
+    "latency": "34ms",
+    "gpu": "AMD Radeon MI25 (16GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV6ads_A10_v5 - Frankfurt, Germany",
+    "coordinates": [
+      8.6821,
+      50.1109
+    ],
+    "region": "germanywestcentral",
+    "status": "online",
+    "latency": "24ms",
+    "gpu": "NVIDIA A10 (6GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC24s_v3 - Zurich, Switzerland",
+    "coordinates": [
+      8.5417,
+      47.3769
+    ],
+    "region": "switzerlandnorth",
+    "status": "online",
+    "latency": "37ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_ND96ams_A100_v4 - Zurich, Switzerland",
+    "coordinates": [
+      8.5417,
+      47.3769
+    ],
+    "region": "switzerlandnorth",
+    "status": "online",
+    "latency": "128ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NV18ads_A10_v5 - Zurich, Switzerland",
+    "coordinates": [
+      8.5417,
+      47.3769
+    ],
+    "region": "switzerlandnorth",
+    "status": "online",
+    "latency": "42ms",
+    "gpu": "NVIDIA A10 (18GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV72ads_A10_v5 - Zurich, Switzerland",
+    "coordinates": [
+      8.5417,
+      47.3769
+    ],
+    "region": "switzerlandnorth",
+    "status": "online",
+    "latency": "93ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC24s_v3 - Arizona, USA (Gov)",
+    "coordinates": [
+      -112.074,
+      33.4484
+    ],
+    "region": "usgovarizona",
+    "status": "online",
+    "latency": "54ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_ND96isr_H100_v5 - Arizona, USA (Gov)",
+    "coordinates": [
+      -112.074,
+      33.4484
+    ],
+    "region": "usgovarizona",
+    "status": "online",
+    "latency": "77ms",
+    "gpu": "NVIDIA H100 (80GB HBM3)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NV32as_v4 - Arizona, USA (Gov)",
+    "coordinates": [
+      -112.074,
+      33.4484
+    ],
+    "region": "usgovarizona",
+    "status": "online",
+    "latency": "12ms",
+    "gpu": "AMD Radeon MI25 (32GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_ND96ams_A100_v4 - Dubai, UAE",
+    "coordinates": [
+      55.2708,
+      25.2048
+    ],
+    "region": "uaenorth",
+    "status": "online",
+    "latency": "150ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_ND96isr_MI300X_v5 - Dubai, UAE",
+    "coordinates": [
+      55.2708,
+      25.2048
+    ],
+    "region": "uaenorth",
+    "status": "online",
+    "latency": "13ms",
+    "gpu": "AMD Instinct MI300X (192GB HBM3)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NV36ads_A10_v5 - Dubai, UAE",
+    "coordinates": [
+      55.2708,
+      25.2048
+    ],
+    "region": "uaenorth",
+    "status": "online",
+    "latency": "16ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC24rs_v3 - Mumbai, India",
+    "coordinates": [
+      72.8777,
+      19.076
+    ],
+    "region": "jioindiawest",
+    "status": "online",
+    "latency": "146ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NC96ads_A100_v4 - Mumbai, India",
+    "coordinates": [
+      72.8777,
+      19.076
+    ],
+    "region": "jioindiawest",
+    "status": "online",
+    "latency": "148ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NV72ads_A10_v5 - Mumbai, India",
+    "coordinates": [
+      72.8777,
+      19.076
+    ],
+    "region": "jioindiawest",
+    "status": "online",
+    "latency": "62ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC64as_T4_v3 - Tel Aviv, Israel",
+    "coordinates": [
+      34.7818,
+      32.0853
+    ],
+    "region": "israelcentral",
+    "status": "online",
+    "latency": "88ms",
+    "gpu": "NVIDIA Tesla T4 (16GB GDDR6)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NV36ads_A10_v5 - Tel Aviv, Israel",
+    "coordinates": [
+      34.7818,
+      32.0853
+    ],
+    "region": "israelcentral",
+    "status": "online",
+    "latency": "31ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC64as_T4_v3 - Kuala Lumpur, Malaysia",
+    "coordinates": [
+      101.6869,
+      3.139
+    ],
+    "region": "malaysiawest",
+    "status": "online",
+    "latency": "27ms",
+    "gpu": "NVIDIA Tesla T4 (16GB GDDR6)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NV36adms_A10_v5 - Kuala Lumpur, Malaysia",
+    "coordinates": [
+      101.6869,
+      3.139
+    ],
+    "region": "malaysiawest",
+    "status": "online",
+    "latency": "153ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_ND128isr_NDR_GB200_v6 - Busan, South Korea",
+    "coordinates": [
+      129.0756,
+      35.1796
+    ],
+    "region": "koreasouth",
+    "status": "online",
+    "latency": "106ms",
+    "gpu": "NVIDIA GB200 (Blackwell) (192GB HBM3e)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NV18ads_A10_v5 - Busan, South Korea",
+    "coordinates": [
+      129.0756,
+      35.1796
+    ],
+    "region": "koreasouth",
+    "status": "online",
+    "latency": "151ms",
+    "gpu": "NVIDIA A10 (18GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_ND96amsr_A100_v4 - Johannesburg, South Africa",
+    "coordinates": [
+      28.2293,
+      -25.7479
+    ],
+    "region": "southafricanorth",
+    "status": "online",
+    "latency": "45ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 8
+  },
+  {
+    "name": "Standard_NV24s_v3 - Johannesburg, South Africa",
+    "coordinates": [
+      28.2293,
+      -25.7479
+    ],
+    "region": "southafricanorth",
+    "status": "online",
+    "latency": "88ms",
+    "gpu": "NVIDIA Tesla M60 (16GB)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NC24ads_A100_v4 - Nagpur, India",
+    "coordinates": [
+      79.0882,
+      21.1458
+    ],
+    "region": "jioindiacentral",
+    "status": "online",
+    "latency": "86ms",
+    "gpu": "NVIDIA A100 (80GB HBM2e)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV18ads_A10_v5 - Nagpur, India",
+    "coordinates": [
+      79.0882,
+      21.1458
+    ],
+    "region": "jioindiacentral",
+    "status": "online",
+    "latency": "113ms",
+    "gpu": "NVIDIA A10 (18GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC24rs_v3 - Hong Kong",
+    "coordinates": [
+      114.1694,
+      22.3193
+    ],
+    "region": "eastasia",
+    "status": "online",
+    "latency": "125ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 4
+  },
+  {
+    "name": "Standard_NV36adms_A10_v5 - Hong Kong",
+    "coordinates": [
+      114.1694,
+      22.3193
+    ],
+    "region": "eastasia",
+    "status": "online",
+    "latency": "137ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV16as_v4 - Mexico City, Mexico",
+    "coordinates": [
+      -99.1332,
+      19.4326
+    ],
+    "region": "mexicocentral",
+    "status": "online",
+    "latency": "67ms",
+    "gpu": "AMD Radeon MI25 (16GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV6ads_A10_v5 - Mexico City, Mexico",
+    "coordinates": [
+      -99.1332,
+      19.4326
+    ],
+    "region": "mexicocentral",
+    "status": "online",
+    "latency": "122ms",
+    "gpu": "NVIDIA A10 (6GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC8as_T4_v3 - Dallas, Texas, USA",
+    "coordinates": [
+      -96.797,
+      32.7767
+    ],
+    "region": "attdallas1",
+    "status": "online",
+    "latency": "48ms",
+    "gpu": "NVIDIA Tesla T4 (16GB GDDR6)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV8as_v4 - Dallas, Texas, USA",
+    "coordinates": [
+      -96.797,
+      32.7767
+    ],
+    "region": "attdallas1",
+    "status": "online",
+    "latency": "124ms",
+    "gpu": "AMD Radeon MI25 (8GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV16as_v4 - Atlanta, Georgia, USA",
+    "coordinates": [
+      -84.388,
+      33.749
+    ],
+    "region": "attatlanta1",
+    "status": "online",
+    "latency": "44ms",
+    "gpu": "AMD Radeon MI25 (16GB (partitioned))",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC80adis_H100_v5 - Jakarta, Indonesia",
+    "coordinates": [
+      106.8456,
+      -6.2088
+    ],
+    "region": "indonesiacentral",
+    "status": "online",
+    "latency": "20ms",
+    "gpu": "NVIDIA H100 NVL (94GB HBM3)",
+    "gpu_count": 2
+  },
+  {
+    "name": "Standard_NV36ads_A10_v5 - Jakarta, Indonesia",
+    "coordinates": [
+      106.8456,
+      -6.2088
+    ],
+    "region": "indonesiacentral",
+    "status": "online",
+    "latency": "20ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NC6s_v3 - Doha, Qatar",
+    "coordinates": [
+      51.531,
+      25.2854
+    ],
+    "region": "qatarcentral",
+    "status": "online",
+    "latency": "108ms",
+    "gpu": "NVIDIA Tesla V100 (16GB HBM2)",
+    "gpu_count": 1
+  },
+  {
+    "name": "Standard_NV72ads_A10_v5 - Doha, Qatar",
+    "coordinates": [
+      51.531,
+      25.2854
+    ],
+    "region": "qatarcentral",
+    "status": "online",
+    "latency": "79ms",
+    "gpu": "NVIDIA A10 (24GB)",
+    "gpu_count": 2
+  }
+]

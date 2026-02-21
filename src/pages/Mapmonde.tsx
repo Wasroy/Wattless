@@ -9,15 +9,17 @@ import { Badge } from "@/components/ui/badge";
 import { useServerTransitions } from "@/hooks/useServerTransitions";
 
 // Import des données depuis les fichiers JSON
-import allServeursData from "@/data/all_servers.json";
+import nerveServeursData from "@/data/nerve_servers.json";
 import transitionsData from "@/data/transitions.json";
 import type { Serveur } from "@/data/types";
 
-// Préparer la liste complète de tous les serveurs
-const allServeurs: Serveur[] = allServeursData.map((s) => ({
-  ...s,
+// Préparer la liste complète de tous les serveurs depuis le catalogue NERVE
+const allServeurs: Serveur[] = nerveServeursData.map((s) => ({
+  name: s.name,
   coordinates: s.coordinates as [number, number],
-  status: s.status as "online" | "maintenance" | "offline",
+  status: (s.status || "online") as "online" | "maintenance" | "offline",
+  region: s.region,
+  latency: s.latency || "50ms",
 }));
 
 const Mapmonde = () => {
