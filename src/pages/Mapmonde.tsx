@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -6,46 +6,12 @@ import Footer from "@/components/Footer";
 import WorldMap from "@/components/WorldMap";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Switch } from "@/components/ui/switch";
+import { useServerTransitions } from "@/hooks/useServerTransitions";
 
 // Import des données depuis les fichiers JSON
-import serveursData from "@/data/serveurs.json";
 import allServeursData from "@/data/all_servers.json";
+import transitionsData from "@/data/transitions.json";
 import type { Serveur } from "@/data/types";
-
-// Données par défaut en cas d'erreur de chargement du JSON
-const defaultServeurs: Serveur[] = [
-  { name: "DC Paris", coordinates: [2.35, 48.85] as [number, number], status: "online" as const, region: "Europe", latency: "12ms" },
-  { name: "DC New York", coordinates: [-74.01, 40.71] as [number, number], status: "online" as const, region: "Amérique du Nord", latency: "45ms" },
-  { name: "DC Tokyo", coordinates: [139.65, 35.68] as [number, number], status: "online" as const, region: "Asie-Pacifique", latency: "120ms" },
-  { name: "DC London", coordinates: [-0.13, 51.51] as [number, number], status: "online" as const, region: "Europe", latency: "18ms" },
-  { name: "DC Frankfurt", coordinates: [8.68, 50.11] as [number, number], status: "online" as const, region: "Europe", latency: "15ms" },
-  { name: "DC Singapore", coordinates: [103.85, 1.29] as [number, number], status: "online" as const, region: "Asie-Pacifique", latency: "95ms" },
-  { name: "DC São Paulo", coordinates: [-46.63, -23.55] as [number, number], status: "online" as const, region: "Amérique du Sud", latency: "180ms" },
-  { name: "DC Sydney", coordinates: [151.21, -33.87] as [number, number], status: "online" as const, region: "Océanie", latency: "150ms" },
-  { name: "DC Mumbai", coordinates: [72.88, 19.08] as [number, number], status: "online" as const, region: "Asie du Sud", latency: "85ms" },
-  { name: "DC Toronto", coordinates: [-79.38, 43.65] as [number, number], status: "maintenance" as const, region: "Amérique du Nord", latency: "52ms" },
-  { name: "DC Dubai", coordinates: [55.27, 25.20] as [number, number], status: "online" as const, region: "Moyen-Orient", latency: "75ms" },
-  { name: "DC Seoul", coordinates: [126.98, 37.57] as [number, number], status: "online" as const, region: "Asie-Pacifique", latency: "110ms" },
-];
-
-// Utiliser les données du JSON si disponibles, sinon utiliser les données par défaut
-// Conversion des coordonnées en tuple et des statuts en const assertions
-const isUsingJsonData = serveursData && Array.isArray(serveursData) && serveursData.length > 0;
-
-// Log pour vérifier quelle source de données est utilisée (peut être retiré en production)
-if (process.env.NODE_ENV === "development") {
-  console.log(
-    `[Mapmonde] ${isUsingJsonData ? "✅ Utilisation des données JSON" : "⚠️ Utilisation des données par défaut"}`,
-    isUsingJsonData ? `(${serveursData.length} serveurs)` : ""
-  );
-}
-
-const serveurs: Serveur[] = (isUsingJsonData ? serveursData : defaultServeurs).map((dc) => ({
-  ...dc,
-  coordinates: dc.coordinates as [number, number],
-  status: dc.status as "online" | "maintenance" | "offline",
-}));
 
 // Préparer la liste complète de tous les serveurs
 const allServeurs: Serveur[] = allServeursData.map((s) => ({
@@ -55,9 +21,24 @@ const allServeurs: Serveur[] = allServeursData.map((s) => ({
 }));
 
 const Mapmonde = () => {
-  const [showAllServers, setShowAllServers] = useState(false);
+  const { activeTransitions, addTransition } = useServerTransitions();
 
-  const activeServeurs = showAllServers ? allServeurs : serveurs;
+  // Charger et déclencher les transitions depuis le JSON
+  useEffect(() => {
+    const timeouts: NodeJS.Timeout[] = [];
+
+    transitionsData.forEach((transition) => {
+      const timeout = setTimeout(() => {
+        addTransition(transition.from, transition.to, 2000);
+      }, transition.timestamp);
+
+      timeouts.push(timeout);
+    });
+
+    return () => {
+      timeouts.forEach((timeout) => clearTimeout(timeout));
+    };
+  }, [addTransition]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -73,26 +54,17 @@ const Mapmonde = () => {
           <Card className="overflow-hidden">
             <CardHeader className="pb-0">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
+                <div>
                   <CardTitle>Carte des serveurs</CardTitle>
-                  <div className="flex items-center gap-2">
-                    <Switch
-                      id="show-all"
-                      checked={showAllServers}
-                      onCheckedChange={setShowAllServers}
-                    />
-                    <label
-                      htmlFor="show-all"
-                      className="text-xs text-muted-foreground cursor-pointer select-none"
-                    >
-                      Tous les serveurs ({allServeurs.length})
-                    </label>
-                  </div>
                 </div>
                 <div className="flex items-center gap-4 text-xs text-muted-foreground">
                   <div className="flex items-center gap-1.5">
-                    <span className="h-2.5 w-2.5 rounded-full bg-blue-500" />
-                    Online
+                    <span className="h-2.5 w-2.5 rounded-full bg-gray-500 opacity-60" />
+                    Inactif
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
+                    Transition active
                   </div>
                   <div className="flex items-center gap-1.5">
                     <span className="h-2.5 w-2.5 rounded-full bg-amber-500" />
@@ -107,7 +79,11 @@ const Mapmonde = () => {
             </CardHeader>
             <CardContent className="p-4">
               <div className="rounded-lg border border-border bg-[#0d0d1a] overflow-hidden">
-                <WorldMap serveurs={activeServeurs} allServeursColor={showAllServers} />
+                <WorldMap 
+                  serveurs={allServeurs} 
+                  allServeursColor={true}
+                  activeTransitions={activeTransitions}
+                />
               </div>
             </CardContent>
           </Card>
@@ -129,7 +105,7 @@ const Mapmonde = () => {
             </CardHeader>
             <CardContent>
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {activeServeurs.map((dc) => (
+                {allServeurs.map((dc) => (
                   <div
                     key={dc.name}
                     className="flex items-center justify-between rounded-lg border border-border bg-secondary/50 p-4"

@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useMemo } from "react";
 import {
   ComposableMap,
   Geographies,
@@ -6,6 +6,7 @@ import {
   Marker,
   Line,
 } from "react-simple-maps";
+import type { ActiveTransition } from "@/data/types";
 
 const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
@@ -25,6 +26,7 @@ interface WorldMapProps {
   connections?: Connection[];
   className?: string;
   allServeursColor?: boolean; // true = utiliser un bleu différent pour "tous les serveurs"
+  activeTransitions?: ActiveTransition[]; // transitions actives
 }
 
 const defaultServeurs: Serveur[] = [
@@ -64,11 +66,89 @@ const WorldMap = memo(({
   connections = defaultConnections,
   className = "",
   allServeursColor = false,
+  activeTransitions = [],
 }: WorldMapProps) => {
-  // Couleurs selon le mode
-  const dotColor = allServeursColor ? "#60a5fa" : "#3b82f6"; // blue-400 vs blue-500
-  const glowColor = allServeursColor ? "rgba(96, 165, 250, 0.15)" : "rgba(59, 130, 246, 0.15)";
-  const lineColor = allServeursColor ? "rgba(96, 165, 250, 0.20)" : "rgba(59, 130, 246, 0.25)";
+  // Fonction pour vérifier si un serveur est actif
+  const isServerActive = useMemo(() => {
+    const activeSet = new Set<string>();
+    activeTransitions.forEach((t) => {
+      activeSet.add(t.from);
+      activeSet.add(t.to);
+    });
+    return (serverName: string) => activeSet.has(serverName);
+  }, [activeTransitions]);
+
+  // Trouver les coordonnées d'un serveur par son nom
+  const getServerCoordinates = useMemo(() => {
+    const coordMap = new Map<string, [number, number]>();
+    serveurs.forEach((s) => {
+      coordMap.set(s.name, s.coordinates);
+    });
+    return (serverName: string): [number, number] | null => {
+      return coordMap.get(serverName) || null;
+    };
+  }, [serveurs]);
+
+  // Calculer les positions des labels pour éviter les superpositions
+  const labelPositions = useMemo(() => {
+    const positions = new Map<string, { x: number; y: number }>();
+    const activeSet = new Set<string>();
+    activeTransitions.forEach((t) => {
+      activeSet.add(t.from);
+      activeSet.add(t.to);
+    });
+    const activeServers = serveurs.filter((s) => activeSet.has(s.name));
+    
+    // Distance minimale pour considérer deux serveurs comme proches (en degrés)
+    const PROXIMITY_THRESHOLD = 8;
+    
+    activeServers.forEach((server, index) => {
+      let offsetX = 0;
+      let offsetY = -14; // Position par défaut au-dessus
+      
+      // Vérifier les serveurs proches
+      activeServers.forEach((otherServer, otherIndex) => {
+        if (index === otherIndex) return;
+        
+        const [lon1, lat1] = server.coordinates;
+        const [lon2, lat2] = otherServer.coordinates;
+        
+        // Calcul de distance approximative (formule de Haversine simplifiée)
+        const latDiff = Math.abs(lat1 - lat2);
+        const lonDiff = Math.abs(lon1 - lon2);
+        const distance = Math.sqrt(latDiff * latDiff + lonDiff * lonDiff);
+        
+        if (distance < PROXIMITY_THRESHOLD) {
+          // Si les serveurs sont proches, décaler les labels
+          // Alterner entre haut/bas et gauche/droite selon l'index
+          if (index < otherIndex) {
+            // Premier serveur : décaler vers le haut-gauche
+            offsetY = -18;
+            offsetX = -15;
+          } else {
+            // Deuxième serveur : décaler vers le bas-droite
+            offsetY = -10;
+            offsetX = 15;
+          }
+          
+          // Si très proches, utiliser un décalage vertical plus important
+          if (distance < PROXIMITY_THRESHOLD / 2) {
+            if (index < otherIndex) {
+              offsetY = -22;
+              offsetX = -20;
+            } else {
+              offsetY = -6;
+              offsetX = 20;
+            }
+          }
+        }
+      });
+      
+      positions.set(server.name, { x: offsetX, y: offsetY });
+    });
+    
+    return positions;
+  }, [serveurs, activeTransitions]);
   return (
     <div className={`w-full relative ${className}`} style={{ overflow: "hidden", marginBottom: "-10%" }}>
       <div style={{ clipPath: "inset(0 0 3% 0)" }}>
@@ -112,58 +192,106 @@ const WorldMap = memo(({
           }
         </Geographies>
 
-        {/* Connection lines */}
-        {connections.map((conn, i) => (
-          <Line
-            key={`conn-${i}`}
-            from={conn.from}
-            to={conn.to}
-            stroke={lineColor}
-            strokeWidth={1}
-            strokeLinecap="round"
-          />
-        ))}
+        {/* Lignes de transition actives (VERTES) */}
+        {activeTransitions.map((transition, i) => {
+          const fromCoords = getServerCoordinates(transition.from);
+          const toCoords = getServerCoordinates(transition.to);
+
+          if (!fromCoords || !toCoords) return null;
+
+          return (
+            <Line
+              key={`transition-${i}-${transition.timestamp}`}
+              from={fromCoords}
+              to={toCoords}
+              stroke="#22c55e"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeDasharray="5,5"
+              style={{
+                animation: "dash 1s linear infinite",
+                filter: "drop-shadow(0 0 4px rgba(34, 197, 94, 0.6))",
+              }}
+            />
+          );
+        })}
+
 
         {/* Serveur markers */}
-        {serveurs.map((dc) => (
-          <Marker key={dc.name} coordinates={dc.coordinates}>
-            {/* Outer glow */}
-            <circle
-              r={allServeursColor ? 5 : 8}
-              fill={glowColor}
-              className="animate-pulse"
-            />
-            {/* Inner dot */}
-            <circle
-              r={allServeursColor ? 3 : 4}
-              fill={
-                dc.status === "maintenance"
-                  ? "#f59e0b"
-                  : dc.status === "offline"
-                  ? "#ef4444"
-                  : dotColor
-              }
-              stroke="#0f172a"
-              strokeWidth={1}
-            />
-            {/* Label */}
-            {!allServeursColor && (
-              <text
-                textAnchor="middle"
-                y={-14}
+        {serveurs.map((dc) => {
+          const isActive = isServerActive(dc.name);
+          const baseSize = allServeursColor ? 3 : 4;
+          const activeSize = 6;
+          const baseGlowSize = allServeursColor ? 5 : 8;
+          const activeGlowSize = 12;
+
+          return (
+            <Marker key={dc.name} coordinates={dc.coordinates}>
+              {/* Outer glow */}
+              <circle
+                r={isActive ? activeGlowSize : baseGlowSize}
+                fill={
+                  isActive
+                    ? "rgba(34, 197, 94, 0.2)"
+                    : allServeursColor
+                    ? "rgba(96, 165, 250, 0.15)"
+                    : "rgba(59, 130, 246, 0.15)"
+                }
+                className={isActive ? "animate-pulse" : ""}
                 style={{
-                  fontFamily: "JetBrains Mono, monospace",
-                  fontSize: 8,
-                  fill: "#94a3b8",
+                  transition: "r 0.3s ease, fill 0.3s ease",
                 }}
-              >
-                {dc.name}
-              </text>
-            )}
-          </Marker>
-        ))}
+              />
+              {/* Inner dot */}
+              <circle
+                r={isActive ? activeSize : baseSize}
+                fill={
+                  isActive
+                    ? "#22c55e"
+                    : dc.status === "maintenance"
+                    ? "#f59e0b"
+                    : dc.status === "offline"
+                    ? "#ef4444"
+                    : "#6b7280"
+                }
+                stroke={isActive ? "#16a34a" : "#0f172a"}
+                strokeWidth={isActive ? 1.5 : 1}
+                opacity={isActive ? 1 : 0.6}
+                style={{
+                  transition: "r 0.3s ease, fill 0.3s ease, opacity 0.3s ease",
+                }}
+              />
+              {/* Label - toujours afficher pour les serveurs actifs, sinon seulement si pas en mode "tous les serveurs" */}
+              {(isActive || !allServeursColor) && (
+                <text
+                  textAnchor={isActive && labelPositions.get(dc.name)?.x !== 0 ? "start" : "middle"}
+                  x={isActive ? labelPositions.get(dc.name)?.x || 0 : 0}
+                  y={isActive ? labelPositions.get(dc.name)?.y || -14 : -14}
+                  style={{
+                    fontFamily: "JetBrains Mono, monospace",
+                    fontSize: isActive ? 7 : 8,
+                    fill: isActive ? "#22c55e" : "#94a3b8",
+                    opacity: isActive ? 1 : 0.7,
+                    fontWeight: isActive ? "600" : "400",
+                    filter: isActive ? "drop-shadow(0 0 2px rgba(34, 197, 94, 0.5))" : "none",
+                  }}
+                >
+                  {dc.name}
+                </text>
+              )}
+            </Marker>
+          );
+        })}
         </ComposableMap>
       </div>
+      {/* CSS pour l'animation du trait vert */}
+      <style>{`
+        @keyframes dash {
+          to {
+            stroke-dashoffset: -10;
+          }
+        }
+      `}</style>
     </div>
   );
 });
