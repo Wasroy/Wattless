@@ -5,6 +5,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
+import Simulate from "./pages/Simulate";
+import Checkpoint from "./pages/Checkpoint";
+import TimeShift from "./pages/TimeShift";
 import Mapmonde from "./pages/Mapmonde";
 import NotFound from "./pages/NotFound";
 
@@ -19,8 +22,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/simulate" element={<Simulate />} />
+          <Route path="/checkpoint" element={<Checkpoint />} />
+          <Route path="/timeshifting" element={<TimeShift />} />
           <Route path="/mapmonde" element={<Mapmonde />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
