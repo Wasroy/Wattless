@@ -1,0 +1,422 @@
+{
+  "metadata": {
+    "scrape_timestamp": "2026-02-21T12:00:00Z",
+    "version": "1.0",
+    "sources": [
+      "Azure Retail Prices API",
+      "Open-Meteo API",
+      "Carbon Intensity UK API"
+    ],
+    "target_region": "eu-west (Paris, Amsterdam, London)"
+  },
+
+  "job_context": {
+    "job_type": "llm_fine_tuning",
+    "model": "LLaMA-7B",
+    "estimated_gpu_hours": 24,
+    "deadline": "2026-02-22T08:00:00Z",
+    "checkpoint_interval_min": 30,
+    "min_gpu_memory_gb": 16,
+    "framework": "pytorch"
+  },
+
+  "regions": {
+    "francecentral": {
+      "cloud_provider": "azure",
+      "location": "Paris, France",
+      "availability_zones": ["fr-central-1", "fr-central-2", "fr-central-3"],
+      "gpu_spot_prices": [
+        {
+          "sku": "Standard_NC6s_v3",
+          "gpu": "Tesla V100 (16GB)",
+          "gpu_count": 1,
+          "vcpus": 6,
+          "ram_gb": 112,
+          "spot_price_usd_hr": 0.6616,
+          "ondemand_price_usd_hr": 3.580,
+          "savings_pct": 81.5,
+          "availability": "high"
+        },
+        {
+          "sku": "Standard_NC12s_v3",
+          "gpu": "Tesla V100 (16GB)",
+          "gpu_count": 2,
+          "vcpus": 12,
+          "ram_gb": 224,
+          "spot_price_usd_hr": 1.3232,
+          "ondemand_price_usd_hr": 7.160,
+          "savings_pct": 81.5,
+          "availability": "high"
+        },
+        {
+          "sku": "Standard_NC24rs_v3",
+          "gpu": "Tesla V100 (16GB)",
+          "gpu_count": 4,
+          "vcpus": 24,
+          "ram_gb": 448,
+          "spot_price_usd_hr": 2.9112,
+          "ondemand_price_usd_hr": 15.408,
+          "savings_pct": 81.1,
+          "availability": "medium"
+        },
+        {
+          "sku": "Standard_NC48ads_A100_v4",
+          "gpu": "A100 (80GB)",
+          "gpu_count": 2,
+          "vcpus": 48,
+          "ram_gb": 440,
+          "spot_price_usd_hr": 1.6970,
+          "ondemand_price_usd_hr": 8.496,
+          "savings_pct": 80.0,
+          "availability": "low"
+        },
+        {
+          "sku": "Standard_NC96ads_A100_v4",
+          "gpu": "A100 (80GB)",
+          "gpu_count": 4,
+          "vcpus": 96,
+          "ram_gb": 880,
+          "spot_price_usd_hr": 3.3939,
+          "ondemand_price_usd_hr": 16.992,
+          "savings_pct": 80.0,
+          "availability": "low"
+        },
+        {
+          "sku": "Standard_NC64as_T4_v3",
+          "gpu": "Tesla T4 (16GB)",
+          "gpu_count": 4,
+          "vcpus": 64,
+          "ram_gb": 440,
+          "spot_price_usd_hr": 1.4723,
+          "ondemand_price_usd_hr": 5.824,
+          "savings_pct": 74.7,
+          "availability": "high"
+        },
+        {
+          "sku": "Standard_NV6ads_A10_v5",
+          "gpu": "A10 (6GB slice)",
+          "gpu_count": 1,
+          "vcpus": 6,
+          "ram_gb": 55,
+          "spot_price_usd_hr": 0.1048,
+          "ondemand_price_usd_hr": 0.550,
+          "savings_pct": 80.9,
+          "availability": "high"
+        },
+        {
+          "sku": "Standard_NV4as_v4",
+          "gpu": "Radeon MI25 (4GB slice)",
+          "gpu_count": 1,
+          "vcpus": 4,
+          "ram_gb": 14,
+          "spot_price_usd_hr": 0.0538,
+          "ondemand_price_usd_hr": 0.269,
+          "savings_pct": 80.0,
+          "availability": "high"
+        }
+      ],
+      "weather": {
+        "source": "open-meteo.com",
+        "hourly_forecast": [
+          {"hour": "00:00", "temp_c": 11.0, "wind_kmh": 15.4, "solar_radiation_wm2": 0.0},
+          {"hour": "01:00", "temp_c": 10.8, "wind_kmh": 13.5, "solar_radiation_wm2": 0.0},
+          {"hour": "02:00", "temp_c": 10.8, "wind_kmh": 13.0, "solar_radiation_wm2": 0.0},
+          {"hour": "03:00", "temp_c": 10.7, "wind_kmh": 12.4, "solar_radiation_wm2": 0.0},
+          {"hour": "04:00", "temp_c": 11.2, "wind_kmh": 13.2, "solar_radiation_wm2": 0.0},
+          {"hour": "05:00", "temp_c": 11.4, "wind_kmh": 13.4, "solar_radiation_wm2": 0.0},
+          {"hour": "06:00", "temp_c": 11.2, "wind_kmh": 13.5, "solar_radiation_wm2": 0.0},
+          {"hour": "07:00", "temp_c": 11.3, "wind_kmh": 11.6, "solar_radiation_wm2": 0.0},
+          {"hour": "08:00", "temp_c": 10.8, "wind_kmh": 12.1, "solar_radiation_wm2": 0.0},
+          {"hour": "09:00", "temp_c": 10.9, "wind_kmh": 12.4, "solar_radiation_wm2": 7.2},
+          {"hour": "10:00", "temp_c": 12.0, "wind_kmh": 18.5, "solar_radiation_wm2": 37.5},
+          {"hour": "11:00", "temp_c": 12.5, "wind_kmh": 17.3, "solar_radiation_wm2": 41.2},
+          {"hour": "12:00", "temp_c": 13.1, "wind_kmh": 16.9, "solar_radiation_wm2": 36.5},
+          {"hour": "13:00", "temp_c": 14.8, "wind_kmh": 14.1, "solar_radiation_wm2": 28.8},
+          {"hour": "14:00", "temp_c": 14.8, "wind_kmh": 17.4, "solar_radiation_wm2": 57.8},
+          {"hour": "15:00", "temp_c": 15.0, "wind_kmh": 15.6, "solar_radiation_wm2": 35.5},
+          {"hour": "16:00", "temp_c": 15.7, "wind_kmh": 14.0, "solar_radiation_wm2": 35.0},
+          {"hour": "17:00", "temp_c": 15.5, "wind_kmh": 14.1, "solar_radiation_wm2": 30.2},
+          {"hour": "18:00", "temp_c": 15.1, "wind_kmh": 14.3, "solar_radiation_wm2": 5.2},
+          {"hour": "19:00", "temp_c": 13.7, "wind_kmh": 14.5, "solar_radiation_wm2": 0.0},
+          {"hour": "20:00", "temp_c": 13.3, "wind_kmh": 10.5, "solar_radiation_wm2": 0.0},
+          {"hour": "21:00", "temp_c": 13.1, "wind_kmh": 13.3, "solar_radiation_wm2": 0.0},
+          {"hour": "22:00", "temp_c": 13.2, "wind_kmh": 12.7, "solar_radiation_wm2": 0.0},
+          {"hour": "23:00", "temp_c": 13.0, "wind_kmh": 12.3, "solar_radiation_wm2": 0.0}
+        ],
+        "cooling_advantage": "moderate - 11°C overnight reduces datacenter cooling costs",
+        "renewable_potential": "low solar (winter, 57.8 W/m² peak), moderate wind (12-18 km/h)"
+      },
+      "carbon_intensity": {
+        "source": "RTE eCO2mix (estimated from France energy mix)",
+        "current_gco2_kwh": 56,
+        "index": "low",
+        "note": "France has 70% nuclear, consistently low carbon intensity (~50-80 gCO2/kWh)"
+      }
+    },
+
+    "westeurope": {
+      "cloud_provider": "azure",
+      "location": "Amsterdam, Netherlands",
+      "availability_zones": ["we-1", "we-2", "we-3"],
+      "gpu_spot_prices": [
+        {
+          "sku": "Standard_NC24s_v3",
+          "gpu": "Tesla V100 (16GB)",
+          "gpu_count": 4,
+          "vcpus": 24,
+          "ram_gb": 448,
+          "spot_price_usd_hr": 2.8260,
+          "ondemand_price_usd_hr": 14.688,
+          "savings_pct": 80.8,
+          "availability": "medium"
+        },
+        {
+          "sku": "Standard_NCC40ads_H100_v5",
+          "gpu": "H100 (80GB)",
+          "gpu_count": 1,
+          "vcpus": 40,
+          "ram_gb": 320,
+          "spot_price_usd_hr": 1.6447,
+          "ondemand_price_usd_hr": 10.320,
+          "savings_pct": 84.1,
+          "availability": "low"
+        },
+        {
+          "sku": "Standard_NC48ads_A100_v4",
+          "gpu": "A100 (80GB)",
+          "gpu_count": 2,
+          "vcpus": 48,
+          "ram_gb": 440,
+          "spot_price_usd_hr": 4.8399,
+          "ondemand_price_usd_hr": 16.128,
+          "savings_pct": 70.0,
+          "availability": "low"
+        },
+        {
+          "sku": "Standard_NC96ads_A100_v4",
+          "gpu": "A100 (80GB)",
+          "gpu_count": 4,
+          "vcpus": 96,
+          "ram_gb": 880,
+          "spot_price_usd_hr": 9.6799,
+          "ondemand_price_usd_hr": 32.256,
+          "savings_pct": 70.0,
+          "availability": "low"
+        },
+        {
+          "sku": "Standard_NC32ads_A10_v4",
+          "gpu": "A10 (24GB)",
+          "gpu_count": 2,
+          "vcpus": 32,
+          "ram_gb": 220,
+          "spot_price_usd_hr": 1.0571,
+          "ondemand_price_usd_hr": 4.752,
+          "savings_pct": 77.8,
+          "availability": "medium"
+        },
+        {
+          "sku": "Standard_NC16as_T4_v3",
+          "gpu": "Tesla T4 (16GB)",
+          "gpu_count": 1,
+          "vcpus": 16,
+          "ram_gb": 110,
+          "spot_price_usd_hr": 0.8116,
+          "ondemand_price_usd_hr": 2.912,
+          "savings_pct": 72.1,
+          "availability": "high"
+        },
+        {
+          "sku": "Standard_NC8ads_A10_v4",
+          "gpu": "A10 (24GB)",
+          "gpu_count": 1,
+          "vcpus": 8,
+          "ram_gb": 55,
+          "spot_price_usd_hr": 0.3323,
+          "ondemand_price_usd_hr": 1.188,
+          "savings_pct": 72.0,
+          "availability": "high"
+        }
+      ],
+      "weather": {
+        "source": "open-meteo.com",
+        "hourly_forecast": [
+          {"hour": "00:00", "temp_c": 9.0, "wind_kmh": 29.2, "solar_radiation_wm2": 0.0},
+          {"hour": "01:00", "temp_c": 8.4, "wind_kmh": 28.1, "solar_radiation_wm2": 0.0},
+          {"hour": "02:00", "temp_c": 8.4, "wind_kmh": 28.8, "solar_radiation_wm2": 0.0},
+          {"hour": "03:00", "temp_c": 8.1, "wind_kmh": 29.9, "solar_radiation_wm2": 0.0},
+          {"hour": "04:00", "temp_c": 7.9, "wind_kmh": 28.8, "solar_radiation_wm2": 0.0},
+          {"hour": "05:00", "temp_c": 7.8, "wind_kmh": 22.3, "solar_radiation_wm2": 0.0},
+          {"hour": "06:00", "temp_c": 8.0, "wind_kmh": 21.2, "solar_radiation_wm2": 0.0},
+          {"hour": "07:00", "temp_c": 8.3, "wind_kmh": 20.5, "solar_radiation_wm2": 0.0},
+          {"hour": "08:00", "temp_c": 8.2, "wind_kmh": 18.4, "solar_radiation_wm2": 0.0},
+          {"hour": "09:00", "temp_c": 8.6, "wind_kmh": 18.0, "solar_radiation_wm2": 3.1},
+          {"hour": "10:00", "temp_c": 9.1, "wind_kmh": 12.6, "solar_radiation_wm2": 84.6},
+          {"hour": "11:00", "temp_c": 9.8, "wind_kmh": 14.0, "solar_radiation_wm2": 162.4},
+          {"hour": "12:00", "temp_c": 10.4, "wind_kmh": 15.5, "solar_radiation_wm2": 176.9},
+          {"hour": "13:00", "temp_c": 9.8, "wind_kmh": 14.8, "solar_radiation_wm2": 97.8},
+          {"hour": "14:00", "temp_c": 9.9, "wind_kmh": 13.0, "solar_radiation_wm2": 13.2},
+          {"hour": "15:00", "temp_c": 9.8, "wind_kmh": 11.2, "solar_radiation_wm2": 0.4},
+          {"hour": "16:00", "temp_c": 9.9, "wind_kmh": 11.9, "solar_radiation_wm2": 31.0},
+          {"hour": "17:00", "temp_c": 10.0, "wind_kmh": 18.4, "solar_radiation_wm2": 4.7},
+          {"hour": "18:00", "temp_c": 10.1, "wind_kmh": 17.6, "solar_radiation_wm2": 0.0},
+          {"hour": "19:00", "temp_c": 10.1, "wind_kmh": 17.6, "solar_radiation_wm2": 0.0},
+          {"hour": "20:00", "temp_c": 10.1, "wind_kmh": 18.7, "solar_radiation_wm2": 0.0},
+          {"hour": "21:00", "temp_c": 9.9, "wind_kmh": 19.4, "solar_radiation_wm2": 0.0},
+          {"hour": "22:00", "temp_c": 9.8, "wind_kmh": 16.6, "solar_radiation_wm2": 0.0},
+          {"hour": "23:00", "temp_c": 9.9, "wind_kmh": 18.7, "solar_radiation_wm2": 0.0}
+        ],
+        "cooling_advantage": "good - 8°C overnight, strong wind reduces cooling load",
+        "renewable_potential": "high wind (22-30 km/h overnight), Netherlands has strong offshore wind capacity"
+      },
+      "carbon_intensity": {
+        "source": "estimated from Netherlands energy mix",
+        "current_gco2_kwh": 328,
+        "index": "moderate",
+        "note": "Netherlands relies on natural gas (~55%), wind growing rapidly. Nighttime wind reduces intensity."
+      }
+    },
+
+    "uksouth": {
+      "cloud_provider": "azure",
+      "location": "London, UK",
+      "availability_zones": ["uk-south-1", "uk-south-2", "uk-south-3"],
+      "gpu_spot_prices": [
+        {
+          "sku": "Standard_NC4as_T4_v3",
+          "gpu": "Tesla T4 (16GB)",
+          "gpu_count": 1,
+          "vcpus": 4,
+          "ram_gb": 28,
+          "spot_price_usd_hr": 0.3640,
+          "ondemand_price_usd_hr": 1.456,
+          "savings_pct": 75.0,
+          "availability": "high"
+        },
+        {
+          "sku": "Standard_NC6s_v3",
+          "gpu": "Tesla V100 (16GB)",
+          "gpu_count": 1,
+          "vcpus": 6,
+          "ram_gb": 112,
+          "spot_price_usd_hr": 0.6632,
+          "ondemand_price_usd_hr": 3.856,
+          "savings_pct": 82.8,
+          "availability": "medium"
+        },
+        {
+          "sku": "Standard_NC64as_T4_v3",
+          "gpu": "Tesla T4 (16GB)",
+          "gpu_count": 4,
+          "vcpus": 64,
+          "ram_gb": 440,
+          "spot_price_usd_hr": 3.0134,
+          "ondemand_price_usd_hr": 11.877,
+          "savings_pct": 74.6,
+          "availability": "medium"
+        },
+        {
+          "sku": "Standard_NC48ads_A100_v4",
+          "gpu": "A100 (80GB)",
+          "gpu_count": 2,
+          "vcpus": 48,
+          "ram_gb": 440,
+          "spot_price_usd_hr": 1.9670,
+          "ondemand_price_usd_hr": 9.840,
+          "savings_pct": 80.0,
+          "availability": "low"
+        },
+        {
+          "sku": "Standard_NC80adis_H100_v5",
+          "gpu": "H100 (80GB)",
+          "gpu_count": 2,
+          "vcpus": 80,
+          "ram_gb": 640,
+          "spot_price_usd_hr": 12.5640,
+          "ondemand_price_usd_hr": 41.880,
+          "savings_pct": 70.0,
+          "availability": "very_low"
+        },
+        {
+          "sku": "Standard_NC12s_v3",
+          "gpu": "Tesla V100 (16GB)",
+          "gpu_count": 2,
+          "vcpus": 12,
+          "ram_gb": 224,
+          "spot_price_usd_hr": 1.3265,
+          "ondemand_price_usd_hr": 7.712,
+          "savings_pct": 82.8,
+          "availability": "medium"
+        }
+      ],
+      "weather": {
+        "source": "open-meteo.com",
+        "hourly_forecast": [
+          {"hour": "00:00", "temp_c": 9.2, "wind_kmh": 14.3, "solar_radiation_wm2": 0.0},
+          {"hour": "01:00", "temp_c": 9.4, "wind_kmh": 12.8, "solar_radiation_wm2": 0.0},
+          {"hour": "02:00", "temp_c": 9.5, "wind_kmh": 13.6, "solar_radiation_wm2": 0.0},
+          {"hour": "03:00", "temp_c": 9.5, "wind_kmh": 14.1, "solar_radiation_wm2": 0.0},
+          {"hour": "04:00", "temp_c": 10.0, "wind_kmh": 15.0, "solar_radiation_wm2": 0.0},
+          {"hour": "05:00", "temp_c": 10.3, "wind_kmh": 16.1, "solar_radiation_wm2": 0.0},
+          {"hour": "06:00", "temp_c": 10.3, "wind_kmh": 17.2, "solar_radiation_wm2": 0.0},
+          {"hour": "07:00", "temp_c": 10.1, "wind_kmh": 15.1, "solar_radiation_wm2": 0.0},
+          {"hour": "08:00", "temp_c": 10.1, "wind_kmh": 12.9, "solar_radiation_wm2": 0.8},
+          {"hour": "09:00", "temp_c": 10.6, "wind_kmh": 15.5, "solar_radiation_wm2": 5.8},
+          {"hour": "10:00", "temp_c": 11.0, "wind_kmh": 15.6, "solar_radiation_wm2": 4.0},
+          {"hour": "11:00", "temp_c": 11.6, "wind_kmh": 15.2, "solar_radiation_wm2": 6.5},
+          {"hour": "12:00", "temp_c": 12.7, "wind_kmh": 16.8, "solar_radiation_wm2": 24.8},
+          {"hour": "13:00", "temp_c": 13.9, "wind_kmh": 18.5, "solar_radiation_wm2": 53.2},
+          {"hour": "14:00", "temp_c": 14.3, "wind_kmh": 16.9, "solar_radiation_wm2": 30.8},
+          {"hour": "15:00", "temp_c": 13.0, "wind_kmh": 16.6, "solar_radiation_wm2": 2.5},
+          {"hour": "16:00", "temp_c": 13.2, "wind_kmh": 18.5, "solar_radiation_wm2": 1.5},
+          {"hour": "17:00", "temp_c": 13.2, "wind_kmh": 14.7, "solar_radiation_wm2": 0.0},
+          {"hour": "18:00", "temp_c": 12.9, "wind_kmh": 13.1, "solar_radiation_wm2": 0.0},
+          {"hour": "19:00", "temp_c": 12.8, "wind_kmh": 13.6, "solar_radiation_wm2": 0.0},
+          {"hour": "20:00", "temp_c": 12.7, "wind_kmh": 13.8, "solar_radiation_wm2": 0.0},
+          {"hour": "21:00", "temp_c": 12.6, "wind_kmh": 15.8, "solar_radiation_wm2": 0.0},
+          {"hour": "22:00", "temp_c": 12.3, "wind_kmh": 15.5, "solar_radiation_wm2": 0.0},
+          {"hour": "23:00", "temp_c": 12.2, "wind_kmh": 14.8, "solar_radiation_wm2": 0.0}
+        ],
+        "cooling_advantage": "good - 9°C overnight, steady wind",
+        "renewable_potential": "low solar (winter), moderate wind (13-18 km/h)"
+      },
+      "carbon_intensity": {
+        "source": "carbonintensity.org.uk (REAL DATA)",
+        "halfhourly_forecast": [
+          {"from": "00:00", "to": "00:30", "forecast_gco2_kwh": 54, "actual_gco2_kwh": 55, "index": "low"},
+          {"from": "00:30", "to": "01:00", "forecast_gco2_kwh": 57, "actual_gco2_kwh": 55, "index": "low"},
+          {"from": "01:00", "to": "01:30", "forecast_gco2_kwh": 59, "actual_gco2_kwh": 54, "index": "low"},
+          {"from": "01:30", "to": "02:00", "forecast_gco2_kwh": 54, "actual_gco2_kwh": 54, "index": "low"},
+          {"from": "02:00", "to": "02:30", "forecast_gco2_kwh": 53, "actual_gco2_kwh": 55, "index": "low"},
+          {"from": "02:30", "to": "03:00", "forecast_gco2_kwh": 53, "actual_gco2_kwh": 56, "index": "low"}
+        ],
+        "current_gco2_kwh": 55,
+        "index": "low",
+        "note": "UK grid currently low-carbon (wind + nuclear). 54-59 gCO2/kWh range today."
+      }
+    }
+  },
+
+  "scoring_weights": {
+    "w_price": 0.50,
+    "w_carbon": 0.20,
+    "w_availability": 0.15,
+    "w_cooling": 0.10,
+    "w_renewable": 0.05,
+    "formula": "score = w_price * normalized_spot_price + w_carbon * normalized_carbon + w_availability * (1 - availability_score) + w_cooling * normalized_cooling_need + w_renewable * (1 - renewable_score)"
+  },
+
+  "reference_prices": {
+    "currency_eur_usd": 0.92,
+    "typical_ondemand_v100_usd_hr": 3.58,
+    "typical_ondemand_a100_usd_hr": 16.99,
+    "typical_ondemand_h100_usd_hr": 41.88,
+    "avg_datacenter_pue": 1.2,
+    "kwh_per_gpu_hour": {
+      "v100": 0.30,
+      "t4": 0.07,
+      "a10": 0.15,
+      "a100": 0.40,
+      "h100": 0.70
+    }
+  }
+}
