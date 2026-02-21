@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Globe, Server, Wifi, Activity, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WorldMap from "@/components/WorldMap";
@@ -7,11 +7,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 
 // Import des données depuis le fichier JSON
-import datacentersData from "@/data/datacenters.json";
-import type { DataCenter } from "@/data/types";
+import serveursData from "@/data/serveurs.json";
+import type { Serveur } from "@/data/types";
 
 // Données par défaut en cas d'erreur de chargement du JSON
-const defaultDatacenters: DataCenter[] = [
+const defaultServeurs: Serveur[] = [
   { name: "DC Paris", coordinates: [2.35, 48.85] as [number, number], status: "online" as const, region: "Europe", latency: "12ms" },
   { name: "DC New York", coordinates: [-74.01, 40.71] as [number, number], status: "online" as const, region: "Amérique du Nord", latency: "45ms" },
   { name: "DC Tokyo", coordinates: [139.65, 35.68] as [number, number], status: "online" as const, region: "Asie-Pacifique", latency: "120ms" },
@@ -28,154 +28,107 @@ const defaultDatacenters: DataCenter[] = [
 
 // Utiliser les données du JSON si disponibles, sinon utiliser les données par défaut
 // Conversion des coordonnées en tuple et des statuts en const assertions
-const isUsingJsonData = datacentersData && Array.isArray(datacentersData) && datacentersData.length > 0;
+const isUsingJsonData = serveursData && Array.isArray(serveursData) && serveursData.length > 0;
 
 // Log pour vérifier quelle source de données est utilisée (peut être retiré en production)
 if (process.env.NODE_ENV === "development") {
   console.log(
     `[Mapmonde] ${isUsingJsonData ? "✅ Utilisation des données JSON" : "⚠️ Utilisation des données par défaut"}`,
-    isUsingJsonData ? `(${datacentersData.length} datacenters)` : ""
+    isUsingJsonData ? `(${serveursData.length} serveurs)` : ""
   );
 }
 
-const datacenters: DataCenter[] = (isUsingJsonData ? datacentersData : defaultDatacenters).map((dc) => ({
+const serveurs: Serveur[] = (isUsingJsonData ? serveursData : defaultServeurs).map((dc) => ({
   ...dc,
   coordinates: dc.coordinates as [number, number],
   status: dc.status as "online" | "maintenance" | "offline",
 }));
 
-const networkStats = [
-  { label: "Datacenters actifs", value: "11", icon: Server },
-  { label: "En maintenance", value: "1", icon: Activity },
-  { label: "Latence moyenne", value: "80ms", icon: Wifi },
-  { label: "Régions couvertes", value: "7", icon: Globe },
-];
-
 const Mapmonde = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main className="container pt-20 pb-4">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-4"
-        >
-          <div className="flex items-center gap-2 mb-1">
-            <Globe className="h-5 w-5 text-primary" />
-            <h1 className="text-2xl font-bold tracking-tight">Réseau Global</h1>
-          </div>
-          <p className="text-xs text-muted-foreground">
-            Infrastructure mondiale — datacenters et connexions en temps réel
-          </p>
-        </motion.div>
-
-        {/* Network Stats */}
-        <div className="grid gap-2 grid-cols-2 lg:grid-cols-4 mb-3">
-          {networkStats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-            >
-              <Card>
-                <CardContent className="flex items-center gap-2 p-2.5">
-                  <stat.icon className="h-4 w-4 text-primary shrink-0" />
-                  <div>
-                    <div className="text-lg font-bold">{stat.value}</div>
-                    <div className="text-[10px] text-muted-foreground">{stat.label}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-
+      <main className="container pt-24 pb-12">
         {/* World Map */}
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="mb-3"
+          className="mb-8"
         >
           <Card className="overflow-hidden">
-            <CardHeader className="pb-2 pt-3 px-3">
+            <CardHeader className="pb-0">
               <div className="flex items-center justify-between">
                 <div>
-                  <CardTitle className="text-base">Carte des datacenters</CardTitle>
-                  <CardDescription className="text-[10px]">Points d'infrastructure et connexions réseau</CardDescription>
+                  <CardTitle>Carte des serveurs</CardTitle>
                 </div>
-                <div className="flex items-center gap-2 text-[10px] text-muted-foreground">
-                  <div className="flex items-center gap-1">
-                    <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
+                <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-2.5 w-2.5 rounded-full bg-blue-500" />
                     Online
                   </div>
-                  <div className="flex items-center gap-1">
-                    <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
-                    Maint.
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-2.5 w-2.5 rounded-full bg-amber-500" />
+                    Maintenance
                   </div>
-                  <div className="flex items-center gap-1">
-                    <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-2.5 w-2.5 rounded-full bg-red-500" />
                     Offline
                   </div>
                 </div>
               </div>
             </CardHeader>
-            <CardContent className="p-2">
-              <div className="rounded-lg border border-border bg-[#0d0d1a] overflow-hidden h-[280px]">
-                <WorldMap datacenters={datacenters} className="h-full" />
+            <CardContent className="p-4">
+              <div className="rounded-lg border border-border bg-[#0d0d1a] overflow-hidden">
+                <WorldMap serveurs={serveurs} />
               </div>
             </CardContent>
           </Card>
         </motion.div>
 
-        {/* Datacenter List */}
+        {/* Serveur List */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
           <Card>
-            <CardHeader className="pb-2 pt-3 px-3">
-              <CardTitle className="flex items-center gap-1.5 text-base">
-                <MapPin className="h-4 w-4" />
-                Liste des datacenters
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <MapPin className="h-5 w-5" />
+                Liste des serveurs
               </CardTitle>
-              <CardDescription className="text-[10px]">Tous les points d'infrastructure du réseau</CardDescription>
+              <CardDescription>Tous les points d'infrastructure du réseau</CardDescription>
             </CardHeader>
-            <CardContent className="p-2">
-              <div className="grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4 max-h-[200px] overflow-y-auto">
-                {datacenters.map((dc) => (
+            <CardContent>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {serveurs.map((dc) => (
                   <div
                     key={dc.name}
-                    className="flex items-center justify-between rounded-lg border border-border bg-secondary/50 p-2"
+                    className="flex items-center justify-between rounded-lg border border-border bg-secondary/50 p-4"
                   >
-                    <div className="flex items-center gap-2 min-w-0">
+                    <div className="flex items-center gap-3">
                       <div
-                        className={`h-2 w-2 rounded-full shrink-0 ${
+                        className={`h-2.5 w-2.5 rounded-full ${
                           dc.status === "online"
-                            ? "bg-blue-500 shadow-[0_0_6px_rgba(59,130,246,0.5)]"
+                            ? "bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)]"
                             : dc.status === "maintenance"
-                            ? "bg-amber-500 shadow-[0_0_6px_rgba(245,158,11,0.5)]"
+                            ? "bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.5)]"
                             : "bg-red-500"
                         }`}
                       />
-                      <div className="min-w-0">
-                        <div className="text-xs font-medium truncate">{dc.name}</div>
-                        <div className="text-[10px] text-muted-foreground truncate">{dc.region}</div>
+                      <div>
+                        <div className="text-sm font-medium">{dc.name}</div>
+                        <div className="text-xs text-muted-foreground">{dc.region}</div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-1.5 shrink-0">
-                      <span className="font-mono text-[10px] text-muted-foreground">{dc.latency}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="font-mono text-xs text-muted-foreground">{dc.latency}</span>
                       <Badge
                         variant={dc.status === "online" ? "default" : "secondary"}
-                        className={`text-[9px] px-1.5 py-0 ${
-                          dc.status === "online" ? "bg-blue-500/20 text-blue-400 border-blue-500/30 hover:bg-blue-500/30" : ""
-                        }`}
+                        className={dc.status === "online" ? "bg-blue-500/20 text-blue-400 border-blue-500/30 hover:bg-blue-500/30" : ""}
                       >
-                        {dc.status === "online" ? "On" : dc.status === "maintenance" ? "Maint" : "Off"}
+                        {dc.status === "online" ? "Online" : dc.status === "maintenance" ? "Maint." : "Offline"}
                       </Badge>
                     </div>
                   </div>

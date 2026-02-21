@@ -1,4 +1,4 @@
-export interface DataCenter {
+export interface Serveur {
   name: string;
   coordinates: [number, number];
   status: "online" | "maintenance" | "offline";

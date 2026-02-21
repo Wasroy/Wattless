@@ -9,7 +9,7 @@ import {
 
 const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
-export interface DataCenter {
+export interface Serveur {
   name: string;
   coordinates: [number, number]; // [longitude, latitude]
   status?: "online" | "maintenance" | "offline";
@@ -21,12 +21,12 @@ export interface Connection {
 }
 
 interface WorldMapProps {
-  datacenters?: DataCenter[];
+  serveurs?: Serveur[];
   connections?: Connection[];
   className?: string;
 }
 
-const defaultDatacenters: DataCenter[] = [
+const defaultServeurs: Serveur[] = [
   { name: "DC Paris", coordinates: [2.35, 48.85], status: "online" },
   { name: "DC New York", coordinates: [-74.01, 40.71], status: "online" },
   { name: "DC Tokyo", coordinates: [139.65, 35.68], status: "online" },
@@ -59,37 +59,50 @@ const defaultConnections: Connection[] = [
 ];
 
 const WorldMap = memo(({
-  datacenters = defaultDatacenters,
+  serveurs = defaultServeurs,
   connections = defaultConnections,
   className = "",
 }: WorldMapProps) => {
   return (
-    <div className={`w-full h-full ${className}`}>
-      <ComposableMap
-        projection="geoMercator"
-        projectionConfig={{
-          scale: 110,
-          center: [10, 20],
-        }}
-        style={{ width: "100%", height: "100%" }}
-      >
+    <div className={`w-full relative ${className}`} style={{ overflow: "hidden", marginBottom: "-10%" }}>
+      <div style={{ clipPath: "inset(0 0 3% 0)" }}>
+        <ComposableMap
+          projection="geoMercator"
+          projectionConfig={{
+            scale: 130,
+            center: [10, 28], // Centré plus au nord pour exclure l'Antarctique et réduire l'espace en bas
+          }}
+          style={{ width: "100%", height: "auto", display: "block" }}
+        >
         {/* Geographies – black & white style */}
         <Geographies geography={GEO_URL}>
           {({ geographies }) =>
-            geographies.map((geo) => (
-              <Geography
-                key={geo.rsmKey}
-                geography={geo}
-                fill="#1a1a2e"
-                stroke="#2a2a40"
-                strokeWidth={0.5}
-                style={{
-                  default: { outline: "none" },
-                  hover: { outline: "none", fill: "#22223b" },
-                  pressed: { outline: "none" },
-                }}
-              />
-            ))
+            geographies
+              .filter((geo) => {
+                // Exclure l'Antarctique (identifié par différents noms selon le dataset)
+                const name = geo.properties?.NAME || geo.properties?.name || geo.properties?.NAME_LONG || "";
+                const iso = geo.properties?.ISO_A2 || geo.properties?.iso_a2 || "";
+                return (
+                  !name.toLowerCase().includes("antarctica") &&
+                  !name.toLowerCase().includes("antarctique") &&
+                  iso !== "AQ" &&
+                  iso !== "TF" // Terres australes françaises
+                );
+              })
+              .map((geo) => (
+                <Geography
+                  key={geo.rsmKey}
+                  geography={geo}
+                  fill="#1a1a2e"
+                  stroke="#2a2a40"
+                  strokeWidth={0.5}
+                  style={{
+                    default: { outline: "none" },
+                    hover: { outline: "none", fill: "#22223b" },
+                    pressed: { outline: "none" },
+                  }}
+                />
+              ))
           }
         </Geographies>
 
@@ -105,8 +118,8 @@ const WorldMap = memo(({
           />
         ))}
 
-        {/* Datacenter markers */}
-        {datacenters.map((dc) => (
+        {/* Serveur markers */}
+        {serveurs.map((dc) => (
           <Marker key={dc.name} coordinates={dc.coordinates}>
             {/* Outer glow */}
             <circle
@@ -141,7 +154,8 @@ const WorldMap = memo(({
             </text>
           </Marker>
         ))}
-      </ComposableMap>
+        </ComposableMap>
+      </div>
     </div>
   );
 });
