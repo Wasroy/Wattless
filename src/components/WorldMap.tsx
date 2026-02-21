@@ -260,65 +260,27 @@ const WorldMap = memo(({
           }
         </Geographies>
 
-        {/* Lignes de transition actives (VERTES) */}
+        {/* Lignes de transition actives (VERTES) - sans les labels de prix */}
         {activeTransitions.map((transition, i) => {
           const fromCoords = getServerCoordinates(transition.from);
           const toCoords = getServerCoordinates(transition.to);
 
           if (!fromCoords || !toCoords) return null;
 
-          // Calculer le point milieu pour positionner le prix
-          const midLon = (fromCoords[0] + toCoords[0]) / 2;
-          const midLat = (fromCoords[1] + toCoords[1]) / 2;
-          const savings = transition.savings || 0;
-          
-          // Obtenir la position du label de prix (avec décalage pour éviter chevauchements)
-          const pricePos = priceLabelPositions.get(transition.timestamp) || { x: 0, y: -12 };
-
           return (
-            <g key={`transition-${i}-${transition.timestamp}`}>
-              <Line
-                from={fromCoords}
-                to={toCoords}
-                stroke="#22c55e"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeDasharray="5,5"
-                style={{
-                  animation: "dash 1s linear infinite",
-                  filter: "drop-shadow(0 0 4px rgba(34, 197, 94, 0.6))",
-                }}
-              />
-              {/* Label prix au-dessus du trait */}
-              <Marker coordinates={[midLon, midLat]}>
-                <rect
-                  x={pricePos.x - 18}
-                  y={pricePos.y - 6}
-                  width={36}
-                  height={12}
-                  rx={3}
-                  fill="rgba(15, 23, 42, 0.85)"
-                  stroke="#22c55e"
-                  strokeWidth={0.8}
-                  style={{
-                    filter: "drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))",
-                  }}
-                />
-                <text
-                  textAnchor="middle"
-                  x={pricePos.x}
-                  y={pricePos.y + 2}
-                  style={{
-                    fontFamily: "JetBrains Mono, monospace",
-                    fontSize: 7,
-                    fill: "#22c55e",
-                    fontWeight: "600",
-                  }}
-                >
-                  +{savings.toFixed(2)}€
-                </text>
-              </Marker>
-            </g>
+            <Line
+              key={`transition-line-${i}-${transition.timestamp}`}
+              from={fromCoords}
+              to={toCoords}
+              stroke="#22c55e"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeDasharray="5,5"
+              style={{
+                animation: "dash 1s linear infinite",
+                filter: "drop-shadow(0 0 4px rgba(34, 197, 94, 0.6))",
+              }}
+            />
           );
         })}
 
@@ -385,6 +347,53 @@ const WorldMap = memo(({
                   {dc.name}
                 </text>
               )}
+            </Marker>
+          );
+        })}
+
+        {/* Labels de prix des transitions - rendus en dernier pour être au-dessus de tout */}
+        {activeTransitions.map((transition, i) => {
+          const fromCoords = getServerCoordinates(transition.from);
+          const toCoords = getServerCoordinates(transition.to);
+
+          if (!fromCoords || !toCoords) return null;
+
+          // Calculer le point milieu pour positionner le prix
+          const midLon = (fromCoords[0] + toCoords[0]) / 2;
+          const midLat = (fromCoords[1] + toCoords[1]) / 2;
+          const savings = transition.savings || 0;
+          
+          // Obtenir la position du label de prix (avec décalage pour éviter chevauchements)
+          const pricePos = priceLabelPositions.get(transition.timestamp) || { x: 0, y: -12 };
+
+          return (
+            <Marker key={`transition-price-${i}-${transition.timestamp}`} coordinates={[midLon, midLat]}>
+              <rect
+                x={pricePos.x - 18}
+                y={pricePos.y - 6}
+                width={36}
+                height={12}
+                rx={3}
+                fill="rgba(15, 23, 42, 0.85)"
+                stroke="#22c55e"
+                strokeWidth={0.8}
+                style={{
+                  filter: "drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))",
+                }}
+              />
+              <text
+                textAnchor="middle"
+                x={pricePos.x}
+                y={pricePos.y + 2}
+                style={{
+                  fontFamily: "JetBrains Mono, monospace",
+                  fontSize: 7,
+                  fill: "#22c55e",
+                  fontWeight: "600",
+                }}
+              >
+                +{savings.toFixed(2)}€
+              </text>
             </Marker>
           );
         })}

@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import { motion } from "framer-motion";
-import { MapPin } from "lucide-react";
+import { useEffect, useState, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { MapPin, TrendingUp } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WorldMap from "@/components/WorldMap";
@@ -22,6 +22,25 @@ const allServeurs: Serveur[] = allServeursData.map((s) => ({
 
 const Mapmonde = () => {
   const { activeTransitions, addTransition } = useServerTransitions();
+  const [totalSavings, setTotalSavings] = useState(0);
+  const [shouldPulse, setShouldPulse] = useState(false);
+  const processedTransitionsRef = useRef<Set<number>>(new Set());
+
+  // Suivre les nouvelles transitions et ajouter leurs économies au total
+  useEffect(() => {
+    activeTransitions.forEach((transition) => {
+      // Vérifier si cette transition a déjà été comptabilisée
+      if (!processedTransitionsRef.current.has(transition.timestamp)) {
+        // Ajouter les économies de cette transition au total
+        setTotalSavings((prev) => prev + (transition.savings || 0));
+        // Marquer cette transition comme traitée
+        processedTransitionsRef.current.add(transition.timestamp);
+        // Déclencher l'animation de pulse
+        setShouldPulse(true);
+        setTimeout(() => setShouldPulse(false), 600);
+      }
+    });
+  }, [activeTransitions]);
 
   // Charger et déclencher les transitions depuis le JSON
   useEffect(() => {
@@ -80,7 +99,50 @@ const Mapmonde = () => {
               </div>
             </CardHeader>
             <CardContent className="p-4">
-              <div className="rounded-lg border border-border bg-[#0d0d1a] overflow-hidden">
+              <div className="rounded-lg border border-border bg-[#0d0d1a] overflow-hidden relative">
+                {/* Badge total économies en haut à gauche */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8, y: -10 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  className="absolute top-4 left-4 z-10"
+                >
+                  <motion.div
+                    className="bg-background/95 backdrop-blur-sm border border-green-500/30 rounded-lg px-4 py-2.5 shadow-lg"
+                    animate={{
+                      scale: shouldPulse ? [1, 1.05, 1] : 1,
+                      boxShadow: shouldPulse
+                        ? [
+                            "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+                            "0 4px 12px -1px rgba(34, 197, 94, 0.5)",
+                            "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+                          ]
+                        : "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+                    }}
+                    transition={{
+                      duration: 0.4,
+                      ease: "easeOut",
+                    }}
+                  >
+                    <div className="flex items-center gap-2">
+                      <TrendingUp className="h-4 w-4 text-green-500" />
+                      <div className="flex flex-col">
+                        <span className="text-xs text-muted-foreground">Économies totales</span>
+                        <AnimatePresence mode="wait">
+                          <motion.span
+                            key={totalSavings.toFixed(2)}
+                            initial={{ scale: 1.2, opacity: 0, y: -10 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.8, opacity: 0, y: 10 }}
+                            transition={{ duration: 0.3 }}
+                            className="text-lg font-bold font-mono text-green-500"
+                          >
+                            {totalSavings.toFixed(2)}€
+                          </motion.span>
+                        </AnimatePresence>
+                      </div>
+                    </div>
+                  </motion.div>
+                </motion.div>
                 <WorldMap 
                   serveurs={allServeurs} 
                   allServeursColor={true}
