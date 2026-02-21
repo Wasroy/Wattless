@@ -39,7 +39,7 @@ const HeroSection = () => (
         </h1>
 
         <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-          WATLESS Nerve intercepte vos pods batch et les exécute sur les Spot Instances les moins chères — 
+          WATTLESS Nerve intercepte vos pods batch et les exécute sur les Spot Instances les moins chères — 
           avec un rescheduling automatique en cas d'interruption.
         </p>
 

@@ -6,7 +6,7 @@ const Footer = () => (
       <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
         <div className="flex items-center gap-2">
           <Zap className="h-4 w-4 text-primary" />
-          <span className="font-bold">WATLESS</span>
+          <span className="font-bold">WATTLESS</span>
           <span className="font-mono text-xs text-muted-foreground">Nerve</span>
         </div>
         <div className="flex gap-6 font-mono text-xs text-muted-foreground">
@@ -16,7 +16,7 @@ const Footer = () => (
           <a href="#" className="transition-colors hover:text-foreground">Contact</a>
         </div>
         <p className="font-mono text-xs text-muted-foreground">
-          © 2025 WATLESS. Tous droits réservés.
+          © 2025 WATTLESS. Tous droits réservés.
         </p>
       </div>
     </div>

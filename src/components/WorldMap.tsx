@@ -24,6 +24,7 @@ interface WorldMapProps {
   serveurs?: Serveur[];
   connections?: Connection[];
   className?: string;
+  allServeursColor?: boolean; // true = utiliser un bleu différent pour "tous les serveurs"
 }
 
 const defaultServeurs: Serveur[] = [
@@ -62,7 +63,12 @@ const WorldMap = memo(({
   serveurs = defaultServeurs,
   connections = defaultConnections,
   className = "",
+  allServeursColor = false,
 }: WorldMapProps) => {
+  // Couleurs selon le mode
+  const dotColor = allServeursColor ? "#60a5fa" : "#3b82f6"; // blue-400 vs blue-500
+  const glowColor = allServeursColor ? "rgba(96, 165, 250, 0.15)" : "rgba(59, 130, 246, 0.15)";
+  const lineColor = allServeursColor ? "rgba(96, 165, 250, 0.20)" : "rgba(59, 130, 246, 0.25)";
   return (
     <div className={`w-full relative ${className}`} style={{ overflow: "hidden", marginBottom: "-10%" }}>
       <div style={{ clipPath: "inset(0 0 3% 0)" }}>
@@ -112,7 +118,7 @@ const WorldMap = memo(({
             key={`conn-${i}`}
             from={conn.from}
             to={conn.to}
-            stroke="rgba(59, 130, 246, 0.25)"
+            stroke={lineColor}
             strokeWidth={1}
             strokeLinecap="round"
           />
@@ -123,35 +129,37 @@ const WorldMap = memo(({
           <Marker key={dc.name} coordinates={dc.coordinates}>
             {/* Outer glow */}
             <circle
-              r={8}
-              fill="rgba(59, 130, 246, 0.15)"
+              r={allServeursColor ? 5 : 8}
+              fill={glowColor}
               className="animate-pulse"
             />
             {/* Inner dot */}
             <circle
-              r={4}
+              r={allServeursColor ? 3 : 4}
               fill={
                 dc.status === "maintenance"
                   ? "#f59e0b"
                   : dc.status === "offline"
                   ? "#ef4444"
-                  : "#3b82f6"
+                  : dotColor
               }
               stroke="#0f172a"
               strokeWidth={1}
             />
             {/* Label */}
-            <text
-              textAnchor="middle"
-              y={-14}
-              style={{
-                fontFamily: "JetBrains Mono, monospace",
-                fontSize: 8,
-                fill: "#94a3b8",
-              }}
-            >
-              {dc.name}
-            </text>
+            {!allServeursColor && (
+              <text
+                textAnchor="middle"
+                y={-14}
+                style={{
+                  fontFamily: "JetBrains Mono, monospace",
+                  fontSize: 8,
+                  fill: "#94a3b8",
+                }}
+              >
+                {dc.name}
+              </text>
+            )}
           </Marker>
         ))}
         </ComposableMap>

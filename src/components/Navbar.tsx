@@ -6,7 +6,7 @@ const Navbar = () => (
     <div className="container flex h-16 items-center justify-between">
       <Link to="/" className="flex items-center gap-2">
         <Zap className="h-5 w-5 text-primary" />
-        <span className="text-lg font-bold tracking-tight">WATLESS</span>
+        <span className="text-lg font-bold tracking-tight">WATTLESS</span>
         <span className="rounded-md border border-border bg-secondary px-2 py-0.5 font-mono text-xs text-muted-foreground">
           Nerve
         </span>

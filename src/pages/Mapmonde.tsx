@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -5,9 +6,11 @@ import Footer from "@/components/Footer";
 import WorldMap from "@/components/WorldMap";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Switch } from "@/components/ui/switch";
 
-// Import des données depuis le fichier JSON
+// Import des données depuis les fichiers JSON
 import serveursData from "@/data/serveurs.json";
+import allServeursData from "@/data/all_servers.json";
 import type { Serveur } from "@/data/types";
 
 // Données par défaut en cas d'erreur de chargement du JSON
@@ -44,7 +47,18 @@ const serveurs: Serveur[] = (isUsingJsonData ? serveursData : defaultServeurs).m
   status: dc.status as "online" | "maintenance" | "offline",
 }));
 
+// Préparer la liste complète de tous les serveurs
+const allServeurs: Serveur[] = allServeursData.map((s) => ({
+  ...s,
+  coordinates: s.coordinates as [number, number],
+  status: s.status as "online" | "maintenance" | "offline",
+}));
+
 const Mapmonde = () => {
+  const [showAllServers, setShowAllServers] = useState(false);
+
+  const activeServeurs = showAllServers ? allServeurs : serveurs;
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -59,8 +73,21 @@ const Mapmonde = () => {
           <Card className="overflow-hidden">
             <CardHeader className="pb-0">
               <div className="flex items-center justify-between">
-                <div>
+                <div className="flex items-center gap-4">
                   <CardTitle>Carte des serveurs</CardTitle>
+                  <div className="flex items-center gap-2">
+                    <Switch
+                      id="show-all"
+                      checked={showAllServers}
+                      onCheckedChange={setShowAllServers}
+                    />
+                    <label
+                      htmlFor="show-all"
+                      className="text-xs text-muted-foreground cursor-pointer select-none"
+                    >
+                      Tous les serveurs ({allServeurs.length})
+                    </label>
+                  </div>
                 </div>
                 <div className="flex items-center gap-4 text-xs text-muted-foreground">
                   <div className="flex items-center gap-1.5">
@@ -80,7 +107,7 @@ const Mapmonde = () => {
             </CardHeader>
             <CardContent className="p-4">
               <div className="rounded-lg border border-border bg-[#0d0d1a] overflow-hidden">
-                <WorldMap serveurs={serveurs} />
+                <WorldMap serveurs={activeServeurs} allServeursColor={showAllServers} />
               </div>
             </CardContent>
           </Card>
@@ -102,7 +129,7 @@ const Mapmonde = () => {
             </CardHeader>
             <CardContent>
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {serveurs.map((dc) => (
+                {activeServeurs.map((dc) => (
                   <div
                     key={dc.name}
                     className="flex items-center justify-between rounded-lg border border-border bg-secondary/50 p-4"
