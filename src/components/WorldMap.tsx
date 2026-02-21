@@ -64,14 +64,14 @@ const WorldMap = memo(({
   className = "",
 }: WorldMapProps) => {
   return (
-    <div className={`w-full ${className}`}>
+    <div className={`w-full h-full ${className}`}>
       <ComposableMap
         projection="geoMercator"
         projectionConfig={{
-          scale: 130,
+          scale: 110,
           center: [10, 20],
         }}
-        style={{ width: "100%", height: "auto" }}
+        style={{ width: "100%", height: "100%" }}
       >
         {/* Geographies – black & white style */}
         <Geographies geography={GEO_URL}>
