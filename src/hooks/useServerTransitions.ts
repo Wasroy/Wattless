@@ -7,11 +7,14 @@ export const useServerTransitions = () => {
 
   // Ajouter une nouvelle transition
   const addTransition = useCallback((from: string, to: string, duration: number = 2000, savings?: number) => {
+    // S'assurer que la durée ne dépasse jamais 2000ms
+    const clampedDuration = Math.min(Math.max(duration, 1000), 2000);
+    
     const transition: ActiveTransition = {
       from,
       to,
       timestamp: Date.now(),
-      duration,
+      duration: clampedDuration,
       savings,
     };
 
@@ -26,13 +29,13 @@ export const useServerTransitions = () => {
       return [...prev, transition];
     });
 
-    // Retirer automatiquement après la durée
+    // Retirer automatiquement après la durée (garantie max 2000ms)
     const timeout = setTimeout(() => {
       setActiveTransitions((prev) =>
         prev.filter((t) => !(t.from === from && t.to === to && t.timestamp === transition.timestamp))
       );
       timeoutRefs.current.delete(key);
-    }, duration);
+    }, clampedDuration);
 
     timeoutRefs.current.set(key, timeout);
   }, []);

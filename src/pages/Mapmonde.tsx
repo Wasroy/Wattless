@@ -24,32 +24,32 @@ const Mapmonde = () => {
   const { activeTransitions, addTransition } = useServerTransitions();
   const [totalSavings, setTotalSavings] = useState(0);
   const [shouldPulse, setShouldPulse] = useState(false);
-  const processedTransitionsRef = useRef<Set<number>>(new Set());
+  const processedTransitionsRef = useRef<Set<string>>(new Set());
 
-  // Suivre les nouvelles transitions et ajouter leurs économies au total
-  useEffect(() => {
-    activeTransitions.forEach((transition) => {
-      // Vérifier si cette transition a déjà été comptabilisée
-      if (!processedTransitionsRef.current.has(transition.timestamp)) {
-        // Ajouter les économies de cette transition au total
-        setTotalSavings((prev) => prev + (transition.savings || 0));
-        // Marquer cette transition comme traitée
-        processedTransitionsRef.current.add(transition.timestamp);
-        // Déclencher l'animation de pulse
-        setShouldPulse(true);
-        setTimeout(() => setShouldPulse(false), 600);
-      }
-    });
-  }, [activeTransitions]);
+  // Note: Le total est maintenant calculé directement lors du déclenchement de la transition
+  // dans le useEffect ci-dessous, pour éviter de manquer des transitions qui se terminent rapidement
 
   // Charger et déclencher les transitions depuis le JSON
   useEffect(() => {
     const timeouts: NodeJS.Timeout[] = [];
 
-    transitionsData.forEach((transition) => {
+    transitionsData.forEach((transition, index) => {
       const timeout = setTimeout(() => {
-        // Durée aléatoire entre 1000ms (1s) et 2000ms (2s)
-        const duration = Math.floor(Math.random() * 1000) + 1000;
+        // Durée aléatoire entre 1000ms (1s) et 2000ms (2s) MAX
+        const duration = Math.min(Math.floor(Math.random() * 1000) + 1000, 2000);
+        
+        // Créer une clé unique pour cette transition basée sur l'index et les données
+        const transitionKey = `${transition.from}-${transition.to}-${transition.timestamp}-${index}`;
+        
+        // Vérifier si cette transition a déjà été comptabilisée
+        if (!processedTransitionsRef.current.has(transitionKey)) {
+          // Ajouter immédiatement au total (avant même que la transition soit active)
+          setTotalSavings((prev) => prev + (transition.savings || 0));
+          processedTransitionsRef.current.add(transitionKey);
+          setShouldPulse(true);
+          setTimeout(() => setShouldPulse(false), 600);
+        }
+        
         addTransition(transition.from, transition.to, duration, transition.savings);
       }, transition.timestamp);
 
