@@ -24,7 +24,7 @@ export function getCarbonEquivalent(co2Kg: number): CarbonEquivalent {
   if (co2Kg < 0.1) {
     const charges = Math.round(co2Kg / PHONE_CHARGE_CO2);
     return {
-      text: `équivalent à ${charges} charge${charges > 1 ? 's' : ''} de téléphone`,
+      text: `equivalent to ${charges} phone charge${charges > 1 ? 's' : ''}`,
       value: charges,
       unit: 'charges',
     };
@@ -34,7 +34,7 @@ export function getCarbonEquivalent(co2Kg: number): CarbonEquivalent {
   if (co2Kg < FLIGHT_PARIS_NY_CO2) {
     const km = Math.round(co2Kg / CAR_CO2_PER_KM);
     return {
-      text: `équivalent à ${km} km en voiture`,
+      text: `equivalent to ${km} km by car`,
       value: km,
       unit: 'km',
     };
@@ -44,9 +44,9 @@ export function getCarbonEquivalent(co2Kg: number): CarbonEquivalent {
   if (co2Kg < TREE_CO2_PER_YEAR) {
     const flights = Math.round(co2Kg / FLIGHT_PARIS_NY_CO2);
     return {
-      text: `équivalent à ${flights} vol${flights > 1 ? 's' : ''} Paris-New York`,
+      text: `equivalent to ${flights} Paris-New York flight${flights > 1 ? 's' : ''}`,
       value: flights,
-      unit: 'vols',
+      unit: 'flights',
     };
   }
 
@@ -54,7 +54,7 @@ export function getCarbonEquivalent(co2Kg: number): CarbonEquivalent {
   if (co2Kg < 50) {
     const burgers = Math.round(co2Kg / BURGER_CO2);
     return {
-      text: `équivalent à ${burgers} burger${burgers > 1 ? 's' : ''}`,
+      text: `equivalent to ${burgers} burger${burgers > 1 ? 's' : ''}`,
       value: burgers,
       unit: 'burgers',
     };
@@ -63,9 +63,9 @@ export function getCarbonEquivalent(co2Kg: number): CarbonEquivalent {
   // For very large amounts (50+ kg) - use trees
   const trees = Math.round(co2Kg / TREE_CO2_PER_YEAR);
   return {
-    text: `équivalent à ${trees} arbre${trees > 1 ? 's' : ''} planté${trees > 1 ? 's' : ''} pendant 1 an`,
+    text: `equivalent to ${trees} tree${trees > 1 ? 's' : ''} planted for 1 year`,
     value: trees,
-    unit: 'arbres',
+    unit: 'trees',
   };
 }
 
@@ -82,16 +82,16 @@ export function getCarbonEquivalents(co2Kg: number): CarbonEquivalent[] {
   if (co2Kg >= FLIGHT_PARIS_NY_CO2 && co2Kg < TREE_CO2_PER_YEAR) {
     const km = Math.round(co2Kg / CAR_CO2_PER_KM);
     equivalents.push({
-      text: `ou ${km} km en voiture`,
+      text: `or ${km} km by car`,
       value: km,
       unit: 'km',
     });
   } else if (co2Kg >= TREE_CO2_PER_YEAR) {
     const flights = Math.round(co2Kg / FLIGHT_PARIS_NY_CO2);
     equivalents.push({
-      text: `ou ${flights} vol${flights > 1 ? 's' : ''} Paris-New York`,
+      text: `or ${flights} Paris-New York flight${flights > 1 ? 's' : ''}`,
       value: flights,
-      unit: 'vols',
+      unit: 'flights',
     });
   }
 

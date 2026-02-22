@@ -32,73 +32,104 @@ const getUniqueCities = (): string[] => {
   return Array.from(cities);
 };
 
-// Generate server path with real cities and dates
+// Generate server path with real cities and logical dates
 const generateServerPath = (deadlineHours: number, spotPrice: number): Array<{ step: number; action: string; detail: string; date?: string }> => {
   const cities = getUniqueCities();
   const now = new Date();
   const deadline = new Date(now.getTime() + deadlineHours * 60 * 60 * 1000);
   
-  // Select 3-4 different cities for the path
+  // Select 2-3 different cities for realistic migration path
+  // Prefer major datacenter cities
+  const majorCities = cities.filter(city => 
+    ['Amsterdam', 'Paris', 'London', 'Frankfurt', 'San Antonio', 'Tokyo', 'Singapore', 'Sydney', 'Toronto', 'Seoul'].includes(city)
+  );
+  const availableCities = majorCities.length >= 2 ? majorCities : cities;
+  
   const selectedCities: string[] = [];
   const cityIndices = new Set<number>();
-  while (selectedCities.length < 4 && cityIndices.size < cities.length) {
-    const idx = Math.floor(Math.random() * cities.length);
+  const numCities = Math.min(3, availableCities.length);
+  
+  while (selectedCities.length < numCities && cityIndices.size < availableCities.length) {
+    const idx = Math.floor(Math.random() * availableCities.length);
     if (!cityIndices.has(idx)) {
       cityIndices.add(idx);
-      selectedCities.push(cities[idx]);
+      selectedCities.push(availableCities[idx]);
     }
   }
   
-  // Distribute dates across the deadline period
-  const steps = 5;
-  const timeIntervals = [
-    0, // Start now
-    deadlineHours * 0.2, // 20% through
-    deadlineHours * 0.5, // 50% through
-    deadlineHours * 0.8, // 80% through
-    deadlineHours, // At deadline
-  ];
+  // Calculate logical time intervals based on deadline
+  // For short deadlines (< 12h), use smaller intervals
+  // For longer deadlines, use more realistic distribution
+  const isShortDeadline = deadlineHours < 12;
+  const monitoringStart = isShortDeadline ? Math.min(2, deadlineHours * 0.15) : Math.min(4, deadlineHours * 0.1);
+  const checkpointTime = isShortDeadline ? deadlineHours * 0.4 : deadlineHours * 0.35;
+  const migrationTime = isShortDeadline ? deadlineHours * 0.7 : deadlineHours * 0.6;
   
   const formatDate = (date: Date): string => {
     const hours = date.getHours().toString().padStart(2, '0');
     const minutes = date.getMinutes().toString().padStart(2, '0');
     const day = date.getDate();
-    const month = date.toLocaleString('fr-FR', { month: 'short' });
+    const month = date.toLocaleString('en-US', { month: 'short' });
     return `${day} ${month} ${hours}:${minutes}`;
   };
+  
+  // Generate realistic prices for different cities (slight variation)
+  const basePrice = spotPrice;
+  const priceVariation = (city: string, index: number) => {
+    // Simulate price differences between regions
+    const variation = 0.05 + (index * 0.03); // 5-11% variation
+    const isCheaper = Math.random() > 0.5;
+    return isCheaper 
+      ? basePrice * (1 - variation)
+      : basePrice * (1 + variation * 0.5);
+  };
+  
+  const startCity = selectedCities[0];
+  const startPrice = priceVariation(startCity, 0);
+  const migrationCity = selectedCities.length > 1 ? selectedCities[1] : null;
+  const migrationPrice = migrationCity ? priceVariation(migrationCity, 1) : null;
+  
+  // Calculate actual dates
+  const date1 = now;
+  const date2 = new Date(now.getTime() + monitoringStart * 60 * 60 * 1000);
+  const date3 = new Date(now.getTime() + checkpointTime * 60 * 60 * 1000);
+  const date4 = new Date(now.getTime() + migrationTime * 60 * 60 * 1000);
+  const date5 = deadline;
   
   return [
     {
       step: 1,
       action: "Launch job",
-      detail: `Start on ${selectedCities[0]} at $${spotPrice.toFixed(2)}/h`,
-      date: formatDate(now),
+      detail: `Start on ${startCity} at $${startPrice.toFixed(2)}/h`,
+      date: formatDate(date1),
     },
     {
       step: 2,
       action: "Monitor prices",
       detail: `Track spot prices across ${selectedCities.length} regions`,
-      date: formatDate(new Date(now.getTime() + timeIntervals[1] * 60 * 60 * 1000)),
+      date: formatDate(date2),
     },
     {
       step: 3,
       action: "Checkpoint",
       detail: "Save state every 15 minutes",
-      date: formatDate(new Date(now.getTime() + timeIntervals[2] * 60 * 60 * 1000)),
+      date: formatDate(date3),
     },
     {
       step: 4,
       action: "Optimize",
-      detail: selectedCities.length > 1 
-        ? `Migrate to ${selectedCities[1]} if better price found`
-        : "Migrate if better price found",
-      date: formatDate(new Date(now.getTime() + timeIntervals[3] * 60 * 60 * 1000)),
+      detail: migrationCity && migrationPrice && migrationPrice < startPrice
+        ? `Migrate to ${migrationCity} at $${migrationPrice.toFixed(2)}/h (${((1 - migrationPrice/startPrice) * 100).toFixed(0)}% cheaper)`
+        : migrationCity
+        ? `Monitor ${migrationCity} for better prices`
+        : "Continue monitoring for optimization",
+      date: formatDate(date4),
     },
     {
       step: 5,
       action: "Complete",
       detail: "Job finished within deadline",
-      date: formatDate(deadline),
+      date: formatDate(date5),
     },
   ];
 };
