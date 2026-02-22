@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, DollarSign, Leaf, MapPin, CheckCircle2, Clock } from "lucide-react";
+import { ArrowRight, DollarSign, Leaf, MapPin, CheckCircle2, Clock, Download } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import APILoadingAnimation from "@/components/APILoadingAnimation";
@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { api, type SimulateResponse } from "@/lib/api";
 import { getCarbonEquivalents } from "@/lib/carbonEquivalents";
 import nerveServeursData from "@/data/nerve_servers.json";
+import jsPDF from "jspdf";
 
 // Helper function to extract city name from server name
 const getCityName = (serverName: string): string => {
@@ -430,6 +431,68 @@ const Simulate = () => {
 
   const carbonEquivalents = result ? getCarbonEquivalents(result.green_impact.total_co2_kg) : [];
 
+  // Export to PDF function
+  const exportToPDF = () => {
+    if (!result) return;
+    
+    const doc = new jsPDF();
+    
+    // Titre
+    doc.setFontSize(20);
+    doc.setTextColor(34, 197, 94); // Vert emerald
+    doc.text('NERVE Simulation Report', 20, 20);
+    
+    // Ligne de séparation
+    doc.setDrawColor(34, 197, 94);
+    doc.line(20, 25, 190, 25);
+    
+    // Section Savings
+    doc.setFontSize(16);
+    doc.setTextColor(0, 0, 0);
+    doc.text('Your Savings', 20, 40);
+    
+    doc.setFontSize(12);
+    doc.text(`Total Saved: ${result.savings.saved_eur.toFixed(2)}€`, 20, 50);
+    doc.text(`Savings Percentage: ${result.savings.savings_pct.toFixed(1)}%`, 20, 57);
+    doc.text(`Spot Price: ${result.savings.spot_total_usd.toFixed(2)}€`, 20, 64);
+    doc.text(`On-Demand Price: ${result.savings.ondemand_total_usd.toFixed(2)}€`, 20, 71);
+    
+    // Section Carbon Impact
+    doc.setFontSize(16);
+    doc.setTextColor(0, 0, 0);
+    doc.text('Carbon Impact', 20, 90);
+    
+    doc.setFontSize(12);
+    // Total CO₂ en vert
+    doc.setTextColor(34, 197, 94);
+    doc.text(`Total CO₂: ${result.green_impact.total_co2_kg.toFixed(2)} kg`, 20, 100);
+    // Energy Consumed en noir
+    doc.setTextColor(0, 0, 0);
+    doc.text(`Energy Consumed: ${result.green_impact.total_kwh.toFixed(0)} kWh`, 20, 107);
+    // CO₂ Saved en vert
+    doc.setTextColor(34, 197, 94);
+    doc.text(`CO₂ Saved vs Worst Region: ${result.green_impact.co2_vs_worst_region_kg.toFixed(1)} kg`, 20, 114);
+    
+    // Date de génération
+    doc.setFontSize(10);
+    doc.setTextColor(100, 100, 100);
+    const now = new Date();
+    doc.text(`Generated on ${now.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    })}`, 20, 140);
+    
+    // Footer
+    doc.setFontSize(8);
+    doc.text('NERVE by Wattless - Spot GPU Orchestrator', 105, 285, { align: 'center' });
+    
+    // Télécharger le PDF
+    doc.save(`nerve-simulation-${Date.now()}.pdf`);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -640,7 +703,7 @@ const Simulate = () => {
                   <div className="space-y-4">
                     <div>
                       <div className="text-4xl font-bold text-green-600">
-                        {result.green_impact.total_co2_kg.toFixed(2)} kg CO₂
+                        {result.green_impact.total_co2_kg.toFixed(2)} kg CO2
                       </div>
                       <div className="text-sm text-zinc-600 mt-1">
                         {result.green_impact.total_kwh.toFixed(0)} kWh consumed
@@ -659,7 +722,7 @@ const Simulate = () => {
                     {result.green_impact.co2_vs_worst_region_kg > 0 && (
                       <div className="pt-2 text-xs text-green-700">
                         <CheckCircle2 className="h-3 w-3 inline mr-1" />
-                        {result.green_impact.co2_vs_worst_region_kg.toFixed(1)} kg CO₂ saved vs worst region
+                        {result.green_impact.co2_vs_worst_region_kg.toFixed(1)} kg CO2 saved vs worst region
                       </div>
                     )}
                   </div>
@@ -733,6 +796,18 @@ const Simulate = () => {
                   </div>
                 </CardContent>
               </Card>
+
+              {/* Export to PDF Button */}
+              <div className="flex justify-center pt-4">
+                <Button
+                  onClick={exportToPDF}
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 inline-flex items-center gap-2"
+                  size="lg"
+                >
+                  <Download className="h-4 w-4" />
+                  Export to PDF
+                </Button>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
