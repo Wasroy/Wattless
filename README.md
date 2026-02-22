@@ -1,73 +1,50 @@
-# Welcome to your Lovable project
+# Wattless
 
-## Project info
+**Cut your GPU bill by 3x. Zero downtime. Zero hassle.**
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Wattless is a FinOps & GreenOps platform that finds the cheapest, greenest GPU across cloud regions in real time. Spot pricing, carbon-aware scheduling, smart checkpointing.
 
-## How can I edit this code?
+**Devpost:** https://devpost.com/software/wattless
 
-There are several ways of editing your application.
+## What's inside
 
-**Use Lovable**
+```
+Wattless/
+├── src/              # Frontend — React + Vite + Tailwind + shadcn/ui
+├── backend/          # NERVE engine — scoring, scraping, checkpointing
+└── EVE/              # EVE — AI that creates AI models from conversation
+    ├── backend/      # FastAPI + Modal GPU training + NERVE scan
+    └── frontend/     # React chat interface
+```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+| Layer | Stack |
+|-------|-------|
+| Frontend | React 18, Vite, TypeScript, Tailwind CSS, shadcn/ui, Framer Motion |
+| Backend | Python, FastAPI, Supabase |
+| GPU Engine | NERVE scoring (cost + carbon + availability + cooling) |
+| EVE | Anthropic Claude API, Modal (serverless GPU), TinyLlama 1.1B + LoRA |
 
-**Use your preferred IDE**
+## Quick Start
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+git clone https://github.com/Wasroy/Wattless.git
+cd Wattless
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Team
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Four people. 22 hours. Hack Europe 2026.
 
-**Use GitHub Codespaces**
+- **Nicolas** — Backend & Infra
+- **William** — Frontend & Design
+- **Adrien** — Marketing & Business
+- **Roland** — Storytelling & Finance
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Links
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- [Devpost](https://devpost.com/software/wattless)
+- [GitHub](https://github.com/Wasroy/Wattless)
