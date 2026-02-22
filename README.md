@@ -6,15 +6,40 @@ Wattless is a FinOps & GreenOps platform that finds the cheapest, greenest GPU a
 
 **Devpost:** https://devpost.com/software/wattless
 
-## What's inside
+## Repository Structure
 
 ```
 Wattless/
-├── src/              # Frontend — React + Vite + Tailwind + shadcn/ui
-├── backend/          # NERVE engine — scoring, scraping, checkpointing
-└── EVE/              # EVE — AI that creates AI models from conversation
-    ├── backend/      # FastAPI + Modal GPU training + NERVE scan
-    └── frontend/     # React chat interface
+│
+├── src/                    # Wattless Dashboard (React + Vite + Tailwind)
+│   ├── components/         #   UI components (Hero, Dashboard, Map, Team...)
+│   ├── pages/              #   Routes (Index, Dashboard, Simulate, Mapmonde)
+│   ├── data/               #   NERVE data (servers, regions, scoring)
+│   ├── hooks/              #   Custom React hooks
+│   └── lib/                #   API client & utilities
+│
+├── backend/                # NERVE Engine (Python)
+│   └── engine/             #   Scoring, scraping, checkpointing, LLM, timeshifter
+│
+├── supabase/               # Supabase Backend
+│   ├── migrations/         #   Database schema (SQL)
+│   └── functions/          #   Edge functions (scrape, simulate, optimize...)
+│
+├── EVE/                    # EVE — AI that creates AI models
+│   ├── backend/            #   FastAPI + Modal GPU training + NERVE scan
+│   ├── frontend/           #   React chat interface (split-screen)
+│   └── README.md           #   EVE documentation
+│
+├── docs/                   # Documentation
+│   ├── DEPLOYMENT_GUIDE.md
+│   ├── SUPABASE_MCP_GUIDE.md
+│   ├── TEST_RESULTS.md
+│   └── vision/             #   Product vision & scraped data
+│
+├── archive/                # Previous versions (preserved)
+│   └── frontend-v1/        #   Earlier frontend iteration
+│
+└── public/                 # Static assets
 ```
 
 ## Tech Stack
@@ -22,17 +47,32 @@ Wattless/
 | Layer | Stack |
 |-------|-------|
 | Frontend | React 18, Vite, TypeScript, Tailwind CSS, shadcn/ui, Framer Motion |
-| Backend | Python, FastAPI, Supabase |
+| Backend | Python, FastAPI, Supabase Edge Functions |
 | GPU Engine | NERVE scoring (cost + carbon + availability + cooling) |
 | EVE | Anthropic Claude API, Modal (serverless GPU), TinyLlama 1.1B + LoRA |
 
 ## Quick Start
 
+### Wattless Dashboard
 ```bash
 git clone https://github.com/Wasroy/Wattless.git
 cd Wattless
 npm install
 npm run dev
+```
+
+### EVE (AI Model Creator)
+```bash
+# Backend
+cd EVE/backend
+pip install -r requirements.txt
+cp .env.example .env   # Add your Anthropic API key
+python eve.py           # Runs on :8001
+
+# Frontend
+cd EVE/frontend
+npm install
+npm run dev             # Runs on :5173
 ```
 
 ## Team
