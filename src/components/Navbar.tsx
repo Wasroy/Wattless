@@ -24,6 +24,9 @@ const Navbar = () => (
         <Link to="/mapmonde" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
           Mapmonde
         </Link>
+        <Link to="/test-edge-functions" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+          Test API
+        </Link>
       </div>
     </div>
   </nav>
