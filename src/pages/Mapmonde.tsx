@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, TrendingUp, DollarSign, Thermometer, Leaf, Shield, ArrowRight, Zap } from "lucide-react";
+import { MapPin, TrendingUp, Thermometer, Leaf, Shield, ArrowRight, Zap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WorldMap from "@/components/WorldMap";
@@ -41,9 +41,14 @@ const extractCity = (fullName: string): string => {
   return fullName.slice(0, 20);
 };
 
+// Icône Euro simple
+const EuroIcon = ({ className }: { className?: string }) => (
+  <span className={className} style={{ fontFamily: 'Arial, sans-serif', fontWeight: 'bold', display: 'inline-block', transform: 'translateY(-5px)' }}>€</span>
+);
+
 // Icône et couleur par source de gain
-const SOURCE_CONFIG: Record<string, { icon: typeof DollarSign; color: string; bg: string; glow: string }> = {
-  price: { icon: DollarSign, color: "text-green-400", bg: "bg-green-500/15", glow: "shadow-green-500/20" },
+const SOURCE_CONFIG: Record<string, { icon: React.ComponentType<{ className?: string }>; color: string; bg: string; glow: string }> = {
+  price: { icon: EuroIcon, color: "text-green-400", bg: "bg-green-500/15", glow: "shadow-green-500/20" },
   weather: { icon: Thermometer, color: "text-cyan-400", bg: "bg-cyan-500/15", glow: "shadow-cyan-500/20" },
   carbon: { icon: Leaf, color: "text-emerald-400", bg: "bg-emerald-500/15", glow: "shadow-emerald-500/20" },
   availability: { icon: Shield, color: "text-violet-400", bg: "bg-violet-500/15", glow: "shadow-violet-500/20" },
@@ -66,11 +71,24 @@ transitionsData.forEach((t) => {
 
 const Mapmonde = () => {
   const { activeTransitions, addTransition } = useServerTransitions();
-  const [totalSavings, setTotalSavings] = useState(0);
+  
+  // Calculer un total réaliste pour la dernière heure
+  // On prend toutes les transitions et on calcule un total moyen par heure
+  // En supposant ~100 transitions par heure (réaliste pour une activité continue)
+  const allSavings = transitionsData.reduce((sum, t) => sum + (t.savings || 0), 0);
+  const avgSavingsPerTransition = allSavings / transitionsData.length;
+  const transitionsPerHour = 100; // Estimation réaliste
+  const lastHourSavings = avgSavingsPerTransition * transitionsPerHour;
+  
+  // Initialiser avec des valeurs réalistes pour donner l'impression de 24/7
+  // ~247 transitions = impression de beaucoup d'activité continue (24/7)
+  const initialTransitionCount = 247;
+  
+  const [totalSavings, setTotalSavings] = useState(Math.round(lastHourSavings * 100) / 100);
   const [shouldPulse, setShouldPulse] = useState(false);
   const processedTransitionsRef = useRef<Set<string>>(new Set());
   const [liveReasons, setLiveReasons] = useState<TransitionWithReasons[]>([]);
-  const [transitionCount, setTransitionCount] = useState(0);
+  const [transitionCount, setTransitionCount] = useState(initialTransitionCount);
 
   // Charger et déclencher les transitions depuis le JSON
   useEffect(() => {
@@ -85,8 +103,20 @@ const Mapmonde = () => {
         const transitionKey = `${transition.from}-${transition.to}-${transition.timestamp}-${index}`;
         
         // Vérifier si cette transition a déjà été comptabilisée
+        // On continue à ajouter les nouvelles transitions au total de la dernière heure
         if (!processedTransitionsRef.current.has(transitionKey)) {
-          setTotalSavings((prev) => prev + (transition.savings || 0));
+          setTotalSavings((prev) => {
+            const newTotal = prev + (transition.savings || 0);
+            // Simuler un sliding window d'1h : on garde le total dans une fourchette réaliste
+            // Si on dépasse 1.5x le total initial (trop d'accumulation), on réinitialise
+            // pour simuler que les anciennes transitions sortent de la fenêtre d'1h
+            if (newTotal > lastHourSavings * 1.5) {
+              // Réinitialiser à ~80% du total initial + nouvelle transition
+              // pour simuler que les plus anciennes sortent de la fenêtre
+              return Math.round((lastHourSavings * 0.85 + (transition.savings || 0)) * 100) / 100;
+            }
+            return Math.round(newTotal * 100) / 100;
+          });
           processedTransitionsRef.current.add(transitionKey);
           setShouldPulse(true);
           setTimeout(() => setShouldPulse(false), 600);
@@ -142,16 +172,16 @@ const Mapmonde = () => {
             <CardHeader className="pb-0">
               <div className="flex items-center justify-between">
                 <div>
-                  <CardTitle>Carte des serveurs</CardTitle>
+                  <CardTitle>Server Map</CardTitle>
                 </div>
                 <div className="flex items-center gap-4 text-xs text-muted-foreground">
                   <div className="flex items-center gap-1.5">
                     <span className="h-2.5 w-2.5 rounded-full bg-gray-500 opacity-60" />
-                    Inactif
+                    Inactive
                   </div>
                   <div className="flex items-center gap-1.5">
                     <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
-                    Transition active
+                    Active transition
                   </div>
                   <div className="flex items-center gap-1.5">
                     <span className="h-2.5 w-2.5 rounded-full bg-amber-500" />
@@ -191,7 +221,7 @@ const Mapmonde = () => {
                             <TrendingUp className="h-4 w-4 text-green-400" />
                           </div>
                           <div className="flex flex-col">
-                            <span className="text-[10px] uppercase tracking-wider text-muted-foreground font-medium">Économies temps réel</span>
+                            <span className="text-[10px] uppercase tracking-wider text-muted-foreground font-medium">Last Hour Savings</span>
                             <AnimatePresence mode="wait">
                               <motion.span
                                 key={totalSavings.toFixed(2)}
@@ -278,13 +308,13 @@ const Mapmonde = () => {
                                 >
                                   <Icon className={`h-3 w-3 ${config.color} flex-shrink-0`} />
                                   <span className={`text-[11px] font-bold font-mono ${config.color} tabular-nums flex-shrink-0`}>
-                                    +{gain.amount_eur}€
+                                    +{gain.amount_eur}
                                   </span>
                                   <span className="text-[10px] text-white/60 truncate">
-                                    {gain.source === "price" && "prix serveur"}
-                                    {gain.source === "weather" && "météo & cooling"}
-                                    {gain.source === "carbon" && "carbone vert"}
-                                    {gain.source === "availability" && "disponibilité"}
+                                    {gain.source === "price" && "server price"}
+                                    {gain.source === "weather" && "weather & cooling"}
+                                    {gain.source === "carbon" && "green carbon"}
+                                    {gain.source === "availability" && "availability"}
                                   </span>
                                 </motion.div>
                               );
@@ -365,9 +395,9 @@ const Mapmonde = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <MapPin className="h-5 w-5" />
-                Liste des serveurs
+                Server List
               </CardTitle>
-              <CardDescription>Tous les points d'infrastructure du réseau</CardDescription>
+              <CardDescription>All network infrastructure points</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
