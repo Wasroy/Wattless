@@ -1,0 +1,602 @@
+[
+  {
+    "from": "Standard_ND96amsr_A100_v4 - San Francisco, California, USA",
+    "to": "Standard_ND96amsr_A100_v4 - Johannesburg, South Africa",
+    "timestamp": 1500,
+    "savings": 2.44
+  },
+  {
+    "from": "Standard_NC24ads_A100_v4 - Nagpur, India",
+    "to": "Standard_NV72ads_A10_v5 - Mumbai, India",
+    "timestamp": 3000,
+    "savings": 0.59
+  },
+  {
+    "from": "Standard_NV24s_v2 - San Antonio, Texas, USA",
+    "to": "Standard_NC24r_Promo - Chicago, Illinois, USA",
+    "timestamp": 4500,
+    "savings": 0.47
+  },
+  {
+    "from": "Standard_NV12s_v3 - Virginia, USA",
+    "to": "Standard_NC96ads_A100_v4 - Pune, India",
+    "timestamp": 6000,
+    "savings": 1.2
+  },
+  {
+    "from": "Standard_NC24rs_v3 - Mumbai, India",
+    "to": "Standard_ND128isr_NDR_GB200_v6 - Busan, South Korea",
+    "timestamp": 7500,
+    "savings": 1.31
+  },
+  {
+    "from": "Standard_NV12s_v3 - Paris, France",
+    "to": "Standard_NC40ads_H100_v5 - London, United Kingdom",
+    "timestamp": 9000,
+    "savings": 0.6
+  },
+  {
+    "from": "Standard_ND96is_H100_v5 - Washington State, USA",
+    "to": "Standard_NV4as_v4 - Milan, Italy",
+    "timestamp": 10500,
+    "savings": 2.45
+  },
+  {
+    "from": "Standard_NC64as_T4_v3 - Sydney, Australia",
+    "to": "Standard_NC6s_v3 - Doha, Qatar",
+    "timestamp": 12000,
+    "savings": 1.27
+  },
+  {
+    "from": "Standard_NC24ads_A100_v4 - Nagpur, India",
+    "to": "Standard_NV18ads_A10_v5 - Dublin, Ireland",
+    "timestamp": 13500,
+    "savings": 2.06
+  },
+  {
+    "from": "Standard_NV72ads_A10_v5 - Zurich, Switzerland",
+    "to": "Standard_NV12s_v3 - Virginia, USA",
+    "timestamp": 15000,
+    "savings": 1.31
+  },
+  {
+    "from": "Standard_NV32as_v4 - Toronto, Canada",
+    "to": "Standard_NC6_Promo - Virginia, USA",
+    "timestamp": 16500,
+    "savings": 0.4
+  },
+  {
+    "from": "Standard_NV72ads_A10_v5 - San Antonio, Texas, USA",
+    "to": "Standard_NV16as_v4 - Frankfurt, Germany",
+    "timestamp": 18000,
+    "savings": 1.4
+  },
+  {
+    "from": "Standard_NC24rs_v3 - Mumbai, India",
+    "to": "Standard_NC128lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
+    "timestamp": 19500,
+    "savings": 1.12
+  },
+  {
+    "from": "Standard_NV32as_v4 - Warsaw, Poland",
+    "to": "Standard_NP10s - Tokyo, Japan",
+    "timestamp": 21000,
+    "savings": 1.63
+  },
+  {
+    "from": "Standard_NV4as_v4 - Milan, Italy",
+    "to": "Standard_NV8as_v4 - Tokyo, Japan",
+    "timestamp": 22500,
+    "savings": 2.37
+  },
+  {
+    "from": "Standard_NC24_Promo - Virginia, USA (Gov)",
+    "to": "Standard_NC32lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
+    "timestamp": 24000,
+    "savings": 0.78
+  },
+  {
+    "from": "Standard_NC40ads_H100_v5 - Frankfurt, Germany",
+    "to": "Standard_NV18ads_A10_v5 - Washington State, USA",
+    "timestamp": 25500,
+    "savings": 1.75
+  },
+  {
+    "from": "Standard_NC24ads_A100_v4 - Milan, Italy",
+    "to": "Standard_ND96is_noIB_H100_v5 - Virginia, USA",
+    "timestamp": 27000,
+    "savings": 1.65
+  },
+  {
+    "from": "Standard_NV8ads_V710_v5 - Chicago, Illinois, USA",
+    "to": "Standard_ND96is_MI300X_v5 - Phoenix, Arizona, USA",
+    "timestamp": 28500,
+    "savings": 1.15
+  },
+  {
+    "from": "Standard_ND96is_H100_v5 - London, United Kingdom",
+    "to": "Standard_NV6ads_A10_v5 - Stockholm, Sweden",
+    "timestamp": 30000,
+    "savings": 0.49
+  },
+  {
+    "from": "Standard_NC128lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
+    "to": "Standard_NV72ads_A10_v5 - Virginia, USA",
+    "timestamp": 31500,
+    "savings": 1.17
+  },
+  {
+    "from": "Standard_ND96isrf_H100_v5 - Madrid, Spain",
+    "to": "Standard_NV8as_v4 - Toronto, Canada",
+    "timestamp": 33000,
+    "savings": 1.58
+  },
+  {
+    "from": "Standard_NV36ads_A10_v5 - Paris, France",
+    "to": "Standard_NP10s - Tokyo, Japan",
+    "timestamp": 34500,
+    "savings": 2.27
+  },
+  {
+    "from": "Standard_NC80adis_H100_v5 - London, United Kingdom",
+    "to": "Standard_ND96ams_A100_v4 - Zurich, Switzerland",
+    "timestamp": 36000,
+    "savings": 0.54
+  },
+  {
+    "from": "Standard_NC24s_v3 - Phoenix, Arizona, USA",
+    "to": "Standard_NG16ads_V620_v1 - Phoenix, Arizona, USA",
+    "timestamp": 37500,
+    "savings": 0.33
+  },
+  {
+    "from": "Standard_NC24s_v3 - San Francisco, California, USA",
+    "to": "Standard_NC16lds_xl_RTXPRO6000BSE_v6 - Des Moines, Iowa, USA",
+    "timestamp": 39000,
+    "savings": 0.72
+  },
+  {
+    "from": "Standard_NC24rs_v3 - Virginia, USA",
+    "to": "Standard_ND128isr_NDR_GB200_v6 - Phoenix, Arizona, USA",
+    "timestamp": 40500,
+    "savings": 1.23
+  },
+  {
+    "from": "Standard_NV48s_v3 - Virginia, USA (Gov)",
+    "to": "Standard_NC6_Promo - Virginia, USA",
+    "timestamp": 42000,
+    "savings": 0.4
+  },
+  {
+    "from": "Standard_NG8ads_V620_v1 - Des Moines, Iowa, USA",
+    "to": "Standard_NV12s_v2 - San Antonio, Texas, USA",
+    "timestamp": 43500,
+    "savings": 0.52
+  },
+  {
+    "from": "Standard_NC16lds_xl_RTXPRO6000BSE_v6 - Des Moines, Iowa, USA",
+    "to": "Standard_NV6ads_A10_v5 - Frankfurt, Germany",
+    "timestamp": 45000,
+    "savings": 1.9
+  },
+  {
+    "from": "Standard_NV32as_v4 - Toronto, Canada",
+    "to": "Standard_NC24rs_v3 - Mumbai, India",
+    "timestamp": 46500,
+    "savings": 1.63
+  },
+  {
+    "from": "Standard_NV16as_v4 - Frankfurt, Germany",
+    "to": "Standard_NV8as_v4 - Toronto, Canada",
+    "timestamp": 48000,
+    "savings": 1.92
+  },
+  {
+    "from": "Standard_ND96ams_A100_v4 - Paris, France",
+    "to": "Standard_NC64ds_xl_RTXPRO6000BSE_v6 - Washington State, USA",
+    "timestamp": 49500,
+    "savings": 1.39
+  },
+  {
+    "from": "Standard_NC24s_v3 - Tokyo, Japan",
+    "to": "Standard_NC6s_v3 - Doha, Qatar",
+    "timestamp": 51000,
+    "savings": 1.72
+  },
+  {
+    "from": "Standard_NV18ads_A10_v5 - Virginia, USA (Gov)",
+    "to": "Standard_ND96is_H100_v5 - Virginia, USA",
+    "timestamp": 52500,
+    "savings": 0.45
+  },
+  {
+    "from": "Standard_NC12s_v3 - Washington State, USA",
+    "to": "Standard_NV36ads_A10_v5 - Tokyo, Japan",
+    "timestamp": 54000,
+    "savings": 2.37
+  },
+  {
+    "from": "Standard_NV8as_v4 - London, United Kingdom",
+    "to": "Standard_NV48s_v3 - Dublin, Ireland",
+    "timestamp": 55500,
+    "savings": 0.38
+  },
+  {
+    "from": "Standard_NV36ads_A10_v5 - Chicago, Illinois, USA",
+    "to": "Standard_NV32as_v4 - Amsterdam, Netherlands",
+    "timestamp": 57000,
+    "savings": 1.55
+  },
+  {
+    "from": "Standard_NG16ads_V620_v1 - Phoenix, Arizona, USA",
+    "to": "Standard_NV18ads_A10_v5 - Zurich, Switzerland",
+    "timestamp": 58500,
+    "savings": 1.32
+  },
+  {
+    "from": "Standard_NC80adis_H100_v5 - Chicago, Illinois, USA",
+    "to": "Standard_NC16lds_xl_RTXPRO6000BSE_v6 - Dublin, Ireland",
+    "timestamp": 60000,
+    "savings": 1.98
+  },
+  {
+    "from": "Standard_NV8as_v4 - Warsaw, Poland",
+    "to": "Standard_NC32lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
+    "timestamp": 61500,
+    "savings": 1.65
+  },
+  {
+    "from": "Standard_NV18ads_A10_v5 - Washington State, USA",
+    "to": "Standard_NV6ads_A10_v5 - Madrid, Spain",
+    "timestamp": 63000,
+    "savings": 1.78
+  },
+  {
+    "from": "Standard_NV18ads_A10_v5 - Chicago, Illinois, USA",
+    "to": "Standard_NV24s_v3 - Singapore",
+    "timestamp": 64500,
+    "savings": 1.22
+  },
+  {
+    "from": "Standard_NV28adms_V710_v5 - San Francisco, California, USA",
+    "to": "Standard_NC40ads_H100_v5 - Madrid, Spain",
+    "timestamp": 66000,
+    "savings": 2.42
+  },
+  {
+    "from": "Standard_NC24r_Promo - Sydney, Australia",
+    "to": "Standard_NC40ads_H100_v5 - Dublin, Ireland",
+    "timestamp": 67500,
+    "savings": 2.47
+  },
+  {
+    "from": "Standard_NV6ads_A10_v5 - Madrid, Spain",
+    "to": "Standard_ND96ams_A100_v4 - Paris, France",
+    "timestamp": 69000,
+    "savings": 0.57
+  },
+  {
+    "from": "Standard_NV12_Promo - Singapore",
+    "to": "Standard_NV6_Promo - Singapore",
+    "timestamp": 70500,
+    "savings": 0.24
+  },
+  {
+    "from": "Standard_NC64ds_xl_RTXPRO6000BSE_v6 - Singapore",
+    "to": "Standard_NC6_Promo - Dublin, Ireland",
+    "timestamp": 72000,
+    "savings": 2.46
+  },
+  {
+    "from": "Standard_ND128isr_NDR_GB200_v6 - Busan, South Korea",
+    "to": "Standard_NC96ads_A100_v4 - Frankfurt, Germany",
+    "timestamp": 73500,
+    "savings": 1.26
+  },
+  {
+    "from": "Standard_NV72ads_A10_v5 - Virginia, USA",
+    "to": "Standard_NC24r_Promo - Amsterdam, Netherlands",
+    "timestamp": 75000,
+    "savings": 1.68
+  },
+  {
+    "from": "Standard_ND96is_flex_H100_v5 - Stockholm, Sweden",
+    "to": "Standard_NV16as_v4 - Virginia, USA",
+    "timestamp": 76500,
+    "savings": 1.31
+  },
+  {
+    "from": "Standard_NV12s_v3 - Virginia, USA",
+    "to": "Standard_ND96isr_H200_v5 - Warsaw, Poland",
+    "timestamp": 78000,
+    "savings": 1.16
+  },
+  {
+    "from": "Standard_NC40ads_H100_v5 - Dublin, Ireland",
+    "to": "Standard_NV36adms_A10_v5 - Kuala Lumpur, Malaysia",
+    "timestamp": 79500,
+    "savings": 1.82
+  },
+  {
+    "from": "Standard_NV8ads_V710_v5 - Chicago, Illinois, USA",
+    "to": "Standard_ND96isr_H100_v5 - Amsterdam, Netherlands",
+    "timestamp": 81000,
+    "savings": 1.78
+  },
+  {
+    "from": "Standard_NV6_Promo - Virginia, USA",
+    "to": "Standard_NG16ads_V620_v1 - Virginia, USA",
+    "timestamp": 82500,
+    "savings": 0.73
+  },
+  {
+    "from": "Standard_NV16as_v4 - Virginia, USA",
+    "to": "Standard_NV12ads_A10_v5 - Milan, Italy",
+    "timestamp": 84000,
+    "savings": 2.08
+  },
+  {
+    "from": "Standard_NC12_Promo - Amsterdam, Netherlands",
+    "to": "Standard_NC24r_Promo - Amsterdam, Netherlands",
+    "timestamp": 85500,
+    "savings": 0.19
+  },
+  {
+    "from": "Standard_ND128isr_NDR_GB200_v6 - Busan, South Korea",
+    "to": "Standard_NV18ads_A10_v5 - Virginia, USA (Gov)",
+    "timestamp": 87000,
+    "savings": 1.64
+  },
+  {
+    "from": "Standard_NV6ads_A10_v5 - San Francisco, California, USA",
+    "to": "Standard_NV36ads_A10_v5 - Tel Aviv, Israel",
+    "timestamp": 88500,
+    "savings": 1.24
+  },
+  {
+    "from": "Standard_NV12ads_A10_v5 - Milan, Italy",
+    "to": "Standard_NV18ads_A10_v5 - Washington State, USA",
+    "timestamp": 90000,
+    "savings": 1.06
+  },
+  {
+    "from": "Standard_NV16as_v4 - Virginia, USA",
+    "to": "Standard_NC12s_v3 - Toronto, Canada",
+    "timestamp": 91500,
+    "savings": 0.76
+  },
+  {
+    "from": "Standard_NV6_Promo - Virginia, USA",
+    "to": "Standard_NV12s_v3 - Paris, France",
+    "timestamp": 93000,
+    "savings": 1.1
+  },
+  {
+    "from": "Standard_NC24r_Promo - Chicago, Illinois, USA",
+    "to": "Standard_ND96ams_A100_v4 - Dubai, UAE",
+    "timestamp": 94500,
+    "savings": 1.26
+  },
+  {
+    "from": "Standard_NC48ads_A100_v4 - Paris, France",
+    "to": "Standard_NC24rs_v3 - Mumbai, India",
+    "timestamp": 96000,
+    "savings": 2.01
+  },
+  {
+    "from": "Standard_NV8as_v4 - Toronto, Canada",
+    "to": "Standard_NV72ads_A10_v5 - Virginia, USA",
+    "timestamp": 97500,
+    "savings": 0.69
+  },
+  {
+    "from": "Standard_NP20s - Washington State, USA",
+    "to": "Standard_ND96is_H100_v5 - London, United Kingdom",
+    "timestamp": 99000,
+    "savings": 2.16
+  },
+  {
+    "from": "Standard_NV18ads_A10_v5 - Chicago, Illinois, USA",
+    "to": "Standard_NV12s_v3 - Virginia, USA",
+    "timestamp": 100500,
+    "savings": 0.37
+  },
+  {
+    "from": "Standard_NV72ads_A10_v5 - Virginia, USA",
+    "to": "Standard_NC48ads_A100_v4 - Toronto, Canada",
+    "timestamp": 102000,
+    "savings": 0.7
+  },
+  {
+    "from": "Standard_NV32as_v4 - Arizona, USA (Gov)",
+    "to": "Standard_NC6_Promo - Dublin, Ireland",
+    "timestamp": 103500,
+    "savings": 1.9
+  },
+  {
+    "from": "Standard_NV36adms_A10_v5 - Sao Paulo, Brazil",
+    "to": "Standard_NV36adms_A10_v5 - Hong Kong",
+    "timestamp": 105000,
+    "savings": 2.26
+  },
+  {
+    "from": "Standard_NP10s - San Antonio, Texas, USA",
+    "to": "Standard_NV6ads_A10_v5 - Mexico City, Mexico",
+    "timestamp": 106500,
+    "savings": 0.67
+  },
+  {
+    "from": "Standard_NC96ads_A100_v4 - Mumbai, India",
+    "to": "Standard_NV16as_v4 - Atlanta, Georgia, USA",
+    "timestamp": 108000,
+    "savings": 2.36
+  },
+  {
+    "from": "Standard_NC24s_v3 - Arizona, USA (Gov)",
+    "to": "Standard_NC8as_T4_v3 - Des Moines, Iowa, USA",
+    "timestamp": 109500,
+    "savings": 0.94
+  },
+  {
+    "from": "Standard_ND128isrf_GB300_v6 - Virginia, USA",
+    "to": "Standard_NC8as_T4_v3 - Dallas, Texas, USA",
+    "timestamp": 111000,
+    "savings": 0.72
+  },
+  {
+    "from": "Standard_NC24ads_A100_v4 - Milan, Italy",
+    "to": "Standard_NC128ds_xl_RTXPRO6000BSE_v6 - Singapore",
+    "timestamp": 112500,
+    "savings": 1.79
+  },
+  {
+    "from": "Standard_NV48s_v3 - Dublin, Ireland",
+    "to": "Standard_NC48ads_A100_v4 - Warsaw, Poland",
+    "timestamp": 114000,
+    "savings": 1.39
+  },
+  {
+    "from": "Standard_NC24r_Promo - Chicago, Illinois, USA",
+    "to": "Standard_NC320ds_xl_RTXPRO6000BSE_v6 - Des Moines, Iowa, USA",
+    "timestamp": 115500,
+    "savings": 0.68
+  },
+  {
+    "from": "Standard_NC24s_v3 - Tokyo, Japan",
+    "to": "Standard_NC24rs_v3 - Singapore",
+    "timestamp": 117000,
+    "savings": 1.4
+  },
+  {
+    "from": "Standard_NP10s - Toronto, Canada",
+    "to": "Standard_NC6_Promo - Virginia, USA (Gov)",
+    "timestamp": 118500,
+    "savings": 0.72
+  },
+  {
+    "from": "Standard_NC24rs_v3 - Mumbai, India",
+    "to": "Standard_NV36ads_A10_v5 - Dubai, UAE",
+    "timestamp": 120000,
+    "savings": 0.61
+  },
+  {
+    "from": "Standard_NC128ds_xl_RTXPRO6000BSE_v6 - Singapore",
+    "to": "Standard_NC24rs_v3 - Singapore",
+    "timestamp": 121500,
+    "savings": 0.16
+  },
+  {
+    "from": "Standard_NC64ds_xl_RTXPRO6000BSE_v6 - Singapore",
+    "to": "Standard_ND96isr_H200_v5 - Sao Paulo, Brazil",
+    "timestamp": 123000,
+    "savings": 2.38
+  },
+  {
+    "from": "Standard_NC64as_T4_v3 - Sydney, Australia",
+    "to": "Standard_NC24rs_v3 - Mumbai, India",
+    "timestamp": 124500,
+    "savings": 1.76
+  },
+  {
+    "from": "Standard_NC8as_T4_v3 - Amsterdam, Netherlands",
+    "to": "Standard_NV18ads_A10_v5 - Phoenix, Arizona, USA",
+    "timestamp": 126000,
+    "savings": 1.36
+  },
+  {
+    "from": "Standard_NV18ads_A10_v5 - Virginia, USA (Gov)",
+    "to": "Standard_NV16as_v4 - Virginia, USA",
+    "timestamp": 127500,
+    "savings": 0.5
+  },
+  {
+    "from": "Standard_NV12s_v3 - San Francisco, California, USA",
+    "to": "Standard_NV36adms_A10_v5 - Virginia, USA",
+    "timestamp": 129000,
+    "savings": 1.09
+  },
+  {
+    "from": "Standard_NC12s_v3 - Pune, India",
+    "to": "Standard_NC8as_T4_v3 - Sao Paulo, Brazil",
+    "timestamp": 130500,
+    "savings": 1.24
+  },
+  {
+    "from": "Standard_ND128isr_NDR_GB200_v6 - Sydney, Australia",
+    "to": "Standard_NV8as_v4 - Warsaw, Poland",
+    "timestamp": 132000,
+    "savings": 2.3
+  },
+  {
+    "from": "Standard_NC48ads_A100_v4 - Pune, India",
+    "to": "Standard_NV36ads_A10_v5 - Dubai, UAE",
+    "timestamp": 133500,
+    "savings": 0.32
+  },
+  {
+    "from": "Standard_NV16as_v4 - Mexico City, Mexico",
+    "to": "Standard_NV4as_v4 - Milan, Italy",
+    "timestamp": 135000,
+    "savings": 2.44
+  },
+  {
+    "from": "Standard_NC12_Promo - Virginia, USA",
+    "to": "Standard_NV72ads_A10_v5 - Des Moines, Iowa, USA",
+    "timestamp": 136500,
+    "savings": 0.79
+  },
+  {
+    "from": "Standard_NV16as_v4 - Stockholm, Sweden",
+    "to": "Standard_NC6_Promo - Dublin, Ireland",
+    "timestamp": 138000,
+    "savings": 0.69
+  },
+  {
+    "from": "Standard_ND96ams_A100_v4 - Paris, France",
+    "to": "Standard_NV72ads_A10_v5 - Des Moines, Iowa, USA",
+    "timestamp": 139500,
+    "savings": 2.13
+  },
+  {
+    "from": "Standard_ND96isr_H100_v5 - Amsterdam, Netherlands",
+    "to": "Standard_NV12_Promo - Singapore",
+    "timestamp": 141000,
+    "savings": 2.37
+  },
+  {
+    "from": "Standard_NC24ads_A100_v4 - Nagpur, India",
+    "to": "Standard_NV36ads_A10_v5 - Jakarta, Indonesia",
+    "timestamp": 142500,
+    "savings": 0.74
+  },
+  {
+    "from": "Standard_NC6_Promo - Virginia, USA",
+    "to": "Standard_NV12_Promo - Singapore",
+    "timestamp": 144000,
+    "savings": 2.27
+  },
+  {
+    "from": "Standard_NP10s - Tokyo, Japan",
+    "to": "Standard_NC80adis_H100_v5 - London, United Kingdom",
+    "timestamp": 145500,
+    "savings": 1.57
+  },
+  {
+    "from": "Standard_NC4as_T4_v3 - Des Moines, Iowa, USA",
+    "to": "Standard_NC256ds_xl_RTXPRO6000BSE_v6 - Dublin, Ireland",
+    "timestamp": 147000,
+    "savings": 2.37
+  },
+  {
+    "from": "Standard_NV18ads_A10_v5 - Virginia, USA (Gov)",
+    "to": "Standard_NC128lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
+    "timestamp": 148500,
+    "savings": 1.42
+  },
+  {
+    "from": "Standard_NC12s_v3 - Pune, India",
+    "to": "Standard_NP20s - Washington State, USA",
+    "timestamp": 150000,
+    "savings": 1.57
+  }
+]
