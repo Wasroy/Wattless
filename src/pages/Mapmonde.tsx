@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, TrendingUp, Thermometer, Leaf, Shield, ArrowRight, Zap } from "lucide-react";
+import { MapPin, TrendingUp, Thermometer, Leaf, Shield, ArrowRight, Zap, Cpu, Wind, Activity } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WorldMap from "@/components/WorldMap";
@@ -11,6 +11,7 @@ import { useServerTransitions } from "@/hooks/useServerTransitions";
 // Import des données depuis les fichiers JSON
 import nerveServeursData from "@/data/nerve_servers.json";
 import transitionsData from "@/data/transitions.json";
+import liveFeedData from "@/data/live_scrape_feed.json";
 import type { Serveur } from "@/data/types";
 
 // Type pour les gains financiers
@@ -89,6 +90,34 @@ const Mapmonde = () => {
   const processedTransitionsRef = useRef<Set<string>>(new Set());
   const [liveReasons, setLiveReasons] = useState<TransitionWithReasons[]>([]);
   const [transitionCount, setTransitionCount] = useState(initialTransitionCount);
+
+  // ── LIVE DATA FEED ─────────────────────────────────────────────────────
+  const [feedItems, setFeedItems] = useState<Array<{ data: (typeof liveFeedData)[0]; id: string }>>([]);
+  const feedIndexRef = useRef(0);
+
+  useEffect(() => {
+    // Pre-fill with some items already "scraped" (simulate 24/7)
+    const preFill = liveFeedData.slice(0, 8).map((d, i) => ({
+      data: d,
+      id: `pre-${i}`,
+    }));
+    setFeedItems(preFill);
+    feedIndexRef.current = 8;
+
+    // Add new items periodically
+    const interval = setInterval(() => {
+      const idx = feedIndexRef.current % liveFeedData.length;
+      const item = liveFeedData[idx];
+      feedIndexRef.current++;
+
+      setFeedItems((prev) => {
+        const next = [{ data: item, id: `feed-${Date.now()}-${idx}` }, ...prev];
+        return next.slice(0, 30); // keep max 30 in memory
+      });
+    }, 1800); // new entry every 1.8s
+
+    return () => clearInterval(interval);
+  }, []);
 
   // Charger et déclencher les transitions depuis le JSON
   useEffect(() => {
@@ -359,7 +388,7 @@ const Mapmonde = () => {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.8 }}
-                      className="absolute top-3 right-3 z-10"
+                      className="absolute top-3 right-[188px] z-10"
                     >
                       <div className="bg-background/90 backdrop-blur-md border border-primary/30 rounded-lg px-3 py-1.5 flex items-center gap-2">
                         <motion.div
@@ -374,6 +403,101 @@ const Mapmonde = () => {
                     </motion.div>
                   )}
                 </AnimatePresence>
+
+                {/* ── RIGHT: LIVE DATA FEED ──────────────────────── */}
+                <div className="absolute top-0 right-0 z-10 w-[180px] h-full pointer-events-none">
+                  {/* Header */}
+                  <div className="bg-background/95 backdrop-blur-md border-l border-b border-border/40 rounded-bl-lg px-3 py-2 flex items-center gap-1.5">
+                    <motion.div
+                      className="h-1.5 w-1.5 rounded-full bg-green-400"
+                      animate={{ opacity: [1, 0.3, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    />
+                    <span className="text-[9px] uppercase tracking-widest font-semibold text-muted-foreground">Live Data Feed</span>
+                  </div>
+                  {/* Scrolling feed */}
+                  <div className="h-[calc(100%-32px)] overflow-hidden relative">
+                    {/* Fade top */}
+                    <div className="absolute top-0 left-0 right-0 h-6 bg-gradient-to-b from-[#0d0d1a] to-transparent z-10" />
+                    {/* Fade bottom */}
+                    <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#0d0d1a] to-transparent z-10" />
+                    <div className="flex flex-col gap-[3px] px-1.5 pt-1 pb-4">
+                      <AnimatePresence initial={false}>
+                        {feedItems.map((item) => {
+                          const d = item.data;
+                          const isGpu = d.type === "gpu_price";
+                          const isWeather = d.type === "weather";
+                          const isCarbon = d.type === "carbon";
+
+                          return (
+                            <motion.div
+                              key={item.id}
+                              initial={{ opacity: 0, y: -18, scale: 0.95 }}
+                              animate={{ opacity: 1, y: 0, scale: 1 }}
+                              exit={{ opacity: 0, scale: 0.9 }}
+                              transition={{ duration: 0.3 }}
+                              className="bg-white/[0.04] border border-white/[0.06] rounded-md px-2 py-1.5 flex flex-col gap-0.5"
+                            >
+                              {/* Row 1: icon + type badge + region */}
+                              <div className="flex items-center gap-1">
+                                {isGpu && <Cpu className="h-2.5 w-2.5 text-blue-400 flex-shrink-0" />}
+                                {isWeather && <Wind className="h-2.5 w-2.5 text-cyan-400 flex-shrink-0" />}
+                                {isCarbon && <Leaf className="h-2.5 w-2.5 text-emerald-400 flex-shrink-0" />}
+                                <span className={`text-[8px] font-bold uppercase tracking-wider ${
+                                  isGpu ? "text-blue-400" : isWeather ? "text-cyan-400" : "text-emerald-400"
+                                }`}>
+                                  {isGpu ? "GPU" : isWeather ? "METEO" : "CO₂"}
+                                </span>
+                                <span className="text-[8px] text-white/30 ml-auto truncate">
+                                  {(d as any).city || d.region}
+                                </span>
+                              </div>
+                              {/* Row 2: data */}
+                              <div className="flex items-center gap-1 text-[9px]">
+                                {isGpu && (
+                                  <>
+                                    <span className="text-white/70 font-mono truncate flex-1">{(d as any).gpu}</span>
+                                    <span className="text-green-400 font-bold font-mono">{(d as any).spot}€/h</span>
+                                  </>
+                                )}
+                                {isWeather && (
+                                  <>
+                                    <span className="text-white/70 font-mono">{(d as any).temp_c}°C</span>
+                                    <span className="text-white/30">·</span>
+                                    <span className="text-white/70 font-mono">{(d as any).wind_kmh}km/h</span>
+                                    <span className="text-white/30 ml-auto font-mono">{(d as any).solar_wm2}W</span>
+                                  </>
+                                )}
+                                {isCarbon && (
+                                  <>
+                                    <span className="text-white/70 font-mono">{(d as any).gco2_kwh}g/kWh</span>
+                                    <span className={`ml-auto text-[8px] font-bold ${
+                                      (d as any).index === "very low" ? "text-emerald-400" :
+                                      (d as any).index === "low" ? "text-green-400" :
+                                      (d as any).index === "moderate" ? "text-amber-400" :
+                                      "text-red-400"
+                                    }`}>
+                                      {(d as any).index}
+                                    </span>
+                                  </>
+                                )}
+                              </div>
+                              {/* Row 3: savings badge for GPU */}
+                              {isGpu && (
+                                <div className="flex items-center gap-1">
+                                  <div className="h-[1px] flex-1 bg-white/[0.06]" />
+                                  <span className="text-[8px] font-bold text-green-400/80 font-mono">
+                                    -{(d as any).savings_pct}% vs on-demand
+                                  </span>
+                                </div>
+                              )}
+                            </motion.div>
+                          );
+                        })}
+                      </AnimatePresence>
+                    </div>
+                  </div>
+                </div>
 
                 <WorldMap 
                   serveurs={allServeurs} 
