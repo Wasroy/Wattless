@@ -38,32 +38,29 @@ const generateServerPath = (deadlineHours: number, spotPrice: number): Array<{ s
   const now = new Date();
   const deadline = new Date(now.getTime() + deadlineHours * 60 * 60 * 1000);
   
-  // Select 2-3 different cities for realistic migration path
-  // Prefer major datacenter cities
-  const majorCities = cities.filter(city => 
-    ['Amsterdam', 'Paris', 'London', 'Frankfurt', 'San Antonio', 'Tokyo', 'Singapore', 'Sydney', 'Toronto', 'Seoul'].includes(city)
-  );
-  const availableCities = majorCities.length >= 2 ? majorCities : cities;
+  // Major datacenter cities list for realistic routing
+  const majorCities = ['Amsterdam', 'Paris', 'London', 'Frankfurt', 'San Antonio', 'Tokyo', 'Singapore', 'Sydney', 'Toronto', 'Seoul', 'Mumbai', 'Dubai', 'São Paulo', 'Seattle', 'Virginia', 'Dublin', 'Zurich', 'Oslo', 'Stockholm', 'Milan', 'Barcelona', 'Warsaw', 'Vienna', 'Brussels'];
   
+  // Filter to only cities that exist in our server list
+  const availableMajorCities = majorCities.filter(city => cities.includes(city));
+  const pool = availableMajorCities.length >= 3 ? availableMajorCities : cities;
+  
+  // Select 3-6 cities randomly (different each run)
+  const numCities = Math.floor(Math.random() * 4) + 3; // 3 to 6 cities
   const selectedCities: string[] = [];
   const cityIndices = new Set<number>();
-  const numCities = Math.min(3, availableCities.length);
   
-  while (selectedCities.length < numCities && cityIndices.size < availableCities.length) {
-    const idx = Math.floor(Math.random() * availableCities.length);
+  while (selectedCities.length < numCities && cityIndices.size < pool.length) {
+    const idx = Math.floor(Math.random() * pool.length);
     if (!cityIndices.has(idx)) {
       cityIndices.add(idx);
-      selectedCities.push(availableCities[idx]);
+      selectedCities.push(pool[idx]);
     }
   }
   
   // Calculate logical time intervals based on deadline
-  // For short deadlines (< 12h), use smaller intervals
-  // For longer deadlines, use more realistic distribution
   const isShortDeadline = deadlineHours < 12;
-  const monitoringStart = isShortDeadline ? Math.min(2, deadlineHours * 0.15) : Math.min(4, deadlineHours * 0.1);
-  const checkpointTime = isShortDeadline ? deadlineHours * 0.4 : deadlineHours * 0.35;
-  const migrationTime = isShortDeadline ? deadlineHours * 0.7 : deadlineHours * 0.6;
+  const timePerCity = deadlineHours / (numCities + 1); // Distribute time across cities
   
   const formatDate = (date: Date): string => {
     const hours = date.getHours().toString().padStart(2, '0');
@@ -73,65 +70,71 @@ const generateServerPath = (deadlineHours: number, spotPrice: number): Array<{ s
     return `${day} ${month} ${hours}:${minutes}`;
   };
   
-  // Generate realistic prices for different cities (slight variation)
+  // Generate realistic prices for different cities
   const basePrice = spotPrice;
-  const priceVariation = (city: string, index: number) => {
-    // Simulate price differences between regions
-    const variation = 0.05 + (index * 0.03); // 5-11% variation
-    const isCheaper = Math.random() > 0.5;
-    return isCheaper 
+  const cityPrices: { [key: string]: number } = {};
+  
+  selectedCities.forEach((city, index) => {
+    // Simulate price differences between regions (5-15% variation)
+    const variation = 0.05 + (Math.random() * 0.1);
+    const isCheaper = Math.random() > 0.4; // 60% chance of being cheaper
+    cityPrices[city] = isCheaper 
       ? basePrice * (1 - variation)
-      : basePrice * (1 + variation * 0.5);
-  };
+      : basePrice * (1 + variation * 0.6);
+  });
   
+  // Build path steps
+  const pathSteps: Array<{ step: number; action: string; detail: string; date?: string }> = [];
+  
+  // Step 1: Start on first city
   const startCity = selectedCities[0];
-  const startPrice = priceVariation(startCity, 0);
-  const migrationCity = selectedCities.length > 1 ? selectedCities[1] : null;
-  const migrationPrice = migrationCity ? priceVariation(migrationCity, 1) : null;
+  const startPrice = cityPrices[startCity];
+  pathSteps.push({
+    step: 1,
+    action: `Start on ${startCity} at $${startPrice.toFixed(2)}/h`,
+    detail: "Launch job and initialize checkpointing",
+    date: formatDate(now),
+  });
   
-  // Calculate actual dates
-  const date1 = now;
-  const date2 = new Date(now.getTime() + monitoringStart * 60 * 60 * 1000);
-  const date3 = new Date(now.getTime() + checkpointTime * 60 * 60 * 1000);
-  const date4 = new Date(now.getTime() + migrationTime * 60 * 60 * 1000);
-  const date5 = deadline;
+  // Steps 2 to N-1: Migrations to other cities
+  for (let i = 1; i < selectedCities.length; i++) {
+    const currentCity = selectedCities[i];
+    const currentPrice = cityPrices[currentCity];
+    const previousCity = selectedCities[i - 1];
+    const previousPrice = cityPrices[previousCity];
+    
+    const timeOffset = timePerCity * i;
+    const stepDate = new Date(now.getTime() + timeOffset * 60 * 60 * 1000);
+    
+    const savings = previousPrice - currentPrice;
+    const savingsPct = ((savings / previousPrice) * 100).toFixed(0);
+    
+    let detail = "";
+    if (currentPrice < previousPrice) {
+      detail = `Migrate from ${previousCity} - ${savingsPct}% cheaper, checkpoint saved`;
+    } else if (currentPrice > previousPrice) {
+      detail = `Migrate from ${previousCity} - better availability, price +${((currentPrice/previousPrice - 1) * 100).toFixed(0)}%`;
+    } else {
+      detail = `Migrate from ${previousCity} - load balancing across regions`;
+    }
+    
+    pathSteps.push({
+      step: i + 1,
+      action: `Go to ${currentCity} for $${currentPrice.toFixed(2)}/h`,
+      detail: detail,
+      date: formatDate(stepDate),
+    });
+  }
   
-  return [
-    {
-      step: 1,
-      action: "Launch job",
-      detail: `Start on ${startCity} at $${startPrice.toFixed(2)}/h`,
-      date: formatDate(date1),
-    },
-    {
-      step: 2,
-      action: "Monitor prices",
-      detail: `Track spot prices across ${selectedCities.length} regions`,
-      date: formatDate(date2),
-    },
-    {
-      step: 3,
-      action: "Checkpoint",
-      detail: "Save state every 15 minutes",
-      date: formatDate(date3),
-    },
-    {
-      step: 4,
-      action: "Optimize",
-      detail: migrationCity && migrationPrice && migrationPrice < startPrice
-        ? `Migrate to ${migrationCity} at $${migrationPrice.toFixed(2)}/h (${((1 - migrationPrice/startPrice) * 100).toFixed(0)}% cheaper)`
-        : migrationCity
-        ? `Monitor ${migrationCity} for better prices`
-        : "Continue monitoring for optimization",
-      date: formatDate(date4),
-    },
-    {
-      step: 5,
-      action: "Complete",
-      detail: "Job finished within deadline",
-      date: formatDate(date5),
-    },
-  ];
+  // Final step: Complete
+  pathSteps.push({
+    step: selectedCities.length + 1,
+    action: "Complete",
+    detail: `Job finished within deadline on ${selectedCities[selectedCities.length - 1]}`,
+    date: formatDate(deadline),
+  });
+  
+  return pathSteps;
 };
 
 type Step = "form" | "loading" | "results";
@@ -327,37 +330,96 @@ const Simulate = () => {
       console.error("Simulation error:", error);
       // On error, show mock data for demo with variations
       const { scaledSavings, scaledGreenImpact } = getMockData();
-      const estimatedSpotPrice = 0.31;
+      
+      // Generate random configuration data
+      const regions = ["francecentral", "westeurope", "uksouth", "eastus", "westus2", "southeastasia", "japaneast", "australiaeast"];
+      const azs = ["eu-west-3a", "eu-west-3b", "eu-west-3c", "us-east-1a", "us-west-2a", "ap-southeast-1a", "jp-east-1a"];
+      const gpus = [
+        { sku: "Standard_NC6s_v3", name: "NVIDIA V100", basePrice: 0.31 },
+        { sku: "Standard_NC12s_v3", name: "NVIDIA V100", basePrice: 0.62 },
+        { sku: "Standard_NC24s_v3", name: "NVIDIA V100", basePrice: 1.24 },
+        { sku: "Standard_NC96ads_A100_v4", name: "NVIDIA A100", basePrice: 2.85 },
+        { sku: "Standard_ND96isr_H100_v5", name: "NVIDIA H100", basePrice: 4.20 },
+        { sku: "Standard_NC16as_T4_v3", name: "NVIDIA T4", basePrice: 0.45 },
+      ];
+      const strategies = ["spot_optimized", "carbon_optimized", "balanced", "cost_first"];
+      const reasons = [
+        "Best price-to-performance ratio with low carbon intensity",
+        "Optimal balance between cost and availability",
+        "Lowest carbon footprint in available regions",
+        "Highest availability with competitive pricing",
+        "Best spot price stability in this region",
+        "Optimal for deadline with cost efficiency",
+      ];
+      
+      const selectedRegion = regions[Math.floor(Math.random() * regions.length)];
+      const selectedAZ = azs[Math.floor(Math.random() * azs.length)];
+      const selectedGPU = gpus[Math.floor(Math.random() * gpus.length)];
+      const selectedStrategy = strategies[Math.floor(Math.random() * strategies.length)];
+      const selectedReason = reasons[Math.floor(Math.random() * reasons.length)];
+      
+      // Add price variation (±10%)
+      const priceVariation = 1 + (Math.random() * 0.2 - 0.1);
+      const estimatedSpotPrice = selectedGPU.basePrice * priceVariation;
+      
+      // Generate fallback GPU (different from primary)
+      const fallbackGPUs = gpus.filter(g => g.sku !== selectedGPU.sku);
+      const fallbackGPU = fallbackGPUs[Math.floor(Math.random() * fallbackGPUs.length)];
+      const fallbackPriceVariation = 1 + (Math.random() * 0.2 - 0.1);
+      const fallbackPrice = fallbackGPU.basePrice * fallbackPriceVariation;
+      
+      // Generate checkpointing data
+      const checkpointIntervals = [10, 15, 20, 30];
+      const checkpointInterval = checkpointIntervals[Math.floor(Math.random() * checkpointIntervals.length)];
+      const checkpointSize = Math.round((form.min_gpu_memory_gb * 0.7 + Math.random() * form.min_gpu_memory_gb * 0.3) * 10) / 10;
+      const storageOptions = ["Azure Blob Storage", "S3", "Google Cloud Storage"];
+      const selectedStorage = storageOptions[Math.floor(Math.random() * storageOptions.length)];
+      
+      // Generate risk assessment
+      const riskLevels = ["low", "medium", "low"];
+      const riskProbabilities = ["Low (3%)", "Low (5%)", "Low (7%)", "Medium (12%)"];
+      const mitigations = [
+        "Auto-migration to backup AZ in 28s if evicted",
+        "Checkpoint every 15min - recovery in < 90s",
+        "Multi-AZ redundancy - zero downtime migration",
+        "Automatic failover to secondary region in 45s",
+        "Continuous checkpointing - seamless recovery",
+      ];
+      
+      const selectedRiskLevel = riskLevels[Math.floor(Math.random() * riskLevels.length)];
+      const selectedRiskProb = riskProbabilities[Math.floor(Math.random() * riskProbabilities.length)];
+      const selectedMitigation = mitigations[Math.floor(Math.random() * mitigations.length)];
+      
       const serverPath = generateServerPath(form.deadline_hours, estimatedSpotPrice);
       
       setResult({
         decision: {
-          region: "francecentral",
-          az: "eu-west-3a",
-          gpu_sku: "Standard_NC6s_v3",
-          gpu_name: "NVIDIA V100",
-          strategy: "spot_optimized",
+          region: selectedRegion,
+          az: selectedAZ,
+          gpu_sku: selectedGPU.sku,
+          gpu_name: selectedGPU.name,
+          strategy: selectedStrategy,
           estimated_spot_price: estimatedSpotPrice,
-          reason: "Best price-to-performance ratio with low carbon intensity",
+          reason: selectedReason,
         },
         fallback_gpu: {
-          sku: "Standard_NC12s_v3",
-          gpu_name: "NVIDIA V100",
-          spot_price: 0.62,
-          reason: "Higher capacity if primary unavailable",
+          sku: fallbackGPU.sku,
+          gpu_name: fallbackGPU.name,
+          spot_price: fallbackPrice,
+          reason: `Higher capacity backup in ${selectedRegion} if primary unavailable`,
         },
         checkpointing: {
-          interval_min: 15,
-          estimated_size_gb: 12,
-          storage: "Azure Blob Storage",
+          interval_min: checkpointInterval,
+          estimated_size_gb: checkpointSize,
+          storage: selectedStorage,
         },
         savings: scaledSavings,
         green_impact: scaledGreenImpact,
         server_path: serverPath,
         risk_assessment: {
-          interruption_probability: "Low (5%)",
-          risk_level: "low",
-          mitigation: "Auto-migration to backup AZ in 28s if evicted",
+          interruption_probability: selectedRiskProb,
+          risk_level: selectedRiskLevel,
+          mitigation: selectedMitigation,
         },
       });
       setStep("results");
@@ -642,37 +704,6 @@ const Simulate = () => {
                         </div>
                       </motion.div>
                     ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Decision Details */}
-              <Card>
-                <CardHeader>
-                  <CardTitle>Optimal Configuration</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <div className="text-xs text-zinc-500">Region</div>
-                      <div className="font-semibold">{result.decision.region}</div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-zinc-500">Availability Zone</div>
-                      <div className="font-semibold">{result.decision.az}</div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-zinc-500">GPU</div>
-                      <div className="font-semibold">{result.decision.gpu_name}</div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-zinc-500">Price</div>
-                      <div className="font-semibold">{result.decision.estimated_spot_price}€/h</div>
-                    </div>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-zinc-200">
-                    <div className="text-xs text-zinc-500 mb-1">Reason</div>
-                    <div className="text-sm text-zinc-700">{result.decision.reason}</div>
                   </div>
                 </CardContent>
               </Card>
