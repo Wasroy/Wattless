@@ -1,67 +1,96 @@
 import { motion } from "framer-motion";
-import { Shield, DollarSign, Leaf, Gauge, Boxes, Globe } from "lucide-react";
+import { Search, Cpu, Shield, Clock } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
-const features = [
+interface Feature {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  metric: string;
+  metricLabel: string;
+  command: string;
+}
+
+const features: Feature[] = [
   {
-    icon: DollarSign,
-    title: "Jusqu'à -90% de coût",
-    description: "Exécutez vos workloads IA, data et rendu sur les Spot les moins chères, automatiquement.",
+    icon: Search,
+    title: "Hunt the cheapest GPU",
+    description: "Prices change every minute. NERVE watches 12 regions, 60-second intervals, and picks the winner.",
+    metric: "12",
+    metricLabel: "regions",
+    command: "nerve scan --gpu a100 --regions all",
+  },
+  {
+    icon: Cpu,
+    title: "Deploy in one line",
+    description: "Point it at your training script. NERVE handles the VM, the GPU, the region, the pricing.",
+    metric: "$0.31",
+    metricLabel: "/h",
+    command: "nerve deploy --region uksouth",
   },
   {
     icon: Shield,
-    title: "Stabilité on-demand",
-    description: "Prédiction d'interruption + rescheduling instantané : vos jobs ne tombent jamais.",
+    title: "Never lose progress",
+    description: "Checkpoints every 30s. If the cloud pulls the rug, you're back on a new GPU before your coffee cools.",
+    metric: "28s",
+    metricLabel: "recovery",
+    command: "checkpoint saved (2.1 GB)",
   },
   {
-    icon: Gauge,
-    title: "Zero config",
-    description: "Un Helm chart, des annotations — Nerve s'intègre à votre cluster en 5 minutes.",
-  },
-  {
-    icon: Boxes,
-    title: "Multi-workload",
-    description: "IA training, data pipelines, rendu 3D, CI/CD : tout ce qui est batch ou stateless.",
-  },
-  {
-    icon: Globe,
-    title: "Intra-région",
-    description: "Nerve cherche les spots dans toutes les AZ de votre région — latence minimale garantie.",
-  },
-  {
-    icon: Leaf,
-    title: "GreenOps (V2)",
-    description: "Time-shifting selon l'intensité carbone locale pour réduire l'empreinte CO₂ de vos workloads.",
+    icon: Clock,
+    title: "Train when it's cheap",
+    description: "Set a deadline. NERVE finds the window where prices and carbon are both at their lowest.",
+    metric: "40%",
+    metricLabel: "extra saved",
+    command: "nerve timeshift --deadline 24h",
   },
 ];
 
 const FeaturesSection = () => (
-  <section id="features" className="relative border-t border-border py-24">
+  <section className="py-24 bg-zinc-50">
     <div className="container">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="mb-16 text-center"
-      >
-        <span className="mb-4 inline-block font-mono text-sm text-primary">// Features</span>
-        <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
-          Construit pour le <span className="text-gradient-green">cloud moderne</span>
+      <div className="text-center mb-16">
+        <p className="text-xs font-medium text-emerald-600 tracking-widest uppercase mb-3">
+          What NERVE does
+        </p>
+        <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+          The boring parts, automated.
         </h2>
-      </motion.div>
+      </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {features.map((feature, i) => (
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+        {features.map((f, i) => (
           <motion.div
-            key={feature.title}
-            initial={{ opacity: 0, y: 20 }}
+            key={f.title}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
-            className="rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/20"
+            className="bg-white rounded-2xl p-6 border border-zinc-100 group hover:border-emerald-200 hover:shadow-lg hover:shadow-emerald-50 transition-all duration-300"
           >
-            <feature.icon className="mb-4 h-6 w-6 text-primary" />
-            <h3 className="mb-2 font-semibold">{feature.title}</h3>
-            <p className="text-sm leading-relaxed text-muted-foreground">{feature.description}</p>
+            <div className="bg-emerald-50 w-9 h-9 rounded-xl flex items-center justify-center mb-5">
+              <f.icon className="h-4 w-4 text-emerald-600" />
+            </div>
+
+            <div className="mb-4">
+              <span className="text-3xl font-bold text-foreground">
+                {f.metric}
+              </span>
+              <span className="text-sm text-zinc-400 ml-1">
+                {f.metricLabel}
+              </span>
+            </div>
+
+            <h3 className="text-foreground text-sm font-semibold mb-1.5">
+              {f.title}
+            </h3>
+            <p className="text-zinc-400 text-xs leading-relaxed mb-4">
+              {f.description}
+            </p>
+
+            <div className="font-mono text-[10px] text-zinc-300 group-hover:text-emerald-600/50 transition-colors">
+              $ {f.command}
+            </div>
           </motion.div>
         ))}
       </div>

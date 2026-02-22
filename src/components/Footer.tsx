@@ -1,23 +1,32 @@
-import { Zap } from "lucide-react";
+import { Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => (
-  <footer className="border-t border-border bg-secondary/20 py-12">
+  <footer className="border-t border-zinc-100 py-8">
     <div className="container">
-      <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-        <div className="flex items-center gap-2">
-          <Zap className="h-4 w-4 text-primary" />
-          <span className="font-bold">WATTLESS</span>
-          <span className="font-mono text-xs text-muted-foreground">Nerve</span>
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="flex items-center gap-5">
+          <Link to="/" className="text-sm font-bold text-foreground">
+            Wattless
+          </Link>
+          <div className="flex gap-4 text-xs text-zinc-400">
+            <Link to="/dashboard" className="hover:text-foreground transition-colors">Dashboard</Link>
+            <Link to="/mapmonde" className="hover:text-foreground transition-colors">Map</Link>
+            <Link to="/test-edge-functions" className="hover:text-foreground transition-colors">Test API</Link>
+          </div>
         </div>
-        <div className="flex gap-6 font-mono text-xs text-muted-foreground">
-          <a href="#" className="transition-colors hover:text-foreground">GitHub</a>
-          <a href="#" className="transition-colors hover:text-foreground">Docs</a>
-          <a href="#" className="transition-colors hover:text-foreground">Blog</a>
-          <a href="#" className="transition-colors hover:text-foreground">Contact</a>
+        <div className="flex items-center gap-4 text-xs text-zinc-400">
+          <a
+            href="https://github.com/Nick0-ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"
+          >
+            <Github className="h-3.5 w-3.5" />
+            GitHub
+          </a>
+          <span className="text-zinc-300">Europe Hack 2026</span>
         </div>
-        <p className="font-mono text-xs text-muted-foreground">
-          © 2025 WATTLESS. Tous droits réservés.
-        </p>
       </div>
     </div>
   </footer>

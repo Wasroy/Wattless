@@ -258,12 +258,12 @@ const WorldMap = memo(({
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
-                  fill="#1a1a2e"
-                  stroke="#2a2a40"
+                  fill="#dce5ed"
+                  stroke="#c1cdd9"
                   strokeWidth={0.5}
                   style={{
                     default: { outline: "none" },
-                    hover: { outline: "none", fill: "#22223b" },
+                    hover: { outline: "none", fill: "#cdd7e1" },
                     pressed: { outline: "none" },
                   }}
                 />
@@ -333,7 +333,7 @@ const WorldMap = memo(({
                     ? "#ef4444"
                     : "#6b7280"
                 }
-                stroke={isActive ? "#16a34a" : "#0f172a"}
+                stroke={isActive ? "#16a34a" : "#ffffff"}
                 strokeWidth={isActive ? 1.5 : 1}
                 opacity={isActive ? 1 : 0.6}
                 style={{
@@ -349,7 +349,7 @@ const WorldMap = memo(({
                   style={{
                     fontFamily: "JetBrains Mono, monospace",
                     fontSize: isActive ? 7 : 8,
-                    fill: isActive ? "#22c55e" : "#94a3b8",
+                    fill: isActive ? "#16a34a" : "#64748b",
                     opacity: isActive ? 1 : 0.7,
                     fontWeight: isActive ? "600" : "400",
                     filter: isActive ? "drop-shadow(0 0 2px rgba(34, 197, 94, 0.5))" : "none",
@@ -385,11 +385,11 @@ const WorldMap = memo(({
                 width={36}
                 height={12}
                 rx={3}
-                fill="rgba(15, 23, 42, 0.85)"
-                stroke="#22c55e"
+                fill="rgba(255, 255, 255, 0.92)"
+                stroke="#16a34a"
                 strokeWidth={0.8}
                 style={{
-                  filter: "drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))",
+                  filter: "drop-shadow(0 1px 3px rgba(0, 0, 0, 0.15))",
                 }}
               />
               <text
@@ -399,7 +399,7 @@ const WorldMap = memo(({
                 style={{
                   fontFamily: "JetBrains Mono, monospace",
                   fontSize: 7,
-                  fill: "#22c55e",
+                  fill: "#16a34a",
                   fontWeight: "600",
                 }}
               >
