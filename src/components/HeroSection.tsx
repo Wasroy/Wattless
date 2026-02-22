@@ -13,11 +13,6 @@ const HeroSection = () => (
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 px-3 py-1.5 rounded-full text-xs font-medium mb-8">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            Live — 12 regions scanning now
-          </div>
-
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-foreground mb-6">
             Stop overpaying
             <br />
@@ -38,7 +33,7 @@ const HeroSection = () => (
 
           <div className="flex flex-wrap gap-3">
             <Link
-              to="/dashboard"
+              to="/simulate"
               className="bg-emerald-600 text-white px-6 py-3 text-sm font-medium rounded-lg inline-flex items-center gap-2 hover:bg-emerald-700 transition-colors"
             >
               Try it now

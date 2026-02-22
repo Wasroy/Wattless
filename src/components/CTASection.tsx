@@ -22,10 +22,10 @@ const CTASection = () => (
 
         <div className="flex flex-wrap justify-center gap-3">
           <Link
-            to="/dashboard"
+            to="/simulate"
             className="bg-white text-emerald-700 px-7 py-3 text-sm font-semibold rounded-lg inline-flex items-center gap-2 hover:bg-emerald-50 transition-colors"
           >
-            See the dashboard
+            Try it now
             <ArrowRight className="h-4 w-4" />
           </Link>
           <a

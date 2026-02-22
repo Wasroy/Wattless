@@ -10,9 +10,7 @@ const Footer = () => (
             Wattless
           </Link>
           <div className="flex gap-4 text-xs text-zinc-400">
-            <Link to="/dashboard" className="hover:text-foreground transition-colors">Dashboard</Link>
             <Link to="/mapmonde" className="hover:text-foreground transition-colors">Map</Link>
-            <Link to="/test-edge-functions" className="hover:text-foreground transition-colors">Test API</Link>
           </div>
         </div>
         <div className="flex items-center gap-4 text-xs text-zinc-400">
