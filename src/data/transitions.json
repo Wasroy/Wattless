@@ -3,600 +3,1826 @@
     "from": "Standard_ND96amsr_A100_v4 - San Francisco, California, USA",
     "to": "Standard_ND96amsr_A100_v4 - Johannesburg, South Africa",
     "timestamp": 1500,
-    "savings": 2.44
+    "savings": 2.44,
+    "financial_gains": [
+      {
+        "amount_usd": 2.44,
+        "amount_eur": 2.24,
+        "source": "price",
+        "reason": "+2.44€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 2.44,
+    "total_gain_eur": 2.24,
+    "summary": "Total: +2.44€ (2.44€ prix)"
   },
   {
     "from": "Standard_NC24ads_A100_v4 - Nagpur, India",
     "to": "Standard_NV72ads_A10_v5 - Mumbai, India",
     "timestamp": 3000,
-    "savings": 0.59
+    "savings": 0.59,
+    "financial_gains": [
+      {
+        "amount_usd": 0.59,
+        "amount_eur": 0.54,
+        "source": "price",
+        "reason": "+0.59€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.59,
+    "total_gain_eur": 0.54,
+    "summary": "Total: +0.59€ (0.59€ prix)"
   },
   {
     "from": "Standard_NV24s_v2 - San Antonio, Texas, USA",
     "to": "Standard_NC24r_Promo - Chicago, Illinois, USA",
     "timestamp": 4500,
-    "savings": 0.47
+    "savings": 0.47,
+    "financial_gains": [
+      {
+        "amount_usd": 0.47,
+        "amount_eur": 0.43,
+        "source": "price",
+        "reason": "+0.47€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.47,
+    "total_gain_eur": 0.43,
+    "summary": "Total: +0.47€ (0.47€ prix)"
   },
   {
     "from": "Standard_NV12s_v3 - Virginia, USA",
     "to": "Standard_NC96ads_A100_v4 - Pune, India",
     "timestamp": 6000,
-    "savings": 1.2
+    "savings": 1.2,
+    "financial_gains": [
+      {
+        "amount_usd": 1.2,
+        "amount_eur": 1.1,
+        "source": "price",
+        "reason": "+1.2€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.2,
+    "total_gain_eur": 1.1,
+    "summary": "Total: +1.2€ (1.2€ prix)"
   },
   {
     "from": "Standard_NC24rs_v3 - Mumbai, India",
     "to": "Standard_ND128isr_NDR_GB200_v6 - Busan, South Korea",
     "timestamp": 7500,
-    "savings": 1.31
+    "savings": 1.31,
+    "financial_gains": [
+      {
+        "amount_usd": 1.05,
+        "amount_eur": 0.97,
+        "source": "price",
+        "reason": "+1.05€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      },
+      {
+        "amount_usd": 0.26,
+        "amount_eur": 0.24,
+        "source": "weather",
+        "reason": "+0.26€ car meilleure météo (Busan: 5-8°C plus frais) — refroidissement naturel efficace"
+      }
+    ],
+    "total_gain_usd": 1.31,
+    "total_gain_eur": 1.21,
+    "summary": "Total: +1.31€ (1.05€ prix + 0.26€ météo)"
   },
   {
     "from": "Standard_NV12s_v3 - Paris, France",
     "to": "Standard_NC40ads_H100_v5 - London, United Kingdom",
     "timestamp": 9000,
-    "savings": 0.6
+    "savings": 0.6,
+    "financial_gains": [
+      {
+        "amount_usd": 0.6,
+        "amount_eur": 0.55,
+        "source": "price",
+        "reason": "+0.6€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.6,
+    "total_gain_eur": 0.55,
+    "summary": "Total: +0.6€ (0.6€ prix)"
   },
   {
     "from": "Standard_ND96is_H100_v5 - Washington State, USA",
     "to": "Standard_NV4as_v4 - Milan, Italy",
     "timestamp": 10500,
-    "savings": 2.45
+    "savings": 2.45,
+    "financial_gains": [
+      {
+        "amount_usd": 2.45,
+        "amount_eur": 2.25,
+        "source": "price",
+        "reason": "+2.45€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 2.45,
+    "total_gain_eur": 2.25,
+    "summary": "Total: +2.45€ (2.45€ prix)"
   },
   {
     "from": "Standard_NC64as_T4_v3 - Sydney, Australia",
     "to": "Standard_NC6s_v3 - Doha, Qatar",
     "timestamp": 12000,
-    "savings": 1.27
+    "savings": 1.27,
+    "financial_gains": [
+      {
+        "amount_usd": 1.27,
+        "amount_eur": 1.17,
+        "source": "price",
+        "reason": "+1.27€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.27,
+    "total_gain_eur": 1.17,
+    "summary": "Total: +1.27€ (1.27€ prix)"
   },
   {
     "from": "Standard_NC24ads_A100_v4 - Nagpur, India",
     "to": "Standard_NV18ads_A10_v5 - Dublin, Ireland",
     "timestamp": 13500,
-    "savings": 2.06
+    "savings": 2.06,
+    "financial_gains": [
+      {
+        "amount_usd": 1.44,
+        "amount_eur": 1.32,
+        "source": "price",
+        "reason": "+1.44€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      },
+      {
+        "amount_usd": 0.41,
+        "amount_eur": 0.38,
+        "source": "weather",
+        "reason": "+0.41€ car meilleure météo (Dublin: 10-15°C plus frais) — refroidissement naturel efficace"
+      },
+      {
+        "amount_usd": 0.21,
+        "amount_eur": 0.19,
+        "source": "carbon",
+        "reason": "+0.21€ car intensité carbone réduite (Dublin: mix énergétique plus vert) — économie sur compensation carbone"
+      }
+    ],
+    "total_gain_usd": 2.06,
+    "total_gain_eur": 1.89,
+    "summary": "Total: +2.06€ (1.44€ prix + 0.41€ météo + 0.21€ carbone)"
   },
   {
     "from": "Standard_NV72ads_A10_v5 - Zurich, Switzerland",
     "to": "Standard_NV12s_v3 - Virginia, USA",
     "timestamp": 15000,
-    "savings": 1.31
+    "savings": 1.31,
+    "financial_gains": [
+      {
+        "amount_usd": 1.31,
+        "amount_eur": 1.21,
+        "source": "price",
+        "reason": "+1.31€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.31,
+    "total_gain_eur": 1.21,
+    "summary": "Total: +1.31€ (1.31€ prix)"
   },
   {
     "from": "Standard_NV32as_v4 - Toronto, Canada",
     "to": "Standard_NC6_Promo - Virginia, USA",
     "timestamp": 16500,
-    "savings": 0.4
+    "savings": 0.4,
+    "financial_gains": [
+      {
+        "amount_usd": 0.4,
+        "amount_eur": 0.37,
+        "source": "price",
+        "reason": "+0.4€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.4,
+    "total_gain_eur": 0.37,
+    "summary": "Total: +0.4€ (0.4€ prix)"
   },
   {
     "from": "Standard_NV72ads_A10_v5 - San Antonio, Texas, USA",
     "to": "Standard_NV16as_v4 - Frankfurt, Germany",
     "timestamp": 18000,
-    "savings": 1.4
+    "savings": 1.4,
+    "financial_gains": [
+      {
+        "amount_usd": 0.98,
+        "amount_eur": 0.9,
+        "source": "price",
+        "reason": "+0.98€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      },
+      {
+        "amount_usd": 0.28,
+        "amount_eur": 0.26,
+        "source": "weather",
+        "reason": "+0.28€ car meilleure météo (Frankfurt: 5-8°C plus frais) — refroidissement naturel efficace"
+      },
+      {
+        "amount_usd": 0.14,
+        "amount_eur": 0.13,
+        "source": "carbon",
+        "reason": "+0.14€ car intensité carbone réduite (Frankfurt: mix énergétique plus vert) — économie sur compensation carbone"
+      }
+    ],
+    "total_gain_usd": 1.4,
+    "total_gain_eur": 1.29,
+    "summary": "Total: +1.4€ (0.98€ prix + 0.28€ météo + 0.14€ carbone)"
   },
   {
     "from": "Standard_NC24rs_v3 - Mumbai, India",
     "to": "Standard_NC128lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
     "timestamp": 19500,
-    "savings": 1.12
+    "savings": 1.12,
+    "financial_gains": [
+      {
+        "amount_usd": 0.79,
+        "amount_eur": 0.73,
+        "source": "price",
+        "reason": "+0.79€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      },
+      {
+        "amount_usd": 0.22,
+        "amount_eur": 0.21,
+        "source": "weather",
+        "reason": "+0.22€ car meilleure météo (San Francisco: 5-8°C plus frais) — refroidissement naturel efficace"
+      },
+      {
+        "amount_usd": 0.11,
+        "amount_eur": 0.1,
+        "source": "carbon",
+        "reason": "+0.11€ car intensité carbone réduite (San Francisco: mix énergétique plus vert) — économie sur compensation carbone"
+      }
+    ],
+    "total_gain_usd": 1.12,
+    "total_gain_eur": 1.04,
+    "summary": "Total: +1.12€ (0.79€ prix + 0.22€ météo + 0.11€ carbone)"
   },
   {
     "from": "Standard_NV32as_v4 - Warsaw, Poland",
     "to": "Standard_NP10s - Tokyo, Japan",
     "timestamp": 21000,
-    "savings": 1.63
+    "savings": 1.63,
+    "financial_gains": [
+      {
+        "amount_usd": 1.63,
+        "amount_eur": 1.5,
+        "source": "price",
+        "reason": "+1.63€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.63,
+    "total_gain_eur": 1.5,
+    "summary": "Total: +1.63€ (1.63€ prix)"
   },
   {
     "from": "Standard_NV4as_v4 - Milan, Italy",
     "to": "Standard_NV8as_v4 - Tokyo, Japan",
     "timestamp": 22500,
-    "savings": 2.37
+    "savings": 2.37,
+    "financial_gains": [
+      {
+        "amount_usd": 2.37,
+        "amount_eur": 2.18,
+        "source": "price",
+        "reason": "+2.37€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 2.37,
+    "total_gain_eur": 2.18,
+    "summary": "Total: +2.37€ (2.37€ prix)"
   },
   {
     "from": "Standard_NC24_Promo - Virginia, USA (Gov)",
     "to": "Standard_NC32lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
     "timestamp": 24000,
-    "savings": 0.78
+    "savings": 0.78,
+    "financial_gains": [
+      {
+        "amount_usd": 0.78,
+        "amount_eur": 0.72,
+        "source": "price",
+        "reason": "+0.78€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.78,
+    "total_gain_eur": 0.72,
+    "summary": "Total: +0.78€ (0.78€ prix)"
   },
   {
     "from": "Standard_NC40ads_H100_v5 - Frankfurt, Germany",
     "to": "Standard_NV18ads_A10_v5 - Washington State, USA",
     "timestamp": 25500,
-    "savings": 1.75
+    "savings": 1.75,
+    "financial_gains": [
+      {
+        "amount_usd": 1.75,
+        "amount_eur": 1.61,
+        "source": "price",
+        "reason": "+1.75€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.75,
+    "total_gain_eur": 1.61,
+    "summary": "Total: +1.75€ (1.75€ prix)"
   },
   {
     "from": "Standard_NC24ads_A100_v4 - Milan, Italy",
     "to": "Standard_ND96is_noIB_H100_v5 - Virginia, USA",
     "timestamp": 27000,
-    "savings": 1.65
+    "savings": 1.65,
+    "financial_gains": [
+      {
+        "amount_usd": 1.65,
+        "amount_eur": 1.52,
+        "source": "price",
+        "reason": "+1.65€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.65,
+    "total_gain_eur": 1.52,
+    "summary": "Total: +1.65€ (1.65€ prix)"
   },
   {
     "from": "Standard_NV8ads_V710_v5 - Chicago, Illinois, USA",
     "to": "Standard_ND96is_MI300X_v5 - Phoenix, Arizona, USA",
     "timestamp": 28500,
-    "savings": 1.15
+    "savings": 1.15,
+    "financial_gains": [
+      {
+        "amount_usd": 1.15,
+        "amount_eur": 1.06,
+        "source": "price",
+        "reason": "+1.15€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.15,
+    "total_gain_eur": 1.06,
+    "summary": "Total: +1.15€ (1.15€ prix)"
   },
   {
     "from": "Standard_ND96is_H100_v5 - London, United Kingdom",
     "to": "Standard_NV6ads_A10_v5 - Stockholm, Sweden",
     "timestamp": 30000,
-    "savings": 0.49
+    "savings": 0.49,
+    "financial_gains": [
+      {
+        "amount_usd": 0.49,
+        "amount_eur": 0.45,
+        "source": "price",
+        "reason": "+0.49€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.49,
+    "total_gain_eur": 0.45,
+    "summary": "Total: +0.49€ (0.49€ prix)"
   },
   {
     "from": "Standard_NC128lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
     "to": "Standard_NV72ads_A10_v5 - Virginia, USA",
     "timestamp": 31500,
-    "savings": 1.17
+    "savings": 1.17,
+    "financial_gains": [
+      {
+        "amount_usd": 1.17,
+        "amount_eur": 1.08,
+        "source": "price",
+        "reason": "+1.17€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.17,
+    "total_gain_eur": 1.08,
+    "summary": "Total: +1.17€ (1.17€ prix)"
   },
   {
     "from": "Standard_ND96isrf_H100_v5 - Madrid, Spain",
     "to": "Standard_NV8as_v4 - Toronto, Canada",
     "timestamp": 33000,
-    "savings": 1.58
+    "savings": 1.58,
+    "financial_gains": [
+      {
+        "amount_usd": 1.27,
+        "amount_eur": 1.17,
+        "source": "price",
+        "reason": "+1.27€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      },
+      {
+        "amount_usd": 0.32,
+        "amount_eur": 0.29,
+        "source": "weather",
+        "reason": "+0.32€ car meilleure météo (Toronto: 5-8°C plus frais) — refroidissement naturel efficace"
+      }
+    ],
+    "total_gain_usd": 1.59,
+    "total_gain_eur": 1.46,
+    "summary": "Total: +1.59€ (1.27€ prix + 0.32€ météo)"
   },
   {
     "from": "Standard_NV36ads_A10_v5 - Paris, France",
     "to": "Standard_NP10s - Tokyo, Japan",
     "timestamp": 34500,
-    "savings": 2.27
+    "savings": 2.27,
+    "financial_gains": [
+      {
+        "amount_usd": 2.27,
+        "amount_eur": 2.09,
+        "source": "price",
+        "reason": "+2.27€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 2.27,
+    "total_gain_eur": 2.09,
+    "summary": "Total: +2.27€ (2.27€ prix)"
   },
   {
     "from": "Standard_NC80adis_H100_v5 - London, United Kingdom",
     "to": "Standard_ND96ams_A100_v4 - Zurich, Switzerland",
     "timestamp": 36000,
-    "savings": 0.54
+    "savings": 0.54,
+    "financial_gains": [
+      {
+        "amount_usd": 0.54,
+        "amount_eur": 0.5,
+        "source": "price",
+        "reason": "+0.54€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.54,
+    "total_gain_eur": 0.5,
+    "summary": "Total: +0.54€ (0.54€ prix)"
   },
   {
     "from": "Standard_NC24s_v3 - Phoenix, Arizona, USA",
     "to": "Standard_NG16ads_V620_v1 - Phoenix, Arizona, USA",
     "timestamp": 37500,
-    "savings": 0.33
+    "savings": 0.33,
+    "financial_gains": [
+      {
+        "amount_usd": 0.33,
+        "amount_eur": 0.3,
+        "source": "price",
+        "reason": "+0.33€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.33,
+    "total_gain_eur": 0.3,
+    "summary": "Total: +0.33€ (0.33€ prix)"
   },
   {
     "from": "Standard_NC24s_v3 - San Francisco, California, USA",
     "to": "Standard_NC16lds_xl_RTXPRO6000BSE_v6 - Des Moines, Iowa, USA",
     "timestamp": 39000,
-    "savings": 0.72
+    "savings": 0.72,
+    "financial_gains": [
+      {
+        "amount_usd": 0.72,
+        "amount_eur": 0.66,
+        "source": "price",
+        "reason": "+0.72€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.72,
+    "total_gain_eur": 0.66,
+    "summary": "Total: +0.72€ (0.72€ prix)"
   },
   {
     "from": "Standard_NC24rs_v3 - Virginia, USA",
     "to": "Standard_ND128isr_NDR_GB200_v6 - Phoenix, Arizona, USA",
     "timestamp": 40500,
-    "savings": 1.23
+    "savings": 1.23,
+    "financial_gains": [
+      {
+        "amount_usd": 1.23,
+        "amount_eur": 1.13,
+        "source": "price",
+        "reason": "+1.23€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.23,
+    "total_gain_eur": 1.13,
+    "summary": "Total: +1.23€ (1.23€ prix)"
   },
   {
     "from": "Standard_NV48s_v3 - Virginia, USA (Gov)",
     "to": "Standard_NC6_Promo - Virginia, USA",
     "timestamp": 42000,
-    "savings": 0.4
+    "savings": 0.4,
+    "financial_gains": [
+      {
+        "amount_usd": 0.4,
+        "amount_eur": 0.37,
+        "source": "price",
+        "reason": "+0.4€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.4,
+    "total_gain_eur": 0.37,
+    "summary": "Total: +0.4€ (0.4€ prix)"
   },
   {
     "from": "Standard_NG8ads_V620_v1 - Des Moines, Iowa, USA",
     "to": "Standard_NV12s_v2 - San Antonio, Texas, USA",
     "timestamp": 43500,
-    "savings": 0.52
+    "savings": 0.52,
+    "financial_gains": [
+      {
+        "amount_usd": 0.52,
+        "amount_eur": 0.48,
+        "source": "price",
+        "reason": "+0.52€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.52,
+    "total_gain_eur": 0.48,
+    "summary": "Total: +0.52€ (0.52€ prix)"
   },
   {
     "from": "Standard_NC16lds_xl_RTXPRO6000BSE_v6 - Des Moines, Iowa, USA",
     "to": "Standard_NV6ads_A10_v5 - Frankfurt, Germany",
     "timestamp": 45000,
-    "savings": 1.9
+    "savings": 1.9,
+    "financial_gains": [
+      {
+        "amount_usd": 1.9,
+        "amount_eur": 1.75,
+        "source": "price",
+        "reason": "+1.9€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.9,
+    "total_gain_eur": 1.75,
+    "summary": "Total: +1.9€ (1.9€ prix)"
   },
   {
     "from": "Standard_NV32as_v4 - Toronto, Canada",
     "to": "Standard_NC24rs_v3 - Mumbai, India",
     "timestamp": 46500,
-    "savings": 1.63
+    "savings": 1.63,
+    "financial_gains": [
+      {
+        "amount_usd": 1.63,
+        "amount_eur": 1.5,
+        "source": "price",
+        "reason": "+1.63€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.63,
+    "total_gain_eur": 1.5,
+    "summary": "Total: +1.63€ (1.63€ prix)"
   },
   {
     "from": "Standard_NV16as_v4 - Frankfurt, Germany",
     "to": "Standard_NV8as_v4 - Toronto, Canada",
     "timestamp": 48000,
-    "savings": 1.92
+    "savings": 1.92,
+    "financial_gains": [
+      {
+        "amount_usd": 1.92,
+        "amount_eur": 1.77,
+        "source": "price",
+        "reason": "+1.92€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.92,
+    "total_gain_eur": 1.77,
+    "summary": "Total: +1.92€ (1.92€ prix)"
   },
   {
     "from": "Standard_ND96ams_A100_v4 - Paris, France",
     "to": "Standard_NC64ds_xl_RTXPRO6000BSE_v6 - Washington State, USA",
     "timestamp": 49500,
-    "savings": 1.39
+    "savings": 1.39,
+    "financial_gains": [
+      {
+        "amount_usd": 1.39,
+        "amount_eur": 1.28,
+        "source": "price",
+        "reason": "+1.39€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.39,
+    "total_gain_eur": 1.28,
+    "summary": "Total: +1.39€ (1.39€ prix)"
   },
   {
     "from": "Standard_NC24s_v3 - Tokyo, Japan",
     "to": "Standard_NC6s_v3 - Doha, Qatar",
     "timestamp": 51000,
-    "savings": 1.72
+    "savings": 1.72,
+    "financial_gains": [
+      {
+        "amount_usd": 1.72,
+        "amount_eur": 1.58,
+        "source": "price",
+        "reason": "+1.72€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.72,
+    "total_gain_eur": 1.58,
+    "summary": "Total: +1.72€ (1.72€ prix)"
   },
   {
     "from": "Standard_NV18ads_A10_v5 - Virginia, USA (Gov)",
     "to": "Standard_ND96is_H100_v5 - Virginia, USA",
     "timestamp": 52500,
-    "savings": 0.45
+    "savings": 0.45,
+    "financial_gains": [
+      {
+        "amount_usd": 0.45,
+        "amount_eur": 0.41,
+        "source": "price",
+        "reason": "+0.45€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.45,
+    "total_gain_eur": 0.41,
+    "summary": "Total: +0.45€ (0.45€ prix)"
   },
   {
     "from": "Standard_NC12s_v3 - Washington State, USA",
     "to": "Standard_NV36ads_A10_v5 - Tokyo, Japan",
     "timestamp": 54000,
-    "savings": 2.37
+    "savings": 2.37,
+    "financial_gains": [
+      {
+        "amount_usd": 2.37,
+        "amount_eur": 2.18,
+        "source": "price",
+        "reason": "+2.37€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 2.37,
+    "total_gain_eur": 2.18,
+    "summary": "Total: +2.37€ (2.37€ prix)"
   },
   {
     "from": "Standard_NV8as_v4 - London, United Kingdom",
     "to": "Standard_NV48s_v3 - Dublin, Ireland",
     "timestamp": 55500,
-    "savings": 0.38
+    "savings": 0.38,
+    "financial_gains": [
+      {
+        "amount_usd": 0.38,
+        "amount_eur": 0.35,
+        "source": "price",
+        "reason": "+0.38€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.38,
+    "total_gain_eur": 0.35,
+    "summary": "Total: +0.38€ (0.38€ prix)"
   },
   {
     "from": "Standard_NV36ads_A10_v5 - Chicago, Illinois, USA",
     "to": "Standard_NV32as_v4 - Amsterdam, Netherlands",
     "timestamp": 57000,
-    "savings": 1.55
+    "savings": 1.55,
+    "financial_gains": [
+      {
+        "amount_usd": 1.55,
+        "amount_eur": 1.43,
+        "source": "price",
+        "reason": "+1.55€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.55,
+    "total_gain_eur": 1.43,
+    "summary": "Total: +1.55€ (1.55€ prix)"
   },
   {
     "from": "Standard_NG16ads_V620_v1 - Phoenix, Arizona, USA",
     "to": "Standard_NV18ads_A10_v5 - Zurich, Switzerland",
     "timestamp": 58500,
-    "savings": 1.32
+    "savings": 1.32,
+    "financial_gains": [
+      {
+        "amount_usd": 0.93,
+        "amount_eur": 0.86,
+        "source": "price",
+        "reason": "+0.93€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      },
+      {
+        "amount_usd": 0.26,
+        "amount_eur": 0.24,
+        "source": "weather",
+        "reason": "+0.26€ car meilleure météo (Zurich: 10-15°C plus frais) — refroidissement naturel efficace"
+      },
+      {
+        "amount_usd": 0.13,
+        "amount_eur": 0.12,
+        "source": "carbon",
+        "reason": "+0.13€ car intensité carbone réduite (Zurich: mix énergétique plus vert) — économie sur compensation carbone"
+      }
+    ],
+    "total_gain_usd": 1.32,
+    "total_gain_eur": 1.22,
+    "summary": "Total: +1.32€ (0.93€ prix + 0.26€ météo + 0.13€ carbone)"
   },
   {
     "from": "Standard_NC80adis_H100_v5 - Chicago, Illinois, USA",
     "to": "Standard_NC16lds_xl_RTXPRO6000BSE_v6 - Dublin, Ireland",
     "timestamp": 60000,
-    "savings": 1.98
+    "savings": 1.98,
+    "financial_gains": [
+      {
+        "amount_usd": 1.98,
+        "amount_eur": 1.82,
+        "source": "price",
+        "reason": "+1.98€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.98,
+    "total_gain_eur": 1.82,
+    "summary": "Total: +1.98€ (1.98€ prix)"
   },
   {
     "from": "Standard_NV8as_v4 - Warsaw, Poland",
     "to": "Standard_NC32lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
     "timestamp": 61500,
-    "savings": 1.65
+    "savings": 1.65,
+    "financial_gains": [
+      {
+        "amount_usd": 1.65,
+        "amount_eur": 1.52,
+        "source": "price",
+        "reason": "+1.65€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.65,
+    "total_gain_eur": 1.52,
+    "summary": "Total: +1.65€ (1.65€ prix)"
   },
   {
     "from": "Standard_NV18ads_A10_v5 - Washington State, USA",
     "to": "Standard_NV6ads_A10_v5 - Madrid, Spain",
     "timestamp": 63000,
-    "savings": 1.78
+    "savings": 1.78,
+    "financial_gains": [
+      {
+        "amount_usd": 1.78,
+        "amount_eur": 1.64,
+        "source": "price",
+        "reason": "+1.78€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.78,
+    "total_gain_eur": 1.64,
+    "summary": "Total: +1.78€ (1.78€ prix)"
   },
   {
     "from": "Standard_NV18ads_A10_v5 - Chicago, Illinois, USA",
     "to": "Standard_NV24s_v3 - Singapore",
     "timestamp": 64500,
-    "savings": 1.22
+    "savings": 1.22,
+    "financial_gains": [
+      {
+        "amount_usd": 1.22,
+        "amount_eur": 1.12,
+        "source": "price",
+        "reason": "+1.22€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.22,
+    "total_gain_eur": 1.12,
+    "summary": "Total: +1.22€ (1.22€ prix)"
   },
   {
     "from": "Standard_NV28adms_V710_v5 - San Francisco, California, USA",
     "to": "Standard_NC40ads_H100_v5 - Madrid, Spain",
     "timestamp": 66000,
-    "savings": 2.42
+    "savings": 2.42,
+    "financial_gains": [
+      {
+        "amount_usd": 2.42,
+        "amount_eur": 2.23,
+        "source": "price",
+        "reason": "+2.42€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 2.42,
+    "total_gain_eur": 2.23,
+    "summary": "Total: +2.42€ (2.42€ prix)"
   },
   {
     "from": "Standard_NC24r_Promo - Sydney, Australia",
     "to": "Standard_NC40ads_H100_v5 - Dublin, Ireland",
     "timestamp": 67500,
-    "savings": 2.47
+    "savings": 2.47,
+    "financial_gains": [
+      {
+        "amount_usd": 2.23,
+        "amount_eur": 2.05,
+        "source": "price",
+        "reason": "+2.23€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      },
+      {
+        "amount_usd": 0.25,
+        "amount_eur": 0.23,
+        "source": "carbon",
+        "reason": "+0.25€ car intensité carbone réduite (Dublin: mix énergétique plus vert) — économie sur compensation carbone"
+      }
+    ],
+    "total_gain_usd": 2.48,
+    "total_gain_eur": 2.28,
+    "summary": "Total: +2.48€ (2.23€ prix + 0.25€ carbone)"
   },
   {
     "from": "Standard_NV6ads_A10_v5 - Madrid, Spain",
     "to": "Standard_ND96ams_A100_v4 - Paris, France",
     "timestamp": 69000,
-    "savings": 0.57
+    "savings": 0.57,
+    "financial_gains": [
+      {
+        "amount_usd": 0.46,
+        "amount_eur": 0.42,
+        "source": "price",
+        "reason": "+0.46€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      },
+      {
+        "amount_usd": 0.11,
+        "amount_eur": 0.1,
+        "source": "weather",
+        "reason": "+0.11€ car meilleure météo (Paris: 5-8°C plus frais) — refroidissement naturel efficace"
+      }
+    ],
+    "total_gain_usd": 0.57,
+    "total_gain_eur": 0.52,
+    "summary": "Total: +0.57€ (0.46€ prix + 0.11€ météo)"
   },
   {
     "from": "Standard_NV12_Promo - Singapore",
     "to": "Standard_NV6_Promo - Singapore",
     "timestamp": 70500,
-    "savings": 0.24
+    "savings": 0.24,
+    "financial_gains": [
+      {
+        "amount_usd": 0.24,
+        "amount_eur": 0.22,
+        "source": "price",
+        "reason": "+0.24€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.24,
+    "total_gain_eur": 0.22,
+    "summary": "Total: +0.24€ (0.24€ prix)"
   },
   {
     "from": "Standard_NC64ds_xl_RTXPRO6000BSE_v6 - Singapore",
     "to": "Standard_NC6_Promo - Dublin, Ireland",
     "timestamp": 72000,
-    "savings": 2.46
+    "savings": 2.46,
+    "financial_gains": [
+      {
+        "amount_usd": 1.97,
+        "amount_eur": 1.81,
+        "source": "price",
+        "reason": "+1.97€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      },
+      {
+        "amount_usd": 0.49,
+        "amount_eur": 0.45,
+        "source": "weather",
+        "reason": "+0.49€ car meilleure météo (Dublin: 5-8°C plus frais) — refroidissement naturel efficace"
+      }
+    ],
+    "total_gain_usd": 2.46,
+    "total_gain_eur": 2.26,
+    "summary": "Total: +2.46€ (1.97€ prix + 0.49€ météo)"
   },
   {
     "from": "Standard_ND128isr_NDR_GB200_v6 - Busan, South Korea",
     "to": "Standard_NC96ads_A100_v4 - Frankfurt, Germany",
     "timestamp": 73500,
-    "savings": 1.26
+    "savings": 1.26,
+    "financial_gains": [
+      {
+        "amount_usd": 1.26,
+        "amount_eur": 1.16,
+        "source": "price",
+        "reason": "+1.26€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.26,
+    "total_gain_eur": 1.16,
+    "summary": "Total: +1.26€ (1.26€ prix)"
   },
   {
     "from": "Standard_NV72ads_A10_v5 - Virginia, USA",
     "to": "Standard_NC24r_Promo - Amsterdam, Netherlands",
     "timestamp": 75000,
-    "savings": 1.68
+    "savings": 1.68,
+    "financial_gains": [
+      {
+        "amount_usd": 1.68,
+        "amount_eur": 1.55,
+        "source": "price",
+        "reason": "+1.68€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.68,
+    "total_gain_eur": 1.55,
+    "summary": "Total: +1.68€ (1.68€ prix)"
   },
   {
     "from": "Standard_ND96is_flex_H100_v5 - Stockholm, Sweden",
     "to": "Standard_NV16as_v4 - Virginia, USA",
     "timestamp": 76500,
-    "savings": 1.31
+    "savings": 1.31,
+    "financial_gains": [
+      {
+        "amount_usd": 1.31,
+        "amount_eur": 1.21,
+        "source": "price",
+        "reason": "+1.31€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.31,
+    "total_gain_eur": 1.21,
+    "summary": "Total: +1.31€ (1.31€ prix)"
   },
   {
     "from": "Standard_NV12s_v3 - Virginia, USA",
     "to": "Standard_ND96isr_H200_v5 - Warsaw, Poland",
     "timestamp": 78000,
-    "savings": 1.16
+    "savings": 1.16,
+    "financial_gains": [
+      {
+        "amount_usd": 1.16,
+        "amount_eur": 1.07,
+        "source": "price",
+        "reason": "+1.16€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.16,
+    "total_gain_eur": 1.07,
+    "summary": "Total: +1.16€ (1.16€ prix)"
   },
   {
     "from": "Standard_NC40ads_H100_v5 - Dublin, Ireland",
     "to": "Standard_NV36adms_A10_v5 - Kuala Lumpur, Malaysia",
     "timestamp": 79500,
-    "savings": 1.82
+    "savings": 1.82,
+    "financial_gains": [
+      {
+        "amount_usd": 1.82,
+        "amount_eur": 1.67,
+        "source": "price",
+        "reason": "+1.82€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.82,
+    "total_gain_eur": 1.67,
+    "summary": "Total: +1.82€ (1.82€ prix)"
   },
   {
     "from": "Standard_NV8ads_V710_v5 - Chicago, Illinois, USA",
     "to": "Standard_ND96isr_H100_v5 - Amsterdam, Netherlands",
     "timestamp": 81000,
-    "savings": 1.78
+    "savings": 1.78,
+    "financial_gains": [
+      {
+        "amount_usd": 1.78,
+        "amount_eur": 1.64,
+        "source": "price",
+        "reason": "+1.78€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.78,
+    "total_gain_eur": 1.64,
+    "summary": "Total: +1.78€ (1.78€ prix)"
   },
   {
     "from": "Standard_NV6_Promo - Virginia, USA",
     "to": "Standard_NG16ads_V620_v1 - Virginia, USA",
     "timestamp": 82500,
-    "savings": 0.73
+    "savings": 0.73,
+    "financial_gains": [
+      {
+        "amount_usd": 0.73,
+        "amount_eur": 0.67,
+        "source": "price",
+        "reason": "+0.73€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.73,
+    "total_gain_eur": 0.67,
+    "summary": "Total: +0.73€ (0.73€ prix)"
   },
   {
     "from": "Standard_NV16as_v4 - Virginia, USA",
     "to": "Standard_NV12ads_A10_v5 - Milan, Italy",
     "timestamp": 84000,
-    "savings": 2.08
+    "savings": 2.08,
+    "financial_gains": [
+      {
+        "amount_usd": 2.08,
+        "amount_eur": 1.91,
+        "source": "price",
+        "reason": "+2.08€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 2.08,
+    "total_gain_eur": 1.91,
+    "summary": "Total: +2.08€ (2.08€ prix)"
   },
   {
     "from": "Standard_NC12_Promo - Amsterdam, Netherlands",
     "to": "Standard_NC24r_Promo - Amsterdam, Netherlands",
     "timestamp": 85500,
-    "savings": 0.19
+    "savings": 0.19,
+    "financial_gains": [
+      {
+        "amount_usd": 0.19,
+        "amount_eur": 0.17,
+        "source": "price",
+        "reason": "+0.19€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.19,
+    "total_gain_eur": 0.17,
+    "summary": "Total: +0.19€ (0.19€ prix)"
   },
   {
     "from": "Standard_ND128isr_NDR_GB200_v6 - Busan, South Korea",
     "to": "Standard_NV18ads_A10_v5 - Virginia, USA (Gov)",
     "timestamp": 87000,
-    "savings": 1.64
+    "savings": 1.64,
+    "financial_gains": [
+      {
+        "amount_usd": 1.64,
+        "amount_eur": 1.51,
+        "source": "price",
+        "reason": "+1.64€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.64,
+    "total_gain_eur": 1.51,
+    "summary": "Total: +1.64€ (1.64€ prix)"
   },
   {
     "from": "Standard_NV6ads_A10_v5 - San Francisco, California, USA",
     "to": "Standard_NV36ads_A10_v5 - Tel Aviv, Israel",
     "timestamp": 88500,
-    "savings": 1.24
+    "savings": 1.24,
+    "financial_gains": [
+      {
+        "amount_usd": 1.24,
+        "amount_eur": 1.14,
+        "source": "price",
+        "reason": "+1.24€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.24,
+    "total_gain_eur": 1.14,
+    "summary": "Total: +1.24€ (1.24€ prix)"
   },
   {
     "from": "Standard_NV12ads_A10_v5 - Milan, Italy",
     "to": "Standard_NV18ads_A10_v5 - Washington State, USA",
     "timestamp": 90000,
-    "savings": 1.06
+    "savings": 1.06,
+    "financial_gains": [
+      {
+        "amount_usd": 1.06,
+        "amount_eur": 0.98,
+        "source": "price",
+        "reason": "+1.06€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.06,
+    "total_gain_eur": 0.98,
+    "summary": "Total: +1.06€ (1.06€ prix)"
   },
   {
     "from": "Standard_NV16as_v4 - Virginia, USA",
     "to": "Standard_NC12s_v3 - Toronto, Canada",
     "timestamp": 91500,
-    "savings": 0.76
+    "savings": 0.76,
+    "financial_gains": [
+      {
+        "amount_usd": 0.76,
+        "amount_eur": 0.7,
+        "source": "price",
+        "reason": "+0.76€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.76,
+    "total_gain_eur": 0.7,
+    "summary": "Total: +0.76€ (0.76€ prix)"
   },
   {
     "from": "Standard_NV6_Promo - Virginia, USA",
     "to": "Standard_NV12s_v3 - Paris, France",
     "timestamp": 93000,
-    "savings": 1.1
+    "savings": 1.1,
+    "financial_gains": [
+      {
+        "amount_usd": 1.1,
+        "amount_eur": 1.01,
+        "source": "price",
+        "reason": "+1.1€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.1,
+    "total_gain_eur": 1.01,
+    "summary": "Total: +1.1€ (1.1€ prix)"
   },
   {
     "from": "Standard_NC24r_Promo - Chicago, Illinois, USA",
     "to": "Standard_ND96ams_A100_v4 - Dubai, UAE",
     "timestamp": 94500,
-    "savings": 1.26
+    "savings": 1.26,
+    "financial_gains": [
+      {
+        "amount_usd": 1.26,
+        "amount_eur": 1.16,
+        "source": "price",
+        "reason": "+1.26€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.26,
+    "total_gain_eur": 1.16,
+    "summary": "Total: +1.26€ (1.26€ prix)"
   },
   {
     "from": "Standard_NC48ads_A100_v4 - Paris, France",
     "to": "Standard_NC24rs_v3 - Mumbai, India",
     "timestamp": 96000,
-    "savings": 2.01
+    "savings": 2.01,
+    "financial_gains": [
+      {
+        "amount_usd": 2.01,
+        "amount_eur": 1.85,
+        "source": "price",
+        "reason": "+2.01€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 2.01,
+    "total_gain_eur": 1.85,
+    "summary": "Total: +2.01€ (2.01€ prix)"
   },
   {
     "from": "Standard_NV8as_v4 - Toronto, Canada",
     "to": "Standard_NV72ads_A10_v5 - Virginia, USA",
     "timestamp": 97500,
-    "savings": 0.69
+    "savings": 0.69,
+    "financial_gains": [
+      {
+        "amount_usd": 0.69,
+        "amount_eur": 0.63,
+        "source": "price",
+        "reason": "+0.69€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.69,
+    "total_gain_eur": 0.63,
+    "summary": "Total: +0.69€ (0.69€ prix)"
   },
   {
     "from": "Standard_NP20s - Washington State, USA",
     "to": "Standard_ND96is_H100_v5 - London, United Kingdom",
     "timestamp": 99000,
-    "savings": 2.16
+    "savings": 2.16,
+    "financial_gains": [
+      {
+        "amount_usd": 2.16,
+        "amount_eur": 1.99,
+        "source": "price",
+        "reason": "+2.16€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 2.16,
+    "total_gain_eur": 1.99,
+    "summary": "Total: +2.16€ (2.16€ prix)"
   },
   {
     "from": "Standard_NV18ads_A10_v5 - Chicago, Illinois, USA",
     "to": "Standard_NV12s_v3 - Virginia, USA",
     "timestamp": 100500,
-    "savings": 0.37
+    "savings": 0.37,
+    "financial_gains": [
+      {
+        "amount_usd": 0.37,
+        "amount_eur": 0.34,
+        "source": "price",
+        "reason": "+0.37€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.37,
+    "total_gain_eur": 0.34,
+    "summary": "Total: +0.37€ (0.37€ prix)"
   },
   {
     "from": "Standard_NV72ads_A10_v5 - Virginia, USA",
     "to": "Standard_NC48ads_A100_v4 - Toronto, Canada",
     "timestamp": 102000,
-    "savings": 0.7
+    "savings": 0.7,
+    "financial_gains": [
+      {
+        "amount_usd": 0.7,
+        "amount_eur": 0.64,
+        "source": "price",
+        "reason": "+0.7€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.7,
+    "total_gain_eur": 0.64,
+    "summary": "Total: +0.7€ (0.7€ prix)"
   },
   {
     "from": "Standard_NV32as_v4 - Arizona, USA (Gov)",
     "to": "Standard_NC6_Promo - Dublin, Ireland",
     "timestamp": 103500,
-    "savings": 1.9
+    "savings": 1.9,
+    "financial_gains": [
+      {
+        "amount_usd": 1.9,
+        "amount_eur": 1.75,
+        "source": "price",
+        "reason": "+1.9€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.9,
+    "total_gain_eur": 1.75,
+    "summary": "Total: +1.9€ (1.9€ prix)"
   },
   {
     "from": "Standard_NV36adms_A10_v5 - Sao Paulo, Brazil",
     "to": "Standard_NV36adms_A10_v5 - Hong Kong",
     "timestamp": 105000,
-    "savings": 2.26
+    "savings": 2.26,
+    "financial_gains": [
+      {
+        "amount_usd": 2.15,
+        "amount_eur": 1.98,
+        "source": "price",
+        "reason": "+2.15€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      },
+      {
+        "amount_usd": 0.11,
+        "amount_eur": 0.1,
+        "source": "availability",
+        "reason": "+0.11€ car meilleure disponibilité (Hong Kong: risque d'interruption Spot réduit de 70%)"
+      }
+    ],
+    "total_gain_usd": 2.26,
+    "total_gain_eur": 2.08,
+    "summary": "Total: +2.26€ (2.15€ prix + 0.11€ disponibilité)"
   },
   {
     "from": "Standard_NP10s - San Antonio, Texas, USA",
     "to": "Standard_NV6ads_A10_v5 - Mexico City, Mexico",
     "timestamp": 106500,
-    "savings": 0.67
+    "savings": 0.67,
+    "financial_gains": [
+      {
+        "amount_usd": 0.54,
+        "amount_eur": 0.5,
+        "source": "price",
+        "reason": "+0.54€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      },
+      {
+        "amount_usd": 0.13,
+        "amount_eur": 0.12,
+        "source": "weather",
+        "reason": "+0.13€ car meilleure météo (Mexico City: 5-8°C plus frais) — refroidissement naturel efficace"
+      }
+    ],
+    "total_gain_usd": 0.67,
+    "total_gain_eur": 0.62,
+    "summary": "Total: +0.67€ (0.54€ prix + 0.13€ météo)"
   },
   {
     "from": "Standard_NC96ads_A100_v4 - Mumbai, India",
     "to": "Standard_NV16as_v4 - Atlanta, Georgia, USA",
     "timestamp": 108000,
-    "savings": 2.36
+    "savings": 2.36,
+    "financial_gains": [
+      {
+        "amount_usd": 2.36,
+        "amount_eur": 2.17,
+        "source": "price",
+        "reason": "+2.36€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 2.36,
+    "total_gain_eur": 2.17,
+    "summary": "Total: +2.36€ (2.36€ prix)"
   },
   {
     "from": "Standard_NC24s_v3 - Arizona, USA (Gov)",
     "to": "Standard_NC8as_T4_v3 - Des Moines, Iowa, USA",
     "timestamp": 109500,
-    "savings": 0.94
+    "savings": 0.94,
+    "financial_gains": [
+      {
+        "amount_usd": 0.94,
+        "amount_eur": 0.86,
+        "source": "price",
+        "reason": "+0.94€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.94,
+    "total_gain_eur": 0.86,
+    "summary": "Total: +0.94€ (0.94€ prix)"
   },
   {
     "from": "Standard_ND128isrf_GB300_v6 - Virginia, USA",
     "to": "Standard_NC8as_T4_v3 - Dallas, Texas, USA",
     "timestamp": 111000,
-    "savings": 0.72
+    "savings": 0.72,
+    "financial_gains": [
+      {
+        "amount_usd": 0.72,
+        "amount_eur": 0.66,
+        "source": "price",
+        "reason": "+0.72€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.72,
+    "total_gain_eur": 0.66,
+    "summary": "Total: +0.72€ (0.72€ prix)"
   },
   {
     "from": "Standard_NC24ads_A100_v4 - Milan, Italy",
     "to": "Standard_NC128ds_xl_RTXPRO6000BSE_v6 - Singapore",
     "timestamp": 112500,
-    "savings": 1.79
+    "savings": 1.79,
+    "financial_gains": [
+      {
+        "amount_usd": 1.79,
+        "amount_eur": 1.65,
+        "source": "price",
+        "reason": "+1.79€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.79,
+    "total_gain_eur": 1.65,
+    "summary": "Total: +1.79€ (1.79€ prix)"
   },
   {
     "from": "Standard_NV48s_v3 - Dublin, Ireland",
     "to": "Standard_NC48ads_A100_v4 - Warsaw, Poland",
     "timestamp": 114000,
-    "savings": 1.39
+    "savings": 1.39,
+    "financial_gains": [
+      {
+        "amount_usd": 1.39,
+        "amount_eur": 1.28,
+        "source": "price",
+        "reason": "+1.39€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.39,
+    "total_gain_eur": 1.28,
+    "summary": "Total: +1.39€ (1.39€ prix)"
   },
   {
     "from": "Standard_NC24r_Promo - Chicago, Illinois, USA",
     "to": "Standard_NC320ds_xl_RTXPRO6000BSE_v6 - Des Moines, Iowa, USA",
     "timestamp": 115500,
-    "savings": 0.68
+    "savings": 0.68,
+    "financial_gains": [
+      {
+        "amount_usd": 0.68,
+        "amount_eur": 0.63,
+        "source": "price",
+        "reason": "+0.68€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.68,
+    "total_gain_eur": 0.63,
+    "summary": "Total: +0.68€ (0.68€ prix)"
   },
   {
     "from": "Standard_NC24s_v3 - Tokyo, Japan",
     "to": "Standard_NC24rs_v3 - Singapore",
     "timestamp": 117000,
-    "savings": 1.4
+    "savings": 1.4,
+    "financial_gains": [
+      {
+        "amount_usd": 1.4,
+        "amount_eur": 1.29,
+        "source": "price",
+        "reason": "+1.4€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.4,
+    "total_gain_eur": 1.29,
+    "summary": "Total: +1.4€ (1.4€ prix)"
   },
   {
     "from": "Standard_NP10s - Toronto, Canada",
     "to": "Standard_NC6_Promo - Virginia, USA (Gov)",
     "timestamp": 118500,
-    "savings": 0.72
+    "savings": 0.72,
+    "financial_gains": [
+      {
+        "amount_usd": 0.72,
+        "amount_eur": 0.66,
+        "source": "price",
+        "reason": "+0.72€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.72,
+    "total_gain_eur": 0.66,
+    "summary": "Total: +0.72€ (0.72€ prix)"
   },
   {
     "from": "Standard_NC24rs_v3 - Mumbai, India",
     "to": "Standard_NV36ads_A10_v5 - Dubai, UAE",
     "timestamp": 120000,
-    "savings": 0.61
+    "savings": 0.61,
+    "financial_gains": [
+      {
+        "amount_usd": 0.61,
+        "amount_eur": 0.56,
+        "source": "price",
+        "reason": "+0.61€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.61,
+    "total_gain_eur": 0.56,
+    "summary": "Total: +0.61€ (0.61€ prix)"
   },
   {
     "from": "Standard_NC128ds_xl_RTXPRO6000BSE_v6 - Singapore",
     "to": "Standard_NC24rs_v3 - Singapore",
     "timestamp": 121500,
-    "savings": 0.16
+    "savings": 0.16,
+    "financial_gains": [
+      {
+        "amount_usd": 0.16,
+        "amount_eur": 0.15,
+        "source": "price",
+        "reason": "+0.16€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.16,
+    "total_gain_eur": 0.15,
+    "summary": "Total: +0.16€ (0.16€ prix)"
   },
   {
     "from": "Standard_NC64ds_xl_RTXPRO6000BSE_v6 - Singapore",
     "to": "Standard_ND96isr_H200_v5 - Sao Paulo, Brazil",
     "timestamp": 123000,
-    "savings": 2.38
+    "savings": 2.38,
+    "financial_gains": [
+      {
+        "amount_usd": 1.91,
+        "amount_eur": 1.76,
+        "source": "price",
+        "reason": "+1.91€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      },
+      {
+        "amount_usd": 0.48,
+        "amount_eur": 0.44,
+        "source": "weather",
+        "reason": "+0.48€ car meilleure météo (Sao Paulo: 5-8°C plus frais) — refroidissement naturel efficace"
+      }
+    ],
+    "total_gain_usd": 2.39,
+    "total_gain_eur": 2.2,
+    "summary": "Total: +2.39€ (1.91€ prix + 0.48€ météo)"
   },
   {
     "from": "Standard_NC64as_T4_v3 - Sydney, Australia",
     "to": "Standard_NC24rs_v3 - Mumbai, India",
     "timestamp": 124500,
-    "savings": 1.76
+    "savings": 1.76,
+    "financial_gains": [
+      {
+        "amount_usd": 1.76,
+        "amount_eur": 1.62,
+        "source": "price",
+        "reason": "+1.76€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.76,
+    "total_gain_eur": 1.62,
+    "summary": "Total: +1.76€ (1.76€ prix)"
   },
   {
     "from": "Standard_NC8as_T4_v3 - Amsterdam, Netherlands",
     "to": "Standard_NV18ads_A10_v5 - Phoenix, Arizona, USA",
     "timestamp": 126000,
-    "savings": 1.36
+    "savings": 1.36,
+    "financial_gains": [
+      {
+        "amount_usd": 1.36,
+        "amount_eur": 1.25,
+        "source": "price",
+        "reason": "+1.36€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.36,
+    "total_gain_eur": 1.25,
+    "summary": "Total: +1.36€ (1.36€ prix)"
   },
   {
     "from": "Standard_NV18ads_A10_v5 - Virginia, USA (Gov)",
     "to": "Standard_NV16as_v4 - Virginia, USA",
     "timestamp": 127500,
-    "savings": 0.5
+    "savings": 0.5,
+    "financial_gains": [
+      {
+        "amount_usd": 0.51,
+        "amount_eur": 0.47,
+        "source": "price",
+        "reason": "+0.51€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.51,
+    "total_gain_eur": 0.47,
+    "summary": "Total: +0.51€ (0.51€ prix)"
   },
   {
     "from": "Standard_NV12s_v3 - San Francisco, California, USA",
     "to": "Standard_NV36adms_A10_v5 - Virginia, USA",
     "timestamp": 129000,
-    "savings": 1.09
+    "savings": 1.09,
+    "financial_gains": [
+      {
+        "amount_usd": 1.09,
+        "amount_eur": 1.0,
+        "source": "price",
+        "reason": "+1.09€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.09,
+    "total_gain_eur": 1.0,
+    "summary": "Total: +1.09€ (1.09€ prix)"
   },
   {
     "from": "Standard_NC12s_v3 - Pune, India",
     "to": "Standard_NC8as_T4_v3 - Sao Paulo, Brazil",
     "timestamp": 130500,
-    "savings": 1.24
+    "savings": 1.24,
+    "financial_gains": [
+      {
+        "amount_usd": 0.87,
+        "amount_eur": 0.8,
+        "source": "price",
+        "reason": "+0.87€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      },
+      {
+        "amount_usd": 0.25,
+        "amount_eur": 0.23,
+        "source": "weather",
+        "reason": "+0.25€ car meilleure météo (Sao Paulo: 5-8°C plus frais) — refroidissement naturel efficace"
+      },
+      {
+        "amount_usd": 0.12,
+        "amount_eur": 0.11,
+        "source": "carbon",
+        "reason": "+0.12€ car intensité carbone réduite (Sao Paulo: mix énergétique plus vert) — économie sur compensation carbone"
+      }
+    ],
+    "total_gain_usd": 1.24,
+    "total_gain_eur": 1.14,
+    "summary": "Total: +1.24€ (0.87€ prix + 0.25€ météo + 0.12€ carbone)"
   },
   {
     "from": "Standard_ND128isr_NDR_GB200_v6 - Sydney, Australia",
     "to": "Standard_NV8as_v4 - Warsaw, Poland",
     "timestamp": 132000,
-    "savings": 2.3
+    "savings": 2.3,
+    "financial_gains": [
+      {
+        "amount_usd": 2.29,
+        "amount_eur": 2.11,
+        "source": "price",
+        "reason": "+2.29€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 2.29,
+    "total_gain_eur": 2.11,
+    "summary": "Total: +2.29€ (2.29€ prix)"
   },
   {
     "from": "Standard_NC48ads_A100_v4 - Pune, India",
     "to": "Standard_NV36ads_A10_v5 - Dubai, UAE",
     "timestamp": 133500,
-    "savings": 0.32
+    "savings": 0.32,
+    "financial_gains": [
+      {
+        "amount_usd": 0.32,
+        "amount_eur": 0.29,
+        "source": "price",
+        "reason": "+0.32€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.32,
+    "total_gain_eur": 0.29,
+    "summary": "Total: +0.32€ (0.32€ prix)"
   },
   {
     "from": "Standard_NV16as_v4 - Mexico City, Mexico",
     "to": "Standard_NV4as_v4 - Milan, Italy",
     "timestamp": 135000,
-    "savings": 2.44
+    "savings": 2.44,
+    "financial_gains": [
+      {
+        "amount_usd": 2.32,
+        "amount_eur": 2.13,
+        "source": "price",
+        "reason": "+2.32€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      },
+      {
+        "amount_usd": 0.12,
+        "amount_eur": 0.11,
+        "source": "availability",
+        "reason": "+0.12€ car meilleure disponibilité (Milan: risque d'interruption Spot réduit de 70%)"
+      }
+    ],
+    "total_gain_usd": 2.44,
+    "total_gain_eur": 2.24,
+    "summary": "Total: +2.44€ (2.32€ prix + 0.12€ disponibilité)"
   },
   {
     "from": "Standard_NC12_Promo - Virginia, USA",
     "to": "Standard_NV72ads_A10_v5 - Des Moines, Iowa, USA",
     "timestamp": 136500,
-    "savings": 0.79
+    "savings": 0.79,
+    "financial_gains": [
+      {
+        "amount_usd": 0.79,
+        "amount_eur": 0.73,
+        "source": "price",
+        "reason": "+0.79€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.79,
+    "total_gain_eur": 0.73,
+    "summary": "Total: +0.79€ (0.79€ prix)"
   },
   {
     "from": "Standard_NV16as_v4 - Stockholm, Sweden",
     "to": "Standard_NC6_Promo - Dublin, Ireland",
     "timestamp": 138000,
-    "savings": 0.69
+    "savings": 0.69,
+    "financial_gains": [
+      {
+        "amount_usd": 0.69,
+        "amount_eur": 0.63,
+        "source": "price",
+        "reason": "+0.69€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.69,
+    "total_gain_eur": 0.63,
+    "summary": "Total: +0.69€ (0.69€ prix)"
   },
   {
     "from": "Standard_ND96ams_A100_v4 - Paris, France",
     "to": "Standard_NV72ads_A10_v5 - Des Moines, Iowa, USA",
     "timestamp": 139500,
-    "savings": 2.13
+    "savings": 2.13,
+    "financial_gains": [
+      {
+        "amount_usd": 2.13,
+        "amount_eur": 1.96,
+        "source": "price",
+        "reason": "+2.13€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 2.13,
+    "total_gain_eur": 1.96,
+    "summary": "Total: +2.13€ (2.13€ prix)"
   },
   {
     "from": "Standard_ND96isr_H100_v5 - Amsterdam, Netherlands",
     "to": "Standard_NV12_Promo - Singapore",
     "timestamp": 141000,
-    "savings": 2.37
+    "savings": 2.37,
+    "financial_gains": [
+      {
+        "amount_usd": 2.37,
+        "amount_eur": 2.18,
+        "source": "price",
+        "reason": "+2.37€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 2.37,
+    "total_gain_eur": 2.18,
+    "summary": "Total: +2.37€ (2.37€ prix)"
   },
   {
     "from": "Standard_NC24ads_A100_v4 - Nagpur, India",
     "to": "Standard_NV36ads_A10_v5 - Jakarta, Indonesia",
     "timestamp": 142500,
-    "savings": 0.74
+    "savings": 0.74,
+    "financial_gains": [
+      {
+        "amount_usd": 0.74,
+        "amount_eur": 0.68,
+        "source": "price",
+        "reason": "+0.74€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 0.74,
+    "total_gain_eur": 0.68,
+    "summary": "Total: +0.74€ (0.74€ prix)"
   },
   {
     "from": "Standard_NC6_Promo - Virginia, USA",
     "to": "Standard_NV12_Promo - Singapore",
     "timestamp": 144000,
-    "savings": 2.27
+    "savings": 2.27,
+    "financial_gains": [
+      {
+        "amount_usd": 2.27,
+        "amount_eur": 2.09,
+        "source": "price",
+        "reason": "+2.27€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 2.27,
+    "total_gain_eur": 2.09,
+    "summary": "Total: +2.27€ (2.27€ prix)"
   },
   {
     "from": "Standard_NP10s - Tokyo, Japan",
     "to": "Standard_NC80adis_H100_v5 - London, United Kingdom",
     "timestamp": 145500,
-    "savings": 1.57
+    "savings": 1.57,
+    "financial_gains": [
+      {
+        "amount_usd": 1.57,
+        "amount_eur": 1.44,
+        "source": "price",
+        "reason": "+1.57€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.57,
+    "total_gain_eur": 1.44,
+    "summary": "Total: +1.57€ (1.57€ prix)"
   },
   {
     "from": "Standard_NC4as_T4_v3 - Des Moines, Iowa, USA",
     "to": "Standard_NC256ds_xl_RTXPRO6000BSE_v6 - Dublin, Ireland",
     "timestamp": 147000,
-    "savings": 2.37
+    "savings": 2.37,
+    "financial_gains": [
+      {
+        "amount_usd": 2.37,
+        "amount_eur": 2.18,
+        "source": "price",
+        "reason": "+2.37€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 2.37,
+    "total_gain_eur": 2.18,
+    "summary": "Total: +2.37€ (2.37€ prix)"
   },
   {
     "from": "Standard_NV18ads_A10_v5 - Virginia, USA (Gov)",
     "to": "Standard_NC128lds_xl_RTXPRO6000BSE_v6 - San Francisco, California, USA",
     "timestamp": 148500,
-    "savings": 1.42
+    "savings": 1.42,
+    "financial_gains": [
+      {
+        "amount_usd": 1.42,
+        "amount_eur": 1.31,
+        "source": "price",
+        "reason": "+1.42€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      }
+    ],
+    "total_gain_usd": 1.42,
+    "total_gain_eur": 1.31,
+    "summary": "Total: +1.42€ (1.42€ prix)"
   },
   {
     "from": "Standard_NC12s_v3 - Pune, India",
     "to": "Standard_NP20s - Washington State, USA",
     "timestamp": 150000,
-    "savings": 1.57
+    "savings": 1.57,
+    "financial_gains": [
+      {
+        "amount_usd": 1.1,
+        "amount_eur": 1.01,
+        "source": "price",
+        "reason": "+1.1€ car serveur moins cher trouvé — optimisation Spot pricing intelligente"
+      },
+      {
+        "amount_usd": 0.31,
+        "amount_eur": 0.29,
+        "source": "weather",
+        "reason": "+0.31€ car meilleure météo (Washington State: 5-8°C plus frais) — refroidissement naturel efficace"
+      },
+      {
+        "amount_usd": 0.16,
+        "amount_eur": 0.14,
+        "source": "carbon",
+        "reason": "+0.16€ car intensité carbone réduite (Washington State: mix énergétique plus vert) — économie sur compensation carbone"
+      }
+    ],
+    "total_gain_usd": 1.57,
+    "total_gain_eur": 1.44,
+    "summary": "Total: +1.57€ (1.1€ prix + 0.31€ météo + 0.16€ carbone)"
   }
 ]
