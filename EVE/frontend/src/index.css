@@ -1,0 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 10%;
+    --border: 220 10% 91%;
+    --muted: 220 10% 96%;
+    --muted-foreground: 220 5% 46%;
+    --primary: 43 96% 56%;
+    --primary-foreground: 220 15% 10%;
+    --accent-blue: 217 91% 68%;
+    --glow-yellow: 234, 179, 8;
+    --glow-orange: 245, 158, 11;
+    --radius: 0.75rem;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    overflow: hidden;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 999px;
+}
+
+/* ============================================================
+   MESH GRADIENT BLOBS — Landing page
+   ============================================================ */
+.mesh-blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.mesh-blob-yellow {
+  background: radial-gradient(circle, rgba(234, 179, 8, 0.5) 0%, rgba(251, 191, 36, 0.25) 40%, transparent 70%);
+  filter: blur(70px);
+}
+
+.mesh-blob-blue {
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.35) 0%, rgba(59, 130, 246, 0.15) 50%, transparent 70%);
+  filter: blur(80px);
+}
+
+.mesh-blob-warm {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.45) 0%, rgba(234, 179, 8, 0.2) 40%, transparent 70%);
+  filter: blur(60px);
+}
+
+.mesh-blob-gold {
+  background: radial-gradient(circle, rgba(253, 224, 71, 0.5) 0%, rgba(234, 179, 8, 0.3) 35%, transparent 65%);
+  filter: blur(90px);
+}
+
+/* ---- Floating animations for blobs ---- */
+@keyframes float-slow {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(40px, -30px) scale(1.08); }
+  50% { transform: translate(-15px, 20px) scale(0.95); }
+  75% { transform: translate(25px, 10px) scale(1.04); }
+}
+
+@keyframes float-slower {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-35px, 30px) scale(1.1); }
+  66% { transform: translate(20px, -15px) scale(0.93); }
+}
+
+@keyframes float-drift {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate(-30px, -20px) scale(1.12) rotate(5deg); }
+}
+
+.animate-float-slow {
+  animation: float-slow 10s ease-in-out infinite;
+}
+
+.animate-float-slower {
+  animation: float-slower 14s ease-in-out infinite;
+}
+
+.animate-float-drift {
+  animation: float-drift 18s ease-in-out infinite;
+}
+
+/* ============================================================
+   PULSE GLOW — Yellow/gold glow effect
+   ============================================================ */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow:
+      0 0 20px rgba(var(--glow-yellow), 0.2),
+      0 0 40px rgba(var(--glow-yellow), 0.08),
+      0 4px 16px rgba(var(--glow-yellow), 0.12);
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(var(--glow-yellow), 0.35),
+      0 0 60px rgba(var(--glow-yellow), 0.15),
+      0 4px 24px rgba(var(--glow-yellow), 0.2);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Intense glow for hero elements */
+@keyframes pulse-glow-strong {
+  0%, 100% {
+    box-shadow:
+      0 0 24px rgba(var(--glow-yellow), 0.3),
+      0 0 48px rgba(var(--glow-orange), 0.12),
+      0 0 80px rgba(var(--glow-yellow), 0.06),
+      inset 0 0 20px rgba(var(--glow-yellow), 0.05);
+  }
+  50% {
+    box-shadow:
+      0 0 36px rgba(var(--glow-yellow), 0.45),
+      0 0 72px rgba(var(--glow-orange), 0.2),
+      0 0 100px rgba(var(--glow-yellow), 0.1),
+      inset 0 0 30px rgba(var(--glow-yellow), 0.08);
+  }
+}
+
+.animate-pulse-glow-strong {
+  animation: pulse-glow-strong 2.5s ease-in-out infinite;
+}
+
+/* Subtle ambient glow for cards */
+@keyframes glow-ambient {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(var(--glow-yellow), 0), 0 1px 3px rgba(0,0,0,0.06);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(var(--glow-yellow), 0.08), 0 1px 3px rgba(0,0,0,0.06);
+  }
+}
+
+.animate-glow-ambient {
+  animation: glow-ambient 3s ease-in-out infinite;
+}
+
+/* ============================================================
+   GOLDEN SHIMMER — Text/border highlight effect
+   ============================================================ */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--primary)) 0%,
+    rgba(253, 224, 71, 1) 25%,
+    hsl(var(--primary)) 50%,
+    rgba(245, 158, 11, 1) 75%,
+    hsl(var(--primary)) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Golden border glow for active cards */
+.border-glow-yellow {
+  box-shadow:
+    0 0 0 1px rgba(var(--glow-yellow), 0.2),
+    0 0 15px rgba(var(--glow-yellow), 0.1),
+    0 0 30px rgba(var(--glow-yellow), 0.05);
+}
+
+/* ============================================================
+   WORKSPACE
+   ============================================================ */
+.workspace-bg {
+  background-color: hsl(45 20% 98%);
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(var(--glow-yellow), 0.06) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Yellow accent line that pulses */
+@keyframes line-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.line-pulse {
+  animation: line-pulse 2s ease-in-out infinite;
+}
+
+/* ============================================================
+   HEADER GLOW BAR
+   ============================================================ */
+.header-glow {
+  position: relative;
+}
+
+.header-glow::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(var(--glow-yellow), 0.3) 20%,
+    rgba(var(--glow-yellow), 0.6) 50%,
+    rgba(var(--glow-yellow), 0.3) 80%,
+    transparent 100%
+  );
+}
+
+/* ============================================================
+   INPUT BAR GLOW on focus
+   ============================================================ */
+.input-glow:focus-within {
+  box-shadow:
+    0 0 0 2px rgba(var(--glow-yellow), 0.15),
+    0 0 20px rgba(var(--glow-yellow), 0.08),
+    0 4px 16px rgba(0, 0, 0, 0.04);
+  border-color: rgba(var(--glow-yellow), 0.4);
+}
+
+/* ============================================================
+   EVE AVATAR — breathing glow
+   ============================================================ */
+@keyframes avatar-breathe {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(var(--glow-yellow), 0.2), 0 0 16px rgba(var(--glow-yellow), 0.1);
+  }
+  50% {
+    box-shadow: 0 0 14px rgba(var(--glow-yellow), 0.35), 0 0 28px rgba(var(--glow-yellow), 0.15);
+  }
+}
+
+.avatar-glow {
+  animation: avatar-breathe 2.5s ease-in-out infinite;
+}
+
+/* ============================================================
+   BUTTON GLOW — hover intensify
+   ============================================================ */
+.btn-glow {
+  transition: all 0.2s ease;
+  box-shadow: 0 0 12px rgba(var(--glow-yellow), 0.15), 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.btn-glow:hover {
+  box-shadow:
+    0 0 20px rgba(var(--glow-yellow), 0.3),
+    0 0 40px rgba(var(--glow-yellow), 0.12),
+    0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+.btn-glow:active {
+  transform: translateY(0);
+  box-shadow: 0 0 16px rgba(var(--glow-yellow), 0.25), 0 2px 6px rgba(0,0,0,0.06);
+}
