@@ -15,7 +15,7 @@ const Footer = () => (
         </div>
         <div className="flex items-center gap-4 text-xs text-zinc-400">
           <a
-            href="https://github.com/Nick0-ai"
+            href="https://github.com/Wasroy/Wattless"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"
@@ -23,7 +23,7 @@ const Footer = () => (
             <Github className="h-3.5 w-3.5" />
             GitHub
           </a>
-          <span className="text-zinc-300">Europe Hack 2026</span>
+          <span className="text-zinc-300">Hack Europe 2026</span>
         </div>
       </div>
     </div>

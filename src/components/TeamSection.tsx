@@ -4,6 +4,8 @@ import { Github } from "lucide-react";
 const team = [
   { name: "Nicolas", role: "Backend & Infra", description: "The one who makes GPUs obey. API, orchestration, carbon pipeline.", avatar: "N" },
   { name: "William", role: "Frontend & Design", description: "The one who makes it look good. Dashboard, globe, data viz.", avatar: "W" },
+  { name: "Adrien", role: "Marketing & Business", description: "The one who sells the vision. Strategy, pitch, go-to-market.", avatar: "A" },
+  { name: "Roland", role: "Storytelling & Finance", description: "The one who tells the story. Narrative, financials, partnerships.", avatar: "R" },
 ];
 
 const TeamSection = () => (
@@ -13,10 +15,10 @@ const TeamSection = () => (
         Team
       </p>
       <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
-        Two people. 48 hours.
+        Four people. 22 hours.
       </h2>
       <p className="text-zinc-400 text-sm mb-14">
-        Europe Hack 2026
+        Hack Europe 2026
       </p>
 
       <div className="flex justify-center gap-8 mb-10">
@@ -40,13 +42,13 @@ const TeamSection = () => (
       </div>
 
       <a
-        href="https://github.com/Nick0-ai"
+        href="https://github.com/Wasroy/Wattless"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-foreground transition-colors"
       >
         <Github className="h-4 w-4" />
-        github.com/Nick0-ai
+        github.com/Wasroy/Wattless
       </a>
     </div>
   </section>
