@@ -1,0 +1,109 @@
+🚀 NERVE : MASTER BLUEPRINT (Tech & Business)
+Document de référence complet (PRD + Specs Architecture)
+Version : 4.0 — Vision "Bulletproof" (Intra-Région & Time-Shifting)
+
+1. VISION & EXECUTIVE SUMMARY
+La Vision : Nerve est un Orchestrateur Cloud de FinOps et MLOps Local. Au lieu de combattre la physique des réseaux en déplaçant les calculs à l'autre bout du monde (ce qui tue les performances et fait exploser les Egress Fees), NERVE voyage dans le temps et entre les bâtiments d'une même ville.
+La Promesse Client : Diviser la facture des GPU par 3 pour l'entraînement IA et le rendu 3D, avec une garantie de zéro coupure et zéro latence. On a le prix du Spot, avec la fiabilité du Premium.
+
+Le Principe Fondamental : Respecter la "Data Gravity"
+Un GPU qui s'éloigne de sa donnée meurt de faim (GPU Starvation). NERVE garde le calcul au plus près de la donnée (latence < 1ms), mais joue sur le temps (Time-Shifting) et l'évacuation d'urgence micro-locale (AZ-Hopping) pour casser les prix.
+
+Le Job to be Done (JTBD) :
+
+"Quand ma facture Cloud explose à cause de mes entraînements de LLM, je veux exécuter mes calculs au prix le plus bas possible de façon 100% automatisée, et sans aucun risque de perdre ma progression en cas de coupure de serveur."
+
+2. RÈGLES FONDAMENTALES (LES 3 PILIERS)
+PILIER 1 - Arbitrage Zéro-Latence (L'AZ-Hopping) : On ne change jamais de pays ou de région Cloud. Nerve scanne les prix des GPU Spot dans les différentes Zones de Disponibilité (AZ) d'une même région (ex: Paris AZ-A, AZ-B, AZ-C). Nerve déplace le calcul d'un bâtiment à l'autre. Le transfert de données intra-région coûte presque 0€ et la latence est < 1 milliseconde.
+
+PILIER 2 - L'Arbitrage Temporel (Le Time-Shifting) : Le développeur soumet son job avec une "Deadline" (ex: "J'ai besoin de ce modèle pour demain 8h"). Nerve met le calcul en pause intelligente et attend la nuit (heures creuses) pour lancer le calcul quand les prix Spot s'effondrent et que le réseau électrique local est moins carboné.
+
+PILIER 3 - Le Bouclier Technologique (Smart Checkpointing) : On transforme le Spot (instable) en On-Demand (fiable). Si AWS signale une coupure imminente du serveur Spot (préavis de 2 min), Nerve ne fait pas que déplacer le conteneur : il interagit avec le framework d'IA (ex: PyTorch) pour sauvegarder instantanément les poids du modèle (Checkpointing) sur un stockage pas cher (S3). L'entraînement reprendra sur le nouveau serveur exactement là où il s'est arrêté. Zéro perte.
+
+3. CIBLE CLIENT (ICP - Ideal Customer Profile)
+L'outil est pensé pour les architectures modernes (Kubernetes). Nos premiers clients sont :
+
+Startups IA (La cible prioritaire) : Fine-tuning de LLMs, Machine Learning (fort besoin en GPU, factures énormes).
+
+Studios 3D / Vidéo : Jobs de rendu lourds (tâches très asynchrones).
+
+AdTech / Data : Traitement de données massives (ETL asynchrone).
+(Note : On exclut les secteurs hyper-régulés type Banques/Santé pour le MVP).
+
+4. ARCHITECTURE TECHNIQUE & STACK
+Moteur & Orchestration : Go (Golang) - Pour interagir avec l'API Kubernetes à la milliseconde.
+
+Modèle Prédictif (IA) : Python + PyTorch (Séries temporelles légères pour prédire les creux tarifaires locaux).
+
+Cache & Décision temps réel : Redis (Stockage des prix Spot locaux à la milliseconde).
+
+Observabilité : Prometheus (Métriques FinOps) + Grafana (Dashboard).
+
+Déploiement : Package Helm (helm install nerve-agent).
+
+5. LES 5 MODULES DU PRODUIT (FEATURES)
+Module 1 : Workload Profiler (L'Intercepteur)
+Mécanisme : Mutating Admission Webhook Kubernetes.
+
+Rôle : Intercepte la création de Pods taggés nerve.io/tier: async. Nerve lit la deadline demandée par le développeur et prend le contrôle du routage. Il ignore totalement les pods d'API web en direct (Synchrone) ou les bases de données (Stateful).
+
+Module 2 : Local Intelligence Engine (Le Radar Micro-Local)
+Mécanisme : Scraping continu des APIs Cloud de la région locale du client.
+
+Sources : * Prix en temps réel des GPU Spot sur toutes les Zones de Disponibilité (AZ) de la région locale.
+
+API réseau électrique local (ex: RTE en France) pour mesurer l'intensité carbone à l'instant T.
+
+Module 3 : AZ-Hopping Scheduler & Smart Checkpointer (Le Cœur du Réacteur)
+Mécanisme : Custom Kubernetes Scheduler + intégration MLOps.
+
+Rôle : Place le Pod sur le datacenter (AZ) le moins cher de la ville.
+
+L'Évacuation d'Urgence : Si AWS envoie l'alerte Spot Interruption Notice (via l'endpoint 169.254.169.254), Nerve exécute le protocole d'urgence :
+
+Appel API au conteneur (PyTorch) : "Sauvegarde ton Checkpoint sur S3 immédiatement".
+
+Cordon du nœud condamné.
+
+Démarrage d'un nouveau GPU Spot dans l'AZ voisine.
+
+Redéploiement du Pod qui télécharge le Checkpoint et reprend l'entraînement.
+
+Module 4 : Green Time-Shifter (Le Planificateur Écolo/FinOps)
+Mécanisme : Job Queue Kubernetes avec contrainte de Deadline.
+
+Rôle : Met en pause les entraînements non-urgents (Pending) et les déclenche (Trigger) automatiquement quand les prix Spot locaux touchent le fond (généralement entre 2h et 5h du matin) OU quand le réseau électrique passe au vert (éolien/solaire).
+
+Module 5 : Dashboard FinOps/GreenOps
+Mécanisme : UI légère.
+
+Rôle : Prouver la valeur de l'outil.
+
+Savings ($) : Différence entre le prix On-Demand et le Spot payé sur le mois.
+
+Interruptions gérées : Nombre de coupures esquivées grâce au Smart Checkpointing.
+
+Carbone Évité (CO2) : Impact du Time-Shifting nocturne.
+
+6. SPÉCIFICATIONS & CONTRAINTES DE CODE (SPECS MILITAIRES)
+Performances : L'agent Nerve doit consommer < 50 Mo de RAM et < 0.1 vCPU.
+
+Sécurité & RBAC : Accès limité aux Nodes et Pods. Interdiction absolue de requêter les Secrets ou les données client.
+
+Fail-Safe : Si l'agent Nerve perd internet ou crash, le cluster repasse silencieusement sur l'orchestrateur par défaut d'AWS/K8s. Le client ne doit jamais être bloqué.
+
+7. GESTION DES RISQUES & EDGE CASES (POUR LES DEVS)
+Cas A - Pénurie TOTALE de GPU Spot dans la région : Si l'AZ-A, l'AZ-B et l'AZ-C n'ont plus aucun GPU en solde, Nerve active le "Fallback". Il lance le calcul sur un serveur Premium plein tarif (On-Demand) pour respecter la Deadline du client coûte que coûte.
+
+Cas B - Le Checkpoint prend plus de 2 minutes : Si le modèle est gigantesque et que la sauvegarde sur S3 prend trop de temps par rapport au préavis d'AWS, Nerve s'appuie sur une fréquence de sauvegarde asynchrone régulière pilotée par le script PyTorch du client.
+
+Cas C - Boucle d'éviction : Un "Eviction Rate Limiter" empêche un calcul de rebondir plus de 2 fois par heure entre les bâtiments pour éviter le chaos sur le réseau.
+
+8. ROADMAP DU MVP (Ce qu'on code le Mois 1 - Pour le Hackathon)
+L'équipe tech se concentre sur un Use Case chirurgical :
+
+Semaine 1-2 : Agent basique (Webhook + Scheduler). Arbitrage sur 3 AZ AWS pour un Pod contenant un calcul factice.
+
+Semaine 3 : Coder le Smart Checkpointing. Simuler une coupure AWS, prouver que le Pod sauvegarde son état et reprend sur une autre machine de l'AZ voisine sans perdre son avancée.
+
+Semaine 4 : Un Dashboard affichant le ROI ($ sauvés).

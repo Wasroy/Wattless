@@ -1,0 +1,688 @@
+[
+  {
+    "name": "DC Paris",
+    "coordinates": [2.3522, 48.8566],
+    "status": "online",
+    "region": "Europe",
+    "latency": "12ms"
+  },
+  {
+    "name": "DC New York",
+    "coordinates": [-74.0060, 40.7128],
+    "status": "online",
+    "region": "Amérique du Nord",
+    "latency": "45ms"
+  },
+  {
+    "name": "DC Tokyo",
+    "coordinates": [139.6503, 35.6762],
+    "status": "online",
+    "region": "Asie-Pacifique",
+    "latency": "120ms"
+  },
+  {
+    "name": "DC London",
+    "coordinates": [-0.1276, 51.5074],
+    "status": "online",
+    "region": "Europe",
+    "latency": "18ms"
+  },
+  {
+    "name": "DC Frankfurt",
+    "coordinates": [8.6821, 50.1109],
+    "status": "online",
+    "region": "Europe",
+    "latency": "15ms"
+  },
+  {
+    "name": "DC Singapore",
+    "coordinates": [103.8198, 1.3521],
+    "status": "online",
+    "region": "Asie-Pacifique",
+    "latency": "95ms"
+  },
+  {
+    "name": "DC São Paulo",
+    "coordinates": [-46.6333, -23.5505],
+    "status": "online",
+    "region": "Amérique du Sud",
+    "latency": "180ms"
+  },
+  {
+    "name": "DC Sydney",
+    "coordinates": [151.2093, -33.8688],
+    "status": "online",
+    "region": "Océanie",
+    "latency": "150ms"
+  },
+  {
+    "name": "DC Mumbai",
+    "coordinates": [72.8777, 19.0760],
+    "status": "online",
+    "region": "Asie du Sud",
+    "latency": "85ms"
+  },
+  {
+    "name": "DC Toronto",
+    "coordinates": [-79.3832, 43.6532],
+    "status": "maintenance",
+    "region": "Amérique du Nord",
+    "latency": "52ms"
+  },
+  {
+    "name": "DC Dubai",
+    "coordinates": [55.2708, 25.2048],
+    "status": "online",
+    "region": "Moyen-Orient",
+    "latency": "75ms"
+  },
+  {
+    "name": "DC Seoul",
+    "coordinates": [126.9780, 37.5665],
+    "status": "online",
+    "region": "Asie-Pacifique",
+    "latency": "110ms"
+  },
+  {
+    "name": "DC Amsterdam",
+    "coordinates": [4.9041, 52.3676],
+    "status": "online",
+    "region": "Europe",
+    "latency": "20ms"
+  },
+  {
+    "name": "DC Los Angeles",
+    "coordinates": [-118.2437, 34.0522],
+    "status": "online",
+    "region": "Amérique du Nord",
+    "latency": "35ms"
+  },
+  {
+    "name": "DC Chicago",
+    "coordinates": [-87.6298, 41.8781],
+    "status": "online",
+    "region": "Amérique du Nord",
+    "latency": "40ms"
+  },
+  {
+    "name": "DC Hong Kong",
+    "coordinates": [114.1694, 22.3193],
+    "status": "online",
+    "region": "Asie-Pacifique",
+    "latency": "105ms"
+  },
+  {
+    "name": "DC Shanghai",
+    "coordinates": [121.4737, 31.2304],
+    "status": "online",
+    "region": "Asie-Pacifique",
+    "latency": "125ms"
+  },
+  {
+    "name": "DC Beijing",
+    "coordinates": [116.4074, 39.9042],
+    "status": "online",
+    "region": "Asie-Pacifique",
+    "latency": "130ms"
+  },
+  {
+    "name": "DC Dublin",
+    "coordinates": [-6.2603, 53.3498],
+    "status": "online",
+    "region": "Europe",
+    "latency": "22ms"
+  },
+  {
+    "name": "DC Madrid",
+    "coordinates": [-3.7038, 40.4168],
+    "status": "online",
+    "region": "Europe",
+    "latency": "25ms"
+  },
+  {
+    "name": "DC Milan",
+    "coordinates": [9.1900, 45.4642],
+    "status": "online",
+    "region": "Europe",
+    "latency": "28ms"
+  },
+  {
+    "name": "DC Stockholm",
+    "coordinates": [18.0686, 59.3293],
+    "status": "online",
+    "region": "Europe",
+    "latency": "30ms"
+  },
+  {
+    "name": "DC Zurich",
+    "coordinates": [8.5417, 47.3769],
+    "status": "online",
+    "region": "Europe",
+    "latency": "16ms"
+  },
+  {
+    "name": "DC Vienna",
+    "coordinates": [16.3738, 48.2082],
+    "status": "online",
+    "region": "Europe",
+    "latency": "24ms"
+  },
+  {
+    "name": "DC Warsaw",
+    "coordinates": [21.0122, 52.2297],
+    "status": "online",
+    "region": "Europe",
+    "latency": "26ms"
+  },
+  {
+    "name": "DC Moscow",
+    "coordinates": [37.6173, 55.7558],
+    "status": "online",
+    "region": "Europe",
+    "latency": "45ms"
+  },
+  {
+    "name": "DC Istanbul",
+    "coordinates": [28.9784, 41.0082],
+    "status": "online",
+    "region": "Moyen-Orient",
+    "latency": "50ms"
+  },
+  {
+    "name": "DC Tel Aviv",
+    "coordinates": [34.7818, 32.0853],
+    "status": "online",
+    "region": "Moyen-Orient",
+    "latency": "55ms"
+  },
+  {
+    "name": "DC Riyadh",
+    "coordinates": [46.6753, 24.7136],
+    "status": "online",
+    "region": "Moyen-Orient",
+    "latency": "80ms"
+  },
+  {
+    "name": "DC Mumbai 2",
+    "coordinates": [72.8777, 19.0760],
+    "status": "online",
+    "region": "Asie du Sud",
+    "latency": "88ms"
+  },
+  {
+    "name": "DC Bangalore",
+    "coordinates": [77.5946, 12.9716],
+    "status": "online",
+    "region": "Asie du Sud",
+    "latency": "90ms"
+  },
+  {
+    "name": "DC Delhi",
+    "coordinates": [77.2090, 28.6139],
+    "status": "online",
+    "region": "Asie du Sud",
+    "latency": "92ms"
+  },
+  {
+    "name": "DC Bangkok",
+    "coordinates": [100.5018, 13.7563],
+    "status": "online",
+    "region": "Asie-Pacifique",
+    "latency": "115ms"
+  },
+  {
+    "name": "DC Jakarta",
+    "coordinates": [106.8451, -6.2088],
+    "status": "online",
+    "region": "Asie-Pacifique",
+    "latency": "125ms"
+  },
+  {
+    "name": "DC Manila",
+    "coordinates": [120.9842, 14.5995],
+    "status": "online",
+    "region": "Asie-Pacifique",
+    "latency": "135ms"
+  },
+  {
+    "name": "DC Kuala Lumpur",
+    "coordinates": [101.6869, 3.1390],
+    "status": "online",
+    "region": "Asie-Pacifique",
+    "latency": "118ms"
+  },
+  {
+    "name": "DC Taipei",
+    "coordinates": [121.5654, 25.0330],
+    "status": "online",
+    "region": "Asie-Pacifique",
+    "latency": "112ms"
+  },
+  {
+    "name": "DC Osaka",
+    "coordinates": [135.5023, 34.6937],
+    "status": "online",
+    "region": "Asie-Pacifique",
+    "latency": "122ms"
+  },
+  {
+    "name": "DC Melbourne",
+    "coordinates": [144.9631, -37.8136],
+    "status": "online",
+    "region": "Océanie",
+    "latency": "155ms"
+  },
+  {
+    "name": "DC Auckland",
+    "coordinates": [174.7633, -36.8485],
+    "status": "online",
+    "region": "Océanie",
+    "latency": "165ms"
+  },
+  {
+    "name": "DC San Francisco",
+    "coordinates": [-122.4194, 37.7749],
+    "status": "online",
+    "region": "Amérique du Nord",
+    "latency": "30ms"
+  },
+  {
+    "name": "DC Seattle",
+    "coordinates": [-122.3321, 47.6062],
+    "status": "online",
+    "region": "Amérique du Nord",
+    "latency": "38ms"
+  },
+  {
+    "name": "DC Dallas",
+    "coordinates": [-96.7970, 32.7767],
+    "status": "online",
+    "region": "Amérique du Nord",
+    "latency": "42ms"
+  },
+  {
+    "name": "DC Miami",
+    "coordinates": [-80.1918, 25.7617],
+    "status": "online",
+    "region": "Amérique du Nord",
+    "latency": "48ms"
+  },
+  {
+    "name": "DC Atlanta",
+    "coordinates": [-84.3880, 33.7490],
+    "status": "online",
+    "region": "Amérique du Nord",
+    "latency": "44ms"
+  },
+  {
+    "name": "DC Montreal",
+    "coordinates": [-73.5673, 45.5017],
+    "status": "online",
+    "region": "Amérique du Nord",
+    "latency": "50ms"
+  },
+  {
+    "name": "DC Vancouver",
+    "coordinates": [-123.1216, 49.2827],
+    "status": "online",
+    "region": "Amérique du Nord",
+    "latency": "40ms"
+  },
+  {
+    "name": "DC Mexico City",
+    "coordinates": [-99.1332, 19.4326],
+    "status": "online",
+    "region": "Amérique du Nord",
+    "latency": "60ms"
+  },
+  {
+    "name": "DC Bogota",
+    "coordinates": [-74.0721, 4.7110],
+    "status": "online",
+    "region": "Amérique du Sud",
+    "latency": "70ms"
+  },
+  {
+    "name": "DC Lima",
+    "coordinates": [-77.0428, -12.0464],
+    "status": "online",
+    "region": "Amérique du Sud",
+    "latency": "75ms"
+  },
+  {
+    "name": "DC Santiago",
+    "coordinates": [-70.6693, -33.4489],
+    "status": "online",
+    "region": "Amérique du Sud",
+    "latency": "85ms"
+  },
+  {
+    "name": "DC Buenos Aires",
+    "coordinates": [-58.3816, -34.6037],
+    "status": "online",
+    "region": "Amérique du Sud",
+    "latency": "90ms"
+  },
+  {
+    "name": "DC Rio de Janeiro",
+    "coordinates": [-43.1729, -22.9068],
+    "status": "online",
+    "region": "Amérique du Sud",
+    "latency": "95ms"
+  },
+  {
+    "name": "DC Johannesburg",
+    "coordinates": [28.0473, -26.2041],
+    "status": "online",
+    "region": "Afrique",
+    "latency": "140ms"
+  },
+  {
+    "name": "DC Cape Town",
+    "coordinates": [18.4241, -33.9249],
+    "status": "online",
+    "region": "Afrique",
+    "latency": "145ms"
+  },
+  {
+    "name": "DC Lagos",
+    "coordinates": [3.3792, 6.5244],
+    "status": "online",
+    "region": "Afrique",
+    "latency": "120ms"
+  },
+  {
+    "name": "DC Cairo",
+    "coordinates": [31.2357, 30.0444],
+    "status": "online",
+    "region": "Afrique",
+    "latency": "65ms"
+  },
+  {
+    "name": "DC Casablanca",
+    "coordinates": [-7.5898, 33.5731],
+    "status": "online",
+    "region": "Afrique",
+    "latency": "35ms"
+  },
+  {
+    "name": "DC Nairobi",
+    "coordinates": [36.8219, -1.2921],
+    "status": "online",
+    "region": "Afrique",
+    "latency": "100ms"
+  },
+  {
+    "name": "DC Brussels",
+    "coordinates": [4.3517, 50.8503],
+    "status": "online",
+    "region": "Europe",
+    "latency": "19ms"
+  },
+  {
+    "name": "DC Copenhagen",
+    "coordinates": [12.5683, 55.6761],
+    "status": "online",
+    "region": "Europe",
+    "latency": "27ms"
+  },
+  {
+    "name": "DC Helsinki",
+    "coordinates": [24.9375, 60.1699],
+    "status": "online",
+    "region": "Europe",
+    "latency": "32ms"
+  },
+  {
+    "name": "DC Oslo",
+    "coordinates": [10.7522, 59.9139],
+    "status": "online",
+    "region": "Europe",
+    "latency": "29ms"
+  },
+  {
+    "name": "DC Prague",
+    "coordinates": [14.4378, 50.0755],
+    "status": "online",
+    "region": "Europe",
+    "latency": "23ms"
+  },
+  {
+    "name": "DC Budapest",
+    "coordinates": [19.0402, 47.4979],
+    "status": "online",
+    "region": "Europe",
+    "latency": "25ms"
+  },
+  {
+    "name": "DC Bucharest",
+    "coordinates": [26.1025, 44.4268],
+    "status": "online",
+    "region": "Europe",
+    "latency": "28ms"
+  },
+  {
+    "name": "DC Athens",
+    "coordinates": [23.7275, 37.9838],
+    "status": "online",
+    "region": "Europe",
+    "latency": "35ms"
+  },
+  {
+    "name": "DC Lisbon",
+    "coordinates": [-9.1393, 38.7223],
+    "status": "online",
+    "region": "Europe",
+    "latency": "30ms"
+  },
+  {
+    "name": "DC Barcelona",
+    "coordinates": [2.1734, 41.3851],
+    "status": "online",
+    "region": "Europe",
+    "latency": "26ms"
+  },
+  {
+    "name": "DC Rome",
+    "coordinates": [12.4964, 41.9028],
+    "status": "online",
+    "region": "Europe",
+    "latency": "27ms"
+  },
+  {
+    "name": "DC Berlin",
+    "coordinates": [13.4050, 52.5200],
+    "status": "online",
+    "region": "Europe",
+    "latency": "17ms"
+  },
+  {
+    "name": "DC Munich",
+    "coordinates": [11.5819, 48.1351],
+    "status": "online",
+    "region": "Europe",
+    "latency": "18ms"
+  },
+  {
+    "name": "DC Hamburg",
+    "coordinates": [9.9937, 53.5511],
+    "status": "online",
+    "region": "Europe",
+    "latency": "20ms"
+  },
+  {
+    "name": "DC Amsterdam 2",
+    "coordinates": [4.9041, 52.3676],
+    "status": "online",
+    "region": "Europe",
+    "latency": "21ms"
+  },
+  {
+    "name": "DC Brussels 2",
+    "coordinates": [4.3517, 50.8503],
+    "status": "online",
+    "region": "Europe",
+    "latency": "20ms"
+  },
+  {
+    "name": "DC Paris 2",
+    "coordinates": [2.3522, 48.8566],
+    "status": "online",
+    "region": "Europe",
+    "latency": "13ms"
+  },
+  {
+    "name": "DC London 2",
+    "coordinates": [-0.1276, 51.5074],
+    "status": "online",
+    "region": "Europe",
+    "latency": "19ms"
+  },
+  {
+    "name": "DC Frankfurt 2",
+    "coordinates": [8.6821, 50.1109],
+    "status": "online",
+    "region": "Europe",
+    "latency": "16ms"
+  },
+  {
+    "name": "DC New York 2",
+    "coordinates": [-74.0060, 40.7128],
+    "status": "online",
+    "region": "Amérique du Nord",
+    "latency": "46ms"
+  },
+  {
+    "name": "DC Los Angeles 2",
+    "coordinates": [-118.2437, 34.0522],
+    "status": "online",
+    "region": "Amérique du Nord",
+    "latency": "31ms"
+  },
+  {
+    "name": "DC Chicago 2",
+    "coordinates": [-87.6298, 41.8781],
+    "status": "online",
+    "region": "Amérique du Nord",
+    "latency": "41ms"
+  },
+  {
+    "name": "DC Tokyo 2",
+    "coordinates": [139.6503, 35.6762],
+    "status": "online",
+    "region": "Asie-Pacifique",
+    "latency": "121ms"
+  },
+  {
+    "name": "DC Singapore 2",
+    "coordinates": [103.8198, 1.3521],
+    "status": "online",
+    "region": "Asie-Pacifique",
+    "latency": "96ms"
+  },
+  {
+    "name": "DC Hong Kong 2",
+    "coordinates": [114.1694, 22.3193],
+    "status": "online",
+    "region": "Asie-Pacifique",
+    "latency": "106ms"
+  },
+  {
+    "name": "DC Sydney 2",
+    "coordinates": [151.2093, -33.8688],
+    "status": "online",
+    "region": "Océanie",
+    "latency": "151ms"
+  },
+  {
+    "name": "DC São Paulo 2",
+    "coordinates": [-46.6333, -23.5505],
+    "status": "online",
+    "region": "Amérique du Sud",
+    "latency": "181ms"
+  },
+  {
+    "name": "DC Mumbai 3",
+    "coordinates": [72.8777, 19.0760],
+    "status": "online",
+    "region": "Asie du Sud",
+    "latency": "86ms"
+  },
+  {
+    "name": "DC Seoul 2",
+    "coordinates": [126.9780, 37.5665],
+    "status": "online",
+    "region": "Asie-Pacifique",
+    "latency": "111ms"
+  },
+  {
+    "name": "DC Dubai 2",
+    "coordinates": [55.2708, 25.2048],
+    "status": "online",
+    "region": "Moyen-Orient",
+    "latency": "76ms"
+  },
+  {
+    "name": "DC Doha",
+    "coordinates": [51.5310, 25.2854],
+    "status": "online",
+    "region": "Moyen-Orient",
+    "latency": "78ms"
+  },
+  {
+    "name": "DC Kuwait City",
+    "coordinates": [47.9774, 29.3759],
+    "status": "online",
+    "region": "Moyen-Orient",
+    "latency": "82ms"
+  },
+  {
+    "name": "DC Manama",
+    "coordinates": [50.5860, 26.0667],
+    "status": "online",
+    "region": "Moyen-Orient",
+    "latency": "80ms"
+  },
+  {
+    "name": "DC Abu Dhabi",
+    "coordinates": [54.3773, 24.4539],
+    "status": "online",
+    "region": "Moyen-Orient",
+    "latency": "77ms"
+  },
+  {
+    "name": "DC Jeddah",
+    "coordinates": [39.1828, 21.4858],
+    "status": "online",
+    "region": "Moyen-Orient",
+    "latency": "85ms"
+  },
+  {
+    "name": "DC Karachi",
+    "coordinates": [67.0011, 24.8607],
+    "status": "online",
+    "region": "Asie du Sud",
+    "latency": "95ms"
+  },
+  {
+    "name": "DC Colombo",
+    "coordinates": [79.8612, 6.9271],
+    "status": "online",
+    "region": "Asie du Sud",
+    "latency": "98ms"
+  },
+  {
+    "name": "DC Dhaka",
+    "coordinates": [90.4125, 23.8103],
+    "status": "online",
+    "region": "Asie du Sud",
+    "latency": "102ms"
+  },
+  {
+    "name": "DC Kathmandu",
+    "coordinates": [85.3240, 27.7172],
+    "status": "online",
+    "region": "Asie du Sud",
+    "latency": "105ms"
+  }
+]
